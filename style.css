@@ -11,6 +11,10 @@ body {
     padding-bottom: 80px;
   }
   
+  .jumbotron-contrast {
+    background-color: #1e2a47;
+  }
+  
   .logo {
     max-width: 200px;
     margin-bottom: 30px;
