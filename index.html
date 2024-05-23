@@ -102,6 +102,34 @@
     .feature-row:nth-child(even) {
       background-color: #1a3a67;
     }
+
+    .modal-content {
+      background-color: #1a3a67;
+      color: #fff;
+    }
+
+    .modal-header,
+    .modal-footer {
+      border-color: #162b4d;
+    }
+
+    .form-control {
+      background-color: #162b4d;
+      color: #fff;
+      border-color: #1e88e5;
+    }
+
+    .form-control:focus {
+      background-color: #162b4d;
+      color: #fff;
+      border-color: #1e88e5;
+      box-shadow: none;
+    }
+
+    .modal-logo {
+      max-width: 100px;
+      margin-bottom: 20px;
+    }
   </style>
 </head>
 
@@ -118,7 +146,7 @@
             <a class="nav-link" href="#">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Contact</a>
+            <a class="nav-link" href="#contact">Contact</a>
           </li>
         </ul>
       </div>
@@ -190,6 +218,43 @@
     <a class="btn btn-primary btn-lg" href="#" role="button">Get Started Today</a>
   </div>
 
+  <div class="modal fade" id="contactModal" tabindex="-1" role="dialog" aria-labelledby="contactModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="contactModalLabel">Contact Us</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="text-center">
+            <img src="zentinel-logo.png" alt="Zentinl.com logo" class="modal-logo">
+          </div>
+          <form id="contactForm">
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Email address</label>
+              <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea class="form-control" id="message" rows="4" placeholder="Enter your message" required></textarea>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" id="submitButton">Submit</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <footer class="text-center py-3 mt-5">
     <div class="social-links">
       <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
@@ -207,6 +272,37 @@
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  <script>
+    $(document).ready(function () {
+      // Open the contact form modal when the "Contact" link is clicked
+      $(".nav-link[href='#contact']").click(function (e) {
+        e.preventDefault();
+        $("#contactModal").modal("show");
+      });
+
+      // Handle form submission
+      $("#submitButton").click(function () {
+        var name = $("#name").val();
+        var email = $("#email").val();
+        var message = $("#message").val();
+
+        if (name && email && message) {
+          // Perform form submission logic here (e.g., send data to server)
+          console.log("Form submitted:");
+          console.log("Name:", name);
+          console.log("Email:", email);
+          console.log("Message:", message);
+
+          // Reset the form after submission
+          $("#contactForm")[0].reset();
+
+          // Close the modal
+          $("#contactModal").modal("hide");
+        }
+      });
+    });
+  </script>
 </body>
 
 </html>
