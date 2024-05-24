@@ -102,16 +102,60 @@
       background-color: #0c1b33;
       color: #fff;
     }
+
+    .pancake-menu {
+      display: none;
+      cursor: pointer;
+      float: right;
+      padding: 10px;
+      margin-top: 10px;
+      margin-right: 20px;
+    }
+
+    .pancake-bar {
+      width: 25px;
+      height: 3px;
+      background-color: #fff;
+      margin: 5px 0;
+      transition: 0.4s;
+    }
+
+    @media (max-width: 992px) {
+      .pancake-menu {
+        display: block;
+      }
+
+      .navbar-collapse {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: #0c1b33;
+        padding: 20px;
+        z-index: 999;
+      }
+
+      .navbar-collapse.show {
+        display: block;
+      }
+
+      .nav-link {
+        margin-left: 0;
+        margin-bottom: 10px;
+      }
+    }
   </style>
 </head>
 
 <body>
   <nav class="navbar navbar-expand-lg">
     <div class="container">
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+      <div class="pancake-menu" onclick="toggleMenu()">
+        <div class="pancake-bar"></div>
+        <div class="pancake-bar"></div>
+        <div class="pancake-bar"></div>
+      </div>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
@@ -226,6 +270,12 @@
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script>
+    function toggleMenu() {
+      const navbar = document.querySelector('.navbar-collapse');
+      navbar.classList.toggle('show');
+    }
+  </script>
 </body>
 
 </html>
