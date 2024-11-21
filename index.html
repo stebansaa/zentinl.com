@@ -13,7 +13,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-  <!-- Improved Contrast CSS -->
+  <!-- Improved Contrast and Pricing Page CSS -->
   <style>
     body {
       font-family: 'Roboto', sans-serif;
@@ -177,65 +177,43 @@
       color: #ffffff;
     }
 
-    /* Pricing Section Dark Theme */
-    #pricing {
+    /* Pricing Page Styles */
+    .dark-jumbotron {
       background-color: #343a40;
-      color: #ffffff;
-    }
-
-    #pricing .jumbotron {
-      background-color: #495057;
       color: #ffffff;
       padding: 2rem 1rem;
       border-radius: 0.3rem;
     }
 
-    #pricing .feature-title {
+    .pricing-row {
+      background-color: #343a40;
+      color: #ffffff;
+      padding: 2rem 0;
+    }
+
+    .pricing-row h2.feature-title,
+    .pricing-row h3.feature-title,
+    .pricing-row p.feature-text,
+    .pricing-row li,
+    .pricing-row ul li,
+    .pricing-row ol li {
       color: #ffffff;
     }
 
-    #pricing .feature-text {
-      color: #d4d4d4;
+    .pricing-row strong {
+      color: #ffffff;
     }
 
-    #pricing ol.feature-text,
-    #pricing ul.feature-text {
-      color: #d4d4d4;
-    }
-
-    #pricing .btn-primary {
+    .pricing-row a.btn-primary {
       background-color: #007bff;
       border-color: #007bff;
       color: #ffffff;
     }
 
-    #pricing .btn-primary:hover {
+    .pricing-row a.btn-primary:hover {
       background-color: #0056b3;
       border-color: #004085;
       color: #ffffff;
-    }
-
-    /* Ensure buttons in pricing have sufficient contrast */
-    #pricing .btn-secondary {
-      background-color: #6c757d;
-      border-color: #6c757d;
-      color: #ffffff;
-    }
-
-    #pricing .btn-secondary:hover {
-      background-color: #5a6268;
-      border-color: #545b62;
-      color: #ffffff;
-    }
-
-    /* Ensure links in pricing have sufficient contrast */
-    #pricing a {
-      color: #007bff;
-    }
-
-    #pricing a:hover,
-    #pricing a:focus {
-      color: #66b2ff;
     }
 
     /* Responsive adjustments */
@@ -364,7 +342,7 @@
 
   <!-- Pricing Section -->
   <section id="pricing" style="display: none;">
-    <div class="jumbotron">
+    <div class="jumbotron dark-jumbotron">
       <div class="container">
         <img src="zentinel-logo.png" alt="Zentinl logo" class="owl-logo">
         <h1 class="display-4">Pricing</h1>
