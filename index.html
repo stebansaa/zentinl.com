@@ -1,618 +1,743 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Zentinl.com - AI-Generated Video for Social Networks</title>
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <style>
-        :root {
-            --primary-color: #2563eb;
-            --secondary-color: #1e40af;
-            --accent-color: #60a5fa;
-            --dark-bg: #1a202c;
-            --light-bg: #f8fafc;
-            --text-dark: #0f172a;
-            --text-light: #f8fafc;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zentinl.com - AI-Generated Video for Social Networks</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      color: #fff;
+      background-color: #0c1b33;
+    }
 
-        body {
-            font-family: 'Poppins', sans-serif;
-            color: var(--text-dark);
-            line-height: 1.6;
-            margin-top: 60px; /* Account for fixed navbar */
-        }
+    .jumbotron {
+      background-color: #0c1b33;
+      text-align: center;
+      padding-top: 80px;
+      padding-bottom: 80px;
+    }
 
-        /* Navigation Styles */
-        .navbar {
-            background-color: var(--dark-bg);
-            padding: 1rem 0;
-            position: fixed;
-            top: 0;
-            width: 100%;
-            z-index: 1000;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
+    .logo {
+      max-width: 200px;
+      margin-bottom: 30px;
+    }
 
-        .navbar .container {
-            display: flex;
-            justify-content: flex-end;
-            align-items: center;
-        }
+    .btn-primary {
+      background-color: #1e88e5;
+      border-color: #1e88e5;
+      padding: 12px 30px;
+      font-size: 18px;
+      transition: all 0.3s ease;
+    }
 
-        .navbar-nav {
-            display: flex;
-            list-style: none;
-            margin: 0;
-            padding: 0;
-        }
+    .btn-primary:hover {
+      background-color: #1565c0;
+      border-color: #1565c0;
+      transform: translateY(-2px);
+    }
 
-        .nav-item {
-            margin: 0 1rem;
-        }
+    .social-links {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
 
-        .nav-link {
-            color: var(--text-light) !important;
-            text-decoration: none;
-            font-weight: 600;
-            padding: 0.5rem 1rem;
-            transition: color 0.3s ease;
-        }
+    .social-links a {
+      margin: 0 10px;
+      color: #fff;
+      font-size: 24px;
+      transition: color 0.3s;
+    }
 
-        .nav-link:hover {
-            color: var(--accent-color) !important;
-        }
+    .social-links a:hover {
+      color: #1e88e5;
+    }
 
-        /* Jumbotron Styles */
-        .jumbotron {
-            background: linear-gradient(135deg, var(--dark-bg), var(--secondary-color));
-            color: var(--text-light);
-            padding: 4rem 0;
-            margin-bottom: 0;
-            border-radius: 0;
-        }
+    .owl-logo {
+      max-width: 150px;
+      margin-bottom: 20px;
+    }
 
-        .jumbotron .display-4 {
-            font-weight: 700;
-            margin-bottom: 1.5rem;
-        }
+    .feature-icon {
+      font-size: 48px;
+      color: #1e88e5;
+      margin-bottom: 20px;
+    }
 
-        .jumbotron .lead {
-            font-size: 1.25rem;
-            margin-bottom: 2rem;
-        }
+    .feature-title {
+      color: #fff;
+      margin-bottom: 20px;
+    }
 
-        /* Feature Sections */
-        .feature-row {
-            padding: 4rem 0;
-            background-color: var(--light-bg);
-        }
+    .feature-text {
+      color: #c7d1e6;
+      line-height: 1.8;
+      margin-bottom: 25px;
+    }
 
-        .feature-row:nth-child(even) {
-            background-color: white;
-        }
+    footer {
+      background-color: #0c1b33;
+      color: #fff;
+      padding: 40px 0;
+    }
 
-        .feature-icon {
-            font-size: 2.5rem;
-            color: var(--primary-color);
-            margin-bottom: 1.5rem;
-        }
+    .navbar {
+      background-color: #0c1b33;
+      padding-top: 20px;
+      padding-bottom: 20px;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+    }
 
-        .feature-title {
-            color: var(--text-dark);
-            font-weight: 600;
-            margin-bottom: 1rem;
-        }
+    .nav-link {
+      color: #fff !important;
+      font-size: 18px;
+      margin-left: 20px;
+      transition: color 0.3s ease;
+    }
 
-        .feature-text {
-            color: #4a5568;
-            margin-bottom: 1.5rem;
-        }
+    .nav-link:hover {
+      color: #1e88e5 !important;
+    }
 
-        /* Button Styles */
-        .btn-primary {
-            background-color: var(--primary-color);
-            border-color: var(--primary-color);
-            padding: 0.75rem 2rem;
-            font-weight: 600;
-            transition: all 0.3s ease;
-        }
+    .feature-row {
+      background-color: #162b4d;
+      padding: 80px 0;
+    }
 
-        .btn-primary:hover {
-            background-color: var(--secondary-color);
-            border-color: var(--secondary-color);
-            transform: translateY(-2px);
-        }
+    .feature-row:nth-child(even) {
+      background-color: #1a3a67;
+    }
 
-        /* Modal Styles */
-        .modal-content {
-            border-radius: 10px;
-            overflow: hidden;
-        }
+    .modal-content {
+      background-color: #1a3a67;
+      color: #fff;
+    }
 
-        .modal-header {
-            background-color: var(--dark-bg);
-            color: var(--text-light);
-            border-bottom: none;
-            padding: 1.5rem;
-        }
+    .modal-header,
+    .modal-footer {
+      border-color: #162b4d;
+    }
 
-        .modal-body {
-            padding: 2rem;
-        }
+    .form-control {
+      background-color: #162b4d;
+      color: #fff;
+      border-color: #1e88e5;
+    }
 
-        .form-control {
-            border-radius: 5px;
-            padding: 0.75rem;
-            border: 1px solid #e2e8f0;
-            margin-bottom: 1rem;
-        }
+    .form-control:focus {
+      background-color: #162b4d;
+      color: #fff;
+      border-color: #1e88e5;
+      box-shadow: 0 0 0 0.2rem rgba(30, 136, 229, 0.25);
+    }
 
-        .modal-logo {
-            max-width: 150px;
-            margin-bottom: 1.5rem;
-        }
+    .modal-logo {
+      max-width: 100px;
+      margin-bottom: 20px;
+    }
 
-        /* Footer Styles */
-        footer {
-            background-color: var(--dark-bg);
-            color: var(--text-light);
-            padding: 2rem 0;
-            margin-top: 0;
-        }
+    .pancake-menu {
+      display: none;
+      cursor: pointer;
+      float: right;
+      padding: 10px;
+      margin-top: 10px;
+      margin-right: 20px;
+    }
 
-        .footer-content {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-        }
+    .pancake-bar {
+      width: 25px;
+      height: 3px;
+      background-color: #fff;
+      margin: 5px 0;
+      transition: 0.4s;
+    }
 
-        .social-links {
-            display: flex;
-            gap: 1.5rem;
-            margin-bottom: 1rem;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
+    .testimonial-section {
+      background-color: #1a3a67;
+      padding: 80px 0;
+    }
 
-        .social-links a {
-            color: var(--text-light);
-            font-size: 1.5rem;
-            transition: color 0.3s ease;
-            text-decoration: none;
-        }
+    .testimonial-card {
+      background-color: #162b4d;
+      padding: 30px;
+      border-radius: 8px;
+      margin-bottom: 30px;
+      height: 100%;
+    }
 
-        .social-links a:hover {
-            color: var(--accent-color);
-        }
+    .client-info {
+      display: flex;
+      align-items: center;
+      margin-top: 20px;
+    }
 
-        /* List Styles */
-        ol.feature-text {
-            padding-left: 1.5rem;
-        }
+    .client-image {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      margin-right: 15px;
+    }
 
-        ol.feature-text li {
-            margin-bottom: 1rem;
-        }
+    .stats-section {
+      background-color: #162b4d;
+      padding: 60px 0;
+    }
 
-        ul.feature-text {
-            list-style-type: none;
-            padding-left: 0;
-        }
+    .stat-card {
+      text-align: center;
+      padding: 30px;
+    }
 
-        ul.feature-text li {
-            padding-left: 1.5rem;
-            position: relative;
-            margin-bottom: 0.5rem;
-        }
+    .stat-number {
+      font-size: 48px;
+      font-weight: bold;
+      color: #1e88e5;
+      margin-bottom: 10px;
+    }
 
-        ul.feature-text li:before {
-            content: "•";
-            color: var(--primary-color);
-            position: absolute;
-            left: 0;
-        }
+    .stat-label {
+      color: #c7d1e6;
+      font-size: 18px;
+    }
 
-        /* Logo Styles */
-        .owl-logo {
-            max-width: 200px;
-            margin-bottom: 2rem;
-        }
+    .how-it-works {
+      background-color: #1a3a67;
+      padding: 80px 0;
+    }
 
-        /* Mobile Navigation */
-        .pancake-menu {
-            display: none;
-            cursor: pointer;
-            padding: 10px;
-        }
+    .step-card {
+      background-color: #162b4d;
+      padding: 30px;
+      border-radius: 8px;
+      margin-bottom: 30px;
+      height: 100%;
+      position: relative;
+    }
 
-        .pancake-bar {
-            width: 25px;
-            height: 3px;
-            background-color: var(--text-light);
-            margin: 5px 0;
-            transition: 0.3s;
-        }
+    .step-number {
+      position: absolute;
+      top: -20px;
+      left: 30px;
+      background-color: #1e88e5;
+      color: #fff;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+    }
 
-        @media (max-width: 768px) {
-            .pancake-menu {
-                display: block;
-            }
+    @media (max-width: 992px) {
+      .pancake-menu {
+        display: block;
+      }
 
-            .navbar-collapse {
-                position: absolute;
-                top: 100%;
-                left: 0;
-                right: 0;
-                background-color: var(--dark-bg);
-                padding: 1rem;
-                display: none;
-            }
+      .navbar-collapse {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: #0c1b33;
+        padding: 20px;
+        z-index: 999;
+      }
 
-            .navbar-collapse.show {
-                display: block;
-            }
+      .navbar-collapse.show {
+        display: block;
+      }
 
-            .navbar-nav {
-                flex-direction: column;
-                align-items: center;
-            }
+      .nav-link {
+        margin-left: 0;
+        margin-bottom: 10px;
+      }
 
-            .nav-item {
-                margin: 0.5rem 0;
-            }
+      .feature-row {
+        padding: 40px 0;
+      }
 
-            .jumbotron {
-                padding: 2rem 0;
-            }
+      .testimonial-section,
+      .stats-section,
+      .how-it-works {
+        padding: 40px 0;
+      }
+    }
 
-            .feature-row {
-                padding: 2rem 0;
-            }
+    .benefits-section {
+      background-color: #162b4d;
+      padding: 80px 0;
+    }
 
-            .col-md-4 {
-                margin-bottom: 2rem;
-            }
-        }
+    .benefit-card {
+      background-color: rgba(26, 58, 103, 0.5);
+      padding: 30px;
+      border-radius: 8px;
+      margin-bottom: 30px;
+      height: 100%;
+      transition: transform 0.3s ease;
+    }
 
-        /* Section Transitions */
-        section {
-            transition: opacity 0.3s ease;
-        }
+    .benefit-card:hover {
+      transform: translateY(-5px);
+    }
 
-        /* Custom Scrollbar */
-        ::-webkit-scrollbar {
-            width: 10px;
-        }
+    .benefit-icon {
+      font-size: 36px;
+      color: #1e88e5;
+      margin-bottom: 20px;
+    }
 
-        ::-webkit-scrollbar-track {
-            background: var(--light-bg);
-        }
+    .tech-stack {
+      background-color: #1a3a67;
+      padding: 80px 0;
+    }
 
-        ::-webkit-scrollbar-thumb {
-            background: var(--primary-color);
-            border-radius: 5px;
-        }
+    .tech-icon {
+      font-size: 48px;
+      color: #1e88e5;
+      margin: 20px;
+      transition: transform 0.3s ease;
+    }
 
-        ::-webkit-scrollbar-thumb:hover {
-            background: var(--secondary-color);
-        }
+    .tech-icon:hover {
+      transform: scale(1.2);
+    }
 
-        /* Pricing Section Styles */
-        .pricing-row {
-            padding: 4rem 0;
-            background-color: white;
-        }
+    .cta-section {
+      background: linear-gradient(135deg, #162b4d, #1a3a67);
+      padding: 100px 0;
+      text-align: center;
+    }
 
-        .pricing-row:nth-child(even) {
-            background-color: var(--light-bg);
-        }
+    .scroll-to-top {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #1e88e5;
+      color: #fff;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
 
-        /* Just on Time Video Section Styles */
-        #just-on-time-video .feature-row {
-            background-color: white;
-        }
-
-        #just-on-time-video .feature-row:nth-child(even) {
-            background-color: var(--light-bg);
-        }
-    </style>
+    .scroll-to-top.visible {
+      opacity: 1;
+    }
+  </style>
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg">
-        <div class="container">
-            <div class="pancake-menu" onclick="toggleMenu()">
-                <div class="pancake-bar"></div>
-                <div class="pancake-bar"></div>
-                <div class="pancake-bar"></div>
-            </div>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#" data-section="home">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#" data-section="pricing">Pricing</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#" data-section="just-on-time-video">Just on Time Video</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#" data-toggle="modal" data-target="#contactModal">Contact</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-
-    <!-- Home Section -->
-    <section id="home">
-        <div class="jumbotron">
-            <div class="container">
-                <img src="zentinel-logo.png" alt="Zentinl.com logo" class="owl-logo">
-                <h1 class="display-4">Revolutionize Your Social Media Presence</h1>
-                <p class="lead">Harness the power of artificial intelligence to create captivating, custom-generated
-                    video content for your social networks. Stand out from the crowd and engage your audience like never before.</p>
-                <a class="btn btn-primary btn-lg" href="#" role="button">Get Started</a>
-            </div>
-        </div>
-
-        <div class="feature-row">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-4 text-center">
-                        <i class="fas fa-palette feature-icon"></i>
-                        <h3 class="feature-title">Tailored to Your Vision</h3>
-                        <p class="feature-text">Our AI technology empowers you to create video content that perfectly aligns with your unique style, tone,
-                            and target audience. Customize every aspect of your videos to ensure they resonate with your followers.</p>
-                    </div>
-                    <div class="col-md-4 text-center">
-                        <i class="fas fa-video feature-icon"></i>
-                        <h3 class="feature-title">Effortless Content Creation</h3>
-                        <p class="feature-text">We take your data and turn it into a video in minutes. Say goodbye to time-consuming video creation. 
-                            Our AI algorithms generate high-quality videos at unparalleled speed and scale.</p>
-                    </div>
-                    <div class="col-md-4 text-center">
-                        <i class="fas fa-chart-line feature-icon"></i>
-                        <h3 class="feature-title">Maximize Engagement</h3>
-                        <p class="feature-text">Our AI-generated videos are designed to capture your audience's interest and drive engagement. 
-                            Effortlessly upload content to all major social networks using their APIs.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="feature-row">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <h2 class="feature-title text-center mb-4">Transform Your Data into Captivating Video Content</h2>
-                        <p class="feature-text">Zentinl empowers brands to convert their data into engaging videos for social media. Our advanced AI technology transforms your content into dynamic videos that boost engagement.</p>
-                        <p class="feature-text">Integration is seamless with all major social networks, allowing you to publish and schedule your AI-generated videos effortlessly.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="feature-row">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-4 text-center">
-                        <i class="fas fa-newspaper feature-icon"></i>
-                        <h3 class="feature-title">News Reports</h3>
-                        <p class="feature-text">Transform news articles into compelling video content that captures attention and informs your audience.</p>
-                    </div>
-                    <div class="col-md-4 text-center">
-                        <i class="fas fa-home feature-icon"></i>
-                        <h3 class="feature-title">Real Estate Listings</h3>
-                        <p class="feature-text">Convert property listings into immersive virtual tour videos that showcase the best features of your properties.</p>
-                    </div>
-                    <div class="col-md-4 text-center">
-                        <i class="fas fa-car feature-icon"></i>
-                        <h3 class="feature-title">High Value Products</h3>
-                        <p class="feature-text">Create dynamic promotional videos that highlight your products' unique selling points and boost sales.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Pricing Section -->
-    <section id="pricing" style="display: none;">
-        <div class="jumbotron">
-            <div class="container">
-                <img src="zentinel-logo.png" alt="Zentinl logo" class="owl-logo">
-                <h1 class="display-4">Pricing</h1>
-                <p class="lead">Discover our cost-effective solution for captivating social media video content.</p>
-            </div>
-        </div>
-
-        <div class="pricing-row">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-8 offset-md-2">
-                        <h2 class="feature-title">Video Production Made Simple</h2>
-                        <p class="feature-text">Our AI technology makes video production accessible and affordable.</p>
-                        <p class="feature-text">Starting at $300 per video with a minimum of 20 videos monthly.</p>
-                        <div class="
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                        div class="text-center mt-4">
-                            <a class="btn btn-primary btn-lg" href="#" role="button">Get Started</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Just on Time Video Section -->
-    <section id="just-on-time-video" style="display: none;">
-        <div class="jumbotron">
-            <div class="container">
-                <img src="zentinel-logo.png" alt="Zentinl logo" class="owl-logo">
-                <h1 class="display-4">Just on Time Video</h1>
-                <p class="lead">AI-driven video generation tailored precisely when and how you need it.</p>
-            </div>
-        </div>
-
-        <div class="feature-row">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <h2 class="feature-title text-center mb-4">What is Just on Time Video?</h2>
-                        <p class="feature-text">Inspired by the Just-In-Time (JIT) production philosophy, our service generates videos exactly when they are needed. This approach minimizes waste, maximizes efficiency, and ensures your content is always timely and relevant.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="feature-row">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-4 text-center">
-                        <i class="fas fa-rocket feature-icon"></i>
-                        <h3 class="feature-title">Social Reels</h3>
-                        <p class="feature-text">Transform the latest news into engaging social reels that captivate your audience. We handle everything from creation to distribution.</p>
-                    </div>
-                    <div class="col-md-4 text-center">
-                        <i class="fas fa-book-open feature-icon"></i>
-                        <h3 class="feature-title">Education</h3>
-                        <p class="feature-text">Enhance learning with visually appealing videos tailored to specific educational needs and interests.</p>
-                    </div>
-                    <div class="col-md-4 text-center">
-                        <i class="fas fa-chart-pie feature-icon"></i>
-                        <h3 class="feature-title">Marketing & Sales</h3>
-                        <p class="feature-text">Drive sales with personalized video content that creates unique and memorable marketing experiences.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Modal -->
-    <div class="modal fade" id="contactModal" tabindex="-1" role="dialog" aria-labelledby="contactModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="contactModalLabel">Contact Us</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <div class="text-center">
-                        <img src="zentinel-logo.png" alt="Zentinl.com logo" class="modal-logo">
-                    </div>
-                    <form id="contactForm">
-                        <div class="form-group">
-                            <label for="name">Name</label>
-                            <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email address</label>
-                            <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Message</label>
-                            <textarea class="form-control" id="message" rows="4" placeholder="Enter your message" required></textarea>
-                        </div>
-                    </form>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary" id="submitButton">Submit</button>
-                </div>
-            </div>
-        </div>
+  <nav class="navbar navbar-expand-lg">
+    <div class="container">
+      <div class="pancake-menu" onclick="toggleMenu()">
+        <div class="pancake-bar"></div>
+        <div class="pancake-bar"></div>
+        <div class="pancake-bar"></div>
+      </div>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./pricing.html">Pricing</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#how-it-works">How It Works</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#benefits">Benefits</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">Contact</a>
+          </li>
+        </ul>
+      </div>
     </div>
+  </nav>
 
-    <!-- Footer -->
-    <footer>
-        <div class="footer-content">
-            <div class="social-links">
-                <a href="https://www.facebook.com/zentinl" target="_blank"><i class="fab fa-facebook"></i></a>
-                <a href="https://www.instagram.com/zentinl/" target="_blank"><i class="fab fa-instagram"></i></a>
-                <a href="https://t.me/zentinl" target="_blank"><i class="fab fa-telegram"></i></a>
-                <a href="https://x.com/zentinl" target="_blank"><i class="fab fa-twitter"></i></a>
-                <a href="https://www.linkedin.com/company/zentinl.com/" target="_blank"><i class="fab fa-linkedin"></i></a>
-                <a href="https://www.tiktok.com/@zentinl.com" target="_blank"><i class="fab fa-tiktok"></i></a>
-                <a href="https://www.youtube.com/zentinl/videos" target="_blank"><i class="fab fa-youtube"></i></a>
-                <a href="https://github.com/zentinl" target="_blank"><i class="fab fa-github"></i></a>
-            </div>
-            <p class="copyright">© Zentinl.com. All rights reserved.</p>
+  <div class="jumbotron">
+    <div class="container">
+      <img src="zentinel-logo.png" alt="Zentinl.com logo" class="owl-logo">
+      <h1 class="display-4">Revolutionize Your Social Media Presence</h1>
+      <p class="lead">Harness the power of artificial intelligence to create captivating, custom-generated
+        video content for your social networks from your own data. Stand out from the crowd and engage your audience like never before.</p>
+      <a class="btn btn-primary btn-lg" href="#" role="button">Get Started</a>
+    </div>
+  </div>
+
+  <div class="stats-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3 col-sm-6">
+          <div class="stat-card">
+            <div class="stat-number">500+</div>
+            <div class="stat-label">Active Users</div>
+          </div>
         </div>
-    </footer>
+        <div class="col-md-3 col-sm-6">
+          <div class="stat-card">
+            <div class="stat-number">10K+</div>
+            <div class="stat-label">Videos Generated</div>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <div class="stat-card">
+            <div class="stat-number">98%</div>
+            <div class="stat-label">Satisfaction Rate</div>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <div class="stat-card">
+            <div class="stat-number">24/7</div>
+            <div class="stat-label">Support Available</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
-    <!-- External JS Libraries -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <section id="how-it-works" class="how-it-works">
+    <div class="container">
+      <h2 class="text-center feature-title mb-5">How It Works</h2>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="step-card">
+            <div class="step-number">1</div>
+            <h3 class="feature-title">Connect Your Data</h3>
+            <p class="feature-text">Simply connect your data sources or upload your content. We support various formats including articles, listings, and product catalogs.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="step-card">
+            <div class="step-number">2</div>
+            <h3 class="feature-title">AI Magic</h3>
+            <p class="feature-text">Our AI analyzes your content and transforms it into engaging video formats optimized for social media platforms.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="step-card">
+            <div class="step-number">3</div>
+            <h3 class="feature-title">Publish & Share</h3>
+            <p class="feature-text">Automatically publish your videos across all major social networks or download them for custom distribution.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <!-- Custom JavaScript -->
-    <script>
-        $(document).ready(function() {
-            // Function to show a specific section and hide others
-            function showSection(sectionId) {
-                $('section').hide();
-                $('#' + sectionId).show();
-                // Update active class on navbar
-                $('.nav-item').removeClass('active');
-                $('.nav-link[data-section="' + sectionId + '"]').parent().addClass('active');
-            }
+  <div class="feature-row">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 text-center">
+          <i class="fas fa-palette feature-icon"></i>
+          <h3 class="feature-title">Tailored to Your Vision</h3>
+          <p class="feature-text">Our AI technology empowers you to create video content that perfectly aligns with your unique style, tone,
+            and target audience. Customize every aspect of your videos, from the visuals to the messaging, to ensure they
+            resonate with your followers and effectively communicate your brand's identity.</p>
+        </div>
+        <div class="col-md-4 text-center">
+          <i class="fas fa-video feature-icon"></i>
+          <h3 class="feature-title">Effortless Content Creation</h3>
+          <p class="feature-text">The best software is not software! We take your data and turn it into a video in minutes. Say goodbye to the time-consuming process of creating video content from scratch. Our advanced AI algorithms
+            generate high-quality, engaging videos at an unparalleled speed and scale. Focus on growing your business
+            while we take care of your content needs.</p>
+        </div>
+        <div class="col-md-4 text-center">
+          <i class="fas fa-chart-line feature-icon"></i>
+          <h3 class="feature-title">Maximize Engagement</h3>
+          <p class="feature-text">In the era of short attention spans, video content reigns supreme. Zentinl.com's AI-generated videos are
+            designed to capture your audience's interest, drive engagement, and boost your social media presence. Effortlessly upload content to
 
-            // Initially show the home section
-            showSection('home');
 
-            // Handle navigation link clicks
-            $('.nav-link[data-section]').click(function(e) {
-                e.preventDefault();
-                var section = $(this).data('section');
-                showSection(section);
-            });
 
-            // Handle contact form submission
-            $("#submitButton").click(function() {
-                var name = $("#name").val();
-                var email = $("#email").val();
-                var message = $("#message").val();
 
-                if (name && email && message) {
-                    // Here you would typically send the data to your server
-                    console.log("Form submitted:", {name, email, message});
-                    $("#contactForm")[0].reset();
-                    $("#contactModal").modal("hide");
-                } else {
-                    alert("Please fill in all fields before submitting.");
-                }
-            });
-        });
 
-        // Toggle mobile menu
-        function toggleMenu() {
-            document.querySelector('.navbar-collapse').classList.toggle('show');
+
+
+
+            all major social networks using their APIs. Watch your likes, shares, and followers soar.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="testimonial-section">
+    <div class="container">
+      <h2 class="text-center feature-title mb-5">What Our Clients Say</h2>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="testimonial-card">
+            <p class="feature-text">"Zentinl has transformed how we create content for our social media channels. The AI-generated videos are incredibly engaging and save us countless hours of production time."</p>
+            <div class="client-info">
+              <div>
+                <h4 class="feature-title mb-0">Sarah Johnson</h4>
+                <p class="feature-text mb-0">Marketing Director</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="testimonial-card">
+            <p class="feature-text">"The quality and consistency of videos generated by Zentinl is remarkable. Our engagement rates have increased by 300% since we started using the platform."</p>
+            <div class="client-info">
+              <div>
+                <h4 class="feature-title mb-0">Michael Chen</h4>
+                <p class="feature-text mb-0">Social Media Manager</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="testimonial-card">
+            <p class="feature-text">"As a real estate agent, Zentinl has been a game-changer. The property videos it creates are professional and engaging, helping us close deals faster."</p>
+            <div class="client-info">
+              <div>
+                <h4 class="feature-title mb-0">David Miller</h4>
+                <p class="feature-text mb-0">Real Estate Agent</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section id="benefits" class="benefits-section">
+    <div class="container">
+      <h2 class="text-center feature-title mb-5">Why Choose Zentinl</h2>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="benefit-card">
+            <i class="fas fa-bolt benefit-icon"></i>
+            <h3 class="feature-title">Lightning Fast</h3>
+            <p class="feature-text">Generate professional videos in minutes, not hours or days. Our AI works at unprecedented speed while maintaining quality.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="benefit-card">
+            <i class="fas fa-robot benefit-icon"></i>
+            <h3 class="feature-title">Advanced AI</h3>
+            <p class="feature-text">Powered by state-of-the-art artificial intelligence that understands context and creates compelling narratives.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="benefit-card">
+            <i class="fas fa-magic benefit-icon"></i>
+            <h3 class="feature-title">Automatic Optimization</h3>
+            <p class="feature-text">Videos are automatically optimized for each social platform's requirements and best practices.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="benefit-card">
+            <i class="fas fa-lock benefit-icon"></i>
+            <h3 class="feature-title">Secure & Private</h3>
+            <p class="feature-text">Your data is encrypted and protected. We never share or expose your content without permission.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="benefit-card">
+            <i class="fas fa-chart-bar benefit-icon"></i>
+            <h3 class="feature-title">Analytics & Insights</h3>
+            <p class="feature-text">Track performance metrics and get actionable insights to improve your video content strategy.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="benefit-card">
+            <i class="fas fa-users benefit-icon"></i>
+            <h3 class="feature-title">Dedicated Support</h3>
+            <p class="feature-text">Our expert team is available 24/7 to help you make the most of your video content.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="tech-stack">
+    <div class="container">
+      <h2 class="text-center feature-title mb-5">Powered by Advanced Technology</h2>
+      <div class="row text-center">
+        <div class="col-md-12">
+          <i class="fab fa-python tech-icon"></i>
+          <i class="fab fa-aws tech-icon"></i>
+          <i class="fab fa-react tech-icon"></i>
+          <i class="fab fa-node tech-icon"></i>
+          <i class="fab fa-docker tech-icon"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="cta-section">
+    <div class="container">
+      <h2 class="feature-title">Ready to Transform Your Content Strategy?</h2>
+      <p class="feature-text">Join thousands of businesses already using Zentinl to create engaging video content.</p>
+      <a class="btn btn-primary btn-lg" href="#" role="button">Start Your Free Trial</a>
+    </div>
+  </div>
+
+  <div class="feature-row">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h2 class="feature-title text-center mb-4">Transform Your Data into Captivating Video Content</h2>
+          <p class="feature-text">Zentinl empowers the best brands to convert their own data into stunning, engaging, and viral videos for social media. Our advanced AI technology seamlessly transforms your news articles, real estate listings, product photos, and more into a dynamic stream of videos that boost sales and engagement.</p>
+          <p class="feature-text">Integrating Zentinl into your social media strategy is a breeze. Our platform effortlessly connects with all major social networks, allowing you to publish and schedule your AI-generated videos with just a few clicks. Spend less time juggling tools and more time captivating your audience.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="feature-row">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 text-center">
+          <i class="fas fa-newspaper feature-icon"></i>
+          <h3 class="feature-title">News Reports</h3>
+          <p class="feature-text">Stream your news articles and reports into compelling video content that captures your audience's attention and keeps them informed. Our AI technology ensures that your news videos are visually appealing, informative, and shareable across social media platforms.</p>
+        </div>
+        <div class="col-md-4 text-center">
+          <i class="fas fa-home feature-icon"></i>
+          <h3 class="feature-title">Real Estate Listings</h3>
+          <p class="feature-text">Convert your real estate pictures and listings into immersive virtual tour videos that showcase the best features of your properties. Our AI-powered videos help potential buyers visualize themselves in their dream homes, increasing engagement and ultimately driving sales.</p>
+        </div>
+        <div class="col-md-4 text-center">
+          <i class="fas fa-car feature-icon"></i>
+          <h3 class="feature-title">High Value Products</h3>
+          <p class="feature-text">Transform static product images of cars, electronics, or any other merchandise into dynamic promotional videos that highlight their unique selling points. Our AI technology creates videos that effectively showcase your products, attract potential customers, and boost your sales.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="contactModal" tabindex="-1" role="dialog" aria-labelledby="contactModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="contactModalLabel">Contact Us</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="text-center">
+            <img src="zentinel-logo.png" alt="Zentinl.com logo" class="modal-logo">
+          </div>
+          <form id="contactForm">
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Email address</label>
+              <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea class="form-control" id="message" rows="4" placeholder="Enter your message" required></textarea>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" id="submitButton">Submit</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="scroll-to-top">
+    <i class="fas fa-arrow-up"></i>
+  </div>
+
+  <footer class="text-center py-3">
+    <div class="social-links">
+      <a href="https://www.facebook.com/zentinl" target="_blank"><i class="fab fa-facebook"></i></a>
+      <a href="https://www.instagram.com/zentinl/" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://t.me/zentinl" target="_blank"><i class="fab fa-telegram"></i></a>
+      <a href="https://x.com/zentinl" target="_blank"><i class="fab fa-twitter"></i></a>
+      <a href="https://www.linkedin.com/company/zentinl.com/" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a href="https://www.tiktok.com/@zentinl.com" target="_blank"><i class="fab fa-tiktok"></i></a>
+      <a href="https://www.youtube.com/zentinl/videos" target="_blank"><i class="fab fa-youtube"></i></a>
+      <a href="https://github.com/zentinl" target="_blank"><i class="fab fa-github"></i></a>
+    </div>
+    <p class="mt-3">&copy; Zentinl.com. All rights reserved.</p>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  <script>
+    $(document).ready(function () {
+      // Contact form modal
+      $(".nav-link[href='#contact']").click(function (e) {
+        e.preventDefault();
+        $("#contactModal").modal("show");
+      });
+
+      // Form submission
+      $("#submitButton").click(function () {
+        var name = $("#name").val();
+        var email = $("#email").val();
+        var message = $("#message").val();
+
+        if (name && email && message) {
+          console.log("Form submitted:", {name, email, message});
+          $("#contactForm")[0].reset();
+          $("#contactModal").modal("hide");
+        } else {
+          alert("Please fill in all fields before submitting.");
         }
-    </script>
+      });
+
+      // Smooth scroll for anchor links
+      $('a[href^="#"]').on('click', function (e) {
+        e.preventDefault();
+        var target = $(this.hash);
+        if (target.length) {
+          $('html, body').animate({
+            scrollTop: target.offset().top - 70
+          }, 1000);
+        }
+      });
+
+      // Scroll to top button
+      $(window).scroll(function () {
+        if ($(this).scrollTop() > 300) {
+          $('.scroll-to-top').addClass('visible');
+        } else {
+          $('.scroll-to-top').removeClass('visible');
+        }
+      });
+
+      $('.scroll-to-top').click(function () {
+        $('html, body').animate({ scrollTop: 0 }, 800);
+        return false;
+      });
+    });
+
+    // Mobile menu toggle
+    function toggleMenu() {
+      const navbar = document.querySelector('.navbar-collapse');
+      navbar.classList.toggle('show');
+    }
+  </script>
 </body>
 </html>
