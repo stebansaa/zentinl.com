@@ -23,6 +23,7 @@
 
     .navbar {
       background-color: #343a40;
+      padding: 0.5rem 1rem;
     }
 
     .navbar .nav-link {
@@ -118,7 +119,7 @@
       cursor: pointer;
       width: 30px;
       height: 22px;
-      display: flex;
+      display: none;
       flex-direction: column;
       justify-content: space-between;
     }
@@ -132,11 +133,8 @@
 
     /* Adjustments for better contrast */
     .navbar-toggler {
-      border-color: #ffffff;
-    }
-
-    .navbar-toggler-icon {
-      background-color: #ffffff;
+      border: none;
+      background: none;
     }
 
     /* Ensure all buttons have sufficient contrast */
@@ -180,10 +178,11 @@
     /* Pricing Section Styling */
     #pricing {
       padding: 4rem 0;
+      background-color: #ffffff;
     }
 
     #pricing .jumbotron {
-      background-color: #f8f9fa;
+      background-color: #ffffff;
       color: #212529;
       padding: 2rem 1rem;
       border-radius: 0.3rem;
@@ -231,8 +230,18 @@
       width: 100%;
     }
 
+    /* Just on Time Video Section Styling */
+    #just-on-time-video {
+      padding: 4rem 0;
+      background-color: #ffffff;
+    }
+
     /* Responsive adjustments */
     @media (max-width: 767.98px) {
+      .pancake-menu {
+        display: flex;
+      }
+
       .navbar-nav {
         text-align: center;
       }
@@ -360,7 +369,7 @@
   </section>
 
   <!-- Pricing Section -->
-  <section id="pricing" style="display: none;">
+  <section id="pricing">
     <div class="jumbotron">
       <div class="container">
         <img src="zentinel-logo.png" alt="Zentinl logo" class="owl-logo">
@@ -463,7 +472,7 @@
   </section>
 
   <!-- New Just on Time Video Section -->
-  <section id="just-on-time-video" style="display: none;">
+  <section id="just-on-time-video">
     <div class="jumbotron">
       <div class="container">
         <img src="zentinel-logo.png" alt="Zentinl logo" class="owl-logo">
@@ -588,7 +597,7 @@
         $('.nav-link[data-section="' + sectionId + '"]').parent().addClass('active');
       }
 
-      // Initially show the home section
+      // Initially show the home section and hide others
       showSection('home');
 
       // Handle navigation link clicks
@@ -596,12 +605,20 @@
         e.preventDefault();
         var section = $(this).data('section');
         showSection(section);
+        // Close the navbar collapse on mobile after clicking
+        if ($('.navbar-collapse').hasClass('show')) {
+          toggleMenu();
+        }
       });
 
       // Open the contact form modal when the "Contact" link is clicked
       $(".nav-link[data-toggle='modal']").click(function (e) {
         e.preventDefault();
         $("#contactModal").modal("show");
+        // Close the navbar collapse on mobile after clicking
+        if ($('.navbar-collapse').hasClass('show')) {
+          toggleMenu();
+        }
       });
 
       // Handle form submission
