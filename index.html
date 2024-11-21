@@ -288,7 +288,7 @@
         <h1 class="display-4">Revolutionize Your Social Media Presence</h1>
         <p class="lead">Harness the power of artificial intelligence to create captivating, custom-generated
           video content for your social networks. Stand out from the crowd and engage your audience like never before.</p>
-        <a class="btn btn-primary btn-lg" href="#" role="button">Get Started</a>
+        <a class="btn btn-primary btn-lg" href="#" role="button" data-toggle="modal" data-target="#contactModal">Get Started</a>
       </div>
     </div>
 
@@ -373,7 +373,7 @@
       <h2 class="feature-title">Ready to Transform Your Social Media Game?</h2>
       <p class="feature-text">Join the countless brands and influencers who have already unlocked the power of AI-generated video content.
         Sign up now and experience the Zentinl difference for yourself.</p>
-      <a class="btn btn-primary btn-lg" href="#" role="button">Get Started Today</a>
+      <a class="btn btn-primary btn-lg" href="#" role="button" data-toggle="modal" data-target="#contactModal">Get Started Today</a>
     </div>
   </section>
 
@@ -472,7 +472,7 @@
             <p>Pricing starts at $300 per video, with a minimum of 20 videos monthly. Maintain a steady stream of compelling content without breaking the bank.</p>
             <p>Don't let traditional video creation hold you back. Partner with Zentinl and unlock the power of AI-powered video production.</p>
             <div class="text-center mt-4">
-              <a class="btn btn-primary btn-lg" href="#" role="button">Get Started!</a>
+              <a class="btn btn-primary btn-lg" href="#" role="button" data-toggle="modal" data-target="#contactModal">Get Started!</a>
             </div>
           </div>
         </div>
@@ -532,7 +532,7 @@
     <div class="container my-5 text-center">
       <h2 class="feature-title">Experience the Future of Video Production</h2>
       <p class="feature-text">With Just on Time Video, you receive content that is not only high-quality but also perfectly timed to meet your specific needs. Enhance your engagement, streamline your content strategy, and stay ahead of the competition with our innovative AI solutions.</p>
-      <a class="btn btn-primary btn-lg" href="#" role="button">Get Started with Just on Time Video</a>
+      <a class="btn btn-primary btn-lg" href="#" role="button" data-toggle="modal" data-target="#contactModal">Get Started with Just on Time Video</a>
     </div>
   </section>
 
@@ -551,24 +551,26 @@
           <div class="text-center">
             <img src="zentinel-logo.png" alt="Zentinl.com logo" class="modal-logo">
           </div>
-          <form id="contactForm">
+          <form id="contactForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
             <div class="form-group">
               <label for="name">Name</label>
-              <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
+              <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name" required>
             </div>
             <div class="form-group">
               <label for="email">Email address</label>
-              <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+              <input type="email" class="form-control" id="email" name="_replyto" placeholder="Enter your email" required>
             </div>
             <div class="form-group">
               <label for="message">Message</label>
-              <textarea class="form-control" id="message" rows="4" placeholder="Enter your message" required></textarea>
+              <textarea class="form-control" id="message" name="message" rows="4" placeholder="Enter your message" required></textarea>
             </div>
+            <input type="hidden" name="_subject" value="New Contact Form Submission">
+            <input type="hidden" name="_next" value="https://zentinl.com/thank-you.html">
           </form>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary" id="submitButton">Submit</button>
+          <button type="submit" class="btn btn-primary" form="contactForm">Submit</button>
         </div>
       </div>
     </div>
@@ -617,24 +619,6 @@
         e.preventDefault();
         $("#contactModal").modal("show");
         $('.navbar-collapse').collapse('hide');
-      });
-
-      $("#submitButton").click(function () {
-        var name = $("#name").val();
-        var email = $("#email").val();
-        var message = $("#message").val();
-
-        if (name && email && message) {
-          console.log("Form submitted:");
-          console.log("Name:", name);
-          console.log("Email:", email);
-          console.log("Message:", message);
-
-          $("#contactForm")[0].reset();
-          $("#contactModal").modal("hide");
-        } else {
-          alert("Please fill in all fields before submitting.");
-        }
       });
     });
   </script>
