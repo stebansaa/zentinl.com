@@ -16,19 +16,15 @@
       font-family: 'Roboto', sans-serif;
       background-color: #ffffff;
       color: #212529;
-      scroll-behavior: smooth;
     }
 
     .navbar {
       background-color: #343a40;
-      padding: 0.75rem 1rem;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      padding: 0.5rem 1rem;
     }
 
     .navbar .nav-link {
       color: #ffffff !important;
-      font-weight: 500;
-      transition: color 0.3s;
     }
 
     .navbar .nav-link:hover,
@@ -36,42 +32,17 @@
       color: #d4d4d4 !important;
     }
 
-    .navbar-brand img {
-      max-width: 150px;
-      transition: max-width 0.3s;
-    }
-
-    .navbar-brand img:hover {
-      max-width: 160px;
-    }
-
     .jumbotron {
       background-color: #f8f9fa;
       color: #212529;
-      padding: 3rem 1rem;
-      border-radius: 0.5rem;
-      margin-bottom: 2rem;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    }
-
-    .jumbotron h1 {
-      font-weight: 700;
-      margin-bottom: 1.5rem;
-    }
-
-    .jumbotron p {
-      font-size: 1.1rem;
-      margin-bottom: 2rem;
+      padding: 2rem 1rem;
+      border-radius: 0.3rem;
     }
 
     .btn-primary {
       background-color: #007bff;
       border-color: #007bff;
       color: #ffffff;
-      padding: 0.75rem 1.5rem;
-      font-size: 1rem;
-      border-radius: 0.3rem;
-      transition: background-color 0.3s, border-color 0.3s;
     }
 
     .btn-primary:hover {
@@ -81,20 +52,17 @@
     }
 
     .feature-row {
-      padding: 3rem 0;
+      padding: 2rem 0;
       background-color: #ffffff;
     }
 
     .feature-title {
       color: #343a40;
       font-weight: 700;
-      margin-bottom: 1rem;
     }
 
     .feature-text {
       color: #495057;
-      font-size: 1rem;
-      line-height: 1.6;
     }
 
     .feature-icon {
@@ -111,27 +79,14 @@
     .modal-content {
       background-color: #ffffff;
       color: #212529;
-      border-radius: 0.5rem;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     }
 
     .modal-header {
       border-bottom: 1px solid #dee2e6;
-      padding: 1.5rem;
-    }
-
-    .modal-title {
-      font-weight: 700;
-      font-size: 1.5rem;
-    }
-
-    .modal-body {
-      padding: 1.5rem;
     }
 
     .modal-footer {
       border-top: 1px solid #dee2e6;
-      padding: 1.5rem;
     }
 
     .modal-logo {
@@ -142,18 +97,56 @@
     footer {
       background-color: #343a40;
       color: #ffffff;
-      padding: 2rem 0;
+      padding: 1.5rem 0;
     }
 
     footer .social-links a {
       color: #ffffff;
-      margin: 0 0.75rem;
+      margin: 0 0.5rem;
       font-size: 1.5rem;
       transition: color 0.3s;
     }
 
     footer .social-links a:hover {
       color: #d4d4d4;
+    }
+
+    /* Ensure all buttons have sufficient contrast */
+    .btn-secondary {
+      background-color: #6c757d;
+      border-color: #6c757d;
+      color: #ffffff;
+    }
+
+    .btn-secondary:hover {
+      background-color: #5a6268;
+      border-color: #545b62;
+      color: #ffffff;
+    }
+
+    /* Ensure modal buttons have sufficient contrast */
+    .modal-footer .btn-secondary {
+      background-color: #6c757d;
+      border-color: #6c757d;
+      color: #ffffff;
+    }
+
+    .modal-footer .btn-secondary:hover {
+      background-color: #5a6268;
+      border-color: #545b62;
+      color: #ffffff;
+    }
+
+    .modal-footer .btn-primary {
+      background-color: #007bff;
+      border-color: #007bff;
+      color: #ffffff;
+    }
+
+    .modal-footer .btn-primary:hover {
+      background-color: #0056b3;
+      border-color: #004085;
+      color: #ffffff;
     }
 
     /* Pricing Section Styling */
@@ -165,56 +158,50 @@
     #pricing .jumbotron {
       background-color: #ffffff;
       color: #212529;
-      padding: 2.5rem 1rem;
-      border-radius: 0.5rem;
-      margin-bottom: 3rem;
-      box-shadow: none;
+      padding: 2rem 1rem;
+      border-radius: 0.3rem;
+      margin-bottom: 2rem;
     }
 
     #pricing .feature-title-section {
       text-align: center;
-      margin-bottom: 3rem;
+      margin-bottom: 2rem;
     }
 
     #pricing .feature-title-section h2 {
       color: #343a40;
       font-weight: 700;
-      font-size: 2rem;
     }
 
     #pricing .pricing-content {
       padding: 2rem;
-      border-radius: 0.5rem;
+      border-radius: 0.3rem;
       background-color: #ffffff;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
     }
 
     #pricing .pricing-content h3 {
       color: #343a40;
       margin-bottom: 1rem;
-      font-weight: 700;
     }
 
     #pricing .pricing-content p,
     #pricing .pricing-content ol,
     #pricing .pricing-content ul {
       color: #495057;
-      font-size: 1rem;
-      line-height: 1.6;
     }
 
     #pricing .pricing-content ol li,
     #pricing .pricing-content ul li {
-      margin-bottom: 0.75rem;
+      margin-bottom: 0.5rem;
     }
 
     #pricing .pricing-content ul {
       list-style-type: disc;
-      padding-left: 1.5rem;
+      padding-left: 20px;
     }
 
     #pricing .btn-primary {
-      margin-top: 2rem;
+      margin-top: 1.5rem;
       width: 100%;
     }
 
@@ -226,36 +213,17 @@
 
     /* Responsive adjustments */
     @media (max-width: 767.98px) {
-      .navbar-brand img {
-        max-width: 120px;
-      }
-
-      .jumbotron {
-        padding: 2rem 1rem;
+      .navbar-nav {
+        text-align: center;
       }
 
       .feature-row {
-        padding: 2rem 0;
+        padding: 1rem 0;
       }
 
       #pricing .pricing-content {
-        padding: 1.5rem;
+        padding: 1rem;
       }
-
-      .btn-primary {
-        padding: 0.6rem 1.2rem;
-        font-size: 0.9rem;
-      }
-
-      footer .social-links a {
-        margin: 0 0.5rem;
-        font-size: 1.25rem;
-      }
-    }
-
-    /* Hide all sections initially */
-    section {
-      display: none;
     }
   </style>
 </head>
@@ -295,10 +263,11 @@
   <!-- Home Section -->
   <section id="home">
     <div class="jumbotron">
-      <div class="container text-center">
+      <div class="container">
         <img src="zentinel-logo.png" alt="Zentinl.com logo" class="owl-logo">
         <h1 class="display-4">Revolutionize Your Social Media Presence</h1>
-        <p class="lead">Harness the power of artificial intelligence to create captivating, custom-generated video content for your social networks. Stand out from the crowd and engage your audience like never before.</p>
+        <p class="lead">Harness the power of artificial intelligence to create captivating, custom-generated
+          video content for your social networks. Stand out from the crowd and engage your audience like never before.</p>
         <a class="btn btn-primary btn-lg" href="#" role="button">Get Started</a>
       </div>
     </div>
@@ -306,26 +275,32 @@
     <div class="feature-row">
       <div class="container">
         <div class="row">
-          <div class="col-md-4 text-center mb-4 mb-md-0">
+          <div class="col-md-4 text-center">
             <i class="fas fa-palette feature-icon"></i>
             <h3 class="feature-title">Tailored to Your Vision</h3>
-            <p class="feature-text">Our AI technology empowers you to create video content that perfectly aligns with your unique style, tone, and target audience. Customize every aspect of your videos, from the visuals to the messaging, to ensure they resonate with your followers and effectively communicate your brand's identity.</p>
+            <p class="feature-text">Our AI technology empowers you to create video content that perfectly aligns with your unique style, tone,
+              and target audience. Customize every aspect of your videos, from the visuals to the messaging, to ensure they
+              resonate with your followers and effectively communicate your brand's identity.</p>
           </div>
-          <div class="col-md-4 text-center mb-4 mb-md-0">
+          <div class="col-md-4 text-center">
             <i class="fas fa-video feature-icon"></i>
             <h3 class="feature-title">Effortless Content Creation</h3>
-            <p class="feature-text">The best software is not software! We take your data and turn it into a video in minutes. Say goodbye to the time-consuming process of creating video content from scratch. Our advanced AI algorithms generate high-quality, engaging videos at an unparalleled speed and scale. Focus on growing your business while we take care of your content needs.</p>
+            <p class="feature-text">The best software is not software! We take your data and turn it into a video in minutes. Say goodbye to the time-consuming process of creating video content from scratch. Our advanced AI algorithms
+              generate high-quality, engaging videos at an unparalleled speed and scale. Focus on growing your business
+              while we take care of your content needs.</p>
           </div>
           <div class="col-md-4 text-center">
             <i class="fas fa-chart-line feature-icon"></i>
             <h3 class="feature-title">Maximize Engagement</h3>
-            <p class="feature-text">In the era of short attention spans, video content reigns supreme. Zentinl.com's AI-generated videos are designed to capture your audience's interest, drive engagement, and boost your social media presence. Effortlessly upload content to all major social networks using their APIs. Watch your likes, shares, and followers soar.</p>
+            <p class="feature-text">In the era of short attention spans, video content reigns supreme. Zentinl.com's AI-generated videos are
+              designed to capture your audience's interest, drive engagement, and boost your social media presence. Effortlessly upload content to all major social networks using their APIs. Watch
+              your likes, shares, and followers soar.</p>
           </div>
         </div>
       </div>
     </div>
 
-    <div class="feature-row bg-light">
+    <div class="feature-row">
       <div class="container">
         <div class="row">
           <div class="col-md-12">
@@ -340,12 +315,12 @@
     <div class="feature-row">
       <div class="container">
         <div class="row">
-          <div class="col-md-4 text-center mb-4 mb-md-0">
+          <div class="col-md-4 text-center">
             <i class="fas fa-newspaper feature-icon"></i>
             <h3 class="feature-title">News Reports</h3>
             <p class="feature-text">Stream your news articles and reports into compelling video content that captures your audience's attention and keeps them informed. Our AI technology ensures that your news videos are visually appealing, informative, and shareable across social media platforms.</p>
           </div>
-          <div class="col-md-4 text-center mb-4 mb-md-0">
+          <div class="col-md-4 text-center">
             <i class="fas fa-home feature-icon"></i>
             <h3 class="feature-title">Real Estate Listings</h3>
             <p class="feature-text">Convert your real estate pictures and listings into immersive virtual tour videos that showcase the best features of your properties. Our AI-powered videos help potential buyers visualize themselves in their dream homes, increasing engagement and ultimately driving sales.</p>
@@ -361,14 +336,15 @@
 
     <div class="container my-5 text-center">
       <h2 class="feature-title">Ready to Transform Your Social Media Game?</h2>
-      <p class="feature-text">Join the countless brands and influencers who have already unlocked the power of AI-generated video content. Sign up now and experience the Zentinl difference for yourself.</p>
+      <p class="feature-text">Join the countless brands and influencers who have already unlocked the power of AI-generated video content.
+        Sign up now and experience the Zentinl difference for yourself.</p>
       <a class="btn btn-primary btn-lg" href="#" role="button">Get Started Today</a>
     </div>
   </section>
 
   <!-- Pricing Section -->
   <section id="pricing">
-    <div class="jumbotron text-center">
+    <div class="jumbotron">
       <div class="container">
         <img src="zentinel-logo.png" alt="Zentinl logo" class="owl-logo">
         <h1 class="display-4">Pricing</h1>
@@ -393,7 +369,7 @@
       </div>
     </div>
 
-    <div class="pricing-row bg-light">
+    <div class="pricing-row">
       <div class="container">
         <div class="row">
           <div class="col-md-8 offset-md-2 feature-title-section">
@@ -472,7 +448,7 @@
   <!-- New Just on Time Video Section -->
   <section id="just-on-time-video">
     <div class="jumbotron">
-      <div class="container text-center">
+      <div class="container">
         <img src="zentinel-logo.png" alt="Zentinl logo" class="owl-logo">
         <h1 class="display-4">Just on Time Video</h1>
         <p class="lead">AI-driven video generation tailored precisely when and how you need it, ensuring relevance and maximizing engagement.</p>
@@ -492,19 +468,22 @@
     </div>
 
     <!-- Applications Section -->
-    <div class="feature-row bg-light">
+    <div class="feature-row">
       <div class="container">
         <div class="row">
-          <div class="col-md-4 text-center mb-4 mb-md-0">
+          <!-- Social Reels -->
+          <div class="col-md-4 text-center">
             <i class="fas fa-rocket feature-icon"></i>
             <h3 class="feature-title">Social Reels</h3>
             <p class="feature-text">Transform the latest news into engaging social reels that captivate your audience. We not only create the videos but also handle the uploading and distribution across all major social platforms, ensuring maximum reach and engagement.</p>
           </div>
-          <div class="col-md-4 text-center mb-4 mb-md-0">
+          <!-- Education -->
+          <div class="col-md-4 text-center">
             <i class="fas fa-book-open feature-icon"></i>
             <h3 class="feature-title">Education</h3>
             <p class="feature-text">Enhance learning with visually appealing videos tailored to specific educational needs. For example, create visual aids for children learning vocabulary within the context of their interests, such as aviation, to boost engagement and retention.</p>
           </div>
+          <!-- Marketing and Sales -->
           <div class="col-md-4 text-center">
             <i class="fas fa-chart-pie feature-icon"></i>
             <h3 class="feature-title">Marketing & Sales</h3>
@@ -514,6 +493,7 @@
       </div>
     </div>
 
+    <!-- Additional Details or Testimonials (Optional) -->
     <div class="container my-5 text-center">
       <h2 class="feature-title">Experience the Future of Video Production</h2>
       <p class="feature-text">With Just on Time Video, you receive content that is not only high-quality but also perfectly timed to meet your specific needs. Enhance your engagement, streamline your content strategy, and stay ahead of the competition with our innovative AI solutions.</p>
@@ -533,7 +513,7 @@
           </button>
         </div>
         <div class="modal-body">
-          <div class="text-center mb-3">
+          <div class="text-center">
             <img src="zentinel-logo.png" alt="Zentinl.com logo" class="modal-logo">
           </div>
           <form id="contactForm">
@@ -560,8 +540,8 @@
   </div>
 
   <!-- Footer -->
-  <footer class="text-center py-4 mt-5">
-    <div class="social-links mb-3">
+  <footer class="text-center py-3 mt-5">
+    <div class="social-links">
       <a href="https://www.facebook.com/zentinl" target="_blank"><i class="fab fa-facebook"></i></a>
       <a href="https://www.instagram.com/zentinl/" target="_blank"><i class="fab fa-instagram"></i></a>
       <a href="https://t.me/zentinl" target="_blank"><i class="fab fa-telegram"></i></a>
@@ -571,7 +551,7 @@
       <a href="https://www.youtube.com/zentinl/videos" target="_blank"><i class="fab fa-youtube"></i></a>
       <a href="https://github.com/zentinl" target="_blank"><i class="fab fa-github"></i></a>
     </div>
-    <p class="mb-0">&copy; 2024 Zentinl.com. All rights reserved.</p>
+    <p class="mt-3">&copy; Zentinl.com. All rights reserved.</p>
   </footer>
 
   <!-- External JS Libraries -->
@@ -584,18 +564,17 @@
     $(document).ready(function () {
       function showSection(sectionId) {
         $('section').hide();
-        $('#' + sectionId).fadeIn(500);
+        $('#' + sectionId).show();
         $('.nav-item').removeClass('active');
         $('.nav-link[data-section="' + sectionId + '"]').parent().addClass('active');
       }
+
+      showSection('home');
 
       $('.nav-link[data-section]').click(function (e) {
         e.preventDefault();
         var section = $(this).data('section');
         showSection(section);
-        $('html, body').animate({
-          scrollTop: $('#' + section).offset().top - $('.navbar').outerHeight()
-        }, 600);
         $('.navbar-collapse').collapse('hide');
       });
 
@@ -606,9 +585,9 @@
       });
 
       $("#submitButton").click(function () {
-        var name = $("#name").val().trim();
-        var email = $("#email").val().trim();
-        var message = $("#message").val().trim();
+        var name = $("#name").val();
+        var email = $("#email").val();
+        var message = $("#message").val();
 
         if (name && email && message) {
           console.log("Form submitted:");
@@ -618,7 +597,6 @@
 
           $("#contactForm")[0].reset();
           $("#contactModal").modal("hide");
-          alert("Thank you for contacting us! We'll get back to you shortly.");
         } else {
           alert("Please fill in all fields before submitting.");
         }
