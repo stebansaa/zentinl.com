@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zentinl.com - AI-Generated Video for Social Networks</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      color: #fff;
+      background-color: #0c1b33;
+    }
+
+    .jumbotron {
+      background-color: #0c1b33;
+      text-align: center;
+      padding-top: 80px;
+      padding-bottom: 80px;
+    }
+
+    .logo {
+      max-width: 200px;
+      margin-bottom: 30px;
+    }
+
+    .btn-primary {
+      background-color: #1e88e5;
+      border-color: #1e88e5;
+    }
+
+    .btn-primary:hover {
+      background-color: #1565c0;
+      border-color: #1565c0;
+    }
+
+    .social-links {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
+
+    .social-links a {
+      margin: 0 10px;
+      color: #fff;
+      font-size: 24px;
+      transition: color 0.3s;
+    }
+
+    .social-links a:hover {
+      color: #1e88e5;
+    }
+
+    .owl-logo {
+      max-width: 150px;
+      margin-bottom: 20px;
+    }
+
+    .feature-icon {
+      font-size: 48px;
+      color: #1e88e5;
+      margin-bottom: 20px;
+    }
+
+    .feature-title {
+      color: #fff;
+    }
+
+    .feature-text {
+      color: #c7d1e6;
+    }
+
+    footer {
+      background-color: #0c1b33;
+      color: #fff;
+    }
+
+    .navbar {
+      background-color: #0c1b33;
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
+
+    .nav-link {
+      color: #fff;
+      font-size: 18px;
+      margin-left: 20px;
+    }
+
+    .nav-link:hover {
+      color: #1e88e5;
+    }
+
+    .feature-row {
+      background-color: #162b4d;
+      padding: 60px 0;
+    }
+
+    .feature-row:nth-child(even) {
+      background-color: #1a3a67;
+    }
+
+    .modal-content {
+      background-color: #1a3a67;
+      color: #fff;
+    }
+
+    .modal-header,
+    .modal-footer {
+      border-color: #162b4d;
+    }
+
+    .form-control {
+      background-color: #162b4d;
+      color: #fff;
+      border-color: #1e88e5;
+    }
+
+    .form-control:focus {
+      background-color: #162b4d;
+      color: #fff;
+      border-color: #1e88e5;
+      box-shadow: none;
+    }
+
+    .modal-logo {
+      max-width: 100px;
+      margin-bottom: 20px;
+    }
+
+    .pancake-menu {
+      display: none;
+      cursor: pointer;
+      float: right;
+      padding: 10px;
+      margin-top: 10px;
+      margin-right: 20px;
+    }
+
+    .pancake-bar {
+      width: 25px;
+      height: 3px;
+      background-color: #fff;
+      margin: 5px 0;
+      transition: 0.4s;
+    }
+
+    @media (max-width: 992px) {
+      .pancake-menu {
+        display: block;
+      }
+
+      .navbar-collapse {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: #0c1b33;
+        padding: 20px;
+        z-index: 999;
+      }
+
+      .navbar-collapse.show {
+        display: block;
+      }
+
+      .nav-link {
+        margin-left: 0;
+        margin-bottom: 10px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg">
+    <div class="container">
+      <div class="pancake-menu" onclick="toggleMenu()">
+        <div class="pancake-bar"></div>
+        <div class="pancake-bar"></div>
+        <div class="pancake-bar"></div>
+      </div>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./pricing.html">Pricing</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="jumbotron">
+    <div class="container">
+      <img src="zentinel-logo.png" alt="Zentinl.com logo" class="owl-logo">
+      <h1 class="display-4">Revolutionize Your Social Media Presence</h1>
+      <p class="lead">Harness the power of artificial intelligence to create captivating, custom-generated
+        video content for your social networks from your own data.  Stand out from the crowd and engage your audience like never before.</p>
+      <a class="btn btn-primary btn-lg" href="#" role="button">Get Started</a>
+    </div>
+  </div>
+
+  <div class="feature-row">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 text-center">
+          <i class="fas fa-palette feature-icon"></i>
+          <h3 class="feature-title">Tailored to Your Vision</h3>
+          <p class="feature-text">Our AI technology empowers you to create video content that perfectly aligns with your unique style, tone,
+            and target audience. Customize every aspect of your videos, from the visuals to the messaging, to ensure they
+            resonate with your followers and effectively communicate your brand's identity.</p>
+        </div>
+        <div class="col-md-4 text-center">
+          <i class="fas fa-video feature-icon"></i>
+          <h3 class="feature-title">Effortless Content Creation</h3>
+          <p class="feature-text">The best software is not software! We take your data and turn it into a video in minutes. Say goodbye to the time-consuming process of creating video content from scratch. Our advanced AI algorithms
+            generate high-quality, engaging videos at an unparalleled speed and scale. Focus on growing your business
+            while we take care of your content needs.</p>
+        </div>
+        <div class="col-md-4 text-center">
+          <i class="fas fa-chart-line feature-icon"></i>
+          <h3 class="feature-title">Maximize Engagement</h3>
+          <p class="feature-text">In the era of short attention spans, video content reigns supreme. Zentinl.com's AI-generated videos are
+            designed to capture your audience's interest, drive engagement, and boost your social media presence. Effortlessly upload content to all major social networks using their APIs. Watch
+            your likes, shares, and followers soar.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="feature-row">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h2 class="feature-title text-center mb-4">Transform Your Data into Captivating Video Content</h2>
+          <p class="feature-text">Zentinl empowers the best brands to convert their own data into stunning, engaging, and viral videos for social media. Our advanced AI technology seamlessly transforms your news articles, real estate listings, product photos, and more into a dynamic stream of videos that boost sales and engagement.</p>
+          <p class="feature-text">Integrating Zentinl into your social media strategy is a breeze. Our platform effortlessly connects with all major social networks, allowing you to publish and schedule your AI-generated videos with just a few clicks. Spend less time juggling tools and more time captivating your audience.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="feature-row">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 text-center">
+          <i class="fas fa-newspaper feature-icon"></i>
+          <h3 class="feature-title">News Reports</h3>
+          <p class="feature-text">Stream your news articles and reports into compelling video content that captures your audience's attention and keeps them informed. Our AI technology ensures that your news videos are visually appealing, informative, and shareable across social media platforms.</p>
+        </div>
+        <div class="col-md-4 text-center">
+          <i class="fas fa-home feature-icon"></i>
+          <h3 class="feature-title">Real Estate Listings</h3>
+          <p class="feature-text">Convert your real estate pictures and listings into immersive virtual tour videos that showcase the best features of your properties. Our AI-powered videos help potential buyers visualize themselves in their dream homes, increasing engagement and ultimately driving sales.</p>
+        </div>
+        <div class="col-md-4 text-center">
+          <i class="fas fa-car feature-icon"></i>
+          <h3 class="feature-title">High value Products</h3>
+          <p class="feature-text">Transform static product images of cars, electronics, or any other merchandise into dynamic promotional videos that highlight their unique selling points. Our AI technology creates videos that effectively showcase your products, attract potential customers, and boost your sales.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container my-5 text-center">
+    <h2 class="feature-title">Ready to Transform Your Social Media Game?</h2>
+    <p class="feature-text">Join the countless brands and influencers who have already unlocked the power of AI-generated video content.
+      Sign up now and experience the Zentinl difference for yourself.</p>
+    <a class="btn btn-primary btn-lg" href="#" role="button">Get Started Today</a>
+  </div>
+
+  <div class="modal fade" id="contactModal" tabindex="-1" role="dialog" aria-labelledby="contactModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="contactModalLabel">Contact Us</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="text-center">
+            <img src="zentinel-logo.png" alt="Zentinl.com logo" class="modal-logo">
+          </div>
+          <form id="contactForm">
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Email address</label>
+              <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea class="form-control" id="message" rows="4" placeholder="Enter your message" required></textarea>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" id="submitButton">Submit</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="text-center py-3 mt-5">
+    <div class="social-links">
+      <a href="https://www.facebook.com/zentinl" target="https://www.facebook.com/zentinl"><i class="fab fa-facebook"></i></a>
+      <a href="https://www.instagram.com/zentinl/" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://t.me/zentinl" target="https://t.me/zentinl"><i class="fab fa-telegram"></i></a>
+      <a href="https://x.com/zentinl" target="_blank"><i class="fab fa-twitter"></i></a>
+      <a href="https://www.linkedin.com/company/zentinl.com/" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a href="https://www.tiktok.com/@zentinl.com" target="_blank"><i class="fab fa-tiktok"></i></a>
+      <a href="https://www.youtube.com/zentinl/videos" target="_blank"><i class="fab fa-youtube"></i></a>
+      <a href="https://github.com/zentinl" target="_blank"><i class="fab fa-github"></i></a>
+    </div>
+    <p class="mt-3">&copy; Zentinl.com. All rights reserved.</p>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  <script>
+    $(document).ready(function () {
+      // Open the contact form modal when the "Contact" link is clicked
+      $(".nav-link[href='#contact']").click(function (e) {
+        e.preventDefault();
+        $("#contactModal").modal("show");
+      });
+
+      // Handle form submission
+      $("#submitButton").click(function () {
+        var name = $("#name").val();
+        var email = $("#email").val();
+        var message = $("#message").val();
+
+        if (name && email && message) {
+          // Perform form submission logic here (e.g., send data to server)
+          console.log("Form submitted:");
+          console.log("Name:", name);
+          console.log("Email:", email);
+          console.log("Message:", message);
+
+          // Reset the form after submission
+          $("#contactForm")[0].reset();
+
+          // Close the modal
+          $("#contactModal").modal("hide");
+        }
+      });
+    });
+
+       function toggleMenu() {
+      const navbar = document.querySelector('.navbar-collapse');
+      navbar.classList.toggle('show');
+    }
+  </script>
+</body>
+
+</html>
