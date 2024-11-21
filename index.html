@@ -46,7 +46,7 @@
 
   <!-- Home Section -->
   <section id="home">
-    <div class="jumbotron jumbotron-home">
+    <div class="jumbotron">
       <div class="container">
         <img src="zentinel-logo.png" alt="Zentinl.com logo" class="owl-logo">
         <h1 class="display-4">Revolutionize Your Social Media Presence</h1>
@@ -128,7 +128,7 @@
 
   <!-- Pricing Section -->
   <section id="pricing" style="display: none;">
-    <div class="jumbotron jumbotron-pricing">
+    <div class="jumbotron">
       <div class="container">
         <img src="zentinel-logo.png" alt="Zentinl logo" class="owl-logo">
         <h1 class="display-4">Pricing</h1>
@@ -209,9 +209,9 @@
     </div>
   </section>
 
-  <!-- Just on Time Video Section -->
+  <!-- New Just on Time Video Section -->
   <section id="just-on-time-video" style="display: none;">
-    <div class="jumbotron jumbotron-jotv">
+    <div class="jumbotron">
       <div class="container">
         <img src="zentinel-logo.png" alt="Zentinl logo" class="owl-logo">
         <h1 class="display-4">Just on Time Video</h1>
@@ -329,13 +329,10 @@
       // Function to show a specific section and hide others
       function showSection(sectionId) {
         $('section').hide();
-        $('#' + sectionId).fadeIn(300);
+        $('#' + sectionId).show();
         // Update active class on navbar
         $('.nav-item').removeClass('active');
         $('.nav-link[data-section="' + sectionId + '"]').parent().addClass('active');
-
-        // Scroll to top when a new section is shown
-        $('html, body').animate({ scrollTop: 0 }, 'fast');
       }
 
       // Initially show the home section
@@ -372,9 +369,6 @@
 
           // Close the modal
           $("#contactModal").modal("hide");
-
-          // Optionally, display a success message
-          alert("Thank you for contacting us! We'll get back to you shortly.");
         } else {
           alert("Please fill in all fields before submitting.");
         }
