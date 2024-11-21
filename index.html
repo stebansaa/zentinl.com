@@ -16,6 +16,7 @@
       font-family: 'Roboto', sans-serif;
       background-color: #ffffff;
       color: #212529;
+      scroll-behavior: smooth;
     }
 
     .navbar {
@@ -26,8 +27,8 @@
 
     .navbar .nav-link {
       color: #ffffff !important;
-      transition: color 0.3s;
       font-weight: 500;
+      transition: color 0.3s;
     }
 
     .navbar .nav-link:hover,
@@ -36,6 +37,11 @@
     }
 
     .navbar-brand img {
+      max-width: 150px;
+      transition: max-width 0.3s;
+    }
+
+    .navbar-brand img:hover {
       max-width: 160px;
     }
 
@@ -44,18 +50,18 @@
       color: #212529;
       padding: 3rem 1rem;
       border-radius: 0.5rem;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
       margin-bottom: 2rem;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     }
 
     .jumbotron h1 {
       font-weight: 700;
-      margin-bottom: 1rem;
+      margin-bottom: 1.5rem;
     }
 
-    .jumbotron p.lead {
+    .jumbotron p {
       font-size: 1.1rem;
-      margin-bottom: 1.5rem;
+      margin-bottom: 2rem;
     }
 
     .btn-primary {
@@ -82,7 +88,7 @@
     .feature-title {
       color: #343a40;
       font-weight: 700;
-      margin-bottom: 1.5rem;
+      margin-bottom: 1rem;
     }
 
     .feature-text {
@@ -116,7 +122,7 @@
 
     .modal-title {
       font-weight: 700;
-      font-size: 1.25rem;
+      font-size: 1.5rem;
     }
 
     .modal-body {
@@ -141,55 +147,13 @@
 
     footer .social-links a {
       color: #ffffff;
-      margin: 0 0.5rem;
+      margin: 0 0.75rem;
       font-size: 1.5rem;
       transition: color 0.3s;
     }
 
     footer .social-links a:hover {
       color: #d4d4d4;
-    }
-
-    /* Ensure all buttons have sufficient contrast */
-    .btn-secondary {
-      background-color: #6c757d;
-      border-color: #6c757d;
-      color: #ffffff;
-      padding: 0.75rem 1.5rem;
-      font-size: 1rem;
-      border-radius: 0.3rem;
-      transition: background-color 0.3s, border-color 0.3s;
-    }
-
-    .btn-secondary:hover {
-      background-color: #5a6268;
-      border-color: #545b62;
-      color: #ffffff;
-    }
-
-    /* Ensure modal buttons have sufficient contrast */
-    .modal-footer .btn-secondary {
-      background-color: #6c757d;
-      border-color: #6c757d;
-      color: #ffffff;
-    }
-
-    .modal-footer .btn-secondary:hover {
-      background-color: #5a6268;
-      border-color: #545b62;
-      color: #ffffff;
-    }
-
-    .modal-footer .btn-primary {
-      background-color: #007bff;
-      border-color: #007bff;
-      color: #ffffff;
-    }
-
-    .modal-footer .btn-primary:hover {
-      background-color: #0056b3;
-      border-color: #004085;
-      color: #ffffff;
     }
 
     /* Pricing Section Styling */
@@ -201,15 +165,15 @@
     #pricing .jumbotron {
       background-color: #ffffff;
       color: #212529;
-      padding: 2.5rem 1.5rem;
+      padding: 2.5rem 1rem;
       border-radius: 0.5rem;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
       margin-bottom: 3rem;
+      box-shadow: none;
     }
 
     #pricing .feature-title-section {
       text-align: center;
-      margin-bottom: 2.5rem;
+      margin-bottom: 3rem;
     }
 
     #pricing .feature-title-section h2 {
@@ -223,7 +187,6 @@
       border-radius: 0.5rem;
       background-color: #ffffff;
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-      margin-bottom: 2rem;
     }
 
     #pricing .pricing-content h3 {
@@ -251,10 +214,8 @@
     }
 
     #pricing .btn-primary {
-      margin-top: 1.5rem;
+      margin-top: 2rem;
       width: 100%;
-      padding: 0.75rem 1.5rem;
-      font-size: 1rem;
     }
 
     /* Just on Time Video Section Styling */
@@ -273,22 +234,22 @@
         padding: 2rem 1rem;
       }
 
-      .feature-icon {
-        font-size: 2.5rem;
-      }
-
-      .btn-primary,
-      .btn-secondary {
-        width: 100%;
-        text-align: center;
-      }
-
       .feature-row {
         padding: 2rem 0;
       }
 
       #pricing .pricing-content {
         padding: 1.5rem;
+      }
+
+      .btn-primary {
+        padding: 0.6rem 1.2rem;
+        font-size: 0.9rem;
+      }
+
+      footer .social-links a {
+        margin: 0 0.5rem;
+        font-size: 1.25rem;
       }
     }
   </style>
@@ -359,7 +320,7 @@
       </div>
     </div>
 
-    <div class="feature-row">
+    <div class="feature-row bg-light">
       <div class="container">
         <div class="row">
           <div class="col-md-12">
@@ -402,8 +363,8 @@
 
   <!-- Pricing Section -->
   <section id="pricing">
-    <div class="jumbotron">
-      <div class="container text-center">
+    <div class="jumbotron text-center">
+      <div class="container">
         <img src="zentinel-logo.png" alt="Zentinl logo" class="owl-logo">
         <h1 class="display-4">Pricing</h1>
         <p class="lead">Discover the cost-effective solution for captivating social media video content.</p>
@@ -427,7 +388,7 @@
       </div>
     </div>
 
-    <div class="pricing-row">
+    <div class="pricing-row bg-light">
       <div class="container">
         <div class="row">
           <div class="col-md-8 offset-md-2 feature-title-section">
@@ -503,7 +464,7 @@
     </div>
   </section>
 
-  <!-- Just on Time Video Section -->
+  <!-- New Just on Time Video Section -->
   <section id="just-on-time-video">
     <div class="jumbotron">
       <div class="container text-center">
@@ -526,22 +487,19 @@
     </div>
 
     <!-- Applications Section -->
-    <div class="feature-row">
+    <div class="feature-row bg-light">
       <div class="container">
         <div class="row">
-          <!-- Social Reels -->
           <div class="col-md-4 text-center mb-4 mb-md-0">
             <i class="fas fa-rocket feature-icon"></i>
             <h3 class="feature-title">Social Reels</h3>
             <p class="feature-text">Transform the latest news into engaging social reels that captivate your audience. We not only create the videos but also handle the uploading and distribution across all major social platforms, ensuring maximum reach and engagement.</p>
           </div>
-          <!-- Education -->
           <div class="col-md-4 text-center mb-4 mb-md-0">
             <i class="fas fa-book-open feature-icon"></i>
             <h3 class="feature-title">Education</h3>
             <p class="feature-text">Enhance learning with visually appealing videos tailored to specific educational needs. For example, create visual aids for children learning vocabulary within the context of their interests, such as aviation, to boost engagement and retention.</p>
           </div>
-          <!-- Marketing and Sales -->
           <div class="col-md-4 text-center">
             <i class="fas fa-chart-pie feature-icon"></i>
             <h3 class="feature-title">Marketing & Sales</h3>
@@ -608,7 +566,7 @@
       <a href="https://www.youtube.com/zentinl/videos" target="_blank"><i class="fab fa-youtube"></i></a>
       <a href="https://github.com/zentinl" target="_blank"><i class="fab fa-github"></i></a>
     </div>
-    <p class="mb-0">&copy; Zentinl.com. All rights reserved.</p>
+    <p class="mb-0">&copy; 2024 Zentinl.com. All rights reserved.</p>
   </footer>
 
   <!-- External JS Libraries -->
@@ -621,7 +579,7 @@
     $(document).ready(function () {
       function showSection(sectionId) {
         $('section').hide();
-        $('#' + sectionId).fadeIn(300);
+        $('#' + sectionId).fadeIn(500);
         $('.nav-item').removeClass('active');
         $('.nav-link[data-section="' + sectionId + '"]').parent().addClass('active');
       }
@@ -632,6 +590,9 @@
         e.preventDefault();
         var section = $(this).data('section');
         showSection(section);
+        $('html, body').animate({
+          scrollTop: $('#' + section).offset().top - $('.navbar').outerHeight()
+        }, 600);
         $('.navbar-collapse').collapse('hide');
       });
 
@@ -654,6 +615,7 @@
 
           $("#contactForm")[0].reset();
           $("#contactModal").modal("hide");
+          alert("Thank you for contacting us! We'll get back to you shortly.");
         } else {
           alert("Please fill in all fields before submitting.");
         }
