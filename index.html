@@ -5,15 +5,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Zentinl.com - AI-Generated Video for Social Networks</title>
-  <!-- External CSS -->
-  <link rel="stylesheet" href="style.css">
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-  <!-- Improved Contrast CSS -->
   <style>
     body {
       font-family: 'Roboto', sans-serif;
@@ -114,29 +111,6 @@
       color: #d4d4d4;
     }
 
-    /* Pancake Menu Styles */
-    .pancake-menu {
-      cursor: pointer;
-      width: 30px;
-      height: 22px;
-      display: none;
-      flex-direction: column;
-      justify-content: space-between;
-    }
-
-    .pancake-bar {
-      width: 100%;
-      height: 4px;
-      background-color: #ffffff;
-      border-radius: 2px;
-    }
-
-    /* Adjustments for better contrast */
-    .navbar-toggler {
-      border: none;
-      background: none;
-    }
-
     /* Ensure all buttons have sufficient contrast */
     .btn-secondary {
       background-color: #6c757d;
@@ -202,6 +176,7 @@
     #pricing .pricing-content {
       padding: 2rem;
       border-radius: 0.3rem;
+      background-color: #ffffff;
     }
 
     #pricing .pricing-content h3 {
@@ -238,10 +213,6 @@
 
     /* Responsive adjustments */
     @media (max-width: 767.98px) {
-      .pancake-menu {
-        display: flex;
-      }
-
       .navbar-nav {
         text-align: center;
       }
@@ -261,11 +232,15 @@
   <!-- Navigation Bar -->
   <nav class="navbar navbar-expand-lg">
     <div class="container">
-      <div class="pancake-menu" onclick="toggleMenu()">
-        <div class="pancake-bar"></div>
-        <div class="pancake-bar"></div>
-        <div class="pancake-bar"></div>
-      </div>
+      <a class="navbar-brand" href="#">
+        <img src="zentinel-logo.png" alt="Zentinl.com logo" class="owl-logo">
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon">
+          <i class="fas fa-bars" style="color: #ffffff; font-size: 1.5rem;"></i>
+        </span>
+      </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item active">
@@ -274,7 +249,6 @@
           <li class="nav-item">
             <a class="nav-link" href="#" data-section="pricing">Pricing</a>
           </li>
-          <!-- New Navigation Link for Just on Time Video -->
           <li class="nav-item">
             <a class="nav-link" href="#" data-section="just-on-time-video">Just on Time Video</a>
           </li>
@@ -588,68 +562,46 @@
   <!-- Custom JavaScript -->
   <script>
     $(document).ready(function () {
-      // Function to show a specific section and hide others
       function showSection(sectionId) {
         $('section').hide();
         $('#' + sectionId).show();
-        // Update active class on navbar
         $('.nav-item').removeClass('active');
         $('.nav-link[data-section="' + sectionId + '"]').parent().addClass('active');
       }
 
-      // Initially show the home section and hide others
       showSection('home');
 
-      // Handle navigation link clicks
       $('.nav-link[data-section]').click(function (e) {
         e.preventDefault();
         var section = $(this).data('section');
         showSection(section);
-        // Close the navbar collapse on mobile after clicking
-        if ($('.navbar-collapse').hasClass('show')) {
-          toggleMenu();
-        }
+        $('.navbar-collapse').collapse('hide');
       });
 
-      // Open the contact form modal when the "Contact" link is clicked
       $(".nav-link[data-toggle='modal']").click(function (e) {
         e.preventDefault();
         $("#contactModal").modal("show");
-        // Close the navbar collapse on mobile after clicking
-        if ($('.navbar-collapse').hasClass('show')) {
-          toggleMenu();
-        }
+        $('.navbar-collapse').collapse('hide');
       });
 
-      // Handle form submission
       $("#submitButton").click(function () {
         var name = $("#name").val();
         var email = $("#email").val();
         var message = $("#message").val();
 
         if (name && email && message) {
-          // Perform form submission logic here (e.g., send data to server)
           console.log("Form submitted:");
           console.log("Name:", name);
           console.log("Email:", email);
           console.log("Message:", message);
 
-          // Reset the form after submission
           $("#contactForm")[0].reset();
-
-          // Close the modal
           $("#contactModal").modal("hide");
         } else {
           alert("Please fill in all fields before submitting.");
         }
       });
     });
-
-    // Toggle the navigation menu on small screens
-    function toggleMenu() {
-      const navbar = document.querySelector('.navbar-collapse');
-      navbar.classList.toggle('show');
-    }
   </script>
 </body>
 
