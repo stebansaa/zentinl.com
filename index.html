@@ -13,62 +13,62 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-  <!-- Improved Contrast and Dark Theme CSS -->
+  <!-- Improved Contrast CSS -->
   <style>
     body {
       font-family: 'Roboto', sans-serif;
-      background-color: #121212;
-      color: #e0e0e0;
+      background-color: #ffffff;
+      color: #212529;
     }
 
     .navbar {
-      background-color: #1f1f1f;
+      background-color: #343a40;
     }
 
     .navbar .nav-link {
-      color: #e0e0e0 !important;
+      color: #ffffff !important;
     }
 
     .navbar .nav-link:hover,
     .navbar .nav-link:focus {
-      color: #ffffff !important;
+      color: #d4d4d4 !important;
     }
 
     .jumbotron {
-      background-color: #1e1e1e;
-      color: #e0e0e0;
+      background-color: #f8f9fa;
+      color: #212529;
       padding: 2rem 1rem;
       border-radius: 0.3rem;
     }
 
     .btn-primary {
-      background-color: #bb86fc;
-      border-color: #bb86fc;
-      color: #121212;
+      background-color: #007bff;
+      border-color: #007bff;
+      color: #ffffff;
     }
 
     .btn-primary:hover {
-      background-color: #985eff;
-      border-color: #7a5afc;
+      background-color: #0056b3;
+      border-color: #004085;
       color: #ffffff;
     }
 
     .feature-row {
       padding: 2rem 0;
-      background-color: #1f1f1f;
+      background-color: #ffffff;
     }
 
     .feature-title {
-      color: #ffffff;
+      color: #343a40;
       font-weight: 700;
     }
 
     .feature-text {
-      color: #cfcfcf;
+      color: #495057;
     }
 
     .feature-icon {
-      color: #bb86fc;
+      color: #007bff;
       font-size: 3rem;
       margin-bottom: 1rem;
     }
@@ -79,16 +79,16 @@
     }
 
     .modal-content {
-      background-color: #2c2c2c;
-      color: #e0e0e0;
+      background-color: #ffffff;
+      color: #212529;
     }
 
     .modal-header {
-      border-bottom: 1px solid #444;
+      border-bottom: 1px solid #dee2e6;
     }
 
     .modal-footer {
-      border-top: 1px solid #444;
+      border-top: 1px solid #dee2e6;
     }
 
     .modal-logo {
@@ -97,20 +97,20 @@
     }
 
     footer {
-      background-color: #1f1f1f;
-      color: #e0e0e0;
+      background-color: #343a40;
+      color: #ffffff;
       padding: 1.5rem 0;
     }
 
     footer .social-links a {
-      color: #e0e0e0;
+      color: #ffffff;
       margin: 0 0.5rem;
       font-size: 1.5rem;
       transition: color 0.3s;
     }
 
     footer .social-links a:hover {
-      color: #bb86fc;
+      color: #d4d4d4;
     }
 
     /* Pancake Menu Styles */
@@ -126,109 +126,116 @@
     .pancake-bar {
       width: 100%;
       height: 4px;
-      background-color: #e0e0e0;
+      background-color: #ffffff;
       border-radius: 2px;
     }
 
     /* Adjustments for better contrast */
     .navbar-toggler {
-      border-color: #e0e0e0;
+      border-color: #ffffff;
     }
 
     .navbar-toggler-icon {
-      background-color: #e0e0e0;
-      width: 30px;
-      height: 3px;
-      display: block;
-      position: relative;
-    }
-
-    .navbar-toggler-icon::before,
-    .navbar-toggler-icon::after {
-      content: '';
-      background-color: #e0e0e0;
-      width: 30px;
-      height: 3px;
-      display: block;
-      position: absolute;
-      left: 0;
-      transition: all 0.3s;
-    }
-
-    .navbar-toggler-icon::before {
-      top: -8px;
-    }
-
-    .navbar-toggler-icon::after {
-      top: 8px;
+      background-color: #ffffff;
     }
 
     /* Ensure all buttons have sufficient contrast */
     .btn-secondary {
-      background-color: #3a3a3a;
-      border-color: #3a3a3a;
-      color: #e0e0e0;
+      background-color: #6c757d;
+      border-color: #6c757d;
+      color: #ffffff;
     }
 
     .btn-secondary:hover {
-      background-color: #555555;
-      border-color: #555555;
+      background-color: #5a6268;
+      border-color: #545b62;
       color: #ffffff;
     }
 
     /* Ensure modal buttons have sufficient contrast */
     .modal-footer .btn-secondary {
-      background-color: #3a3a3a;
-      border-color: #3a3a3a;
-      color: #e0e0e0;
+      background-color: #6c757d;
+      border-color: #6c757d;
+      color: #ffffff;
     }
 
     .modal-footer .btn-secondary:hover {
-      background-color: #555555;
-      border-color: #555555;
+      background-color: #5a6268;
+      border-color: #545b62;
       color: #ffffff;
     }
 
     .modal-footer .btn-primary {
-      background-color: #bb86fc;
-      border-color: #bb86fc;
-      color: #121212;
+      background-color: #007bff;
+      border-color: #007bff;
+      color: #ffffff;
     }
 
     .modal-footer .btn-primary:hover {
-      background-color: #985eff;
-      border-color: #7a5afc;
+      background-color: #0056b3;
+      border-color: #004085;
       color: #ffffff;
     }
 
     /* Pricing Section Dark Theme */
-    #pricing .pricing-row {
-      background-color: #1f1f1f;
-      color: #e0e0e0;
-      padding: 2rem 0;
-    }
-
-    #pricing .pricing-row h2,
-    #pricing .pricing-row h3 {
+    #pricing {
+      background-color: #343a40;
       color: #ffffff;
     }
 
-    #pricing .pricing-row p,
-    #pricing .pricing-row li {
-      color: #cfcfcf;
+    #pricing .jumbotron {
+      background-color: #495057;
+      color: #ffffff;
+      padding: 2rem 1rem;
+      border-radius: 0.3rem;
     }
 
-    #pricing ol.feature-text {
-      padding-left: 1.5rem;
+    #pricing .feature-title {
+      color: #ffffff;
     }
 
+    #pricing .feature-text {
+      color: #d4d4d4;
+    }
+
+    #pricing ol.feature-text,
     #pricing ul.feature-text {
-      padding-left: 1.5rem;
+      color: #d4d4d4;
     }
 
-    /* Just on Time Video Section */
-    #just-on-time-video .feature-row {
-      background-color: #1f1f1f;
+    #pricing .btn-primary {
+      background-color: #007bff;
+      border-color: #007bff;
+      color: #ffffff;
+    }
+
+    #pricing .btn-primary:hover {
+      background-color: #0056b3;
+      border-color: #004085;
+      color: #ffffff;
+    }
+
+    /* Ensure buttons in pricing have sufficient contrast */
+    #pricing .btn-secondary {
+      background-color: #6c757d;
+      border-color: #6c757d;
+      color: #ffffff;
+    }
+
+    #pricing .btn-secondary:hover {
+      background-color: #5a6268;
+      border-color: #545b62;
+      color: #ffffff;
+    }
+
+    /* Ensure links in pricing have sufficient contrast */
+    #pricing a {
+      color: #007bff;
+    }
+
+    #pricing a:hover,
+    #pricing a:focus {
+      color: #66b2ff;
     }
 
     /* Responsive adjustments */
@@ -253,9 +260,6 @@
         <div class="pancake-bar"></div>
         <div class="pancake-bar"></div>
       </div>
-      <button class="navbar-toggler" type="button" aria-label="Toggle navigation" onclick="toggleMenu()">
-        <span class="navbar-toggler-icon"></span>
-      </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item active">
