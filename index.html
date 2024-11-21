@@ -252,6 +252,11 @@
         font-size: 1.25rem;
       }
     }
+
+    /* Hide all sections initially */
+    section {
+      display: none;
+    }
   </style>
 </head>
 
@@ -583,8 +588,6 @@
         $('.nav-item').removeClass('active');
         $('.nav-link[data-section="' + sectionId + '"]').parent().addClass('active');
       }
-
-      showSection('home');
 
       $('.nav-link[data-section]').click(function (e) {
         e.preventDefault();
