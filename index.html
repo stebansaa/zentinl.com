@@ -1,18 +1,16 @@
-<!-- revolutionize.html -->
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Zentinl.com - Revolutionize Your Social Media Presence</title>
+  <title>Zentinl.com - AI-Generated Video for Social Networks</title>
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-  <!-- Custom Styles -->
   <style>
     body {
       font-family: 'Roboto', sans-serif;
@@ -126,8 +124,89 @@
       color: #ffffff;
     }
 
+    /* Ensure modal buttons have sufficient contrast */
+    .modal-footer .btn-secondary {
+      background-color: #6c757d;
+      border-color: #6c757d;
+      color: #ffffff;
+    }
+
+    .modal-footer .btn-secondary:hover {
+      background-color: #5a6268;
+      border-color: #545b62;
+      color: #ffffff;
+    }
+
+    .modal-footer .btn-primary {
+      background-color: #007bff;
+      border-color: #007bff;
+      color: #ffffff;
+    }
+
+    .modal-footer .btn-primary:hover {
+      background-color: #0056b3;
+      border-color: #004085;
+      color: #ffffff;
+    }
+
     /* General Section Styling */
     section {
+      padding: 4rem 0;
+      background-color: #ffffff;
+    }
+
+    section .jumbotron {
+      background-color: #f8f9fa;
+      color: #212529;
+      padding: 2rem 1rem;
+      border-radius: 0.3rem;
+      margin-bottom: 2rem;
+    }
+
+    .feature-title-section {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .feature-title-section h2 {
+      color: #343a40;
+      font-weight: 700;
+    }
+
+    .pricing-content {
+      padding: 2rem;
+      border-radius: 0.3rem;
+      background-color: #ffffff;
+    }
+
+    .pricing-content h3 {
+      color: #343a40;
+      margin-bottom: 1rem;
+    }
+
+    .pricing-content p,
+    .pricing-content ol,
+    .pricing-content ul {
+      color: #495057;
+    }
+
+    .pricing-content ol li,
+    .pricing-content ul li {
+      margin-bottom: 0.5rem;
+    }
+
+    .pricing-content ul {
+      list-style-type: disc;
+      padding-left: 20px;
+    }
+
+    .btn-primary.full-width {
+      margin-top: 1.5rem;
+      width: 100%;
+    }
+
+    /* Just on Time Video Section Styling */
+    #just-on-time-video {
       padding: 4rem 0;
       background-color: #ffffff;
     }
@@ -146,6 +225,80 @@
         padding: 1rem;
       }
     }
+
+    /* Effortless Video Creation Section Styling */
+    #effortless-video-creation {
+      padding: 4rem 0;
+      background-color: #f8f9fa;
+    }
+
+    #effortless-video-creation .feature-title {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    #effortless-video-creation .feature-text ul {
+      list-style-type: disc;
+      padding-left: 20px;
+    }
+
+    #effortless-video-creation .feature-text li {
+      margin-bottom: 0.75rem;
+    }
+
+    /* Virtual Influencers Section Styling */
+    #virtual-influencers {
+      padding: 4rem 0;
+      background-color: #ffffff;
+    }
+
+    #virtual-influencers .feature-title {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    #virtual-influencers .feature-text ul {
+      list-style-type: disc;
+      padding-left: 20px;
+    }
+
+    #virtual-influencers .feature-text li {
+      margin-bottom: 0.75rem;
+    }
+
+    /* API & Zap Integration Section Styling */
+    #api-zap-integration {
+      padding: 4rem 0;
+      background-color: #f8f9fa;
+    }
+
+    #api-zap-integration .feature-title {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    #api-zap-integration .feature-text ul {
+      list-style-type: disc;
+      padding-left: 20px;
+    }
+
+    #api-zap-integration .feature-text li {
+      margin-bottom: 0.75rem;
+    }
+
+    /* Revolution Section Styling */
+    #revolution {
+      padding: 4rem 0;
+      background-color: #ffffff;
+    }
+
+    #revolution .jumbotron {
+      background-color: #f8f9fa;
+      color: #212529;
+      padding: 2rem 1rem;
+      border-radius: 0.3rem;
+      margin-bottom: 2rem;
+    }
   </style>
 </head>
 
@@ -153,7 +306,7 @@
   <!-- Navigation Bar -->
   <nav class="navbar navbar-expand-lg">
     <div class="container">
-      <a class="navbar-brand" href="revolutionize.html">
+      <a class="navbar-brand" href="#">
         Zentinl.com
       </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
@@ -165,19 +318,22 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item active">
-            <a class="nav-link" href="revolutionize.html">Home</a>
+            <a class="nav-link" href="#" data-section="revolution">Revolution</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="pricing.html">Pricing</a>
+            <a class="nav-link" href="#" data-section="home">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="just-on-time-video.html">Just on Time Video</a>
+            <a class="nav-link" href="#" data-section="pricing">Pricing</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="virtual-influencers.html">Virtual Influencers</a>
+            <a class="nav-link" href="#" data-section="just-on-time-video">Just on Time Video</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="api-zap-integration.html">API & Zap Integration</a>
+            <a class="nav-link" href="#" data-section="virtual-influencers">Virtual Influencers</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" data-section="api-zap-integration">API & Zap Integration</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#" data-toggle="modal" data-target="#contactModal">Contact</a>
@@ -187,8 +343,8 @@
     </div>
   </nav>
 
-  <!-- Revolutionize Section -->
-  <section id="revolutionize">
+  <!-- Revolution Section -->
+  <section id="revolution">
     <div class="jumbotron">
       <div class="container">
         <img src="zentinel-logo.png" alt="Zentinl.com logo" class="owl-logo">
@@ -198,42 +354,334 @@
         <a class="btn btn-primary btn-lg" href="#" role="button" data-toggle="modal" data-target="#contactModal">Get Started</a>
       </div>
     </div>
+  </section>
+
+  <!-- Home Section (Summary) -->
+  <section id="home">
+    <div class="container">
+      <div class="row">
+        <!-- Pricing Summary -->
+        <div class="col-md-6 mb-4">
+          <div class="card h-100">
+            <div class="card-body text-center">
+              <i class="fas fa-dollar-sign feature-icon"></i>
+              <h3 class="feature-title">Pricing</h3>
+              <p class="feature-text">Discover our cost-effective solutions for creating high-quality AI-generated videos tailored to your needs.</p>
+              <a href="#" class="btn btn-primary" data-section="pricing">Learn More</a>
+            </div>
+          </div>
+        </div>
+        <!-- Just on Time Video Summary -->
+        <div class="col-md-6 mb-4">
+          <div class="card h-100">
+            <div class="card-body text-center">
+              <i class="fas fa-clock feature-icon"></i>
+              <h3 class="feature-title">Just on Time Video</h3>
+              <p class="feature-text">Generate videos precisely when you need them, ensuring relevance and maximizing engagement.</p>
+              <a href="#" class="btn btn-primary" data-section="just-on-time-video">Learn More</a>
+            </div>
+          </div>
+        </div>
+        <!-- Virtual Influencers Summary -->
+        <div class="col-md-6 mb-4">
+          <div class="card h-100">
+            <div class="card-body text-center">
+              <i class="fas fa-user feature-icon"></i>
+              <h3 class="feature-title">Virtual Influencers</h3>
+              <p class="feature-text">Create and manage AI-driven virtual influencers to amplify your brand's presence.</p>
+              <a href="#" class="btn btn-primary" data-section="virtual-influencers">Learn More</a>
+            </div>
+          </div>
+        </div>
+        <!-- API & Zap Integration Summary -->
+        <div class="col-md-6 mb-4">
+          <div class="card h-100">
+            <div class="card-body text-center">
+              <i class="fas fa-plug feature-icon"></i>
+              <h3 class="feature-title">API & Zap Integration</h3>
+              <p class="feature-text">Seamlessly integrate Zentinl with your existing tools and workflows for enhanced productivity.</p>
+              <a href="#" class="btn btn-primary" data-section="api-zap-integration">Learn More</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing Section -->
+  <section id="pricing">
+    <div class="jumbotron">
+      <div class="container">
+        <img src="zentinel-logo.png" alt="Zentinl logo" class="owl-logo">
+        <h1 class="display-4">Pricing</h1>
+        <p class="lead">Discover the cost-effective solution for captivating social media video content.</p>
+      </div>
+    </div>
 
     <div class="feature-row">
       <div class="container">
         <div class="row">
-          <div class="col-md-4 text-center">
-            <i class="fas fa-palette feature-icon"></i>
-            <h3 class="feature-title">Tailored to Your Vision</h3>
-            <p class="feature-text">Our AI technology empowers you to create video content that perfectly aligns with your unique style, tone,
-              and target audience. Customize every aspect of your videos, from the visuals to the messaging, to ensure they
-              resonate with your followers and effectively communicate your brand's identity.</p>
+          <div class="col-md-8 offset-md-2 feature-title-section">
+            <h2 class="feature-title">The Power of Video in Today's Digital World</h2>
           </div>
-          <div class="col-md-4 text-center">
-            <i class="fas fa-video feature-icon"></i>
-            <h3 class="feature-title">Effortless Content Creation</h3>
-            <p class="feature-text">The best software is not software! We take your data and turn it into a video in minutes. Say goodbye to the time-consuming process of creating video content from scratch. Our advanced AI algorithms
-              generate high-quality, engaging videos at an unparalleled speed and scale. Focus on growing your business
-              while we take care of your content needs.</p>
-          </div>
-          <div class="col-md-4 text-center">
-            <i class="fas fa-chart-line feature-icon"></i>
-            <h3 class="feature-title">Maximize Engagement</h3>
-            <p class="feature-text">In the era of short attention spans, video content reigns supreme. Zentinl.com's AI-generated videos are
-              designed to capture your audience's interest, drive engagement, and boost your social media presence. Effortlessly upload content to all major social networks using their APIs. Watch
-              your likes, shares, and followers soar.</p>
+        </div>
+        <div class="row">
+          <div class="col-md-12 pricing-content">
+            <p>Video is key for engaging your audience and boosting brand awareness across platforms like Instagram, TikTok, Facebook, LinkedIn, Twitter, and Telegram.</p>
+            <p>However, producing high-quality videos can be expensive and time-consuming. Traditional production involves multiple stages, taking multiple hours and even days and costing hundreds to thousands of dollars for short videos, and even more for longer content.</p>
+            <p>Beyond production, businesses invest in compelling thumbnails and optimized descriptions. Scheduling and uploading videos also add to the complexity and cost.</p>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- Additional Content as Needed -->
+    <div class="feature-row">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 offset-md-2 feature-title-section">
+            <h3 class="feature-title">The Traditional Short Video Process</h3>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12 pricing-content">
+            <p>Creating a short video typically involves several steps:</p>
+            <ol class="feature-text">
+              <li><strong>Video Scripting and Production:</strong>
+                <ul>
+                  <li>Plan: Defining the video idea and writing a short script.</li>
+                  <li>Setup: Preparing the location, props, and equipment.</li>
+                  <li>Film: Recording the video, ensuring good lighting and clear audio.</li>
+                  <li>Edit: Using an app like InShot or CapCut to edit and add effects.</li>
+                </ul>
+              </li>
+              <li><strong>Generating a Thumbnail:</strong>
+                <ul>
+                  <li>Capture: Taking a still image from the video or designing a custom thumbnail.</li>
+                  <li>Design: Using bold text and colors to make it visually appealing.</li>
+                </ul>
+              </li>
+              <li><strong>Writing the Text for Upload:</strong>
+                <ul>
+                  <li>Description: Writing a summary of the video with a call to action.</li>
+                  <li>Tags: Adding relevant keywords and hashtags.</li>
+                </ul>
+              </li>
+              <li><strong>Scheduling and Uploading:</strong>
+                <ul>
+                  <li>Upload: Following platform-specific steps to upload the video.</li>
+                  <li>Schedule: Posting at peak times using scheduling tools.</li>
+                  <li>Promote: Sharing the video on other channels and engaging with viewers.</li>
+                </ul>
+              </li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </div>
 
+    <div class="feature-row">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 offset-md-2 feature-title-section">
+            <h2 class="feature-title">Zentinl: Seamless AI-Powered Video Production</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12 pricing-content">
+            <p>Zentinl revolutionizes video creation using AI. Our AI takes your data and handles the complete process, from generating the video to crafting descriptions and thumbnails.</p>
+            <p>Our AI generates videos in under an hour, ensuring a constant flow of content. Zentinl integrates with social media APIs for automated scheduling and uploading, reaching your audience at optimal times.</p>
+            <p>Benefits of Zentinl:</p>
+            <ul class="feature-text">
+              <li>Effortless video production with minimal human involvement</li>
+              <li>24/7 generation of consistent, high-quality content</li>
+              <li>Significant cost savings compared to traditional methods</li>
+              <li>Videos tailored to align with your brand</li>
+              <li>Scalability to meet varying content demands</li>
+              <li>Automated thumbnail and video description creation</li>
+              <li>Automated scheduling and uploading through social media API integration</li>
+            </ul>
+            <p>Pricing starts at $300 per video, with a minimum of 20 videos monthly. Maintain a steady stream of compelling content without breaking the bank.</p>
+            <p>Don't let traditional video creation hold you back. Partner with Zentinl and unlock the power of AI-powered video production.</p>
+            <div class="text-center mt-4">
+              <a class="btn btn-primary btn-lg full-width" href="#" role="button" data-toggle="modal" data-target="#contactModal">Get Started!</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Just on Time Video Section -->
+  <section id="just-on-time-video">
+    <div class="jumbotron">
+      <div class="container">
+        <img src="zentinel-logo.png" alt="Zentinl logo" class="owl-logo">
+        <h1 class="display-4">Just on Time Video</h1>
+        <p class="lead">AI-driven video generation tailored precisely when and how you need it, ensuring relevance and maximizing engagement.</p>
+      </div>
+    </div>
+
+    <div class="feature-row">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <h2 class="feature-title text-center mb-4">What is Just on Time Video?</h2>
+            <p class="feature-text">Inspired by the Just-In-Time (JIT) production philosophy from Toyota, our Just on Time Video service generates videos exactly when they are needed. This approach minimizes waste, maximizes efficiency, and ensures that your video content is always timely and relevant.</p>
+            <p class="feature-text">Our service can be seamlessly applied across various domains, including Social Reels, Education, Marketing, and Sales, providing customized solutions that cater to specific needs and contexts.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Applications Section -->
+    <div class="feature-row">
+      <div class="container">
+        <div class="row">
+          <!-- Social Reels -->
+          <div class="col-md-4 text-center">
+            <i class="fas fa-rocket feature-icon"></i>
+            <h3 class="feature-title">Social Reels</h3>
+            <p class="feature-text">Transform the latest news into engaging social reels that captivate your audience. We not only create the videos but also handle the uploading and distribution across all major social platforms, ensuring maximum reach and engagement.</p>
+          </div>
+          <!-- Education -->
+          <div class="col-md-4 text-center">
+            <i class="fas fa-book-open feature-icon"></i>
+            <h3 class="feature-title">Education</h3>
+            <p class="feature-text">Enhance learning with visually appealing videos tailored to specific educational needs. For example, create visual aids for children learning vocabulary within the context of their interests, such as aviation, to boost engagement and retention.</p>
+          </div>
+          <!-- Marketing and Sales -->
+          <div class="col-md-4 text-center">
+            <i class="fas fa-chart-pie feature-icon"></i>
+            <h3 class="feature-title">Marketing & Sales</h3>
+            <p class="feature-text">Drive sales with personalized video content. For instance, envision a customer purchasing a specific car or brand and integrating their picture into a customized movie scene, creating a unique and memorable marketing experience.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Additional Details or Testimonials (Optional) -->
     <div class="container my-5 text-center">
-      <h2 class="feature-title">Ready to Transform Your Social Media Game?</h2>
-      <p class="feature-text">Join the countless brands and influencers who have already unlocked the power of AI-generated video content.
-        Sign up now and experience the Zentinl difference for yourself.</p>
-      <a class="btn btn-primary btn-lg" href="#" role="button" data-toggle="modal" data-target="#contactModal">Get Started Today</a>
+      <h2 class="feature-title">Experience the Future of Video Production</h2>
+      <p class="feature-text">With Just on Time Video, you receive content that is not only high-quality but also perfectly timed to meet your specific needs. Enhance your engagement, streamline your content strategy, and stay ahead of the competition with our innovative AI solutions.</p>
+      <a class="btn btn-primary btn-lg" href="#" role="button" data-toggle="modal" data-target="#contactModal">Get Started with Just on Time Video</a>
+    </div>
+  </section>
+
+  <!-- Virtual Influencers Section -->
+  <section id="virtual-influencers">
+    <div class="jumbotron">
+      <div class="container">
+        <img src="zentinel-logo.png" alt="Zentinl logo" class="owl-logo">
+        <h1 class="display-4">Virtual Influencers</h1>
+        <p class="lead">Create and manage AI-driven virtual influencers to amplify your brand's presence and engage with audiences in innovative ways.</p>
+      </div>
+    </div>
+
+    <div class="feature-row">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <h2 class="feature-title text-center mb-4">Harness the Power of Virtual Influencers</h2>
+            <p class="feature-text">Virtual influencers are AI-generated personalities designed to interact with your audience, promote your brand, and create engaging content without the limitations of human influencers. Here's how Zentinl can help you leverage virtual influencers:</p>
+            <ul class="feature-text">
+              <li><strong>Customizable Personas:</strong> Design virtual influencers that align with your brand's identity, values, and aesthetics. Tailor their appearance, personality, and voice to resonate with your target audience.</li>
+              <li><strong>24/7 Engagement:</strong> Virtual influencers can interact with followers around the clock, ensuring consistent engagement and responsiveness without the constraints of human schedules.</li>
+              <li><strong>Scalable Campaigns:</strong> Deploy multiple virtual influencers to reach diverse audience segments, manage large-scale marketing campaigns, and maintain a dynamic online presence.</li>
+              <li><strong>Cost-Effective:</strong> Reduce costs associated with traditional influencer marketing, such as fees, travel, and scheduling conflicts, while maintaining high engagement levels.</li>
+              <li><strong>Data-Driven Insights:</strong> Utilize AI analytics to monitor virtual influencer performance, audience interactions, and campaign effectiveness, allowing for continuous optimization and improvement.</li>
+            </ul>
+            <p class="feature-text">With Zentinl's advanced AI technology, creating and managing virtual influencers is seamless and efficient. Enhance your marketing strategy, build stronger connections with your audience, and stay ahead in the digital landscape with our innovative solutions.</p>
+            <div class="text-center mt-4">
+              <a class="btn btn-primary btn-lg full-width" href="#" role="button" data-toggle="modal" data-target="#contactModal">Create Your Virtual Influencer</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Showcase Section -->
+    <div class="feature-row">
+      <div class="container">
+        <div class="row">
+          <!-- Example Virtual Influencer 1 -->
+          <div class="col-md-4 text-center">
+            <img src="virtual-influencer1.jpg" alt="Virtual Influencer 1" class="img-fluid rounded-circle mb-3" style="max-width: 150px;">
+            <h4 class="feature-title">Ava Tech</h4>
+            <p class="feature-text">Ava Tech is your go-to tech enthusiast, sharing the latest in technology trends, gadgets, and innovations. Follow Ava for insightful reviews and futuristic content.</p>
+          </div>
+          <!-- Example Virtual Influencer 2 -->
+          <div class="col-md-4 text-center">
+            <img src="virtual-influencer2.jpg" alt="Virtual Influencer 2" class="img-fluid rounded-circle mb-3" style="max-width: 150px;">
+            <h4 class="feature-title">Luna Style</h4>
+            <p class="feature-text">Luna Style brings you the latest in fashion, beauty tips, and lifestyle trends. Her curated content will inspire your daily looks and personal style.</p>
+          </div>
+          <!-- Example Virtual Influencer 3 -->
+          <div class="col-md-4 text-center">
+            <img src="virtual-influencer3.jpg" alt="Virtual Influencer 3" class="img-fluid rounded-circle mb-3" style="max-width: 150px;">
+            <h4 class="feature-title">Max Fitness</h4>
+            <p class="feature-text">Max Fitness motivates you to achieve your health and wellness goals with personalized workout routines, nutrition advice, and fitness challenges.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- API & Zap Integration Section -->
+  <section id="api-zap-integration">
+    <div class="jumbotron">
+      <div class="container">
+        <img src="zentinel-logo.png" alt="Zentinl logo" class="owl-logo">
+        <h1 class="display-4">API & Zap Integration</h1>
+        <p class="lead">Seamlessly integrate Zentinl with your existing tools and workflows using our robust API and Zapier integrations.</p>
+      </div>
+    </div>
+
+    <div class="feature-row">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <h2 class="feature-title text-center mb-4">Enhance Your Workflow with API & Zapier</h2>
+            <p class="feature-text">Zentinl offers powerful API and Zapier integrations to ensure that your video content creation and distribution are seamlessly integrated into your existing workflows. Whether you're using CRM systems, marketing automation tools, or other business applications, our integrations make it easy to automate and streamline your processes.</p>
+            <ul class="feature-text">
+              <li><strong>Comprehensive API:</strong> Access all of Zentinl's features programmatically. Our RESTful API allows developers to integrate video generation, scheduling, and management functionalities into custom applications, dashboards, or platforms.</li>
+              <li><strong>Zapier Integration:</strong> Connect Zentinl with over 3,000 apps on Zapier. Automate tasks such as triggering video creation based on new entries in Google Sheets, sending notifications via Slack, or publishing videos to social media platforms automatically.</li>
+              <li><strong>Custom Workflows:</strong> Design and implement workflows that fit your unique business needs. Automate repetitive tasks, reduce manual intervention, and ensure consistency across your content creation and distribution processes.</li>
+              <li><strong>Real-Time Data Sync:</strong> Ensure that your data is always up-to-date across all integrated platforms. Our integrations support real-time synchronization, eliminating data silos and enhancing collaboration.</li>
+              <li><strong>Scalable Solutions:</strong> Whether you're a small business or a large enterprise, our API and Zapier integrations scale with your needs, allowing you to handle increasing volumes of video content without compromising on performance.</li>
+            </ul>
+            <p class="feature-text">By leveraging Zentinl's API and Zapier integrations, you can automate your video content workflows, enhance productivity, and focus more on strategy and creativity. Empower your team with the tools they need to produce and distribute high-quality video content effortlessly.</p>
+            <div class="text-center mt-4">
+              <a class="btn btn-primary btn-lg full-width" href="#" role="button" data-toggle="modal" data-target="#contactModal">Integrate Now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Integration Examples Section -->
+    <div class="feature-row">
+      <div class="container">
+        <div class="row">
+          <!-- Example Integration 1 -->
+          <div class="col-md-4 text-center">
+            <i class="fas fa-code feature-icon"></i>
+            <h4 class="feature-title">Custom Applications</h4>
+            <p class="feature-text">Integrate Zentinl's video generation capabilities directly into your custom software applications using our comprehensive API.</p>
+          </div>
+          <!-- Example Integration 2 -->
+          <div class="col-md-4 text-center">
+            <i class="fas fa-sync-alt feature-icon"></i>
+            <h4 class="feature-title">Automated Workflows</h4>
+            <p class="feature-text">Use Zapier to connect Zentinl with your favorite apps, automating tasks like video creation, scheduling, and publishing.</p>
+          </div>
+          <!-- Example Integration 3 -->
+          <div class="col-md-4 text-center">
+            <i class="fas fa-cloud-upload-alt feature-icon"></i>
+            <h4 class="feature-title">Seamless Data Transfer</h4>
+            <p class="feature-text">Ensure your data flows smoothly between Zentinl and other platforms, keeping your content creation process efficient and organized.</p>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -300,8 +748,27 @@
   <!-- Custom JavaScript -->
   <script>
     $(document).ready(function () {
-      // No section toggling needed for separate pages
-      // Any additional JavaScript can go here
+      function showSection(sectionId) {
+        $('section').hide();
+        $('#' + sectionId).show();
+        $('.nav-item').removeClass('active');
+        $('.nav-link[data-section="' + sectionId + '"]').parent().addClass('active');
+      }
+
+      showSection('revolution');
+
+      $('.nav-link[data-section]').click(function (e) {
+        e.preventDefault();
+        var section = $(this).data('section');
+        showSection(section);
+        $('.navbar-collapse').collapse('hide');
+      });
+
+      $(".nav-link[data-toggle='modal']").click(function (e) {
+        e.preventDefault();
+        $("#contactModal").modal("show");
+        $('.navbar-collapse').collapse('hide');
+      });
     });
   </script>
 </body>
