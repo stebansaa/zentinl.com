@@ -187,6 +187,40 @@
         animation: float 3s infinite;
         animation-delay: calc(var(--delay) * 1s);
       }
+
+      .enterprise-badge {
+        position: absolute;
+        top: 0;
+        right: 0;
+        background-color: #1E40AF;
+        color: white;
+        padding: 0.25rem 0.75rem;
+        font-size: 0.75rem;
+        font-weight: 600;
+        border-top-right-radius: 0.5rem;
+        border-bottom-left-radius: 0.5rem;
+      }
+
+      .social-platform-logos {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1.5rem;
+        margin: 2rem 0;
+      }
+
+      .social-platform-logo {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+      
+      .social-platform-logo i {
+        font-size: 2rem;
+        margin-bottom: 0.5rem;
+        color: #3B82F6;
+      }
     </style>
   </head>
   <body class="bg-white font-sans text-secondary-900">
@@ -261,6 +295,15 @@
             </li>
             <li>
               
+                href="/enterprise"
+                class="nav-link block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-primary-700 md:p-0 transition-colors duration-300"
+                data-section="enterprise"
+              >
+                Enterprise Solutions
+              </a>
+            </li>
+            <li>
+              
                 href="/pricing"
                 class="nav-link block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-primary-700 md:p-0 transition-colors duration-300"
                 data-section="Pricing"
@@ -330,7 +373,7 @@
           </button>
           <div class="px-6 py-6 lg:px-8">
             <h3 class="mb-6 text-xl font-semibold text-gray-900 dark:text-white border-b pb-4">
-              Contact Us
+              Custom Enterprise Solution
             </h3>
             <form
               action="https://formspree.io/f/xkgnzyqo"
@@ -354,6 +397,21 @@
               </div>
               <div>
                 <label
+                  for="company"
+                  class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                  >Company Name</label
+                >
+                <input
+                  type="text"
+                  name="company"
+                  id="company"
+                  class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 transition-all duration-200"
+                  placeholder="Your Company"
+                  required
+                />
+              </div>
+              <div>
+                <label
                   for="email"
                   class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
                   >Your Email</label
@@ -369,16 +427,36 @@
               </div>
               <div>
                 <label
+                  for="service"
+                  class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                  >Service Interest</label
+                >
+                <select
+                  name="service"
+                  id="service"
+                  class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 transition-all duration-200"
+                  required
+                >
+                  <option value="">Select a service</option>
+                  <option value="video-dubbing">AI Video Dubbing</option>
+                  <option value="just-on-time">Just-on-Time Video</option>
+                  <option value="virtual-influencers">Virtual Influencers</option>
+                  <option value="api-integration">API Integration</option>
+                  <option value="enterprise">Custom Enterprise Solution</option>
+                </select>
+              </div>
+              <div>
+                <label
                   for="message"
                   class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                  >Your Message</label
+                  >Your Requirements</label
                 >
                 <textarea
                   name="message"
                   id="message"
                   rows="4"
                   class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 transition-all duration-200"
-                  placeholder="Tell us about your project..."
+                  placeholder="Tell us about your specific needs and requirements..."
                   required
                 ></textarea>
               </div>
@@ -386,7 +464,7 @@
                 type="submit"
                 class="w-full btn-primary text-white bg-primary-700 hover:bg-primary-800 font-medium rounded-lg text-sm px-5 py-3 text-center transition-all duration-300"
               >
-                Send Message
+                Request Custom Solution
               </button>
             </form>
           </div>
@@ -439,13 +517,52 @@
               </svg>
             </a>
             
-              href="#"
-              data-modal-target="contactModal"
-              data-modal-toggle="contactModal"
+              href="/enterprise"
               class="inline-flex justify-center items-center py-3 px-6 text-base font-medium text-center text-white rounded-lg bg-white/20 backdrop-blur-sm hover:bg-white/30 focus:ring-4 focus:ring-white/30 transition-all duration-300 border border-white/30"
             >
-              Request a Demo
+              Enterprise Solutions
             </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Social Platform Support -->
+      <div class="py-10 px-4 bg-gray-50">
+        <div class="max-w-screen-xl mx-auto text-center">
+          <p class="text-lg font-medium text-gray-600 mb-6">Works seamlessly with all major platforms</p>
+          <div class="social-platform-logos">
+            <div class="social-platform-logo">
+              <i class="fab fa-youtube"></i>
+              <span class="text-sm text-gray-500">YouTube</span>
+            </div>
+            <div class="social-platform-logo">
+              <i class="fab fa-tiktok"></i>
+              <span class="text-sm text-gray-500">TikTok</span>
+            </div>
+            <div class="social-platform-logo">
+              <i class="fab fa-instagram"></i>
+              <span class="text-sm text-gray-500">Instagram</span>
+            </div>
+            <div class="social-platform-logo">
+              <i class="fab fa-facebook"></i>
+              <span class="text-sm text-gray-500">Facebook</span>
+            </div>
+            <div class="social-platform-logo">
+              <i class="fab fa-linkedin"></i>
+              <span class="text-sm text-gray-500">LinkedIn</span>
+            </div>
+            <div class="social-platform-logo">
+              <i class="fab fa-twitter"></i>
+              <span class="text-sm text-gray-500">Twitter</span>
+            </div>
+            <div class="social-platform-logo">
+              <i class="fab fa-twitch"></i>
+              <span class="text-sm text-gray-500">Twitch</span>
+            </div>
+            <div class="social-platform-logo">
+              <i class="fab fa-pinterest"></i>
+              <span class="text-sm text-gray-500">Pinterest</span>
+            </div>
           </div>
         </div>
       </div>
@@ -458,7 +575,8 @@
           </h2>
           
           <div class="grid md:grid-cols-2 gap-8 items-center mb-16">
-            <div class="bg-primary-50 rounded-2xl p-8 shadow-xl transform hover:-translate-y-2 transition-all duration-300 border-t-4 border-primary-600">
+            <div class="bg-primary-50 rounded-2xl p-8 shadow-xl transform hover:-translate-y-2 transition-all duration-300 border-t-4 border-primary-600 relative">
+              <span class="enterprise-badge">ENTERPRISE READY</span>
               <div class="flex items-center mb-6">
                 <div class="bg-primary-600 rounded-full p-3 mr-4">
                   <i class="fa-solid fa-language text-white text-2xl"></i>
@@ -468,7 +586,11 @@
               <p class="text-gray-700 mb-6">
                 <span class="font-semibold text-primary-800">Our flagship service:</span> Transform your videos into any language while 
                 preserving the original voice characteristics. Perfect for enterprises looking to reach
-                global audiences with minimal effort.
+                global audiences with minimal effort. Completely automated, no human intervention needed.
+              </p>
+              <p class="text-gray-700 mb-6">
+                Works with videos from <strong>any social platform</strong> including YouTube, TikTok, Instagram, Facebook, 
+                LinkedIn, and more. Our system automatically handles downloading, dubbing, and republishing.
               </p>
               <a href="/video-dubbing" class="inline-flex items-center font-medium text-primary-600 hover:text-primary-800">
                 Learn more
@@ -480,43 +602,47 @@
             </div>
             
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-              <div class="feature-card bg-white rounded-xl p-6 shadow-lg border border-gray-200">
+              <div class="feature-card bg-white rounded-xl p-6 shadow-lg border border-gray-200 relative">
+                <span class="enterprise-badge text-xs">AUTOMATED</span>
                 <div class="text-primary-600 text-2xl mb-4">
                   <i class="fa-solid fa-video"></i>
                 </div>
                 <h4 class="text-lg font-bold text-gray-900 mb-2">Just-on-Time Video</h4>
                 <p class="text-gray-700 text-sm">
-                  AI-generated videos exactly when you need them, ensuring relevance and maximizing engagement.
+                  AI-generated videos exactly when you need them, ensuring relevance and maximizing engagement with zero effort.
                 </p>
               </div>
               
-              <div class="feature-card bg-white rounded-xl p-6 shadow-lg border border-gray-200">
+              <div class="feature-card bg-white rounded-xl p-6 shadow-lg border border-gray-200 relative">
+                <span class="enterprise-badge text-xs">AUTOMATED</span>
                 <div class="text-primary-600 text-2xl mb-4">
                   <i class="fa-solid fa-users"></i>
                 </div>
                 <h4 class="text-lg font-bold text-gray-900 mb-2">Virtual Influencers</h4>
                 <p class="text-gray-700 text-sm">
-                  AI-driven personalities that engage with your audience and promote your brand 24/7.
+                  AI-driven personalities that engage with your audience and promote your brand 24/7 without human input.
                 </p>
               </div>
               
-              <div class="feature-card bg-white rounded-xl p-6 shadow-lg border border-gray-200">
+              <div class="feature-card bg-white rounded-xl p-6 shadow-lg border border-gray-200 relative">
+                <span class="enterprise-badge text-xs">CUSTOMIZABLE</span>
                 <div class="text-primary-600 text-2xl mb-4">
                   <i class="fa-solid fa-code"></i>
                 </div>
                 <h4 class="text-lg font-bold text-gray-900 mb-2">API Integration</h4>
                 <p class="text-gray-700 text-sm">
-                  Seamlessly integrate our AI technologies with your existing tools and workflows.
+                  Seamlessly integrate our AI technologies with your existing tools and workflows for automated processes.
                 </p>
               </div>
               
-              <div class="feature-card bg-white rounded-xl p-6 shadow-lg border border-gray-200">
+              <div class="feature-card bg-white rounded-xl p-6 shadow-lg border border-gray-200 relative">
+                <span class="enterprise-badge text-xs">TAILORED</span>
                 <div class="text-primary-600 text-2xl mb-4">
                   <i class="fa-solid fa-chart-line"></i>
                 </div>
                 <h4 class="text-lg font-bold text-gray-900 mb-2">Enterprise Solutions</h4>
                 <p class="text-gray-700 text-sm">
-                  Customized AI video solutions designed specifically for enterprise-scale requirements.
+                  Custom AI video solutions designed specifically for enterprise-scale requirements with dedicated support.
                 </p>
               </div>
             </div>
@@ -524,8 +650,58 @@
         </div>
       </div>
 
-      <!-- Trust Section -->
+      <!-- Automation Section -->
       <div class="py-16 px-4 bg-gray-50">
+        <div class="max-w-screen-xl mx-auto">
+          <div class="text-center mb-12">
+            <h2 class="text-3xl font-extrabold text-gray-900 mb-6 sm:text-4xl">End-to-End Automation</h2>
+            <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+              Our AI-powered platform handles everything automatically. No additional human resources needed at any stage.
+            </p>
+          </div>
+          
+          <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+            <div class="feature-card bg-white p-8 rounded-xl border border-gray-200 shadow-lg hover:shadow-xl transition-all duration-300">
+              <div class="text-primary-600 text-4xl mb-6 flex justify-center">
+                <i class="fa-solid fa-download"></i>
+              </div>
+              <h5 class="mb-4 text-xl font-bold tracking-tight text-center text-gray-900">
+                Automated Content Sourcing
+              </h5>
+              <p class="font-normal text-gray-700 text-center">
+                Our system automatically processes your content from any platform. Simply provide the URL or upload files, and we handle the rest.
+              </p>
+            </div>
+            
+            <div class="feature-card bg-white p-8 rounded-xl border border-gray-200 shadow-lg hover:shadow-xl transition-all duration-300">
+              <div class="text-primary-600 text-4xl mb-6 flex justify-center">
+                <i class="fa-solid fa-cogs"></i>
+              </div>
+              <h5 class="mb-4 text-xl font-bold tracking-tight text-center text-gray-900">
+                AI Processing & Production
+              </h5>
+              <p class="font-normal text-gray-700 text-center">
+                Our AI handles all processing, dubbing, and production automatically with natural-sounding results. No manual editing required.
+              </p>
+            </div>
+            
+            <div class="feature-card bg-white p-8 rounded-xl border border-gray-200 shadow-lg hover:shadow-xl transition-all duration-300">
+              <div class="text-primary-600 text-4xl mb-6 flex justify-center">
+                <i class="fa-solid fa-share-alt"></i>
+              </div>
+              <h5 class="mb-4 text-xl font-bold tracking-tight text-center text-gray-900">
+                Seamless Distribution
+              </h5>
+              <p class="font-normal text-gray-700 text-center">
+                Complete automated publishing to all social platforms with optimized metadata, scheduling, and analytics tracking.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Trust Section -->
+      <div class="py-16 px-4 bg-white">
         <div class="max-w-screen-xl mx-auto text-center">
           <h2 class="mb-4 text-2xl font-extrabold text-gray-900">Trusted by Forward-Thinking Companies</h2>
           <p class="mb-12 text-gray-600 max-w-3xl mx-auto">
@@ -558,7 +734,7 @@
       </div>
       
       <!-- Features Highlight -->
-      <div class="py-16 px-4 bg-white">
+      <div class="py-16 px-4 bg-gray-50">
         <div class="max-w-screen-xl mx-auto">
           <div class="text-center mb-16">
             <h2 class="mb-4 text-3xl font-extrabold text-gray-900 sm:text-4xl">Why Choose Zentinl?</h2>
@@ -577,7 +753,7 @@
               </h5>
               <p class="font-normal text-gray-700 text-center">
                 Our AI maintains the original voice characteristics, emotions, and speaking style
-                while translating into any language, delivering authentic-sounding results.
+                while translating into any language, delivering authentically natural-sounding results.
               </p>
             </div>
             
@@ -599,12 +775,109 @@
                 <i class="fa-solid fa-gear"></i>
               </div>
               <h5 class="mb-4 text-xl font-bold tracking-tight text-center text-gray-900">
-                End-to-End Service
+                End-to-End Automation
               </h5>
               <p class="font-normal text-gray-700 text-center">
                 From downloading your videos to dubbing and republishing on social platforms,
-                we handle the entire process so you can focus on creating great content.
+                we handle the entire process automatically so you can focus on your core business.
               </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Enterprise Focus Section -->
+      <div class="py-16 px-4 bg-white">
+        <div class="max-w-screen-xl mx-auto">
+          <div class="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+              <h2 class="text-3xl font-extrabold text-gray-900 mb-6">Customized Enterprise Solutions</h2>
+              <p class="text-lg text-gray-600 mb-6">
+                We understand that every enterprise has unique requirements. That's why we work closely with our enterprise 
+                clients to create tailored solutions that address their specific needs.
+              </p>
+              <p class="text-lg text-gray-600 mb-6">
+                Whether you need custom workflows, specific language support, enhanced security features, or dedicated resources, 
+                our team will design a solution that fits your organization perfectly.
+              </p>
+              <div class="space-y-4 mt-8">
+                <div class="flex items-start">
+                  <div class="flex-shrink-0 mt-1">
+                    <div class="flex h-6 w-6 items-center justify-center rounded-full bg-primary-100">
+                      <i class="fa-solid fa-check text-xs text-primary-600"></i>
+                    </div>
+                  </div>
+                  <p class="ml-3 text-gray-600">Tailored solutions for your specific industry</p>
+                </div>
+                <div class="flex items-start">
+                  <div class="flex-shrink-0 mt-1">
+                    <div class="flex h-6 w-6 items-center justify-center rounded-full bg-primary-100">
+                      <i class="fa-solid fa-check text-xs text-primary-600"></i>
+                    </div>
+                  </div>
+                  <p class="ml-3 text-gray-600">No one-size-fits-all approaches</p>
+                </div>
+                <div class="flex items-start">
+                  <div class="flex-shrink-0 mt-1">
+                    <div class="flex h-6 w-6 items-center justify-center rounded-full bg-primary-100">
+                      <i class="fa-solid fa-check text-xs text-primary-600"></i>
+                    </div>
+                  </div>
+                  <p class="ml-3 text-gray-600">Dedicated account management and support</p>
+                </div>
+                <div class="flex items-start">
+                  <div class="flex-shrink-0 mt-1">
+                    <div class="flex h-6 w-6 items-center justify-center rounded-full bg-primary-100">
+                      <i class="fa-solid fa-check text-xs text-primary-600"></i>
+                    </div>
+                  </div>
+                  <p class="ml-3 text-gray-600">Custom API integrations with your existing systems</p>
+                </div>
+              </div>
+              <div class="mt-8">
+                
+                  href="/enterprise"
+                  class="inline-flex justify-center items-center py-3 px-6 text-base font-medium text-center text-white rounded-lg bg-primary-600 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 transition-all duration-300 shadow-lg hover:shadow-xl"
+                >
+                  Learn About Enterprise Solutions
+                </a>
+              </div>
+            </div>
+            <div class="bg-gray-50 p-8 rounded-xl shadow-lg text-center">
+              <div class="text-primary-600 text-6xl mb-6">
+                <i class="fa-solid fa-building"></i>
+              </div>
+              <h3 class="text-2xl font-bold text-gray-900 mb-4">We Serve Enterprises Like:</h3>
+              <ul class="space-y-3 text-left max-w-sm mx-auto mb-8">
+                <li class="flex items-center">
+                  <i class="fa-solid fa-check-circle text-primary-600 mr-3"></i>
+                  <span class="text-gray-700">Multinational corporations expanding globally</span>
+                </li>
+                <li class="flex items-center">
+                  <i class="fa-solid fa-check-circle text-primary-600 mr-3"></i>
+                  <span class="text-gray-700">Media companies with extensive content libraries</span>
+                </li>
+                <li class="flex items-center">
+                  <i class="fa-solid fa-check-circle text-primary-600 mr-3"></i>
+                  <span class="text-gray-700">E-learning platforms targeting international audiences</span>
+                </li>
+                <li class="flex items-center">
+                  <i class="fa-solid fa-check-circle text-primary-600 mr-3"></i>
+                  <span class="text-gray-700">Marketing agencies managing multiple client accounts</span>
+                </li>
+                <li class="flex items-center">
+                  <i class="fa-solid fa-check-circle text-primary-600 mr-3"></i>
+                  <span class="text-gray-700">Content creators with large social media followings</span>
+                </li>
+              </ul>
+              
+                href="#"
+                data-modal-target="contactModal"
+                data-modal-toggle="contactModal"
+                class="inline-flex justify-center items-center py-3 px-6 text-base font-medium text-center text-white rounded-lg bg-primary-600 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 transition-all duration-300 shadow-lg hover:shadow-xl"
+              >
+                Request Enterprise Consultation
+              </a>
             </div>
           </div>
         </div>
@@ -652,7 +925,36 @@
             Transform your existing videos into any language while preserving the natural voice 
             characteristics. Expand your audience by 4x with minimal effort.
           </p>
-          <div class="flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-4">
+          
+          <!-- Social Platform Support -->
+          <div class="social-platform-logos">
+            <div class="social-platform-logo">
+              <i class="fab fa-youtube text-white"></i>
+              <span class="text-sm text-white opacity-80">YouTube</span>
+            </div>
+            <div class="social-platform-logo">
+              <i class="fab fa-tiktok text-white"></i>
+              <span class="text-sm text-white opacity-80">TikTok</span>
+            </div>
+            <div class="social-platform-logo">
+              <i class="fab fa-instagram text-white"></i>
+              <span class="text-sm text-white opacity-80">Instagram</span>
+            </div>
+            <div class="social-platform-logo">
+              <i class="fab fa-facebook text-white"></i>
+              <span class="text-sm text-white opacity-80">Facebook</span>
+            </div>
+            <div class="social-platform-logo">
+              <i class="fab fa-linkedin text-white"></i>
+              <span class="text-sm text-white opacity-80">LinkedIn</span>
+            </div>
+            <div class="social-platform-logo">
+              <i class="fab fa-twitter text-white"></i>
+              <span class="text-sm text-white opacity-80">Twitter</span>
+            </div>
+          </div>
+          
+          <div class="flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-4 mt-8">
             
               href="#how-it-works"
               class="inline-flex justify-center items-center py-3 px-6 text-base font-medium text-center text-white rounded-lg bg-primary-600 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 transition-all duration-300 shadow-lg hover:shadow-xl"
@@ -702,7 +1004,7 @@
         <div class="max-w-screen-xl mx-auto">
           <h2 class="text-3xl font-extrabold text-center text-gray-900 mb-6">Unlock Global Potential</h2>
           <p class="text-lg text-center text-gray-600 mb-12 max-w-3xl mx-auto">
-            Our AI video dubbing technology helps enterprises break language barriers and reach international audiences
+            Our AI video dubbing technology helps enterprises break language barriers and reach international audiences with perfectly natural-sounding voices
           </p>
           
           <div class="grid md:grid-cols-2 gap-12">
@@ -715,10 +1017,10 @@
                   </div>
                 </div>
                 <div class="ml-4">
-                  <h3 class="text-xl font-bold text-gray-900 mb-2">Preserve Voice Characteristics</h3>
+                  <h3 class="text-xl font-bold text-gray-900 mb-2">Incredibly Natural Voice Quality</h3>
                   <p class="text-gray-600">
                     Our AI preserves the emotion, tone, and speaking style of the original speaker while 
-                    seamlessly translating into any target language.
+                    seamlessly translating into any target language. The result is indistinguishable from native speech.
                   </p>
                 </div>
               </div>
@@ -733,7 +1035,7 @@
                   <h3 class="text-xl font-bold text-gray-900 mb-2">Expand Your Audience by 4x</h3>
                   <p class="text-gray-600">
                     Reach new markets and demographics by offering your content in viewers' native languages,
-                    dramatically increasing engagement and conversions.
+                    dramatically increasing engagement and conversions across all your social platforms.
                   </p>
                 </div>
               </div>
@@ -745,10 +1047,10 @@
                   </div>
                 </div>
                 <div class="ml-4">
-                  <h3 class="text-xl font-bold text-gray-900 mb-2">Minimal Effort Required</h3>
+                  <h3 class="text-xl font-bold text-gray-900 mb-2">Fully Automated Process</h3>
                   <p class="text-gray-600">
-                    Simply provide the video URL or file, choose your target languages, and we handle the rest.
-                    No need for costly studio time or voice actors.
+                    Simply provide the video URL or file from any platform, choose your target languages, and our system 
+                    automatically handles everything else. No need for additional staff or resources.
                   </p>
                 </div>
               </div>
@@ -760,10 +1062,10 @@
                   </div>
                 </div>
                 <div class="ml-4">
-                  <h3 class="text-xl font-bold text-gray-900 mb-2">Full-Service Solution</h3>
+                  <h3 class="text-xl font-bold text-gray-900 mb-2">Complete Platform Integration</h3>
                   <p class="text-gray-600">
-                    From downloading your videos to dubbing and republishing on social platforms,
-                    we handle the entire process seamlessly.
+                    Works with all major social platforms including YouTube, TikTok, Instagram, Facebook, LinkedIn, 
+                    Twitter and more. We handle downloading, dubbing, and republishing automatically.
                   </p>
                 </div>
               </div>
@@ -812,7 +1114,7 @@
         <div class="max-w-screen-xl mx-auto">
           <h2 class="text-3xl font-extrabold text-center text-gray-900 mb-6">How It Works</h2>
           <p class="text-lg text-center text-gray-600 mb-12 max-w-3xl mx-auto">
-            Our seamless process makes video dubbing effortless for your team
+            Our fully automated process makes video dubbing effortless for your team
           </p>
           
           <div class="relative">
@@ -825,8 +1127,8 @@
                 <div class="md:w-1/2 md:pr-12 md:text-right">
                   <h3 class="text-xl font-bold text-gray-900 mb-2">1. Submit Your Video</h3>
                   <p class="text-gray-600 mb-4">
-                    Simply provide the URL to your YouTube or social media video, or upload your video file.
-                    Our system will securely process your content.
+                    Simply provide the URL to your YouTube, TikTok, Instagram or other social media video, or upload your video file.
+                    Our system will securely process your content. No download or preparation needed on your end.
                   </p>
                 </div>
                 <div class="mx-auto md:mx-0 flex items-center justify-center w-12 h-12 rounded-full bg-primary-600 text-white text-xl font-bold z-10">
@@ -845,7 +1147,7 @@
                   <h3 class="text-xl font-bold text-gray-900 mb-2">2. Select Target Languages</h3>
                   <p class="text-gray-600 mb-4">
                     Choose from over 40 languages to target specific regions or go global.
-                    You can select multiple languages for maximum reach.
+                    You can select multiple languages for maximum reach with a single submission.
                   </p>
                 </div>
               </div>
@@ -856,7 +1158,8 @@
                   <h3 class="text-xl font-bold text-gray-900 mb-2">3. AI Voice Processing</h3>
                   <p class="text-gray-600 mb-4">
                     Our AI analyzes the original voice characteristics and generates
-                    natural-sounding dubbed audio in your selected languages.
+                    natural-sounding dubbed audio in your selected languages. The voice maintains all 
+                    original qualities including tone, emotion, and speaking style.
                   </p>
                 </div>
                 <div class="mx-auto md:mx-0 flex items-center justify-center w-12 h-12 rounded-full bg-primary-600 text-white text-xl font-bold z-10">
@@ -872,10 +1175,10 @@
                   4
                 </div>
                 <div class="md:w-1/2 md:pl-12 order-2 md:order-3">
-                  <h3 class="text-xl font-bold text-gray-900 mb-2">4. Video Rendering</h3>
+                  <h3 class="text-xl font-bold text-gray-900 mb-2">4. Automated Video Rendering</h3>
                   <p class="text-gray-600 mb-4">
-                    We synchronize the newly generated audio with your video,
-                    ensuring perfect lip-sync and timing for a professional result.
+                    Our system automatically synchronizes the newly generated audio with your video,
+                    ensuring perfect lip-sync and timing for a professional result. No manual editing required.
                   </p>
                 </div>
               </div>
@@ -883,10 +1186,11 @@
               <!-- Step 5 -->
               <div class="flex flex-col md:flex-row items-center">
                 <div class="md:w-1/2 md:pr-12 md:text-right">
-                  <h3 class="text-xl font-bold text-gray-900 mb-2">5. Delivery & Publishing</h3>
+                  <h3 class="text-xl font-bold text-gray-900 mb-2">5. Seamless Distribution</h3>
                   <p class="text-gray-600 mb-4">
-                    Receive your dubbed videos for download, or let us handle the publishing
-                    directly to your YouTube, Facebook, Instagram, and other platforms.
+                    Receive your dubbed videos for download, or let our system handle the publishing
+                    directly to YouTube, TikTok, Instagram, Facebook, and other platforms automatically. 
+                    We even optimize titles, descriptions and metadata in each language.
                   </p>
                 </div>
                 <div class="mx-auto md:mx-0 flex items-center justify-center w-12 h-12 rounded-full bg-primary-600 text-white text-xl font-bold z-10">
@@ -928,7 +1232,7 @@
               </h5>
               <p class="font-normal text-gray-700 text-center">
                 Expand your YouTube channel's reach to international audiences by dubbing your
-                existing videos into multiple languages. Grow subscribers globally.
+                existing videos into multiple languages. Grow subscribers globally with zero extra effort.
               </p>
             </div>
             
@@ -941,7 +1245,7 @@
               </h5>
               <p class="font-normal text-gray-700 text-center">
                 Localize your training videos for international teams without recreating content.
-                Ensure consistent messaging across all regions.
+                Ensure consistent messaging across all regions with perfect voice matching.
               </p>
             </div>
             
@@ -1017,7 +1321,7 @@
                 <p class="text-gray-600 mb-6 italic">
                   "We expanded our YouTube channel to Spanish, French, and German markets using Zentinl's 
                   dubbing service. The voices sound incredibly natural, and we've seen a 315% increase
-                  in our international audience within just three months."
+                  in our international audience within just three months. The best part is that it's completely automated."
                 </p>
                 <div class="flex items-center">
                   <div class="w-12 h-12 bg-gray-200 rounded-full flex items-center justify-center text-gray-500">
@@ -1039,7 +1343,7 @@
                 <p class="text-gray-600 mb-6 italic">
                   "As a global enterprise, we needed to localize our training videos for 12 different markets.
                   Zentinl's AI dubbing solution saved us over $180,000 compared to traditional dubbing
-                  methods, while delivering exceptional quality in all languages."
+                  methods, while delivering exceptionally natural voice quality in all languages."
                 </p>
                 <div class="flex items-center">
                   <div class="w-12 h-12 bg-gray-200 rounded-full flex items-center justify-center text-gray-500">
@@ -1058,7 +1362,7 @@
           <div class="mt-16 bg-white rounded-xl overflow-hidden shadow-xl">
             <div class="grid md:grid-cols-2">
               <div class="p-8 md:p-12">
-                <div class="text-sm font-semibold text-primary-600 uppercase tracking-wider mb-2">Case Study</div>
+                <div class="text-sm font-semibold text-primary-600 uppercase tracking-wider mb-2">Enterprise Case Study</div>
                 <h3 class="text-2xl font-bold text-gray-900 mb-4">How Global Reach Media Expanded to 5 New Markets</h3>
                 <p class="text-gray-600 mb-6">
                   Global Reach Media, a content creation agency with over 200 product videos, needed to 
@@ -1080,6 +1384,10 @@
                   <li class="flex items-center">
                     <i class="fa-solid fa-check text-primary-600 mr-2"></i>
                     <span class="text-gray-600">90% cost reduction compared to hiring voice actors</span>
+                  </li>
+                  <li class="flex items-center">
+                    <i class="fa-solid fa-check text-primary-600 mr-2"></i>
+                    <span class="text-gray-600">No additional staff needed - fully automated process</span>
                   </li>
                 </ul>
                 <a href="#" class="inline-flex items-center font-medium text-primary-600 hover:text-primary-800">
@@ -1107,11 +1415,11 @@
       <!-- Enterprise Focus CTA -->
       <div class="py-16 px-4 bg-primary-900 text-white">
         <div class="max-w-screen-xl mx-auto text-center">
-          <h2 class="text-3xl font-extrabold mb-6">Enterprise-Ready Solutions</h2>
+          <h2 class="text-3xl font-extrabold mb-6">Custom Enterprise Solutions</h2>
           <p class="text-lg opacity-90 max-w-3xl mx-auto mb-8">
-            We specialize in providing AI dubbing services tailored for enterprise needs.
-            Our platform can handle high volume requirements with custom workflows, dedicated
-            support, and enterprise-grade security.
+            Every enterprise has unique needs. That's why we don't offer one-size-fits-all solutions.
+            Our team works with you to understand your specific requirements and create a custom
+            dubbing solution that integrates perfectly with your existing workflows and systems.
           </p>
           <div class="inline-flex items-center justify-center p-1 rounded-lg bg-white/10 backdrop-blur-sm mb-8">
             <div class="px-4 py-2 rounded-md bg-white/20 mr-2">Enterprise</div>
@@ -1125,7 +1433,8 @@
               data-modal-target="contactModal"
               data-modal-toggle="contactModal"
               class="inline-flex justify-center items-center py-3 px-6 text-base font-medium text-center text-primary-900 rounded-lg bg-white hover:bg-gray-100 focus:ring-4 focus:ring-white/30 transition-all duration-300 shadow-lg hover:shadow-xl"
-            > Request Enterprise Demo
+            >
+              Request Custom Enterprise Solution
             </a>
           </div>
         </div>
@@ -1145,7 +1454,16 @@
               <p class="text-gray-600">
                 Our advanced AI technology preserves the voice characteristics, tone, emotion, and speaking style of 
                 the original speaker. The result is remarkably natural-sounding speech that maintains the 
-                authenticity of the original content while speaking a different language.
+                authenticity of the original content. Most viewers cannot distinguish our AI dubbing from native speakers.
+              </p>
+            </div>
+            
+            <div class="bg-gray-50 rounded-lg p-6 shadow-md">
+              <h3 class="text-lg font-semibold text-gray-900 mb-2">What social media platforms do you support?</h3>
+              <p class="text-gray-600">
+                We support all major social media and video platforms including YouTube, TikTok, Instagram, Facebook, 
+                Twitter, LinkedIn, Twitch, and many more. Our system can automatically download videos from these platforms, 
+                process them, and republish the dubbed versions directly.
               </p>
             </div>
             
@@ -1159,29 +1477,20 @@
             </div>
             
             <div class="bg-gray-50 rounded-lg p-6 shadow-md">
-              <h3 class="text-lg font-semibold text-gray-900 mb-2">How long does the dubbing process take?</h3>
+              <h3 class="text-lg font-semibold text-gray-900 mb-2">Is the entire process automated?</h3>
               <p class="text-gray-600">
-                The processing time depends on your video length and the number of target languages. Typically, 
-                a 10-minute video can be dubbed in a single language within a few hours. For enterprise clients with 
-                large volumes, we can establish dedicated processing queues for faster turnaround times.
+                Yes, the entire process from video ingestion to dubbing to republishing is fully automated. You don't need 
+                to hire additional staff or allocate resources to manage the dubbing process. Our AI handles everything, 
+                allowing your team to focus on creating great content in your primary language.
               </p>
             </div>
             
             <div class="bg-gray-50 rounded-lg p-6 shadow-md">
-              <h3 class="text-lg font-semibold text-gray-900 mb-2">Do you offer end-to-end service including publishing?</h3>
+              <h3 class="text-lg font-semibold text-gray-900 mb-2">How do you handle enterprise clients with special requirements?</h3>
               <p class="text-gray-600">
-                Yes, we provide a complete service from video sourcing to publishing. We can download your videos from 
-                YouTube or other platforms, dub them into your selected languages, and then handle the republishing to 
-                all major social platforms including metadata translation and optimization.
-              </p>
-            </div>
-            
-            <div class="bg-gray-50 rounded-lg p-6 shadow-md">
-              <h3 class="text-lg font-semibold text-gray-900 mb-2">How does pricing work?</h3>
-              <p class="text-gray-600">
-                Our pricing is based on total video duration and the number of target languages. We offer volume 
-                discounts for enterprise clients and recurring projects. Please contact us for a customized quote 
-                based on your specific requirements.
+                We understand that each enterprise has unique needs. We provide custom solutions tailored to your specific 
+                requirements including dedicated API access, custom integrations with your content management systems, 
+                enhanced security protocols, dedicated support, and customized workflows that match your existing processes.
               </p>
             </div>
           </div>
@@ -1213,7 +1522,483 @@
               data-modal-toggle="contactModal"
               class="inline-flex justify-center items-center py-3 px-6 text-base font-medium text-center text-white rounded-lg bg-white/20 backdrop-blur-sm hover:bg-white/30 focus:ring-4 focus:ring-white/30 transition-all duration-300 border border-white/30"
             >
-              Schedule a Demo
+              Request Enterprise Demo
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Enterprise Solutions Section (NEW) -->
+    <section id="enterprise" class="page-section pt-20" data-page-title="Enterprise Solutions - Zentinl" data-page-description="Custom AI video dubbing and creation solutions tailored for enterprise needs. Automate your global content strategy with Zentinl's enterprise-grade platform.">
+      <!-- Hero Section -->
+      <div class="hero-gradient text-white">
+        <div class="py-16 px-4 mx-auto max-w-screen-xl text-center">
+          <h1 class="mb-6 text-4xl font-extrabold tracking-tight leading-none sm:text-5xl lg:text-6xl">
+            Enterprise Solutions
+          </h1>
+          <p class="mb-8 text-lg font-normal opacity-90 lg:text-xl sm:px-16 lg:px-48 max-w-3xl mx-auto">
+            Custom AI video solutions designed specifically for your organization's unique needs.
+            No one-size-fits-all approaches. Just tailored solutions that work for you.
+          </p>
+          <div class="flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-4">
+            
+              href="#enterprise-solutions"
+              class="inline-flex justify-center items-center py-3 px-6 text-base font-medium text-center text-white rounded-lg bg-primary-600 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 transition-all duration-300 shadow-lg hover:shadow-xl"
+            >
+              Explore Solutions
+            </a>
+            
+              href="#"
+              data-modal-target="contactModal"
+              data-modal-toggle="contactModal"
+              class="inline-flex justify-center items-center py-3 px-6 text-base font-medium text-center text-white rounded-lg bg-white/20 backdrop-blur-sm hover:bg-white/30 focus:ring-4 focus:ring-white/30 transition-all duration-300 border border-white/30"
+            >
+              Schedule a Consultation
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Enterprise Approach -->
+      <div class="py-16 px-4 bg-white" id="enterprise-solutions">
+        <div class="max-w-screen-xl mx-auto">
+          <div class="text-center mb-12">
+            <h2 class="text-3xl font-extrabold text-gray-900 mb-6">Our Enterprise Approach</h2>
+            <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+              We understand that every enterprise has unique needs, challenges, and goals. 
+              Our team works closely with you to develop tailored solutions that integrate 
+              seamlessly with your existing systems and workflows.
+            </p>
+          </div>
+          
+          <div class="grid md:grid-cols-2 gap-12 items-center mb-16">
+            <div>
+              <h3 class="text-2xl font-bold text-gray-900 mb-6">Not One-Size-Fits-All</h3>
+              <p class="text-lg text-gray-600 mb-6">
+                Unlike many providers, we don't force your business into predefined packages or templates. 
+                We begin with understanding your specific requirements and build custom solutions that address 
+                your particular needs.
+              </p>
+              <p class="text-lg text-gray-600 mb-6">
+                Whether you're a global media company managing thousands of videos across multiple platforms, 
+                an e-learning provider creating educational content in multiple languages, or a marketing agency 
+                serving international clients, we adapt our technology to fit your business model.
+              </p>
+              <div class="space-y-4">
+                <div class="flex items-start">
+                  <div class="flex-shrink-0 mt-1">
+                    <div class="flex h-6 w-6 items-center justify-center rounded-full bg-primary-100">
+                      <i class="fa-solid fa-check text-xs text-primary-600"></i>
+                    </div>
+                  </div>
+                  <p class="ml-3 text-gray-600">Custom workflows designed around your processes</p>
+                </div>
+                <div class="flex items-start">
+                  <div class="flex-shrink-0 mt-1">
+                    <div class="flex h-6 w-6 items-center justify-center rounded-full bg-primary-100">
+                      <i class="fa-solid fa-check text-xs text-primary-600"></i>
+                    </div>
+                  </div>
+                  <p class="ml-3 text-gray-600">Integration with your existing content systems</p>
+                </div>
+                <div class="flex items-start">
+                  <div class="flex-shrink-0 mt-1">
+                    <div class="flex h-6 w-6 items-center justify-center rounded-full bg-primary-100">
+                      <i class="fa-solid fa-check text-xs text-primary-600"></i>
+                    </div>
+                  </div>
+                  <p class="ml-3 text-gray-600">Tailored solutions for your industry-specific challenges</p>
+                </div>
+              </div>
+            </div>
+            <div class="bg-gray-50 p-8 rounded-xl shadow-lg text-center">
+              <div class="text-primary-600 text-6xl mb-6">
+                <i class="fa-solid fa-puzzle-piece"></i>
+              </div>
+              <h3 class="text-2xl font-bold text-gray-900 mb-4">Our Customization Process</h3>
+              <ol class="space-y-3 text-left max-w-sm mx-auto">
+                <li class="flex items-start">
+                  <div class="flex-shrink-0 flex h-6 w-6 items-center justify-center rounded-full bg-primary-600 text-white text-xs mr-3 mt-1">
+                    1
+                  </div>
+                  <span class="text-gray-700"><b>Discovery:</b> Thorough analysis of your needs, systems, and workflows</span>
+                </li>
+                <li class="flex items-start">
+                  <div class="flex-shrink-0 flex h-6 w-6 items-center justify-center rounded-full bg-primary-600 text-white text-xs mr-3 mt-1">
+                    2
+                  </div>
+                  <span class="text-gray-700"><b>Design:</b> Custom solution architecture tailored to your requirements</span>
+                </li>
+                <li class="flex items-start">
+                  <div class="flex-shrink-0 flex h-6 w-6 items-center justify-center rounded-full bg-primary-600 text-white text-xs mr-3 mt-1">
+                    3
+                  </div>
+                  <span class="text-gray-700"><b>Development:</b> Building and configuring your custom implementation</span>
+                </li>
+                <li class="flex items-start">
+                  <div class="flex-shrink-0 flex h-6 w-6 items-center justify-center rounded-full bg-primary-600 text-white text-xs mr-3 mt-1">
+                    4
+                  </div>
+                  <span class="text-gray-700"><b>Deployment:</b> Seamless integration with minimal disruption</span>
+                </li>
+                <li class="flex items-start">
+                  <div class="flex-shrink-0 flex h-6 w-6 items-center justify-center rounded-full bg-primary-600 text-white text-xs mr-3 mt-1">
+                    5
+                  </div>
+                  <span class="text-gray-700"><b>Support:</b> Ongoing dedicated enterprise-level support and optimization</span>
+                </li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Full Automation Section -->
+      <div class="py-16 px-4 bg-gray-50">
+        <div class="max-w-screen-xl mx-auto">
+          <div class="text-center mb-12">
+            <h2 class="text-3xl font-extrabold text-gray-900 mb-6">Complete Process Automation</h2>
+            <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+              Our enterprise solutions automate your entire video localization workflow, 
+              eliminating the need for additional human resources while expanding your global reach.
+            </p>
+          </div>
+          
+          <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+            <div class="feature-card bg-white p-8 rounded-xl border border-gray-200 shadow-lg hover:shadow-xl transition-all duration-300">
+              <div class="text-primary-600 text-4xl mb-6 flex justify-center">
+                <i class="fa-solid fa-robot"></i>
+              </div>
+              <h5 class="mb-4 text-xl font-bold tracking-tight text-center text-gray-900">
+                No Human Involvement Required
+              </h5>
+              <p class="font-normal text-gray-700 text-center">
+                Our AI handles everything from content analysis to voice generation, synchronization, 
+                and publishing. No need to hire specialists or train staff on new tools.
+              </p>
+            </div>
+            
+            <div class="feature-card bg-white p-8 rounded-xl border border-gray-200 shadow-lg hover:shadow-xl transition-all duration-300">
+              <div class="text-primary-600 text-4xl mb-6 flex justify-center">
+                <i class="fa-solid fa-clock"></i>
+              </div>
+              <h5 class="mb-4 text-xl font-bold tracking-tight text-center text-gray-900">
+                Scale Without Adding Resources
+              </h5>
+              <p class="font-normal text-gray-700 text-center">
+                Whether you're dubbing 10 videos or 10,000, our system scales automatically without 
+                requiring additional human resources or management overhead.
+              </p>
+            </div>
+            
+            <div class="feature-card bg-white p-8 rounded-xl border border-gray-200 shadow-lg hover:shadow-xl transition-all duration-300">
+              <div class="text-primary-600 text-4xl mb-6 flex justify-center">
+                <i class="fa-solid fa-chart-bar"></i>
+              </div>
+              <h5 class="mb-4 text-xl font-bold tracking-tight text-center text-gray-900">
+                Data-Driven Insights
+              </h5>
+              <p class="font-normal text-gray-700 text-center">
+                Comprehensive analytics dashboard shows performance across languages and platforms, 
+                helping you understand ROI and optimize your global content strategy.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Enterprise Solutions -->
+      <div class="py-16 px-4 bg-white">
+        <div class="max-w-screen-xl mx-auto">
+          <div class="text-center mb-12">
+            <h2 class="text-3xl font-extrabold text-gray-900 mb-6">Enterprise-Grade Features</h2>
+            <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+              Our enterprise solutions include advanced features designed specifically 
+              for the needs of large organizations with complex requirements.
+            </p>
+          </div>
+          
+          <div class="grid md:grid-cols-2 gap-8 mb-16">
+            <div class="bg-gray-50 p-8 rounded-xl shadow-lg">
+              <div class="flex items-start mb-6">
+                <div class="flex-shrink-0 mt-1">
+                  <div class="flex h-10 w-10 items-center justify-center rounded-full bg-primary-100">
+                    <i class="fa-solid fa-shield-alt text-primary-600"></i>
+                  </div>
+                </div>
+                <div class="ml-4">
+                  <h3 class="text-xl font-bold text-gray-900 mb-2">Enterprise Security</h3>
+                  <p class="text-gray-600">
+                    Robust security features including SOC 2 compliance, data encryption, 
+                    role-based access control, and secure content handling protocols designed 
+                    for enterprise requirements.
+                  </p>
+                </div>
+              </div>
+              
+              <div class="flex items-start mb-6">
+                <div class="flex-shrink-0 mt-1">
+                  <div class="flex h-10 w-10 items-center justify-center rounded-full bg-primary-100">
+                    <i class="fa-solid fa-code-branch text-primary-600"></i>
+                  </div>
+                </div>
+                <div class="ml-4">
+                  <h3 class="text-xl font-bold text-gray-900 mb-2">Custom API Integration</h3>
+                  <p class="text-gray-600">
+                    Dedicated API endpoints and custom integrations with your existing CMS, 
+                    DAM, CRM, and other systems for seamless data flow and process automation 
+                    that fits your infrastructure.
+                  </p>
+                </div>
+              </div>
+              
+              <div class="flex items-start mb-6">
+                <div class="flex-shrink-0 mt-1">
+                  <div class="flex h-10 w-10 items-center justify-center rounded-full bg-primary-100">
+                    <i class="fa-solid fa-users-cog text-primary-600"></i>
+                  </div>
+                </div>
+                <div class="ml-4">
+                  <h3 class="text-xl font-bold text-gray-900 mb-2">Advanced Team Management</h3>
+                  <p class="text-gray-600">
+                    Multi-user management with customizable permission levels, team workflows, 
+                    approval processes, and audit logs designed for enterprise collaboration.
+                  </p>
+                </div>
+              </div>
+            </div>
+            
+            <div class="bg-gray-50 p-8 rounded-xl shadow-lg">
+              <div class="flex items-start mb-6">
+                <div class="flex-shrink-0 mt-1">
+                  <div class="flex h-10 w-10 items-center justify-center rounded-full bg-primary-100">
+                    <i class="fa-solid fa-server text-primary-600"></i>
+                  </div>
+                </div>
+                <div class="ml-4">
+                  <h3 class="text-xl font-bold text-gray-900 mb-2">Dedicated Infrastructure</h3>
+                  <p class="text-gray-600">
+                    Option for dedicated processing infrastructure, private cloud deployment, 
+                    or on-premises solutions for organizations with specific security or 
+                    performance requirements.
+                  </p>
+                </div>
+              </div>
+              
+              <div class="flex items-start mb-6">
+                <div class="flex-shrink-0 mt-1">
+                  <div class="flex h-10 w-10 items-center justify-center rounded-full bg-primary-100">
+                    <i class="fa-solid fa-headset text-primary-600"></i>
+                  </div>
+                </div>
+                <div class="ml-4">
+                  <h3 class="text-xl font-bold text-gray-900 mb-2">White-Glove Support</h3>
+                  <p class="text-gray-600">
+                    Dedicated account management, priority support with guaranteed response times, 
+                    regular business reviews, and a direct line to our technical team for 
+                    enterprise clients.
+                  </p>
+                </div>
+              </div>
+              
+              <div class="flex items-start mb-6">
+                <div class="flex-shrink-0 mt-1">
+                  <div class="flex h-10 w-10 items-center justify-center rounded-full bg-primary-100">
+                    <i class="fa-solid fa-file-contract text-primary-600"></i>
+                  </div>
+                </div>
+                <div class="ml-4">
+                  <h3 class="text-xl font-bold text-gray-900 mb-2">Custom SLAs & Agreements</h3>
+                  <p class="text-gray-600">
+                    Tailored service level agreements, custom legal terms, specialized compliance 
+                    documentation, and flexible billing options to meet enterprise requirements.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Industry Solutions -->
+      <div class="py-16 px-4 bg-gray-50">
+        <div class="max-w-screen-xl mx-auto">
+          <div class="text-center mb-12">
+            <h2 class="text-3xl font-extrabold text-gray-900 mb-6">Industry-Specific Solutions</h2>
+            <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+              We've developed specialized solutions for various industries, each with unique requirements and challenges
+            </p>
+          </div>
+          
+          <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+            <div class="feature-card bg-white p-8 rounded-xl border border-gray-200 shadow-lg hover:shadow-xl transition-all duration-300">
+              <div class="text-primary-600 text-4xl mb-6 flex justify-center">
+                <i class="fa-solid fa-tv"></i>
+              </div>
+              <h5 class="mb-4 text-xl font-bold tracking-tight text-center text-gray-900">
+                Media & Entertainment
+              </h5>
+              <p class="font-normal text-gray-700 text-center">
+                Solutions for broadcasters, studios, and content networks to localize massive content libraries 
+                while preserving brand voice and creative intent across global markets.
+              </p>
+            </div>
+            
+            <div class="feature-card bg-white p-8 rounded-xl border border-gray-200 shadow-lg hover:shadow-xl transition-all duration-300">
+              <div class="text-primary-600 text-4xl mb-6 flex justify-center">
+                <i class="fa-solid fa-graduation-cap"></i>
+              </div>
+              <h5 class="mb-4 text-xl font-bold tracking-tight text-center text-gray-900">
+                Education & E-Learning
+              </h5>
+              <p class="font-normal text-gray-700 text-center">
+                Specialized tools for educational institutions and online learning platforms to make 
+                knowledge accessible globally through perfectly localized instructional content.
+              </p>
+            </div>
+            
+            <div class="feature-card bg-white p-8 rounded-xl border border-gray-200 shadow-lg hover:shadow-xl transition-all duration-300">
+              <div class="text-primary-600 text-4xl mb-6 flex justify-center">
+                <i class="fa-solid fa-shopping-bag"></i>
+              </div>
+              <h5 class="mb-4 text-xl font-bold tracking-tight text-center text-gray-900">
+                Retail & E-Commerce
+              </h5>
+              <p class="font-normal text-gray-700 text-center">
+                Solutions for retailers to localize product demonstrations, marketing videos, and customer 
+                testimonials to drive sales in international markets.
+              </p>
+            </div>
+            
+            <div class="feature-card bg-white p-8 rounded-xl border border-gray-200 shadow-lg hover:shadow-xl transition-all duration-300">
+              <div class="text-primary-600 text-4xl mb-6 flex justify-center">
+                <i class="fa-solid fa-building"></i>
+              </div>
+              <h5 class="mb-4 text-xl font-bold tracking-tight text-center text-gray-900">
+                Corporate Communications
+              </h5>
+              <p class="font-normal text-gray-700 text-center">
+                Enterprise solutions for internal communications, training, and compliance videos that maintain 
+                consistent messaging across global offices and teams.
+              </p>
+            </div>
+            
+            <div class="feature-card bg-white p-8 rounded-xl border border-gray-200 shadow-lg hover:shadow-xl transition-all duration-300">
+              <div class="text-primary-600 text-4xl mb-6 flex justify-center">
+                <i class="fa-solid fa-bullhorn"></i>
+              </div>
+              <h5 class="mb-4 text-xl font-bold tracking-tight text-center text-gray-900">
+                Marketing Agencies
+              </h5>
+              <p class="font-normal text-gray-700 text-center">
+                Custom tools for agencies managing multiple client accounts and campaigns, with seamless 
+                workflow integration and multi-client management features.
+              </p>
+            </div>
+            
+            <div class="feature-card bg-white p-8 rounded-xl border border-gray-200 shadow-lg hover:shadow-xl transition-all duration-300">
+              <div class="text-primary-600 text-4xl mb-6 flex justify-center">
+                <i class="fa-solid fa-heartbeat"></i>
+              </div>
+              <h5 class="mb-4 text-xl font-bold tracking-tight text-center text-gray-900">
+                Healthcare
+              </h5>
+              <p class="font-normal text-gray-700 text-center">
+                Specialized solutions for healthcare organizations with HIPAA compliance, medical terminology 
+                precision, and patient education video localization.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Enterprise Case Study -->
+      <div class="py-16 px-4 bg-white">
+        <div class="max-w-screen-xl mx-auto">
+          <div class="bg-primary-900 text-white rounded-xl overflow-hidden shadow-xl">
+            <div class="grid md:grid-cols-2">
+              <div class="p-8 md:p-12">
+                <div class="text-sm font-semibold uppercase tracking-wider mb-2 text-primary-200">Enterprise Success Story</div>
+                <h3 class="text-2xl font-bold mb-4">How MultiLearn Globalized Their Course Library</h3>
+                <p class="text-white/80 mb-6">
+                  MultiLearn, a leading online education platform with over 10,000 instructional videos, 
+                  needed to expand into 8 international markets without delay.
+                </p>
+                <ul class="space-y-2 mb-6 text-white/80">
+                  <li class="flex items-center">
+                    <i class="fa-solid fa-check text-primary-300 mr-2"></i>
+                    <span>Custom integration with their existing content management system</span>
+                  </li>
+                  <li class="flex items-center">
+                    <i class="fa-solid fa-check text-primary-300 mr-2"></i>
+                    <span>Automated dubbing of 10,000+ educational videos in 8 languages</span>
+                  </li>
+                  <li class="flex items-center">
+                    <i class="fa-solid fa-check text-primary-300 mr-2"></i>
+                    <span>Perfectly preserved instructor voice characteristics in all languages</span>
+                  </li>
+                  <li class="flex items-center">
+                    <i class="fa-solid fa-check text-primary-300 mr-2"></i>
+                    <span>85% time savings compared to traditional voice-over processes</span>
+                  </li>
+                  <li class="flex items-center">
+                    <i class="fa-solid fa-check text-primary-300 mr-2"></i>
+                    <span>No additional staff needed - fully automated workflow</span>
+                  </li>
+                </ul>
+                <div class="mb-6 text-2xl font-bold">
+                  Results: <span class="text-primary-300">245% increase</span> in international enrollment
+                </div>
+                <a href="#" class="inline-flex items-center font-medium text-primary-300 hover:text-primary-200">
+                  Read the full case study
+                  <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" fill="none">
+                    <path d="M5 12H19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M12 5L19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </a>
+              </div>
+              <div class="bg-primary-800 flex items-center justify-center p-8">
+                <div class="text-center">
+                  <div class="text-white text-7xl mb-4">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                  </div>
+                  <div class="text-5xl font-bold text-primary-300 mb-2">8 Languages</div>
+                  <div class="text-3xl font-semibold text-white">10,000+ Videos</div>
+                  <div class="text-lg text-white/70 mt-2">Zero Additional Staff</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- CTA Section -->
+      <div class="hero-gradient text-white">
+        <div class="py-16 px-4 mx-auto max-w-screen-xl text-center">
+          <h2 class="mb-6 text-3xl font-extrabold tracking-tight leading-none sm:text-4xl lg:text-5xl">
+            Ready for a Custom Enterprise Solution?
+          </h2>
+          <p class="mb-8 text-lg font-normal opacity-90 lg:text-xl sm:px-16 lg:px-48 max-w-3xl mx-auto">
+            Our team will work with you to understand your specific requirements and create 
+            a tailored solution that meets your organization's unique needs.
+          </p>
+          <div class="flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-4">
+            
+              href="#"
+              data-modal-target="contactModal"
+              data-modal-toggle="contactModal"
+              class="inline-flex justify-center items-center py-3 px-6 text-base font-medium text-center text-white rounded-lg bg-primary-600 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 transition-all duration-300 shadow-lg hover:shadow-xl"
+            >
+              Request Enterprise Demo
+            </a>
+            
+              href="#"
+              data-modal-target="contactModal"
+              data-modal-toggle="contactModal"
+              class="inline-flex justify-center items-center py-3 px-6 text-base font-medium text-center text-white rounded-lg bg-white/20 backdrop-blur-sm hover:bg-white/30 focus:ring-4 focus:ring-white/30 transition-all duration-300 border border-white/30"
+            >
+              Speak with a Solution Architect
             </a>
           </div>
         </div>
@@ -1272,11 +2057,11 @@
                   </li>
                   <li class="flex items-start">
                     <i class="fa-solid fa-check text-primary-600 mt-1 mr-3"></i>
-                    <span class="text-gray-600">Standard processing time (24-48 hours)</span>
+                    <span class="text-gray-600">Compatible with all major social platforms</span>
                   </li>
                   <li class="flex items-start">
                     <i class="fa-solid fa-check text-primary-600 mt-1 mr-3"></i>
-                    <span class="text-gray-600">Voice characteristic preservation</span>
+                    <span class="text-gray-600">Natural voice characteristic preservation</span>
                   </li>
                   <li class="flex items-start">
                     <i class="fa-solid fa-check text-primary-600 mt-1 mr-3"></i>
@@ -1284,7 +2069,7 @@
                   </li>
                   <li class="flex items-start">
                     <i class="fa-solid fa-check text-primary-600 mt-1 mr-3"></i>
-                    <span class="text-gray-600">Email support</span>
+                    <span class="text-gray-600">Fully automated workflow</span>
                   </li>
                 </ul>
               </div>
@@ -1326,7 +2111,7 @@
                   </li>
                   <li class="flex items-start">
                     <i class="fa-solid fa-check text-primary-600 mt-1 mr-3"></i>
-                    <span class="text-gray-600">Priority processing (12-24 hours)</span>
+                    <span class="text-gray-600">Automated social media publishing</span>
                   </li>
                   <li class="flex items-start">
                     <i class="fa-solid fa-check text-primary-600 mt-1 mr-3"></i>
@@ -1334,11 +2119,11 @@
                   </li>
                   <li class="flex items-start">
                     <i class="fa-solid fa-check text-primary-600 mt-1 mr-3"></i>
-                    <span class="text-gray-600">Social media publishing</span>
+                    <span class="text-gray-600">Multi-platform distribution automation</span>
                   </li>
                   <li class="flex items-start">
                     <i class="fa-solid fa-check text-primary-600 mt-1 mr-3"></i>
-                    <span class="text-gray-600">Priority email & chat support</span>
+                    <span class="text-gray-600">Priority support with 24hr response time</span>
                   </li>
                 </ul>
               </div>
@@ -1362,13 +2147,13 @@
                 <div class="flex items-baseline">
                   <span class="text-4xl font-extrabold">Custom</span>
                 </div>
-                <p class="text-sm text-gray-400 mt-2">Contact us for custom pricing</p>
+                <p class="text-sm text-gray-400 mt-2">Tailored to your needs</p>
               </div>
               <div class="p-8 flex-grow">
                 <ul class="space-y-4">
                   <li class="flex items-start">
                     <i class="fa-solid fa-check text-primary-600 mt-1 mr-3"></i>
-                    <span class="text-gray-600">Unlimited AI video dubbing</span>
+                    <span class="text-gray-600">Custom solution based on your specific requirements</span>
                   </li>
                   <li class="flex items-start">
                     <i class="fa-solid fa-check text-primary-600 mt-1 mr-3"></i>
@@ -1376,19 +2161,19 @@
                   </li>
                   <li class="flex items-start">
                     <i class="fa-solid fa-check text-primary-600 mt-1 mr-3"></i>
-                    <span class="text-gray-600">Express processing (4-12 hours)</span>
+                    <span class="text-gray-600">Enterprise-grade security and compliance</span>
                   </li>
                   <li class="flex items-start">
                     <i class="fa-solid fa-check text-primary-600 mt-1 mr-3"></i>
-                    <span class="text-gray-600">Premium voice characteristics & lip sync</span>
+                    <span class="text-gray-600">Custom API integrations with your systems</span>
                   </li>
                   <li class="flex items-start">
                     <i class="fa-solid fa-check text-primary-600 mt-1 mr-3"></i>
-                    <span class="text-gray-600">API access & custom integrations</span>
+                    <span class="text-gray-600">Advanced analytics and reporting dashboard</span>
                   </li>
                   <li class="flex items-start">
                     <i class="fa-solid fa-check text-primary-600 mt-1 mr-3"></i>
-                    <span class="text-gray-600">Dedicated account manager</span>
+                    <span class="text-gray-600">Dedicated account manager and support team</span>
                   </li>
                 </ul>
               </div>
@@ -1452,6 +2237,10 @@
                       <i class="fa-solid fa-check text-primary-600 mt-1 mr-3"></i>
                       <span class="text-gray-600">Consistent content delivery 365 days/year</span>
                     </li>
+                    <li class="flex items-start">
+                      <i class="fa-solid fa-check text-primary-600 mt-1 mr-3"></i>
+                      <span class="text-gray-600">Fully automated - no human resources needed</span>
+                    </li>
                   </ul>
                 </div>
                 
@@ -1473,6 +2262,10 @@
                     <li class="flex items-start">
                       <i class="fa-solid fa-circle-check text-primary-600 mt-1 mr-3"></i>
                       <span class="text-gray-600">Brands maintaining consistent social presence</span>
+                    </li>
+                    <li class="flex items-start">
+                      <i class="fa-solid fa-circle-check text-primary-600 mt-1 mr-3"></i>
+                      <span class="text-gray-600">Organizations lacking dedicated video teams</span>
                     </li>
                   </ul>
                 </div>
@@ -1623,8 +2416,32 @@
           </h1>
           <p class="mb-8 text-lg font-normal opacity-90 lg:text-xl sm:px-16 lg:px-48 max-w-3xl mx-auto">
             AI-driven video generation tailored precisely when and how you need
-            it, ensuring relevance and maximizing engagement.
+            it, ensuring relevance and maximizing engagement with zero effort.
           </p>
+
+          <!-- Social Platform Support -->
+          <div class="social-platform-logos">
+            <div class="social-platform-logo">
+              <i class="fab fa-youtube text-white"></i>
+              <span class="text-sm text-white opacity-80">YouTube</span>
+            </div>
+            <div class="social-platform-logo">
+              <i class="fab fa-tiktok text-white"></i>
+              <span class="text-sm text-white opacity-80">TikTok</span>
+            </div>
+            <div class="social-platform-logo">
+              <i class="fab fa-instagram text-white"></i>
+              <span class="text-sm text-white opacity-80">Instagram</span>
+            </div>
+            <div class="social-platform-logo">
+              <i class="fab fa-facebook text-white"></i>
+              <span class="text-sm text-white opacity-80">Facebook</span>
+            </div>
+            <div class="social-platform-logo">
+              <i class="fab fa-linkedin text-white"></i>
+              <span class="text-sm text-white opacity-80">LinkedIn</span>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -1641,9 +2458,9 @@
             ensures that your video content is always timely and relevant.
           </p>
           <p class="text-lg font-normal text-gray-700">
-            Our service can be seamlessly applied across various domains,
-            including Social Reels, Education, Marketing, and Sales, providing
-            customized solutions that cater to specific needs and contexts.
+            Our service is completely automated - you provide the data or content sources, and our AI handles 
+            everything else from video creation to publishing across all major social platforms. No human 
+            intervention required at any stage.
           </p>
         </div>
         
@@ -1657,7 +2474,7 @@
             </h5>
             <p class="font-normal text-gray-700 text-center">
               Transform the latest news into engaging social reels that
-              captivate your audience. We handle creation, uploading, and distribution 
+              captivate your audience. Our system automatically handles creation, uploading, and distribution 
               across all major social platforms for maximum reach.
             </p>
           </div>
@@ -1682,10 +2499,210 @@
               Marketing & Sales
             </h5>
             <p class="font-normal text-gray-700 text-center">
-              Drive sales with personalized video content. Create custom scenes
-              featuring your customers' purchases to deliver unique and memorable 
+              Drive sales with personalized video content automatically generated from your product data.
+              Create custom scenes featuring your offerings to deliver unique and memorable 
               marketing experiences that convert.
             </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Automation Features -->
+      <div class="py-16 px-4 bg-gray-50">
+        <div class="max-w-screen-xl mx-auto">
+          <h2 class="text-3xl font-extrabold text-center text-gray-900 mb-6">Fully Automated Process</h2>
+          <p class="text-lg text-center text-gray-600 mb-12 max-w-3xl mx-auto">
+            Our AI handles every aspect of the video creation and distribution process
+          </p>
+          
+          <div class="grid md:grid-cols-2 gap-12 max-w-4xl mx-auto">
+            <div class="bg-white p-8 rounded-xl shadow-lg">
+              <h3 class="text-xl font-bold text-gray-900 mb-6 text-center">
+                <i class="fa-solid fa-brain text-primary-600 mr-2"></i>
+                AI Content Generation
+              </h3>
+              <ul class="space-y-4 text-gray-700">
+                <li class="flex items-start">
+                  <div class="flex-shrink-0 mt-1">
+                    <div class="flex h-6 w-6 items-center justify-center rounded-full bg-primary-100">
+                      <i class="fa-solid fa-check text-xs text-primary-600"></i>
+                    </div>
+                  </div>
+                  <p class="ml-3">Automatic data processing from your sources</p>
+                </li>
+                <li class="flex items-start">
+                  <div class="flex-shrink-0 mt-1">
+                    <div class="flex h-6 w-6 items-center justify-center rounded-full bg-primary-100">
+                      <i class="fa-solid fa-check text-xs text-primary-600"></i>
+                    </div>
+                  </div>
+                  <p class="ml-3">Smart content structuring and organization</p>
+                </li>
+                <li class="flex items-start">
+                  <div class="flex-shrink-0 mt-1">
+                    <div class="flex h-6 w-6 items-center justify-center rounded-full bg-primary-100">
+                      <i class="fa-solid fa-check text-xs text-primary-600"></i>
+                    </div>
+                  </div>
+                  <p class="ml-3">Engaging script generation optimized for video</p>
+                </li>
+                <li class="flex items-start">
+                  <div class="flex-shrink-0 mt-1">
+                    <div class="flex h-6 w-6 items-center justify-center rounded-full bg-primary-100">
+                      <i class="fa-solid fa-check text-xs text-primary-600"></i>
+                    </div>
+                  </div>
+                  <p class="ml-3">Automatic image and media asset selection</p>
+                </li>
+                <li class="flex items-start">
+                  <div class="flex-shrink-0 mt-1">
+                    <div class="flex h-6 w-6 items-center justify-center rounded-full bg-primary-100">
+                      <i class="fa-solid fa-check text-xs text-primary-600"></i>
+                    </div>
+                  </div>
+                  <p class="ml-3">Natural voice narration with perfect pronunciation</p>
+                </li>
+              </ul>
+            </div>
+            
+            <div class="bg-white p-8 rounded-xl shadow-lg">
+              <h3 class="text-xl font-bold text-gray-900 mb-6 text-center">
+                <i class="fa-solid fa-share-alt text-primary-600 mr-2"></i>
+                Automatic Distribution
+              </h3>
+              <ul class="space-y-4 text-gray-700">
+                <li class="flex items-start">
+                  <div class="flex-shrink-0 mt-1">
+                    <div class="flex h-6 w-6 items-center justify-center rounded-full bg-primary-100">
+                      <i class="fa-solid fa-check text-xs text-primary-600"></i>
+                    </div>
+                  </div>
+                  <p class="ml-3">Multi-platform publishing to all major social networks</p>
+                </li>
+                <li class="flex items-start">
+                  <div class="flex-shrink-0 mt-1">
+                    <div class="flex h-6 w-6 items-center justify-center rounded-full bg-primary-100">
+                      <i class="fa-solid fa-check text-xs text-primary-600"></i>
+                    </div>
+                  </div>
+                  <p class="ml-3">Optimized titles, descriptions and hashtags for each platform</p>
+                </li>
+                <li class="flex items-start">
+                  <div class="flex-shrink-0 mt-1">
+                    <div class="flex h-6 w-6 items-center justify-center rounded-full bg-primary-100">
+                      <i class="fa-solid fa-check text-xs text-primary-600"></i>
+                    </div>
+                  </div>
+                  <p class="ml-3">Eye-catching thumbnail generation</p>
+                </li>
+                <li class="flex items-start">
+                  <div class="flex-shrink-0 mt-1">
+                    <div class="flex h-6 w-6 items-center justify-center rounded-full bg-primary-100">
+                      <i class="fa-solid fa-check text-xs text-primary-600"></i>
+                    </div>
+                  </div>
+                  <p class="ml-3">Smart scheduling for optimal engagement times</p>
+                </li>
+                <li class="flex items-start">
+                  <div class="flex-shrink-0 mt-1">
+                    <div class="flex h-6 w-6 items-center justify-center rounded-full bg-primary-100">
+                      <i class="fa-solid fa-check text-xs text-primary-600"></i>
+                    </div>
+                  </div>
+                  <p class="ml-3">Performance analytics and reporting dashboard</p>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Industry Use Cases -->
+      <div class="py-16 px-4 bg-white">
+        <div class="max-w-screen-xl mx-auto">
+          <h2 class="text-3xl font-extrabold text-center text-gray-900 mb-6">Industry Solutions</h2>
+          <p class="text-lg text-center text-gray-600 mb-12 max-w-3xl mx-auto">
+            See how different industries leverage our Just-on-Time Video technology
+          </p>
+          
+          <div class="grid md:grid-cols-3 gap-8">
+            <div class="feature-card bg-white p-8 rounded-xl border border-gray-200 shadow-lg hover:shadow-xl transition-all duration-300">
+              <div class="text-primary-600 text-4xl mb-6 flex justify-center">
+                <i class="fa-solid fa-newspaper"></i>
+              </div>
+              <h5 class="mb-4 text-xl font-bold tracking-tight text-center text-gray-900">
+                News & Media
+              </h5>
+              <p class="font-normal text-gray-700 text-center">
+                Automatically transform written news articles into engaging video content within minutes of publication. 
+                Keep your audience informed with visually compelling news updates.
+              </p>
+            </div>
+            
+            <div class="feature-card bg-white p-8 rounded-xl border border-gray-200 shadow-lg hover:shadow-xl transition-all duration-300">
+              <div class="text-primary-600 text-4xl mb-6 flex justify-center">
+                <i class="fa-solid fa-home"></i>
+              </div>
+              <h5 class="mb-4 text-xl font-bold tracking-tight text-center text-gray-900">
+                Real Estate
+              </h5>
+              <p class="font-normal text-gray-700 text-center">
+                Convert property listings into professional virtual tours automatically. Enhance property 
+                presentations without hiring videographers or spending hours on editing.
+              </p>
+            </div>
+            
+            <div class="feature-card bg-white p-8 rounded-xl border border-gray-200 shadow-lg hover:shadow-xl transition-all duration-300">
+              <div class="text-primary-600 text-4xl mb-6 flex justify-center">
+                <i class="fa-solid fa-shopping-cart"></i>
+              </div>
+              <h5 class="mb-4 text-xl font-bold tracking-tight text-center text-gray-900">
+                E-Commerce
+              </h5>
+              <p class="font-normal text-gray-700 text-center">
+                Transform product catalog data into compelling video showcases. Increase conversions by 
+                highlighting features, benefits, and customer reviews with dynamic video content.
+              </p>
+            </div>
+            
+            <div class="feature-card bg-white p-8 rounded-xl border border-gray-200 shadow-lg hover:shadow-xl transition-all duration-300">
+              <div class="text-primary-600 text-4xl mb-6 flex justify-center">
+                <i class="fa-solid fa-graduation-cap"></i>
+              </div>
+              <h5 class="mb-4 text-xl font-bold tracking-tight text-center text-gray-900">
+                Education
+              </h5>
+              <p class="font-normal text-gray-700 text-center">
+                Convert lesson plans and educational content into engaging video lessons. Create 
+                visual explanations that enhance learning outcomes and student engagement.
+              </p>
+            </div>
+            
+            <div class="feature-card bg-white p-8 rounded-xl border border-gray-200 shadow-lg hover:shadow-xl transition-all duration-300">
+              <div class="text-primary-600 text-4xl mb-6 flex justify-center">
+                <i class="fa-solid fa-chart-line"></i>
+              </div>
+              <h5 class="mb-4 text-xl font-bold tracking-tight text-center text-gray-900">
+                Financial Services
+              </h5>
+              <p class="font-normal text-gray-700 text-center">
+                Turn market updates, financial reports, and investment insights into clear, 
+                informative videos that help clients understand complex financial concepts.
+              </p>
+            </div>
+            
+            <div class="feature-card bg-white p-8 rounded-xl border border-gray-200 shadow-lg hover:shadow-xl transition-all duration-300">
+              <div class="text-primary-600 text-4xl mb-6 flex justify-center">
+                <i class="fa-solid fa-heartbeat"></i>
+              </div>
+              <h5 class="mb-4 text-xl font-bold tracking-tight text-center text-gray-900">
+                Healthcare
+              </h5>
+              <p class="font-normal text-gray-700 text-center">
+                Create patient education videos from health information resources. Improve patient 
+                understanding with visual explanations of procedures, treatments, and health guidance.
+              </p>
+            </div>
           </div>
         </div>
       </div>
@@ -1700,7 +2717,7 @@
             With Just on Time Video, you receive content that is not only
             high-quality but also perfectly timed to meet your specific needs.
             Enhance your engagement, streamline your content strategy, and stay
-            ahead of the competition with our innovative AI solutions.
+            ahead of the competition with our fully automated AI solutions.
           </p>
           <div class="flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-4">
             
@@ -1728,7 +2745,30 @@
             Create and manage AI-driven virtual influencers to amplify your
             brand's presence and engage with audiences in innovative ways.
           </p>
-          <div class="flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-4">
+          <!-- Social Platform Support -->
+          <div class="social-platform-logos">
+            <div class="social-platform-logo">
+              <i class="fab fa-youtube text-white"></i>
+              <span class="text-sm text-white opacity-80">YouTube</span>
+            </div>
+            <div class="social-platform-logo">
+              <i class="fab fa-tiktok text-white"></i>
+              <span class="text-sm text-white opacity-80">TikTok</span>
+            </div>
+            <div class="social-platform-logo">
+              <i class="fab fa-instagram text-white"></i>
+              <span class="text-sm text-white opacity-80">Instagram</span>
+            </div>
+            <div class="social-platform-logo">
+              <i class="fab fa-facebook text-white"></i>
+              <span class="text-sm text-white opacity-80">Facebook</span>
+            </div>
+            <div class="social-platform-logo">
+              <i class="fab fa-linkedin text-white"></i>
+              <span class="text-sm text-white opacity-80">LinkedIn</span>
+            </div>
+          </div>
+          <div class="flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-4 mt-8">
             
               href="#"
               data-modal-target="contactModal"
@@ -1750,7 +2790,8 @@
           <p class="text-lg text-center text-gray-700 mb-12 max-w-3xl mx-auto">
             Virtual influencers are AI-generated personalities designed to
             interact with your audience, promote your brand, and create engaging
-            content without the limitations of human influencers.
+            content without the limitations of human influencers. Our system handles everything 
+            automatically with no human involvement needed.
           </p>
 
           <div class="grid md:grid-cols-2 gap-12 max-w-4xl mx-auto mb-20">
@@ -1804,9 +2845,9 @@
                     </span>
                   </div>
                   <p>
-                    <strong class="font-semibold">Cost-Effective:</strong> Reduce costs associated with
-                    traditional influencer marketing while maintaining high 
-                    engagement levels and brand consistency.
+                    <strong class="font-semibold">Fully Automated:</strong> Our AI system handles 
+                    all content creation, scheduling, and engagement automatically with 
+                    no human resources required on your end.
                   </p>
                 </li>
                 <li class="flex items-start space-x-4">
@@ -1906,6 +2947,195 @@
           </div>
         </div>
       </div>
+
+      <!-- Automated Features -->
+      <div class="py-16 px-4 bg-gray-50">
+        <div class="max-w-screen-xl mx-auto">
+          <h2 class="mb-12 text-3xl font-extrabold tracking-tight text-center text-gray-900 sm:text-4xl">
+            Fully Automated Virtual Influencer Management
+          </h2>
+          
+          <div class="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+              <p class="text-lg text-gray-600 mb-6">
+                Our AI system handles every aspect of virtual influencer creation and management, 
+                eliminating the need for human involvement at any stage.
+              </p>
+              <div class="space-y-4">
+                <div class="flex items-start">
+                  <div class="flex-shrink-0 mt-1">
+                    <div class="flex h-8 w-8 items-center justify-center rounded-full bg-primary-100 text-primary-600">
+                      <i class="fa-solid fa-robot text-sm"></i>
+                    </div>
+                  </div>
+                  <div class="ml-4">
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Content Creation</h3>
+                    <p class="text-gray-600">
+                      Automated content generation across text, images, and videos tailored to your 
+                      brand voice and industry focus. No content teams needed.
+                    </p>
+                  </div>
+                </div>
+                
+                <div class="flex items-start">
+                  <div class="flex-shrink-0 mt-1">
+                    <div class="flex h-8 w-8 items-center justify-center rounded-full bg-primary-100 text-primary-600">
+                      <i class="fa-solid fa-comments text-sm"></i>
+                    </div>
+                  </div>
+                  <div class="ml-4">
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Audience Engagement</h3>
+                    <p class="text-gray-600">
+                      Intelligent comment responses, message replies, and interaction with followers 
+                      that builds authentic relationships and community.
+                    </p>
+                  </div>
+                </div>
+                
+                <div class="flex items-start">
+                  <div class="flex-shrink-0 mt-1">
+                    <div class="flex h-8 w-8 items-center justify-center rounded-full bg-primary-100 text-primary-600">
+                      <i class="fa-solid fa-calendar-alt text-sm"></i>
+                    </div>
+                  </div>
+                  <div class="ml-4">
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Scheduling & Distribution</h3>
+                    <p class="text-gray-600">
+                      Optimal posting schedules across all major platforms with platform-specific 
+                      content adaptations for maximum engagement.
+                    </p>
+                  </div>
+                </div>
+                
+                <div class="flex items-start">
+                  <div class="flex-shrink-0 mt-1">
+                    <div class="flex h-8 w-8 items-center justify-center rounded-full bg-primary-100 text-primary-600">
+                      <i class="fa-solid fa-chart-bar text-sm"></i>
+                    </div>
+                  </div>
+                  <div class="ml-4">
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Analytics & Optimization</h3>
+                    <p class="text-gray-600">
+                      Continuous performance monitoring with AI-driven content strategy improvements 
+                      based on audience response data.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="bg-white rounded-xl shadow-xl overflow-hidden">
+              <div class="p-6 bg-primary-900 text-white">
+                <h3 class="text-xl font-bold">Zero Human Resources Required</h3>
+                <p class="text-white/80 mt-2">
+                  Traditional influencer management vs. Zentinl's AI virtual influencers
+                </p>
+              </div>
+              <div class="p-6">
+                <div class="space-y-4">
+                  <div class="flex justify-between items-center p-3 bg-gray-50 rounded-lg">
+                    <span class="font-medium">Content Creation</span>
+                    <div class="flex items-center space-x-8">
+                      <span class="text-red-500">5-10 staff</span>
+                      <span class="text-primary-600 font-bold">0 staff</span>
+                    </div>
+                  </div>
+                  
+                  <div class="flex justify-between items-center p-3 bg-gray-50 rounded-lg">
+                    <span class="font-medium">Community Management</span>
+                    <div class="flex items-center space-x-8">
+                      <span class="text-red-500">3-5 staff</span>
+                      <span class="text-primary-600 font-bold">0 staff</span>
+                    </div>
+                  </div>
+                  
+                  <div class="flex justify-between items-center p-3 bg-gray-50 rounded-lg">
+                    <span class="font-medium">Scheduling & Publishing</span>
+                    <div class="flex items-center space-x-8">
+                      <span class="text-red-500">2-3 staff</span>
+                      <span class="text-primary-600 font-bold">0 staff</span>
+                    </div>
+                  </div>
+                  
+                  <div class="flex justify-between items-center p-3 bg-gray-50 rounded-lg">
+                    <span class="font-medium">Analytics & Strategy</span>
+                    <div class="flex items-center space-x-8">
+                      <span class="text-red-500">2-4 staff</span>
+                      <span class="text-primary-600 font-bold">0 staff</span>
+                    </div>
+                  </div>
+                  
+                  <div class="flex justify-between items-center p-3 bg-primary-50 rounded-lg font-bold">
+                    <span>Total Team Size</span>
+                    <div class="flex items-center space-x-8">
+                      <span class="text-red-600">12-22 staff</span>
+                      <span class="text-primary-600">0 staff</span>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="mt-6 text-center">
+                  <p class="text-gray-600 mb-3">Estimated annual savings with virtual influencers:</p>
+                  <div class="text-2xl font-bold text-primary-600">$500,000+</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Case Study -->
+      <div class="py-16 px-4 bg-white">
+        <div class="max-w-screen-xl mx-auto">
+          <div class="bg-primary-900 text-white rounded-xl overflow-hidden shadow-xl">
+            <div class="grid md:grid-cols-2">
+              <div class="p-8 md:p-12">
+                <div class="text-sm font-semibold uppercase tracking-wider mb-2 text-primary-200">Success Story</div>
+                <h3 class="text-2xl font-bold mb-4">How FashionNova Expanded Their Brand Reach</h3>
+                <p class="text-white/80 mb-6">
+                  FashionNova, a mid-sized fashion retailer, wanted to expand their social media presence 
+                  but faced budget constraints and influencer reliability issues.
+                </p>
+                <ul class="space-y-2 mb-6 text-white/80">
+                  <li class="flex items-center">
+                    <i class="fa-solid fa-check text-primary-300 mr-2"></i>
+                    <span>Created 3 virtual fashion influencers targeting different demographics</span>
+                  </li>
+                  <li class="flex items-center">
+                    <i class="fa-solid fa-check text-primary-300 mr-2"></i>
+                    <span>Fully automated content creation and posting across 5 social platforms</span>
+                  </li>
+                  <li class="flex items-center">
+                    <i class="fa-solid fa-check text-primary-300 mr-2"></i>
+                    <span>Zero human resources needed for management or content creation</span>
+                  </li>
+                  <li class="flex items-center">
+                    <i class="fa-solid fa-check text-primary-300 mr-2"></i>
+                    <span>187% increase in engagement compared to previous real influencers</span>
+                  </li>
+                  <li class="flex items-center">
+                    <i class="fa-solid fa-check text-primary-300 mr-2"></i>
+                    <span>43% cost reduction while increasing content volume by 3x</span>
+                  </li>
+                </ul>
+                <div class="mb-6 text-2xl font-bold">
+                  Results: <span class="text-primary-300">218% ROI</span> in first 6 months
+                </div>
+              </div>
+              <div class="bg-primary-800 flex items-center justify-center p-8">
+                <div class="text-center">
+                  <div class="text-white text-7xl mb-4">
+                    <i class="fa-solid fa-users"></i>
+                  </div>
+                  <div class="text-5xl font-bold text-primary-300 mb-2">0 Staff</div>
+                  <div class="text-3xl font-semibold text-white">3 Virtual Influencers</div>
+                  <div class="text-lg text-white/70 mt-2">5 Social Platforms</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- API & Zap Integrations Section -->
@@ -1925,8 +3155,31 @@
           </h1>
           <p class="mb-8 text-lg font-normal opacity-90 lg:text-xl sm:px-16 lg:px-48 max-w-3xl mx-auto">
             Seamlessly integrate Zentinl with your existing tools and workflows
-            using our robust API and Zapier integrations.
+            using our robust API and Zapier integrations for complete automation.
           </p>
+          <!-- Social Platform Support -->
+          <div class="social-platform-logos">
+            <div class="social-platform-logo">
+              <i class="fab fa-youtube text-white"></i>
+              <span class="text-sm text-white opacity-80">YouTube</span>
+            </div>
+            <div class="social-platform-logo">
+              <i class="fab fa-tiktok text-white"></i>
+              <span class="text-sm text-white opacity-80">TikTok</span>
+            </div>
+            <div class="social-platform-logo">
+              <i class="fab fa-instagram text-white"></i>
+              <span class="text-sm text-white opacity-80">Instagram</span>
+            </div>
+            <div class="social-platform-logo">
+              <i class="fab fa-facebook text-white"></i>
+              <span class="text-sm text-white opacity-80">Facebook</span>
+            </div>
+            <div class="social-platform-logo">
+              <i class="fab fa-linkedin text-white"></i>
+              <span class="text-sm text-white opacity-80">LinkedIn</span>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -1954,7 +3207,7 @@
                   <p>
                     <strong class="font-semibold">Comprehensive API:</strong> Access all of Zentinl's
                     features programmatically through our RESTful API for seamless 
-                    integration with custom applications.
+                    integration with custom applications and complete workflow automation.
                   </p>
                 </li>
                 <li class="flex items-start space-x-4">
@@ -1966,7 +3219,7 @@
                   <p>
                     <strong class="font-semibold">Zapier Integration:</strong> Connect Zentinl with over
                     3,000 apps on Zapier to automate tasks and streamline your 
-                    video content workflow.
+                    video content workflow without any coding required.
                   </p>
                 </li>
                 <li class="flex items-start space-x-4">
@@ -1978,7 +3231,7 @@
                   <p>
                     <strong class="font-semibold">Custom Workflows:</strong> Design and implement
                     workflows that fit your unique business needs and automate
-                    repetitive content creation tasks.
+                    repetitive content creation tasks end-to-end.
                   </p>
                 </li>
               </ul>
@@ -1995,7 +3248,7 @@
                   <p>
                     <strong class="font-semibold">Real-Time Data Sync:</strong> Ensure your data is
                     always up-to-date across all integrated platforms with 
-                    real-time synchronization.
+                    real-time synchronization and automated triggers.
                   </p>
                 </li>
                 <li class="flex items-start space-x-4">
@@ -2007,7 +3260,7 @@
                   <p>
                     <strong class="font-semibold">Scalable Solutions:</strong> Our integrations scale with 
                     your needs, allowing you to handle increasing volumes of video 
-                    content as your business grows.
+                    content as your business grows without adding staff.
                   </p>
                 </li>
                 <li class="flex items-start space-x-4">
@@ -2017,9 +3270,9 @@
                     </span>
                   </div>
                   <p>
-                    <strong class="font-semibold">Enterprise Ready:</strong> Secure, reliable, and 
-                    robust integrations suitable for businesses of all sizes, from
-                    startups to large enterprises.
+                    <strong class="font-semibold">Tailored Enterprise Solutions:</strong> Custom integrations 
+                    and dedicated API endpoints designed specifically for your enterprise's 
+                    unique requirements and existing systems.
                   </p>
                 </li>
               </ul>
@@ -2029,7 +3282,7 @@
           <p class="text-lg text-center text-gray-700 mb-12 max-w-3xl mx-auto">
             By leveraging Zentinl's API and Zapier integrations, you can
             automate your video content workflows, enhance productivity, and
-            focus more on strategy and creativity.
+            focus more on strategy and creativity. Everything just works!
           </p>
 
           <div class="flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-4 mb-16">
@@ -2039,48 +3292,373 @@
               data-modal-toggle="contactModal"
               class="inline-flex justify-center items-center py-3 px-6 text-base font-medium text-center text-white rounded-lg bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 transition-all duration-300 shadow-lg hover:shadow-xl"
             >
-              Get Started Today
+              Get Started with API Integration
             </a>
           </div>
+        </div>
+      </div>
 
-          <!-- Integration Examples -->
+      <!-- Integration Examples -->
+      <div class="py-16 px-4 bg-gray-50">
+        <div class="max-w-screen-xl mx-auto">
+          <h2 class="mb-12 text-3xl font-extrabold tracking-tight text-center text-gray-900 sm:text-4xl">
+Integration Examples
+          </h2>
+          <p class="text-lg text-center text-gray-600 mb-12 max-w-3xl mx-auto">
+            See how different businesses automate their video workflows with our integrations
+          </p>
+          
           <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-            <div class="feature-card bg-white p-8 rounded-xl border border-gray-200 shadow-lg hover:shadow-xl transition-all duration-300">
+            <div class="bg-white rounded-xl p-8 shadow-lg border border-gray-200 hover:shadow-xl transition-all duration-300">
               <div class="text-primary-600 text-4xl mb-6 flex justify-center">
-                <i class="fa-solid fa-code"></i>
+                <i class="fa-solid fa-rss"></i>
               </div>
-              <h5 class="mb-4 text-xl font-bold tracking-tight text-center text-gray-900">
-                Custom Applications
-              </h5>
-              <p class="font-normal text-gray-700 text-center">
-                Integrate Zentinl's video generation capabilities directly into your
-                custom software applications using our comprehensive API.
+              <h3 class="text-xl font-bold text-gray-900 mb-4 text-center">
+                Content Feed to Video
+              </h3>
+              <p class="text-gray-600 text-center mb-4">
+                Connect your blog RSS feed or content API to automatically generate videos from new articles
+                and distribute them across all social platforms.
+              </p>
+              <div class="flex justify-center">
+                <span class="inline-flex items-center px-3 py-1 text-xs font-medium rounded-full bg-blue-100 text-blue-800">
+                  <i class="fa-solid fa-bolt mr-1"></i> Zapier
+                </span>
+                <span class="inline-flex items-center ml-2 px-3 py-1 text-xs font-medium rounded-full bg-indigo-100 text-indigo-800">
+                  <i class="fa-solid fa-code mr-1"></i> API
+                </span>
+              </div>
+            </div>
+            
+            <div class="bg-white rounded-xl p-8 shadow-lg border border-gray-200 hover:shadow-xl transition-all duration-300">
+              <div class="text-primary-600 text-4xl mb-6 flex justify-center">
+                <i class="fa-solid fa-language"></i>
+              </div>
+              <h3 class="text-xl font-bold text-gray-900 mb-4 text-center">
+                Multi-Language Publishing
+              </h3>
+              <p class="text-gray-600 text-center mb-4">
+                Automatically detect new YouTube videos and create dubbed versions in multiple languages, 
+                then publish to region-specific social channels.
+              </p>
+              <div class="flex justify-center">
+                <span class="inline-flex items-center px-3 py-1 text-xs font-medium rounded-full bg-blue-100 text-blue-800">
+                  <i class="fa-solid fa-bolt mr-1"></i> Zapier
+                </span>
+                <span class="inline-flex items-center ml-2 px-3 py-1 text-xs font-medium rounded-full bg-green-100 text-green-800">
+                  <i class="fa-solid fa-plug mr-1"></i> Webhooks
+                </span>
+              </div>
+            </div>
+            
+            <div class="bg-white rounded-xl p-8 shadow-lg border border-gray-200 hover:shadow-xl transition-all duration-300">
+              <div class="text-primary-600 text-4xl mb-6 flex justify-center">
+                <i class="fa-solid fa-database"></i>
+              </div>
+              <h3 class="text-xl font-bold text-gray-900 mb-4 text-center">
+                CMS Integration
+              </h3>
+              <p class="text-gray-600 text-center mb-4">
+                Connect your CMS or product database to automatically create and update videos 
+                whenever product information changes or new items are added.
+              </p>
+              <div class="flex justify-center">
+                <span class="inline-flex items-center px-3 py-1 text-xs font-medium rounded-full bg-indigo-100 text-indigo-800">
+                  <i class="fa-solid fa-code mr-1"></i> API
+                </span>
+                <span class="inline-flex items-center ml-2 px-3 py-1 text-xs font-medium rounded-full bg-purple-100 text-purple-800">
+                  <i class="fa-solid fa-cogs mr-1"></i> Custom
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- API Features -->
+      <div class="py-16 px-4 bg-white">
+        <div class="max-w-screen-xl mx-auto">
+          <h2 class="mb-12 text-3xl font-extrabold tracking-tight text-center text-gray-900 sm:text-4xl">
+            API Features
+          </h2>
+          
+          <div class="grid md:grid-cols-2 gap-12 max-w-4xl mx-auto">
+            <div class="bg-gray-50 p-8 rounded-xl shadow-lg">
+              <h3 class="text-xl font-bold text-gray-900 mb-6 text-center border-b border-gray-200 pb-4">
+                <i class="fa-solid fa-code text-primary-600 mr-2"></i>
+                Video Dubbing API
+              </h3>
+              <ul class="space-y-4 text-gray-700">
+                <li class="flex items-start">
+                  <div class="flex-shrink-0 mt-1">
+                    <div class="flex h-6 w-6 items-center justify-center rounded-full bg-primary-100">
+                      <i class="fa-solid fa-check text-xs text-primary-600"></i>
+                    </div>
+                  </div>
+                  <p class="ml-3">Submit videos via URL or file upload</p>
+                </li>
+                <li class="flex items-start">
+                  <div class="flex-shrink-0 mt-1">
+                    <div class="flex h-6 w-6 items-center justify-center rounded-full bg-primary-100">
+                      <i class="fa-solid fa-check text-xs text-primary-600"></i>
+                    </div>
+                  </div>
+                  <p class="ml-3">Specify target languages and voice parameters</p>
+                </li>
+                <li class="flex items-start">
+                  <div class="flex-shrink-0 mt-1">
+                    <div class="flex h-6 w-6 items-center justify-center rounded-full bg-primary-100">
+                      <i class="fa-solid fa-check text-xs text-primary-600"></i>
+                    </div>
+                  </div>
+                  <p class="ml-3">Real-time status updates via webhooks</p>
+                </li>
+                <li class="flex items-start">
+                  <div class="flex-shrink-0 mt-1">
+                    <div class="flex h-6 w-6 items-center justify-center rounded-full bg-primary-100">
+                      <i class="fa-solid fa-check text-xs text-primary-600"></i>
+                    </div>
+                  </div>
+                  <p class="ml-3">Download processed videos or auto-publish</p>
+                </li>
+              </ul>
+              <div class="mt-6 p-4 bg-gray-100 rounded-lg">
+                <code class="text-xs text-gray-800 block">
+                  POST /api/v1/dub<br>
+                  {<br>
+                  &nbsp;&nbsp;"video_url": "https://example.com/video.mp4",<br>
+                  &nbsp;&nbsp;"target_languages": ["es", "fr", "de"],<br>
+                  &nbsp;&nbsp;"preserve_characteristics": true,<br>
+                  &nbsp;&nbsp;"auto_publish": true<br>
+                  }
+                </code>
+              </div>
+            </div>
+            
+            <div class="bg-gray-50 p-8 rounded-xl shadow-lg">
+              <h3 class="text-xl font-bold text-gray-900 mb-6 text-center border-b border-gray-200 pb-4">
+                <i class="fa-solid fa-video text-primary-600 mr-2"></i>
+                Video Creation API
+              </h3>
+              <ul class="space-y-4 text-gray-700">
+                <li class="flex items-start">
+                  <div class="flex-shrink-0 mt-1">
+                    <div class="flex h-6 w-6 items-center justify-center rounded-full bg-primary-100">
+                      <i class="fa-solid fa-check text-xs text-primary-600"></i>
+                    </div>
+                  </div>
+                  <p class="ml-3">Generate videos from text, images, or data</p>
+                </li>
+                <li class="flex items-start">
+                  <div class="flex-shrink-0 mt-1">
+                    <div class="flex h-6 w-6 items-center justify-center rounded-full bg-primary-100">
+                      <i class="fa-solid fa-check text-xs text-primary-600"></i>
+                    </div>
+                  </div>
+                  <p class="ml-3">Customize style, pacing, and visual elements</p>
+                </li>
+                <li class="flex items-start">
+                  <div class="flex-shrink-0 mt-1">
+                    <div class="flex h-6 w-6 items-center justify-center rounded-full bg-primary-100">
+                      <i class="fa-solid fa-check text-xs text-primary-600"></i>
+                    </div>
+                  </div>
+                  <p class="ml-3">Batch processing for multiple videos</p>
+                </li>
+                <li class="flex items-start">
+                  <div class="flex-shrink-0 mt-1">
+                    <div class="flex h-6 w-6 items-center justify-center rounded-full bg-primary-100">
+                      <i class="fa-solid fa-check text-xs text-primary-600"></i>
+                    </div>
+                  </div>
+                  <p class="ml-3">Automated publishing with platform-specific formatting</p>
+                </li>
+              </ul>
+              <div class="mt-6 p-4 bg-gray-100 rounded-lg">
+                <code class="text-xs text-gray-800 block">
+                  POST /api/v1/create<br>
+                  {<br>
+                  &nbsp;&nbsp;"content_source": "https://myblog.com/api/posts/123",<br>
+                  &nbsp;&nbsp;"style": "news",<br>
+                  &nbsp;&nbsp;"length": "60",<br>
+                  &nbsp;&nbsp;"platforms": ["youtube", "instagram", "tiktok"]<br>
+                  }
+                </code>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Zapier Section -->
+      <div class="py-16 px-4 bg-gray-50">
+        <div class="max-w-screen-xl mx-auto">
+          <div class="grid md:grid-cols-2 gap-12 items-center max-w-5xl mx-auto">
+            <div>
+              <h2 class="text-3xl font-extrabold text-gray-900 mb-6">No-Code Integration with Zapier</h2>
+              <p class="text-lg text-gray-600 mb-6">
+                Connect Zentinl with thousands of other apps without writing a single line of code. 
+                Our Zapier integration makes it easy to create powerful automation workflows.
+              </p>
+              <div class="space-y-4">
+                <div class="flex items-start">
+                  <div class="flex-shrink-0 mt-1">
+                    <div class="flex h-6 w-6 items-center justify-center rounded-full bg-primary-100">
+                      <i class="fa-solid fa-check text-xs text-primary-600"></i>
+                    </div>
+                  </div>
+                  <p class="ml-3 text-gray-600">Trigger video creation from events in other apps</p>
+                </div>
+                <div class="flex items-start">
+                  <div class="flex-shrink-0 mt-1">
+                    <div class="flex h-6 w-6 items-center justify-center rounded-full bg-primary-100">
+                      <i class="fa-solid fa-check text-xs text-primary-600"></i>
+                    </div>
+                  </div>
+                  <p class="ml-3 text-gray-600">Send video data to your CRM, email, or other tools</p>
+                </div>
+                <div class="flex items-start">
+                  <div class="flex-shrink-0 mt-1">
+                    <div class="flex h-6 w-6 items-center justify-center rounded-full bg-primary-100">
+                      <i class="fa-solid fa-check text-xs text-primary-600"></i>
+                    </div>
+                  </div>
+                  <p class="ml-3 text-gray-600">Create multi-step workflows with multiple apps</p>
+                </div>
+                <div class="flex items-start">
+                  <div class="flex-shrink-0 mt-1">
+                    <div class="flex h-6 w-6 items-center justify-center rounded-full bg-primary-100">
+                      <i class="fa-solid fa-check text-xs text-primary-600"></i>
+                    </div>
+                  </div>
+                  <p class="ml-3 text-gray-600">Pre-built templates for common workflows</p>
+                </div>
+              </div>
+              <div class="mt-8">
+                
+                  href="#"
+                  class="inline-flex justify-center items-center py-3 px-6 text-base font-medium text-center text-white rounded-lg bg-primary-600 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 transition-all duration-300 shadow-lg hover:shadow-xl"
+                >
+                  Explore Zapier Integration
+                </a>
+              </div>
+            </div>
+            <div class="bg-white rounded-xl shadow-xl p-8 relative">
+              <div class="absolute top-0 right-0 bg-blue-600 text-white text-xs font-bold px-3 py-1 rounded-bl-lg rounded-tr-lg">
+                ZAPIER
+              </div>
+              <h3 class="text-xl font-bold text-gray-900 mb-6">Popular Zap Templates</h3>
+              <div class="space-y-4">
+                <div class="p-4 bg-gray-50 rounded-lg">
+                  <div class="flex items-center">
+                    <img src="./zentinel-logo.png" class="w-8 h-8 mr-2" alt="Zentinl" />
+                    <i class="fas fa-plus mx-2 text-gray-400"></i>
+                    <i class="fab fa-wordpress text-2xl text-blue-500 mr-2"></i>
+                    <span class="font-medium">WordPress</span>
+                  </div>
+                  <p class="mt-2 text-sm text-gray-600">Create videos from new WordPress posts</p>
+                </div>
+                
+                <div class="p-4 bg-gray-50 rounded-lg">
+                  <div class="flex items-center">
+                    <img src="./zentinel-logo.png" class="w-8 h-8 mr-2" alt="Zentinl" />
+                    <i class="fas fa-plus mx-2 text-gray-400"></i>
+                    <i class="fab fa-youtube text-2xl text-red-500 mr-2"></i>
+                    <span class="font-medium">YouTube</span>
+                  </div>
+                  <p class="mt-2 text-sm text-gray-600">Dub new YouTube videos into multiple languages</p>
+                </div>
+                
+                <div class="p-4 bg-gray-50 rounded-lg">
+                  <div class="flex items-center">
+                    <img src="./zentinel-logo.png" class="w-8 h-8 mr-2" alt="Zentinl" />
+                    <i class="fas fa-plus mx-2 text-gray-400"></i>
+                    <i class="fab fa-shopify text-2xl text-green-500 mr-2"></i>
+                    <span class="font-medium">Shopify</span>
+                  </div>
+                  <p class="mt-2 text-sm text-gray-600">Generate product videos from new Shopify items</p>
+                </div>
+                
+                <div class="p-4 bg-gray-50 rounded-lg">
+                  <div class="flex items-center">
+                    <img src="./zentinel-logo.png" class="w-8 h-8 mr-2" alt="Zentinl" />
+                    <i class="fas fa-plus mx-2 text-gray-400"></i>
+                    <i class="fab fa-slack text-2xl text-purple-500 mr-2"></i>
+                    <span class="font-medium">Slack</span>
+                  </div>
+                  <p class="mt-2 text-sm text-gray-600">Get notified in Slack when videos are completed</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Enterprise Solutions -->
+      <div class="py-16 px-4 bg-white">
+        <div class="max-w-screen-xl mx-auto text-center">
+          <h2 class="mb-6 text-3xl font-extrabold text-gray-900 sm:text-4xl">Enterprise Solutions</h2>
+          <p class="text-lg text-gray-600 mb-8 max-w-3xl mx-auto">
+            We offer custom API solutions and integrations tailored specifically for enterprise needs
+          </p>
+          
+          <div class="inline-flex items-center justify-center p-1 rounded-lg bg-gray-100 mb-10">
+            <div class="px-4 py-2 rounded-md bg-primary-100 text-primary-800 mr-2 font-medium">Enterprise Features</div>
+            <div class="px-4 py-2 text-gray-700">Custom Endpoints</div>
+            <div class="px-4 py-2 text-gray-700">Dedicated Infrastructure</div>
+            <div class="px-4 py-2 text-gray-700">Enhanced Security</div>
+          </div>
+          
+          <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+            <div class="bg-white p-8 rounded-xl border border-gray-200 shadow-lg">
+              <div class="text-primary-600 text-4xl mb-6 flex justify-center">
+                <i class="fa-solid fa-shield-alt"></i>
+              </div>
+              <h3 class="text-xl font-bold text-gray-900 mb-4 text-center">
+                Enhanced API Security
+              </h3>
+              <p class="text-gray-600 text-center">
+                Enterprise-grade security with dedicated endpoints, IP whitelisting, 
+                advanced authentication, and compliance with your security requirements.
               </p>
             </div>
-            <div class="feature-card bg-white p-8 rounded-xl border border-gray-200 shadow-lg hover:shadow-xl transition-all duration-300">
+            
+            <div class="bg-white p-8 rounded-xl border border-gray-200 shadow-lg">
               <div class="text-primary-600 text-4xl mb-6 flex justify-center">
-                <i class="fa-solid fa-sync-alt"></i>
+                <i class="fa-solid fa-project-diagram"></i>
               </div>
-              <h5 class="mb-4 text-xl font-bold tracking-tight text-center text-gray-900">
-                Automated Workflows
-              </h5>
-              <p class="font-normal text-gray-700 text-center">
-                Use Zapier to connect Zentinl with your favorite apps, automating
-                tasks like video creation, scheduling, and publishing.
+              <h3 class="text-xl font-bold text-gray-900 mb-4 text-center">
+                Custom Integration
+              </h3>
+              <p class="text-gray-600 text-center">
+                Tailored integration solutions designed specifically for your systems, 
+                workflows, and business processes with dedicated implementation support.
               </p>
             </div>
-            <div class="feature-card bg-white p-8 rounded-xl border border-gray-200 shadow-lg hover:shadow-xl transition-all duration-300">
+            
+            <div class="bg-white p-8 rounded-xl border border-gray-200 shadow-lg">
               <div class="text-primary-600 text-4xl mb-6 flex justify-center">
-                <i class="fa-solid fa-cloud-upload-alt"></i>
+                <i class="fa-solid fa-tachometer-alt"></i>
               </div>
-              <h5 class="mb-4 text-xl font-bold tracking-tight text-center text-gray-900">
-                Seamless Data Transfer
-              </h5>
-              <p class="font-normal text-gray-700 text-center">
-                Ensure your data flows smoothly between Zentinl and other platforms,
-                keeping your content creation process efficient and organized.
+              <h3 class="text-xl font-bold text-gray-900 mb-4 text-center">
+                Dedicated Infrastructure
+              </h3>
+              <p class="text-gray-600 text-center">
+                Prioritized processing with dedicated resources, higher rate limits, 
+                and guaranteed SLAs for mission-critical enterprise applications.
               </p>
             </div>
+          </div>
+          
+          <div class="mt-10">
+            
+              href="#"
+              data-modal-target="contactModal"
+              data-modal-toggle="contactModal"
+              class="inline-flex justify-center items-center py-3 px-6 text-base font-medium text-center text-white rounded-lg bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 transition-all duration-300 shadow-lg hover:shadow-xl"
+            >
+              Request Enterprise API Solution
+            </a>
           </div>
         </div>
       </div>
@@ -2089,7 +3667,7 @@
     <!-- footer Section -->
     <footer class="bg-gray-900 text-white mt-16">
       <div class="mx-auto w-full max-w-screen-xl p-4 py-8 lg:py-12">
-        <div class="md:flex md:justify-between items-center">
+        <div class="md:flex md:justify-between items-start">
           <div class="mb-6 md:mb-0">
             <a href="/" class="flex items-center">
               <img
@@ -2102,46 +3680,76 @@
                 >Zentinl</span
               >
             </a>
+            <p class="mt-3 text-gray-400 max-w-xs">
+              AI-powered video dubbing and creation for global audiences. 
+              Expand your reach with fully automated video solutions.
+            </p>
+            <div class="flex mt-4 space-x-4">
+              <a href="#" class="text-gray-400 hover:text-white transition-colors duration-200">
+                <i class="fas fa-globe"></i>
+              </a>
+              <a href="mailto:contact@zentinl.com" class="text-gray-400 hover:text-white transition-colors duration-200">
+                <i class="fas fa-envelope"></i>
+              </a>
+              <a href="tel:+1234567890" class="text-gray-400 hover:text-white transition-colors duration-200">
+                <i class="fas fa-phone"></i>
+              </a>
+            </div>
           </div>
           <div class="grid grid-cols-2 gap-8 sm:grid-cols-3 sm:gap-6">
             <div>
-              <h2 class="mb-4 text-sm font-semibold uppercase">Services</h2>
-              <ul class="text-gray-400">
-                <li class="mb-2">
+              <h2 class="mb-4 text-sm font-semibold uppercase tracking-wider">Services</h2>
+              <ul class="text-gray-400 space-y-2">
+                <li>
                   <a href="/video-dubbing" class="hover:text-white transition-colors duration-200">AI Video Dubbing</a>
                 </li>
-                <li class="mb-2">
+                <li>
                   <a href="/just-on-time" class="hover:text-white transition-colors duration-200">Just on Time Video</a>
                 </li>
-                <li class="mb-2">
+                <li>
                   <a href="/virtual-influencers" class="hover:text-white transition-colors duration-200">Virtual Influencers</a>
                 </li>
                 <li>
                   <a href="/api" class="hover:text-white transition-colors duration-200">API Integration</a>
                 </li>
+                <li>
+                  <a href="/enterprise" class="hover:text-white transition-colors duration-200">Enterprise Solutions</a>
+                </li>
               </ul>
             </div>
             <div>
-              <h2 class="mb-4 text-sm font-semibold uppercase">Company</h2>
-              <ul class="text-gray-400">
-                <li class="mb-2">
+              <h2 class="mb-4 text-sm font-semibold uppercase tracking-wider">Company</h2>
+              <ul class="text-gray-400 space-y-2">
+                <li>
                   <a href="/" class="hover:text-white transition-colors duration-200">About Us</a>
                 </li>
-                <li class="mb-2">
+                <li>
                   <a href="/pricing" class="hover:text-white transition-colors duration-200">Pricing</a>
                 </li>
                 <li>
                   <a href="#" data-modal-target="contactModal" data-modal-toggle="contactModal" class="hover:text-white transition-colors duration-200">Contact</a>
                 </li>
+                <li>
+                  <a href="#" class="hover:text-white transition-colors duration-200">Careers</a>
+                </li>
+                <li>
+                  <a href="#" class="hover:text-white transition-colors duration-200">Blog</a>
+                </li>
               </ul>
             </div>
             <div>
-              <h2 class="mb-4 text-sm font-semibold uppercase">Legal</h2>
-              <ul class="text-gray-400">
-                <li class="mb-2">
+              <h2 class="mb-4 text-sm font-semibold uppercase tracking-wider">Resources</h2>
+              <ul class="text-gray-400 space-y-2">
+                <li>
+                  <a href="#" class="hover:text-white transition-colors duration-200">Documentation</a>
+                </li>
+                <li>
+                  <a href="#" class="hover:text-white transition-colors duration-200">API References</a>
+                </li>
+                <li>
                   <a href="#" class="hover:text-white transition-colors duration-200">Privacy Policy</a>
                 </li>
-                <li class="mb-2">
+                <li>
                   <a href="#" class="hover:text-white transition-colors duration-200">Terms of Service</a>
                 </li>
               </ul>
@@ -2151,7 +3759,7 @@
         <hr class="my-8 border-gray-700 sm:mx-auto" />
         <div class="sm:flex sm:items-center sm:justify-between">
           <span class="text-sm text-gray-400 sm:text-center">
-            © 2024 <a class="hover:underline">Zentinl</a>. All Rights Reserved.
+            © 2024 <a href="/" class="hover:underline">Zentinl</a>. All Rights Reserved.
           </span>
           <div class="flex mt-4 sm:justify-center sm:mt-0 space-x-5">
             <!-- Facebook -->
@@ -2266,6 +3874,9 @@
           switch(path) {
             case 'video-dubbing':
               sectionId = 'video-dubbing';
+              break;
+            case 'enterprise':
+              sectionId = 'enterprise';
               break;
             case 'pricing':
               sectionId = 'Pricing';
@@ -2389,6 +4000,24 @@
               };
               break;
               
+            case 'enterprise':
+              pageData = {
+                "@context": "https://schema.org",
+                "@type": "WebPage",
+                "name": pageTitle,
+                "description": pageDescription,
+                "url": currentUrl,
+                "offers": {
+                  "@type": "Service",
+                  "serviceType": "Enterprise AI Solutions",
+                  "provider": {
+                    "@type": "Organization",
+                    "name": "Zentinl"
+                  }
+                }
+              };
+              break;
+              
             case 'Pricing':
               pageData = {
                 "@context": "https://schema.org",
@@ -2468,6 +4097,11 @@
           <loc>https://zentinl.com/video-dubbing</loc>
           <lastmod>${new Date().toISOString().split('T')[0]}</lastmod>
           <priority>1.0</priority>
+        </url>
+        <url>
+          <loc>https://zentinl.com/enterprise</loc>
+          <lastmod>${new Date().toISOString().split('T')[0]}</lastmod>
+          <priority>0.9</priority>
         </url>
         <url>
           <loc>https://zentinl.com/pricing</loc>
