@@ -10,21 +10,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
     <!-- Dynamic Meta Tags - Will be updated by JavaScript -->
-    <title>Zentinl - AI-Powered Video Creation</title>
-    <meta name="description" content="Create Stunning Videos Effortlessly with AI. Unleash your creativity with our AI-powered video creation software! Simply describe your vision, and our intelligent tool brings it to life—no editing skills required." />
+    <title>Zentinl - AI Video Dubbing & Creation</title>
+    <meta name="description" content="Transform your videos for global audiences with AI dubbing technology that preserves voice characteristics. Reach 4x more users with minimal effort." />
     <link rel="canonical" href="https://zentinl.com/" id="canonicalLink" />
     
     <!-- Open Graph Tags for Social Media -->
-    <meta property="og:title" content="Zentinl - AI-Powered Video Creation" id="ogTitle" />
-    <meta property="og:description" content="Create Stunning Videos Effortlessly with AI. Unleash your creativity with our AI-powered video creation software!" id="ogDescription" />
+    <meta property="og:title" content="Zentinl - AI Video Dubbing & Creation" id="ogTitle" />
+    <meta property="og:description" content="Transform your videos for global audiences with AI dubbing that preserves voice characteristics. Reach 4x more viewers today!" id="ogDescription" />
     <meta property="og:url" content="https://zentinl.com/" id="ogUrl" />
     <meta property="og:type" content="website" />
     <meta property="og:image" content="https://zentinl.com/zentinel-logo.png" />
     
     <!-- Twitter Card Tags -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Zentinl - AI-Powered Video Creation" id="twitterTitle" />
-    <meta name="twitter:description" content="Create Stunning Videos Effortlessly with AI." id="twitterDescription" />
+    <meta name="twitter:title" content="Zentinl - AI Video Dubbing & Creation" id="twitterTitle" />
+    <meta name="twitter:description" content="Transform your videos for global audiences with AI dubbing." id="twitterDescription" />
     <meta name="twitter:image" content="https://zentinl.com/zentinel-logo.png" />
     
     <!-- JSON-LD Structured Data - Will be updated by JavaScript -->
@@ -43,7 +43,7 @@
           "https://github.com/zentinl",
           "https://www.tiktok.com/@zentinl.com"
         ],
-        "description": "AI-powered video creation software for social media content."
+        "description": "AI-powered video dubbing and creation software for global content."
       }
     </script>
     
@@ -78,6 +78,8 @@
               'fade-in': 'fadeIn 0.5s ease-in-out',
               'slide-up': 'slideUp 0.5s ease-out',
               'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+              'bounce-slow': 'bounce 3s infinite',
+              'float': 'float 3s ease-in-out infinite',
             },
             keyframes: {
               fadeIn: {
@@ -87,6 +89,10 @@
               slideUp: {
                 '0%': { transform: 'translateY(20px)', opacity: '0' },
                 '100%': { transform: 'translateY(0)', opacity: '1' },
+              },
+              float: {
+                '0%, 100%': { transform: 'translateY(0)' },
+                '50%': { transform: 'translateY(-10px)' },
               }
             }
           }
@@ -142,6 +148,17 @@
         transform: translateY(-1px);
       }
       
+      .shimmer {
+        background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.2) 50%, rgba(255,255,255,0) 100%);
+        background-size: 200% 100%;
+        animation: shimmer 2s infinite;
+      }
+      
+      @keyframes shimmer {
+        0% {background-position: -200% 0;}
+        100% {background-position: 200% 0;}
+      }
+      
       @keyframes fadeIn {
         from {
           opacity: 0;
@@ -149,6 +166,26 @@
         to {
           opacity: 1;
         }
+      }
+      
+      .language-globe {
+        position: relative;
+        width: 100%;
+        max-width: 500px;
+        height: 500px;
+        margin: 0 auto;
+      }
+      
+      .language-tag {
+        position: absolute;
+        padding: 0.5rem 1rem;
+        background-color: white;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        border-radius: 9999px;
+        font-weight: 600;
+        color: #1E40AF;
+        animation: float 3s infinite;
+        animation-delay: calc(var(--delay) * 1s);
       }
     </style>
   </head>
@@ -211,6 +248,15 @@
                 data-section="home"
               >
                 Home
+              </a>
+            </li>
+            <li>
+              
+                href="/video-dubbing"
+                class="nav-link block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-primary-700 md:p-0 transition-colors duration-300"
+                data-section="video-dubbing"
+              >
+                AI Video Dubbing
               </a>
             </li>
             <li>
@@ -349,7 +395,7 @@
     </div>
 
     <!-- Home Section -->
-    <section id="home" class="page-section pt-20" data-page-title="Zentinl - AI-Powered Video Creation" data-page-description="Create Stunning Videos Effortlessly with AI. Unleash your creativity with our AI-powered video creation software!">
+    <section id="home" class="page-section pt-20" data-page-title="Zentinl - AI Video Dubbing & Creation" data-page-description="Transform your videos for global audiences with AI dubbing technology that preserves voice characteristics. Reach 4x more users with minimal effort.">
       <!-- Hero Section -->
       <div class="hero-gradient text-white">
         <div class="py-16 px-4 mx-auto max-w-screen-xl text-center">
@@ -362,23 +408,20 @@
           </div>
 
           <h1 class="mb-6 text-4xl font-extrabold tracking-tight leading-none sm:text-5xl lg:text-6xl animate-slide-up">
-            Revolutionize Your Social Media Presence
+            Break Language Barriers <br> with AI Video Dubbing
           </h1>
 
           <p class="mb-8 text-lg font-normal lg:text-xl sm:px-16 lg:px-48 opacity-90 max-w-3xl mx-auto">
-            Harness the power of artificial intelligence to create captivating,
-            custom-generated video content for your social networks. Stand out
-            from the crowd and engage your audience like never before.
+            Transform your existing videos into any language with our cutting-edge AI technology that 
+            preserves natural voice characteristics. Expand your global reach by 4x with minimal effort.
           </p>
 
           <div class="flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-4">
             
-              href="#"
-              data-modal-target="contactModal"
-              data-modal-toggle="contactModal"
+              href="/video-dubbing"
               class="inline-flex justify-center items-center py-3 px-6 text-base font-medium text-center text-white rounded-lg bg-primary-600 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 transition-all duration-300 shadow-lg hover:shadow-xl"
             >
-              Get started
+              Explore AI Dubbing
               <svg
                 class="w-3.5 h-3.5 ms-2 rtl:rotate-180"
                 aria-hidden="true"
@@ -395,206 +438,173 @@
                 />
               </svg>
             </a>
+            
+              href="#"
+              data-modal-target="contactModal"
+              data-modal-toggle="contactModal"
+              class="inline-flex justify-center items-center py-3 px-6 text-base font-medium text-center text-white rounded-lg bg-white/20 backdrop-blur-sm hover:bg-white/30 focus:ring-4 focus:ring-white/30 transition-all duration-300 border border-white/30"
+            >
+              Request a Demo
+            </a>
           </div>
         </div>
       </div>
 
-      <!-- Features Section -->
-      <div class="py-16 px-4 bg-gray-50">
+      <!-- Our Solutions Section -->
+      <div class="py-16 px-4 bg-white">
         <div class="max-w-screen-xl mx-auto">
-          <div class="flex flex-wrap gap-8 justify-center">
-            <div class="feature-card max-w-sm p-8 bg-white border border-gray-200 rounded-xl shadow-lg hover:bg-gray-50">
-              <div class="flex justify-center text-primary-600 text-4xl mb-6">
-                <i class="fa-solid fa-palette"></i>
-              </div>
-              <h5 class="mb-4 text-2xl font-bold text-gray-900">
-                Tailored to Your Vision
-              </h5>
-              <p class="font-normal text-gray-700">
-                Our AI technology empowers you to create video content that
-                perfectly aligns with your unique style, tone, and target audience.
-                Customize every aspect of your videos to effectively communicate your brand's identity.
-              </p>
-            </div>
-            <div class="feature-card max-w-sm p-8 bg-white border border-gray-200 rounded-xl shadow-lg hover:bg-gray-50">
-              <div class="flex justify-center text-primary-600 text-4xl mb-6">
-                <i class="fa-solid fa-video"></i>
-              </div>
-              <h5 class="mb-4 text-2xl font-bold text-gray-900">
-                Effortless Content Creation
-              </h5>
-              <p class="font-normal text-gray-700">
-                The best software is not software! We take your data and turn it
-                into a video in minutes. Our advanced AI algorithms
-                generate high-quality, engaging videos at an unparalleled speed.
-                Focus on growing your business while we handle your content.
-              </p>
-            </div>
-            <div class="feature-card max-w-sm p-8 bg-white border border-gray-200 rounded-xl shadow-lg hover:bg-gray-50">
-              <div class="flex justify-center text-primary-600 text-4xl mb-6">
-                <i class="fa-solid fa-arrow-trend-up"></i>
-              </div>
-              <h5 class="mb-4 text-2xl font-bold text-gray-900">
-                Maximize Engagement
-              </h5>
-              <p class="font-normal text-gray-700">
-                In the era of short attention spans, video content reigns supreme.
-                Zentinl's AI-generated videos are designed to capture your
-                audience's interest and boost your social media presence.
-                Effortlessly upload content to all major social networks.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Transform Data Section -->
-      <div class="py-16 px-4 mx-auto max-w-screen-xl bg-white">
-        <h2 class="mb-6 text-3xl font-extrabold tracking-tight text-center text-gray-900 sm:text-4xl">
-          Transform Your Data into Captivating Video Content
-        </h2>
-        <p class="mb-16 text-lg font-normal text-gray-600 max-w-3xl mx-auto text-center">
-          Zentinl empowers the best brands to convert their own data into
-          stunning, engaging, and viral videos for social media. Our advanced AI
-          technology seamlessly transforms your content into a dynamic stream of videos
-          that boost sales and engagement.
-        </p>
-        
-        <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-          <div class="feature-card bg-white p-8 rounded-xl border border-gray-200 shadow-lg hover:shadow-xl transition-all duration-300">
-            <div class="text-primary-600 text-4xl mb-6 flex justify-center">
-              <i class="fa-solid fa-newspaper"></i>
-            </div>
-            <h5 class="mb-4 text-xl font-bold tracking-tight text-center text-gray-900">
-              News Reports
-            </h5>
-            <p class="font-normal text-gray-700 text-center">
-              Stream your news articles and reports into compelling video
-              content that captures your audience's attention. Our AI technology ensures 
-              your news videos are visually appealing and shareable.
-            </p>
-          </div>
-          <div class="feature-card bg-white p-8 rounded-xl border border-gray-200 shadow-lg hover:shadow-xl transition-all duration-300">
-            <div class="text-primary-600 text-4xl mb-6 flex justify-center">
-              <i class="fa-solid fa-house"></i>
-            </div>
-            <h5 class="mb-4 text-xl font-bold tracking-tight text-center text-gray-900">
-              Real Estate Listings
-            </h5>
-            <p class="font-normal text-gray-700 text-center">
-              Convert your real estate pictures and listings into immersive
-              virtual tour videos that showcase the best features of your
-              properties, helping buyers visualize their dream homes.
-            </p>
-          </div>
-          <div class="feature-card bg-white p-8 rounded-xl border border-gray-200 shadow-lg hover:shadow-xl transition-all duration-300">
-            <div class="text-primary-600 text-4xl mb-6 flex justify-center">
-              <i class="fa-solid fa-car"></i>
-            </div>
-            <h5 class="mb-4 text-xl font-bold tracking-tight text-center text-gray-900">
-              High Value Products
-            </h5>
-            <p class="font-normal text-gray-700 text-center">
-              Transform static product images of cars, electronics, or any merchandise into 
-              dynamic promotional videos that highlight their unique selling points, 
-              attract potential customers, and boost sales.
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Effortless Video Creation -->
-      <div class="bg-gray-50 py-16">
-        <div class="container mx-auto px-6 max-w-screen-xl">
-          <h2 class="mb-8 text-3xl font-extrabold tracking-tight text-gray-900 text-center sm:text-4xl">
-            Effortless Video Creation
+          <h2 class="mb-12 text-3xl font-extrabold tracking-tight text-center text-gray-900 sm:text-4xl">
+            Our AI-Powered Solutions
           </h2>
-          <p class="text-lg text-center text-gray-700 mb-12 max-w-3xl mx-auto">
-            Transform your social media presence with zero effort. Our platform
-            automatically generates captivating videos using your own data, the
-            latest news, or trending social content.
-          </p>
-
-          <div class="grid md:grid-cols-2 gap-12 max-w-4xl mx-auto">
-            <div class="bg-white p-8 rounded-xl shadow-lg">
-              <ul class="space-y-6 text-lg text-gray-700">
-                <li class="flex items-start space-x-4">
-                  <div class="mt-1 flex-shrink-0">
-                    <span class="flex h-8 w-8 items-center justify-center rounded-full bg-primary-100 text-primary-600">
-                      <i class="fa-solid fa-check text-sm"></i>
-                    </span>
-                  </div>
-                  <p>
-                    <strong class="font-semibold">Automated Publishing:</strong> Videos are seamlessly
-                    scheduled and published directly to your social networks without
-                    any manual intervention.
-                  </p>
-                </li>
-                <li class="flex items-start space-x-4">
-                  <div class="mt-1 flex-shrink-0">
-                    <span class="flex h-8 w-8 items-center justify-center rounded-full bg-primary-100 text-primary-600">
-                      <i class="fa-solid fa-check text-sm"></i>
-                    </span>
-                  </div>
-                  <p>
-                    <strong class="font-semibold">Visually Stunning:</strong> Each video comes with
-                    beautiful thumbnails that grab attention and drive engagement.
-                  </p>
-                </li>
-                <li class="flex items-start space-x-4">
-                  <div class="mt-1 flex-shrink-0">
-                    <span class="flex h-8 w-8 items-center justify-center rounded-full bg-primary-100 text-primary-600">
-                      <i class="fa-solid fa-check text-sm"></i>
-                    </span>
-                  </div>
-                  <p>
-                    <strong class="font-semibold">Engaging Content:</strong> We craft catchy titles,
-                    compelling descriptions, and incorporate trending tags to
-                    maximize engagement and reach.
-                  </p>
-                </li>
-              </ul>
+          
+          <div class="grid md:grid-cols-2 gap-8 items-center mb-16">
+            <div class="bg-primary-50 rounded-2xl p-8 shadow-xl transform hover:-translate-y-2 transition-all duration-300 border-t-4 border-primary-600">
+              <div class="flex items-center mb-6">
+                <div class="bg-primary-600 rounded-full p-3 mr-4">
+                  <i class="fa-solid fa-language text-white text-2xl"></i>
+                </div>
+                <h3 class="text-2xl font-bold text-primary-900">AI Video Dubbing</h3>
+              </div>
+              <p class="text-gray-700 mb-6">
+                <span class="font-semibold text-primary-800">Our flagship service:</span> Transform your videos into any language while 
+                preserving the original voice characteristics. Perfect for enterprises looking to reach
+                global audiences with minimal effort.
+              </p>
+              <a href="/video-dubbing" class="inline-flex items-center font-medium text-primary-600 hover:text-primary-800">
+                Learn more
+                <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" fill="none">
+                  <path d="M5 12H19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M12 5L19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </a>
             </div>
             
-            <div class="bg-white p-8 rounded-xl shadow-lg">
-              <ul class="space-y-6 text-lg text-gray-700">
-                <li class="flex items-start space-x-4">
-                  <div class="mt-1 flex-shrink-0">
-                    <span class="flex h-8 w-8 items-center justify-center rounded-full bg-primary-100 text-primary-600">
-                      <i class="fa-solid fa-check text-sm"></i>
-                    </span>
-                  </div>
-                  <p>
-                    <strong class="font-semibold">Cost-Effective:</strong> Maintain a consistent flow of
-                    high-quality content 365 days a year at an unbeatable cost
-                    compared to traditional video production.
-                  </p>
-                </li>
-                <li class="flex items-start space-x-4">
-                  <div class="mt-1 flex-shrink-0">
-                    <span class="flex h-8 w-8 items-center justify-center rounded-full bg-primary-100 text-primary-600">
-                      <i class="fa-solid fa-check text-sm"></i>
-                    </span>
-                  </div>
-                  <p>
-                    <strong class="font-semibold">Hassle-Free:</strong> Focus on your core business while
-                    we handle the content creation and distribution for you,
-                    saving you time and resources.
-                  </p>
-                </li>
-                <li class="flex items-start space-x-4">
-                  <div class="mt-1 flex-shrink-0">
-                    <span class="flex h-8 w-8 items-center justify-center rounded-full bg-primary-100 text-primary-600">
-                      <i class="fa-solid fa-check text-sm"></i>
-                    </span>
-                  </div>
-                  <p>
-                    <strong class="font-semibold">Data-Driven:</strong> Our AI analyzes performance metrics
-                    to continuously improve your content strategy and maximize
-                    return on investment.
-                  </p>
-                </li>
-              </ul>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              <div class="feature-card bg-white rounded-xl p-6 shadow-lg border border-gray-200">
+                <div class="text-primary-600 text-2xl mb-4">
+                  <i class="fa-solid fa-video"></i>
+                </div>
+                <h4 class="text-lg font-bold text-gray-900 mb-2">Just-on-Time Video</h4>
+                <p class="text-gray-700 text-sm">
+                  AI-generated videos exactly when you need them, ensuring relevance and maximizing engagement.
+                </p>
+              </div>
+              
+              <div class="feature-card bg-white rounded-xl p-6 shadow-lg border border-gray-200">
+                <div class="text-primary-600 text-2xl mb-4">
+                  <i class="fa-solid fa-users"></i>
+                </div>
+                <h4 class="text-lg font-bold text-gray-900 mb-2">Virtual Influencers</h4>
+                <p class="text-gray-700 text-sm">
+                  AI-driven personalities that engage with your audience and promote your brand 24/7.
+                </p>
+              </div>
+              
+              <div class="feature-card bg-white rounded-xl p-6 shadow-lg border border-gray-200">
+                <div class="text-primary-600 text-2xl mb-4">
+                  <i class="fa-solid fa-code"></i>
+                </div>
+                <h4 class="text-lg font-bold text-gray-900 mb-2">API Integration</h4>
+                <p class="text-gray-700 text-sm">
+                  Seamlessly integrate our AI technologies with your existing tools and workflows.
+                </p>
+              </div>
+              
+              <div class="feature-card bg-white rounded-xl p-6 shadow-lg border border-gray-200">
+                <div class="text-primary-600 text-2xl mb-4">
+                  <i class="fa-solid fa-chart-line"></i>
+                </div>
+                <h4 class="text-lg font-bold text-gray-900 mb-2">Enterprise Solutions</h4>
+                <p class="text-gray-700 text-sm">
+                  Customized AI video solutions designed specifically for enterprise-scale requirements.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Trust Section -->
+      <div class="py-16 px-4 bg-gray-50">
+        <div class="max-w-screen-xl mx-auto text-center">
+          <h2 class="mb-4 text-2xl font-extrabold text-gray-900">Trusted by Forward-Thinking Companies</h2>
+          <p class="mb-12 text-gray-600 max-w-3xl mx-auto">
+            Enterprises across industries trust Zentinl to transform their video content for global audiences
+          </p>
+          
+          <div class="flex flex-wrap justify-center items-center gap-x-12 gap-y-8 opacity-70">
+            <div class="w-32 h-12 flex items-center justify-center">
+              <i class="fa-solid fa-building text-4xl text-gray-400"></i>
+              <span class="ml-2 font-semibold text-gray-500">Enterprise 1</span>
+            </div>
+            <div class="w-32 h-12 flex items-center justify-center">
+              <i class="fa-solid fa-globe text-4xl text-gray-400"></i>
+              <span class="ml-2 font-semibold text-gray-500">Global Co.</span>
+            </div>
+            <div class="w-32 h-12 flex items-center justify-center">
+              <i class="fa-solid fa-landmark text-4xl text-gray-400"></i>
+              <span class="ml-2 font-semibold text-gray-500">Brand Inc.</span>
+            </div>
+            <div class="w-32 h-12 flex items-center justify-center">
+              <i class="fa-solid fa-briefcase text-4xl text-gray-400"></i>
+              <span class="ml-2 font-semibold text-gray-500">Corp Ltd.</span>
+            </div>
+            <div class="w-32 h-12 flex items-center justify-center">
+              <i class="fa-solid fa-chart-pie text-4xl text-gray-400"></i>
+              <span class="ml-2 font-semibold text-gray-500">Tech Group</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Features Highlight -->
+      <div class="py-16 px-4 bg-white">
+        <div class="max-w-screen-xl mx-auto">
+          <div class="text-center mb-16">
+            <h2 class="mb-4 text-3xl font-extrabold text-gray-900 sm:text-4xl">Why Choose Zentinl?</h2>
+            <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+              Our AI-powered solutions deliver exceptional results with minimal effort
+            </p>
+          </div>
+          
+          <div class="grid md:grid-cols-3 gap-8">
+            <div class="feature-card bg-white p-8 rounded-xl border border-gray-200 shadow-lg hover:shadow-xl transition-all duration-300">
+              <div class="text-primary-600 text-4xl mb-6 flex justify-center">
+                <i class="fa-solid fa-microphone-lines"></i>
+              </div>
+              <h5 class="mb-4 text-xl font-bold tracking-tight text-center text-gray-900">
+                Natural Voice Preservation
+              </h5>
+              <p class="font-normal text-gray-700 text-center">
+                Our AI maintains the original voice characteristics, emotions, and speaking style
+                while translating into any language, delivering authentic-sounding results.
+              </p>
+            </div>
+            
+            <div class="feature-card bg-white p-8 rounded-xl border border-gray-200 shadow-lg hover:shadow-xl transition-all duration-300">
+              <div class="text-primary-600 text-4xl mb-6 flex justify-center">
+                <i class="fa-solid fa-rocket"></i>
+              </div>
+              <h5 class="mb-4 text-xl font-bold tracking-tight text-center text-gray-900">
+                4x Global Reach
+              </h5>
+              <p class="font-normal text-gray-700 text-center">
+                Expand your audience by up to 400% by breaking language barriers. Reach new markets
+                and engage international viewers with perfectly localized content.
+              </p>
+            </div>
+            
+            <div class="feature-card bg-white p-8 rounded-xl border border-gray-200 shadow-lg hover:shadow-xl transition-all duration-300">
+              <div class="text-primary-600 text-4xl mb-6 flex justify-center">
+                <i class="fa-solid fa-gear"></i>
+              </div>
+              <h5 class="mb-4 text-xl font-bold tracking-tight text-center text-gray-900">
+                End-to-End Service
+              </h5>
+              <p class="font-normal text-gray-700 text-center">
+                From downloading your videos to dubbing and republishing on social platforms,
+                we handle the entire process so you can focus on creating great content.
+              </p>
             </div>
           </div>
         </div>
@@ -604,21 +614,606 @@
       <div class="hero-gradient text-white">
         <div class="py-16 px-4 mx-auto max-w-screen-xl text-center">
           <h2 class="mb-6 text-3xl font-extrabold tracking-tight leading-none sm:text-4xl lg:text-5xl">
-            Ready to Transform Your Social Media Game?
+            Ready to Go Global with Your Content?
           </h2>
           <p class="mb-8 text-lg font-normal opacity-90 lg:text-xl sm:px-16 lg:px-48 max-w-3xl mx-auto">
-            Join the countless brands and influencers who have already unlocked
-            the power of AI-generated video content. Sign up now and experience
-            the <b>Zentinl</b> difference for yourself.
+            Join forward-thinking companies using Zentinl's AI video dubbing technology
+            to reach international audiences and multiply their engagement.
           </p>
           <div class="flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-4">
+            
+              href="/video-dubbing"
+              class="inline-flex justify-center items-center py-3 px-6 text-base font-medium text-center text-white rounded-lg bg-primary-600 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 transition-all duration-300 shadow-lg hover:shadow-xl"
+            >
+              Explore AI Video Dubbing
+            </a>
             
               href="#"
               data-modal-target="contactModal"
               data-modal-toggle="contactModal"
               class="inline-flex justify-center items-center py-3 px-6 text-base font-medium text-center text-white rounded-lg bg-white/20 backdrop-blur-sm hover:bg-white/30 focus:ring-4 focus:ring-white/30 transition-all duration-300 border border-white/30"
             >
-              Get Started Today
+              Get a Free Consultation
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Video Dubbing Section (NEW) -->
+    <section id="video-dubbing" class="page-section pt-20" data-page-title="AI Video Dubbing - Zentinl" data-page-description="Transform your videos into any language while preserving natural voice characteristics. Reach global audiences with Zentinl's AI dubbing technology.">
+      <!-- Hero Section -->
+      <div class="hero-gradient text-white">
+        <div class="py-16 px-4 mx-auto max-w-screen-xl text-center">
+          <h1 class="mb-6 text-4xl font-extrabold tracking-tight leading-none sm:text-5xl lg:text-6xl">
+            AI Video Dubbing for Global Reach
+          </h1>
+          <p class="mb-8 text-lg font-normal opacity-90 lg:text-xl sm:px-16 lg:px-48 max-w-3xl mx-auto">
+            Transform your existing videos into any language while preserving the natural voice 
+            characteristics. Expand your audience by 4x with minimal effort.
+          </p>
+          <div class="flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-4">
+            
+              href="#how-it-works"
+              class="inline-flex justify-center items-center py-3 px-6 text-base font-medium text-center text-white rounded-lg bg-primary-600 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 transition-all duration-300 shadow-lg hover:shadow-xl"
+            >
+              How It Works
+            </a>
+            
+              href="#"
+              data-modal-target="contactModal"
+              data-modal-toggle="contactModal"
+              class="inline-flex justify-center items-center py-3 px-6 text-base font-medium text-center text-white rounded-lg bg-white/20 backdrop-blur-sm hover:bg-white/30 focus:ring-4 focus:ring-white/30 transition-all duration-300 border border-white/30"
+            >
+              Get Started
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Language Globe Visual -->
+      <div class="py-16 px-4 bg-gray-50 overflow-hidden">
+        <div class="max-w-screen-xl mx-auto relative">
+          <h2 class="text-3xl font-extrabold text-center text-gray-900 mb-12">Supporting 40+ Languages</h2>
+          
+          <div class="language-globe relative h-96 md:h-[500px]">
+            <!-- Simulated globe with language tags -->
+            <div class="language-tag" style="top: 30%; left: 20%; --delay: 0">English</div>
+            <div class="language-tag" style="top: 20%; left: 50%; --delay: 0.5">Spanish</div>
+            <div class="language-tag" style="top: 40%; left: 70%; --delay: 1">French</div>
+            <div class="language-tag" style="top: 60%; left: 30%; --delay: 1.5">German</div>
+            <div class="language-tag" style="top: 50%; left: 60%; --delay: 2">Japanese</div>
+            <div class="language-tag" style="top: 70%; left: 50%; --delay: 2.5">Chinese</div>
+            <div class="language-tag" style="top: 35%; left: 40%; --delay: 3">Hindi</div>
+            <div class="language-tag" style="top: 25%; left: 80%; --delay: 3.5">Arabic</div>
+            <div class="language-tag" style="top: 65%; left: 15%; --delay: 4">Portuguese</div>
+            <div class="language-tag" style="top: 80%; left: 75%; --delay: 4.5">Russian</div>
+            
+            <!-- Center globe image -->
+            <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-48 h-48 md:w-64 md:h-64 bg-primary-100 rounded-full flex items-center justify-center overflow-hidden">
+              <i class="fa-solid fa-globe text-primary-600 text-8xl animate-pulse-slow"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Key Benefits -->
+      <div class="py-16 px-4 bg-white" id="benefits">
+        <div class="max-w-screen-xl mx-auto">
+          <h2 class="text-3xl font-extrabold text-center text-gray-900 mb-6">Unlock Global Potential</h2>
+          <p class="text-lg text-center text-gray-600 mb-12 max-w-3xl mx-auto">
+            Our AI video dubbing technology helps enterprises break language barriers and reach international audiences
+          </p>
+          
+          <div class="grid md:grid-cols-2 gap-12">
+            <!-- Left column - Benefits -->
+            <div class="space-y-8">
+              <div class="flex items-start">
+                <div class="flex-shrink-0 mt-1">
+                  <div class="flex h-10 w-10 items-center justify-center rounded-full bg-primary-100">
+                    <i class="fa-solid fa-check text-primary-600"></i>
+                  </div>
+                </div>
+                <div class="ml-4">
+                  <h3 class="text-xl font-bold text-gray-900 mb-2">Preserve Voice Characteristics</h3>
+                  <p class="text-gray-600">
+                    Our AI preserves the emotion, tone, and speaking style of the original speaker while 
+                    seamlessly translating into any target language.
+                  </p>
+                </div>
+              </div>
+              
+              <div class="flex items-start">
+                <div class="flex-shrink-0 mt-1">
+                  <div class="flex h-10 w-10 items-center justify-center rounded-full bg-primary-100">
+                    <i class="fa-solid fa-check text-primary-600"></i>
+                  </div>
+                </div>
+                <div class="ml-4">
+                  <h3 class="text-xl font-bold text-gray-900 mb-2">Expand Your Audience by 4x</h3>
+                  <p class="text-gray-600">
+                    Reach new markets and demographics by offering your content in viewers' native languages,
+                    dramatically increasing engagement and conversions.
+                  </p>
+                </div>
+              </div>
+              
+              <div class="flex items-start">
+                <div class="flex-shrink-0 mt-1">
+                  <div class="flex h-10 w-10 items-center justify-center rounded-full bg-primary-100">
+                    <i class="fa-solid fa-check text-primary-600"></i>
+                  </div>
+                </div>
+                <div class="ml-4">
+                  <h3 class="text-xl font-bold text-gray-900 mb-2">Minimal Effort Required</h3>
+                  <p class="text-gray-600">
+                    Simply provide the video URL or file, choose your target languages, and we handle the rest.
+                    No need for costly studio time or voice actors.
+                  </p>
+                </div>
+              </div>
+              
+              <div class="flex items-start">
+                <div class="flex-shrink-0 mt-1">
+                  <div class="flex h-10 w-10 items-center justify-center rounded-full bg-primary-100">
+                    <i class="fa-solid fa-check text-primary-600"></i>
+                  </div>
+                </div>
+                <div class="ml-4">
+                  <h3 class="text-xl font-bold text-gray-900 mb-2">Full-Service Solution</h3>
+                  <p class="text-gray-600">
+                    From downloading your videos to dubbing and republishing on social platforms,
+                    we handle the entire process seamlessly.
+                  </p>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Right column - Stats -->
+            <div class="bg-gray-50 rounded-xl p-8 shadow-lg">
+              <h3 class="text-2xl font-bold text-center text-gray-900 mb-8">The Impact of Video Localization</h3>
+              
+              <div class="grid grid-cols-2 gap-6 mb-8">
+                <div class="text-center">
+                  <div class="text-primary-600 text-4xl font-bold mb-2">65%</div>
+                  <p class="text-gray-600">of viewers prefer content in their native language</p>
+                </div>
+                <div class="text-center">
+                  <div class="text-primary-600 text-4xl font-bold mb-2">4x</div>
+                  <p class="text-gray-600">increase in potential audience reach with multilingual content</p>
+                </div>
+                <div class="text-center">
+                  <div class="text-primary-600 text-4xl font-bold mb-2">73%</div>
+                  <p class="text-gray-600">higher engagement with localized video content</p>
+                </div>
+                <div class="text-center">
+                  <div class="text-primary-600 text-4xl font-bold mb-2">3x</div>
+                  <p class="text-gray-600">higher conversion rates with native language videos</p>
+                </div>
+              </div>
+              
+              <div class="text-center">
+                
+                  href="#"
+                  data-modal-target="contactModal"
+                  data-modal-toggle="contactModal"
+                  class="inline-flex justify-center items-center py-3 px-6 text-base font-medium text-center text-white rounded-lg bg-primary-600 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 transition-all duration-300 shadow-lg hover:shadow-xl"
+                >
+                  Transform Your Videos Today
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- How It Works Section -->
+      <div id="how-it-works" class="py-16 px-4 bg-gray-50">
+        <div class="max-w-screen-xl mx-auto">
+          <h2 class="text-3xl font-extrabold text-center text-gray-900 mb-6">How It Works</h2>
+          <p class="text-lg text-center text-gray-600 mb-12 max-w-3xl mx-auto">
+            Our seamless process makes video dubbing effortless for your team
+          </p>
+          
+          <div class="relative">
+            <!-- Timeline line -->
+            <div class="hidden md:block absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-primary-200"></div>
+            
+            <div class="space-y-12 relative">
+              <!-- Step 1 -->
+              <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 md:pr-12 md:text-right">
+                  <h3 class="text-xl font-bold text-gray-900 mb-2">1. Submit Your Video</h3>
+                  <p class="text-gray-600 mb-4">
+                    Simply provide the URL to your YouTube or social media video, or upload your video file.
+                    Our system will securely process your content.
+                  </p>
+                </div>
+                <div class="mx-auto md:mx-0 flex items-center justify-center w-12 h-12 rounded-full bg-primary-600 text-white text-xl font-bold z-10">
+                  1
+                </div>
+                <div class="md:w-1/2 md:pl-12 mt-4 md:mt-0"></div>
+              </div>
+              
+              <!-- Step 2 -->
+              <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 md:pr-12 md:text-right order-1 md:order-1 mt-4 md:mt-0"></div>
+                <div class="mx-auto md:mx-0 flex items-center justify-center w-12 h-12 rounded-full bg-primary-600 text-white text-xl font-bold z-10 order-0 md:order-2">
+                  2
+                </div>
+                <div class="md:w-1/2 md:pl-12 order-2 md:order-3">
+                  <h3 class="text-xl font-bold text-gray-900 mb-2">2. Select Target Languages</h3>
+                  <p class="text-gray-600 mb-4">
+                    Choose from over 40 languages to target specific regions or go global.
+                    You can select multiple languages for maximum reach.
+                  </p>
+                </div>
+              </div>
+              
+              <!-- Step 3 -->
+              <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 md:pr-12 md:text-right">
+                  <h3 class="text-xl font-bold text-gray-900 mb-2">3. AI Voice Processing</h3>
+                  <p class="text-gray-600 mb-4">
+                    Our AI analyzes the original voice characteristics and generates
+                    natural-sounding dubbed audio in your selected languages.
+                  </p>
+                </div>
+                <div class="mx-auto md:mx-0 flex items-center justify-center w-12 h-12 rounded-full bg-primary-600 text-white text-xl font-bold z-10">
+                  3
+                </div>
+                <div class="md:w-1/2 md:pl-12 mt-4 md:mt-0"></div>
+              </div>
+              
+              <!-- Step 4 -->
+              <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 md:pr-12 md:text-right order-1 md:order-1 mt-4 md:mt-0"></div>
+                <div class="mx-auto md:mx-0 flex items-center justify-center w-12 h-12 rounded-full bg-primary-600 text-white text-xl font-bold z-10 order-0 md:order-2">
+                  4
+                </div>
+                <div class="md:w-1/2 md:pl-12 order-2 md:order-3">
+                  <h3 class="text-xl font-bold text-gray-900 mb-2">4. Video Rendering</h3>
+                  <p class="text-gray-600 mb-4">
+                    We synchronize the newly generated audio with your video,
+                    ensuring perfect lip-sync and timing for a professional result.
+                  </p>
+                </div>
+              </div>
+              
+              <!-- Step 5 -->
+              <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 md:pr-12 md:text-right">
+                  <h3 class="text-xl font-bold text-gray-900 mb-2">5. Delivery & Publishing</h3>
+                  <p class="text-gray-600 mb-4">
+                    Receive your dubbed videos for download, or let us handle the publishing
+                    directly to your YouTube, Facebook, Instagram, and other platforms.
+                  </p>
+                </div>
+                <div class="mx-auto md:mx-0 flex items-center justify-center w-12 h-12 rounded-full bg-primary-600 text-white text-xl font-bold z-10">
+                  5
+                </div>
+                <div class="md:w-1/2 md:pl-12 mt-4 md:mt-0"></div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="text-center mt-16">
+            
+              href="#"
+              data-modal-target="contactModal"
+              data-modal-toggle="contactModal"
+              class="inline-flex justify-center items-center py-3 px-6 text-base font-medium text-center text-white rounded-lg bg-primary-600 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 transition-all duration-300 shadow-lg hover:shadow-xl"
+            >
+              Start Your First Dubbing Project
+            </a>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Use Cases -->
+      <div class="py-16 px-4 bg-white">
+        <div class="max-w-screen-xl mx-auto">
+          <h2 class="text-3xl font-extrabold text-center text-gray-900 mb-6">Perfect For</h2>
+          <p class="text-lg text-center text-gray-600 mb-12 max-w-3xl mx-auto">
+            Our AI video dubbing service is ideal for various content types and industries
+          </p>
+          
+          <div class="grid md:grid-cols-3 gap-8">
+            <div class="feature-card bg-white p-8 rounded-xl border border-gray-200 shadow-lg hover:shadow-xl transition-all duration-300">
+              <div class="text-primary-600 text-4xl mb-6 flex justify-center">
+                <i class="fa-brands fa-youtube"></i>
+              </div>
+              <h5 class="mb-4 text-xl font-bold tracking-tight text-center text-gray-900">
+                YouTube Creators
+              </h5>
+              <p class="font-normal text-gray-700 text-center">
+                Expand your YouTube channel's reach to international audiences by dubbing your
+                existing videos into multiple languages. Grow subscribers globally.
+              </p>
+            </div>
+            
+            <div class="feature-card bg-white p-8 rounded-xl border border-gray-200 shadow-lg hover:shadow-xl transition-all duration-300">
+              <div class="text-primary-600 text-4xl mb-6 flex justify-center">
+                <i class="fa-solid fa-building"></i>
+              </div>
+              <h5 class="mb-4 text-xl font-bold tracking-tight text-center text-gray-900">
+                Corporate Training
+              </h5>
+              <p class="font-normal text-gray-700 text-center">
+                Localize your training videos for international teams without recreating content.
+                Ensure consistent messaging across all regions.
+              </p>
+            </div>
+            
+            <div class="feature-card bg-white p-8 rounded-xl border border-gray-200 shadow-lg hover:shadow-xl transition-all duration-300">
+              <div class="text-primary-600 text-4xl mb-6 flex justify-center">
+                <i class="fa-solid fa-shopping-cart"></i>
+              </div>
+              <h5 class="mb-4 text-xl font-bold tracking-tight text-center text-gray-900">
+                E-Commerce
+              </h5>
+              <p class="font-normal text-gray-700 text-center">
+                Convert product demonstration videos into multiple languages to increase
+                conversion rates in international markets and boost global sales.
+              </p>
+            </div>
+            
+            <div class="feature-card bg-white p-8 rounded-xl border border-gray-200 shadow-lg hover:shadow-xl transition-all duration-300">
+              <div class="text-primary-600 text-4xl mb-6 flex justify-center">
+                <i class="fa-solid fa-graduation-cap"></i>
+              </div>
+              <h5 class="mb-4 text-xl font-bold tracking-tight text-center text-gray-900">
+                Educational Content
+              </h5>
+              <p class="font-normal text-gray-700 text-center">
+                Make your educational videos accessible to learners worldwide by dubbing into
+                their native languages, increasing comprehension and engagement.
+              </p>
+            </div>
+            
+            <div class="feature-card bg-white p-8 rounded-xl border border-gray-200 shadow-lg hover:shadow-xl transition-all duration-300">
+              <div class="text-primary-600 text-4xl mb-6 flex justify-center">
+                <i class="fa-solid fa-film"></i>
+              </div>
+              <h5 class="mb-4 text-xl font-bold tracking-tight text-center text-gray-900">
+                Marketing Campaigns
+              </h5>
+              <p class="font-normal text-gray-700 text-center">
+                Adapt your marketing videos for different regions without reshooting,
+                ensuring cultural relevance while maintaining brand consistency.
+              </p>
+            </div>
+            
+            <div class="feature-card bg-white p-8 rounded-xl border border-gray-200 shadow-lg hover:shadow-xl transition-all duration-300">
+              <div class="text-primary-600 text-4xl mb-6 flex justify-center">
+                <i class="fa-solid fa-headset"></i>
+              </div>
+              <h5 class="mb-4 text-xl font-bold tracking-tight text-center text-gray-900">
+                Customer Support
+              </h5>
+              <p class="font-normal text-gray-700 text-center">
+                Create multilingual help videos and tutorials to better serve your international
+                customers and reduce support tickets across language barriers.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Testimonial/Example Section -->
+      <div class="py-16 px-4 bg-gray-50">
+        <div class="max-w-screen-xl mx-auto">
+          <h2 class="text-3xl font-extrabold text-center text-gray-900 mb-6">Success Stories</h2>
+          <p class="text-lg text-center text-gray-600 mb-12 max-w-3xl mx-auto">
+            See how our clients have transformed their global reach with AI video dubbing
+          </p>
+          
+          <div class="grid md:grid-cols-2 gap-12">
+            <div class="bg-white rounded-xl p-8 shadow-lg relative">
+              <div class="absolute -top-6 left-8 w-12 h-12 bg-primary-600 rounded-full flex items-center justify-center">
+                <i class="fa-solid fa-quote-left text-white text-xl"></i>
+              </div>
+              <div class="pt-6">
+                <p class="text-gray-600 mb-6 italic">
+                  "We expanded our YouTube channel to Spanish, French, and German markets using Zentinl's 
+                  dubbing service. The voices sound incredibly natural, and we've seen a 315% increase
+                  in our international audience within just three months."
+                </p>
+                <div class="flex items-center">
+                  <div class="w-12 h-12 bg-gray-200 rounded-full flex items-center justify-center text-gray-500">
+                    <i class="fa-solid fa-user"></i>
+                  </div>
+                  <div class="ml-4">
+                    <div class="font-bold text-gray-900">Sarah Johnson</div>
+                    <div class="text-sm text-gray-500">Digital Content Director, TechVision</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="bg-white rounded-xl p-8 shadow-lg relative">
+              <div class="absolute -top-6 left-8 w-12 h-12 bg-primary-600 rounded-full flex items-center justify-center">
+                <i class="fa-solid fa-quote-left text-white text-xl"></i>
+              </div>
+              <div class="pt-6">
+                <p class="text-gray-600 mb-6 italic">
+                  "As a global enterprise, we needed to localize our training videos for 12 different markets.
+                  Zentinl's AI dubbing solution saved us over $180,000 compared to traditional dubbing
+                  methods, while delivering exceptional quality in all languages."
+                </p>
+                <div class="flex items-center">
+                  <div class="w-12 h-12 bg-gray-200 rounded-full flex items-center justify-center text-gray-500">
+                    <i class="fa-solid fa-user"></i>
+                  </div>
+                  <div class="ml-4">
+                    <div class="font-bold text-gray-900">Michael Chen</div>
+                    <div class="text-sm text-gray-500">Global L&D Manager, Enterprise Solutions Inc.</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Case Study -->
+          <div class="mt-16 bg-white rounded-xl overflow-hidden shadow-xl">
+            <div class="grid md:grid-cols-2">
+              <div class="p-8 md:p-12">
+                <div class="text-sm font-semibold text-primary-600 uppercase tracking-wider mb-2">Case Study</div>
+                <h3 class="text-2xl font-bold text-gray-900 mb-4">How Global Reach Media Expanded to 5 New Markets</h3>
+                <p class="text-gray-600 mb-6">
+                  Global Reach Media, a content creation agency with over 200 product videos, needed to 
+                  expand into Asian markets quickly without rebuilding their video library.
+                </p>
+                <ul class="space-y-2 mb-6">
+                  <li class="flex items-center">
+                    <i class="fa-solid fa-check text-primary-600 mr-2"></i>
+                    <span class="text-gray-600">Dubbed 200+ product videos into Japanese, Korean, and Chinese</span>
+                  </li>
+                  <li class="flex items-center">
+                    <i class="fa-solid fa-check text-primary-600 mr-2"></i>
+                    <span class="text-gray-600">Completed in just 2 weeks vs. 3-4 months with traditional dubbing</span>
+                  </li>
+                  <li class="flex items-center">
+                    <i class="fa-solid fa-check text-primary-600 mr-2"></i>
+                    <span class="text-gray-600">Sales in new markets increased by 267% in the first quarter</span>
+                  </li>
+                  <li class="flex items-center">
+                    <i class="fa-solid fa-check text-primary-600 mr-2"></i>
+                    <span class="text-gray-600">90% cost reduction compared to hiring voice actors</span>
+                  </li>
+                </ul>
+                <a href="#" class="inline-flex items-center font-medium text-primary-600 hover:text-primary-800">
+                  Read full case study
+                  <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" fill="none">
+                    <path d="M5 12H19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M12 5L19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </a>
+              </div>
+              <div class="bg-gray-200 flex items-center justify-center p-8">
+                <div class="text-center">
+                  <div class="text-gray-800 text-7xl mb-4">
+                    <i class="fa-solid fa-chart-line"></i>
+                  </div>
+                  <div class="text-5xl font-bold text-primary-600 mb-2">267%</div>
+                  <div class="text-xl font-semibold text-gray-800">Increase in Sales</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Enterprise Focus CTA -->
+      <div class="py-16 px-4 bg-primary-900 text-white">
+        <div class="max-w-screen-xl mx-auto text-center">
+          <h2 class="text-3xl font-extrabold mb-6">Enterprise-Ready Solutions</h2>
+          <p class="text-lg opacity-90 max-w-3xl mx-auto mb-8">
+            We specialize in providing AI dubbing services tailored for enterprise needs.
+            Our platform can handle high volume requirements with custom workflows, dedicated
+            support, and enterprise-grade security.
+          </p>
+          <div class="inline-flex items-center justify-center p-1 rounded-lg bg-white/10 backdrop-blur-sm mb-8">
+            <div class="px-4 py-2 rounded-md bg-white/20 mr-2">Enterprise</div>
+            <div class="px-4 py-2">Volume Discounts</div>
+            <div class="px-4 py-2">Dedicated Support</div>
+            <div class="px-4 py-2">Custom Integration</div>
+          </div>
+          <div>
+            
+              href="#"
+              data-modal-target="contactModal"
+              data-modal-toggle="contactModal"
+              class="inline-flex justify-center items-center py-3 px-6 text-base font-medium text-center text-primary-900 rounded-lg bg-white hover:bg-gray-100 focus:ring-4 focus:ring-white/30 transition-all duration-300 shadow-lg hover:shadow-xl"
+            > Request Enterprise Demo
+            </a>
+          </div>
+        </div>
+      </div>
+      
+      <!-- FAQ Section -->
+      <div class="py-16 px-4 bg-white">
+        <div class="max-w-screen-xl mx-auto">
+          <h2 class="text-3xl font-extrabold text-center text-gray-900 mb-6">Frequently Asked Questions</h2>
+          <p class="text-lg text-center text-gray-600 mb-12 max-w-3xl mx-auto">
+            Get answers to common questions about our AI video dubbing service
+          </p>
+          
+          <div class="max-w-3xl mx-auto space-y-6">
+            <div class="bg-gray-50 rounded-lg p-6 shadow-md">
+              <h3 class="text-lg font-semibold text-gray-900 mb-2">How natural do the AI-dubbed voices sound?</h3>
+              <p class="text-gray-600">
+                Our advanced AI technology preserves the voice characteristics, tone, emotion, and speaking style of 
+                the original speaker. The result is remarkably natural-sounding speech that maintains the 
+                authenticity of the original content while speaking a different language.
+              </p>
+            </div>
+            
+            <div class="bg-gray-50 rounded-lg p-6 shadow-md">
+              <h3 class="text-lg font-semibold text-gray-900 mb-2">What languages do you support?</h3>
+              <p class="text-gray-600">
+                We currently support over 40 languages including English, Spanish, French, German, Italian, Portuguese, 
+                Chinese (Mandarin and Cantonese), Japanese, Korean, Arabic, Russian, Hindi, and many more. If you need 
+                a specific language, please contact us to check availability.
+              </p>
+            </div>
+            
+            <div class="bg-gray-50 rounded-lg p-6 shadow-md">
+              <h3 class="text-lg font-semibold text-gray-900 mb-2">How long does the dubbing process take?</h3>
+              <p class="text-gray-600">
+                The processing time depends on your video length and the number of target languages. Typically, 
+                a 10-minute video can be dubbed in a single language within a few hours. For enterprise clients with 
+                large volumes, we can establish dedicated processing queues for faster turnaround times.
+              </p>
+            </div>
+            
+            <div class="bg-gray-50 rounded-lg p-6 shadow-md">
+              <h3 class="text-lg font-semibold text-gray-900 mb-2">Do you offer end-to-end service including publishing?</h3>
+              <p class="text-gray-600">
+                Yes, we provide a complete service from video sourcing to publishing. We can download your videos from 
+                YouTube or other platforms, dub them into your selected languages, and then handle the republishing to 
+                all major social platforms including metadata translation and optimization.
+              </p>
+            </div>
+            
+            <div class="bg-gray-50 rounded-lg p-6 shadow-md">
+              <h3 class="text-lg font-semibold text-gray-900 mb-2">How does pricing work?</h3>
+              <p class="text-gray-600">
+                Our pricing is based on total video duration and the number of target languages. We offer volume 
+                discounts for enterprise clients and recurring projects. Please contact us for a customized quote 
+                based on your specific requirements.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Final CTA -->
+      <div class="hero-gradient text-white">
+        <div class="py-16 px-4 mx-auto max-w-screen-xl text-center">
+          <h2 class="mb-6 text-3xl font-extrabold tracking-tight leading-none sm:text-4xl lg:text-5xl">
+            Ready to Take Your Videos Global?
+          </h2>
+          <p class="mb-8 text-lg font-normal opacity-90 lg:text-xl sm:px-16 lg:px-48 max-w-3xl mx-auto">
+            Join forward-thinking companies using Zentinl's AI video dubbing technology
+            to reach international audiences and multiply their engagement.
+          </p>
+          <div class="flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-4">
+            
+              href="#"
+              data-modal-target="contactModal"
+              data-modal-toggle="contactModal"
+              class="inline-flex justify-center items-center py-3 px-6 text-base font-medium text-center text-white rounded-lg bg-primary-600 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 transition-all duration-300 shadow-lg hover:shadow-xl"
+            >
+              Start Your Free Trial
+            </a>
+            
+              href="#"
+              data-modal-target="contactModal"
+              data-modal-toggle="contactModal"
+              class="inline-flex justify-center items-center py-3 px-6 text-base font-medium text-center text-white rounded-lg bg-white/20 backdrop-blur-sm hover:bg-white/30 focus:ring-4 focus:ring-white/30 transition-all duration-300 border border-white/30"
+            >
+              Schedule a Demo
             </a>
           </div>
         </div>
@@ -626,7 +1221,7 @@
     </section>
 
     <!-- Pricing Section -->
-    <section id="Pricing" class="page-section pt-20" data-page-title="Pricing - Zentinl AI Video Creation" data-page-description="Discover the cost-effective solution for captivating social media video content with Zentinl's AI-powered video creation service.">
+    <section id="Pricing" class="page-section pt-20" data-page-title="Pricing - Zentinl AI Video Dubbing & Creation" data-page-description="Discover the cost-effective solution for AI video dubbing and content creation with Zentinl's enterprise-grade services.">
       <!-- Hero Section -->
       <div class="hero-gradient text-white">
         <div class="py-16 px-4 mx-auto max-w-screen-xl text-center">
@@ -634,8 +1229,8 @@
             Pricing
           </h1>
           <p class="mb-8 text-lg font-normal opacity-90 lg:text-xl sm:px-16 lg:px-48 max-w-3xl mx-auto">
-            Discover the cost-effective solution for captivating social media
-            video content that drives engagement and results.
+            Transparent, flexible pricing for businesses of all sizes.
+            Unlock global reach with our AI-powered video solutions.
           </p>
           
             href="#pricing-details"
@@ -646,215 +1241,366 @@
         </div>
       </div>
 
-      <!-- Video Power Section -->
-      <div class="py-16 px-4 mx-auto max-w-screen-xl bg-white">
-        <h2 class="mb-8 text-3xl font-extrabold tracking-tight text-center text-gray-900 sm:text-4xl">
-          The Power of Video in Today's Digital World
-        </h2>
-        <div class="max-w-3xl mx-auto bg-gray-50 p-8 rounded-xl shadow-lg">
-          <p class="text-lg font-normal text-gray-700 mb-6">
-            Video is key for engaging your audience and boosting brand awareness
-            across platforms like Instagram, TikTok, Facebook, LinkedIn, Twitter,
-            and Telegram.
-          </p>
-          <p class="text-lg font-normal text-gray-700 mb-6">
-            However, producing high-quality videos can be expensive and
-            time-consuming. Traditional production involves multiple stages,
-            taking multiple hours and even days and costing hundreds to thousands
-            of dollars for short videos, and even more for longer content.
-          </p>
-          <p class="text-lg font-normal text-gray-700">
-            Beyond production, businesses invest in compelling thumbnails and
-            optimized descriptions. Scheduling and uploading videos also add to
-            the complexity and cost.
-          </p>
-        </div>
-      </div>
-
-      <!-- Traditional Video Process -->
-      <div class="py-16 px-4 mx-auto max-w-screen-xl bg-gray-50">
-        <h2 class="mb-12 text-3xl font-extrabold tracking-tight text-center text-gray-900 sm:text-4xl">
-          Traditional Video Production Process
-        </h2>
-        <div class="max-w-4xl mx-auto space-y-8">
-          <div class="bg-white p-8 rounded-xl shadow-lg">
-            <h3 class="text-xl font-bold text-primary-800 mb-4 flex items-center">
-              <span class="flex h-8 w-8 items-center justify-center rounded-full bg-primary-100 text-primary-600 mr-3">
-                1
-              </span>
-              Video Scripting and Production
-            </h3>
-            <ul class="space-y-3 text-gray-700 ml-11">
-              <li class="flex items-center">
-                <i class="fa-solid fa-caret-right text-primary-500 mr-2"></i>
-                <span><b>Plan:</b> Defining the video idea and writing a short script.</span>
-              </li>
-              <li class="flex items-center">
-                <i class="fa-solid fa-caret-right text-primary-500 mr-2"></i>
-                <span><b>Setup:</b> Preparing the location, props, and equipment.</span>
-              </li>
-              <li class="flex items-center">
-                <i class="fa-solid fa-caret-right text-primary-500 mr-2"></i>
-                <span><b>Film:</b> Recording the video, ensuring good lighting and clear audio.</span>
-              </li>
-              <li class="flex items-center">
-                <i class="fa-solid fa-caret-right text-primary-500 mr-2"></i>
-                <span><b>Edit:</b> Using specialized software to edit and add effects.</span>
-              </li>
-            </ul>
-          </div>
+      <!-- Pricing Cards -->
+      <div class="py-16 px-4 bg-white" id="pricing-details">
+        <div class="max-w-screen-xl mx-auto">
+          <h2 class="mb-12 text-3xl font-extrabold tracking-tight text-center text-gray-900 sm:text-4xl">
+            Choose the Perfect Plan for Your Needs
+          </h2>
           
-          <div class="bg-white p-8 rounded-xl shadow-lg">
-            <h3 class="text-xl font-bold text-primary-800 mb-4 flex items-center">
-              <span class="flex h-8 w-8 items-center justify-center rounded-full bg-primary-100 text-primary-600 mr-3">
-                2
-              </span>
-              Generating a Thumbnail
-            </h3>
-            <ul class="space-y-3 text-gray-700 ml-11">
-              <li class="flex items-center">
-                <i class="fa-solid fa-caret-right text-primary-500 mr-2"></i>
-                <span><b>Capture:</b> Taking a still image from the video or designing a custom thumbnail.</span>
-              </li>
-              <li class="flex items-center">
-                <i class="fa-solid fa-caret-right text-primary-500 mr-2"></i>
-                <span><b>Design:</b> Using bold text and colors to make it visually appealing.</span>
-              </li>
-            </ul>
-          </div>
-          
-          <div class="bg-white p-8 rounded-xl shadow-lg">
-            <h3 class="text-xl font-bold text-primary-800 mb-4 flex items-center">
-              <span class="flex h-8 w-8 items-center justify-center rounded-full bg-primary-100 text-primary-600 mr-3">
-                3
-              </span>
-              Content Optimization
-            </h3>
-            <ul class="space-y-3 text-gray-700 ml-11">
-              <li class="flex items-center">
-                <i class="fa-solid fa-caret-right text-primary-500 mr-2"></i>
-                <span><b>Description:</b> Writing a summary of the video with a call to action.</span>
-              </li>
-              <li class="flex items-center">
-                <i class="fa-solid fa-caret-right text-primary-500 mr-2"></i>
-                <span><b>Tags:</b> Adding relevant keywords and hashtags for discoverability.</span>
-              </li>
-            </ul>
-          </div>
-          
-          <div class="bg-white p-8 rounded-xl shadow-lg">
-            <h3 class="text-xl font-bold text-primary-800 mb-4 flex items-center">
-              <span class="flex h-8 w-8 items-center justify-center rounded-full bg-primary-100 text-primary-600 mr-3">
-                4
-              </span>
-              Scheduling and Uploading
-            </h3>
-            <ul class="space-y-3 text-gray-700 ml-11">
-              <li class="flex items-center">
-                <i class="fa-solid fa-caret-right text-primary-500 mr-2"></i>
-                <span><b>Upload:</b> Following platform-specific steps to upload the video.</span>
-              </li>
-              <li class="flex items-center">
-                <i class="fa-solid fa-caret-right text-primary-500 mr-2"></i>
-                <span><b>Schedule:</b> Posting at peak times using scheduling tools.</span>
-              </li>
-              <li class="flex items-center">
-                <i class="fa-solid fa-caret-right text-primary-500 mr-2"></i>
-                <span><b>Promote:</b> Sharing the video on other channels and engaging with viewers.</span>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <!-- Zentinl Solution -->
-      <div class="py-16 px-4 mx-auto max-w-screen-xl bg-white" id="pricing-details">
-        <div class="max-w-4xl mx-auto">
-          <div class="bg-primary-900 text-white rounded-xl shadow-2xl overflow-hidden">
-            <div class="p-8 md:p-12">
-              <h2 class="text-3xl md:text-4xl font-extrabold mb-6">
-                Zentinl: Seamless AI-Powered Video Production
-              </h2>
-              <p class="text-lg opacity-90 mb-6">
-                <b>Zentinl</b> revolutionizes video creation using AI. Our technology
-                takes your data and handles the complete process, from generating
-                the video to crafting descriptions and thumbnails.
-              </p>
-              <p class="text-lg opacity-90 mb-6">
-                Our AI generates videos in under an hour, ensuring a constant flow
-                of content. <b>Zentinl</b> integrates with social media APIs for
-                automated scheduling and uploading, reaching your audience at
-                optimal times.
-              </p>
-            </div>
-          </div>
-          
-          <div class="grid md:grid-cols-2 gap-8 mt-8">
-            <div class="bg-white rounded-xl shadow-xl p-8 border border-gray-200">
-              <h3 class="text-2xl font-bold text-gray-900 mb-6">
-                Benefits of Zentinl
-              </h3>
-
-              <ul class="space-y-4">
-                <li class="flex items-start">
-                  <i class="fa-solid fa-circle-check text-primary-600 mt-1 mr-3"></i>
-                  <span class="text-gray-700">Effortless video production with minimal human involvement</span>
-                </li>
-                <li class="flex items-start">
-                  <i class="fa-solid fa-circle-check text-primary-600 mt-1 mr-3"></i>
-                  <span class="text-gray-700">24/7 generation of consistent, high-quality content</span>
-                </li>
-                <li class="flex items-start">
-                  <i class="fa-solid fa-circle-check text-primary-600 mt-1 mr-3"></i>
-                  <span class="text-gray-700">Significant cost savings compared to traditional methods</span>
-                </li>
-                <li class="flex items-start">
-                  <i class="fa-solid fa-circle-check text-primary-600 mt-1 mr-3"></i>
-                  <span class="text-gray-700">Videos tailored to align with your brand identity</span>
-                </li>
-                <li class="flex items-start">
-                  <i class="fa-solid fa-circle-check text-primary-600 mt-1 mr-3"></i>
-                  <span class="text-gray-700">Scalability to meet varying content demands</span>
-                </li>
-                <li class="flex items-start">
-                  <i class="fa-solid fa-circle-check text-primary-600 mt-1 mr-3"></i>
-                  <span class="text-gray-700">Automated thumbnail and video description creation</span>
-                </li>
-                <li class="flex items-start">
-                  <i class="fa-solid fa-circle-check text-primary-600 mt-1 mr-3"></i>
-                  <span class="text-gray-700">Automated scheduling and uploading through social media integration</span>
-                </li>
-              </ul>
+          <div class="grid md:grid-cols-3 gap-8">
+            <!-- Standard Plan -->
+            <div class="bg-white rounded-xl border border-gray-200 shadow-xl overflow-hidden flex flex-col">
+              <div class="p-8 bg-gray-50 border-b border-gray-200">
+                <h3 class="text-2xl font-bold text-gray-900 mb-2">Standard</h3>
+                <p class="text-gray-600 mb-6">Perfect for individual creators and small businesses</p>
+                <div class="flex items-baseline">
+                  <span class="text-4xl font-extrabold text-gray-900">$299</span>
+                  <span class="text-gray-500 ml-2">/ month</span>
+                </div>
+                <p class="text-sm text-gray-500 mt-2">Billed monthly, no contract</p>
+              </div>
+              <div class="p-8 flex-grow">
+                <ul class="space-y-4">
+                  <li class="flex items-start">
+                    <i class="fa-solid fa-check text-primary-600 mt-1 mr-3"></i>
+                    <span class="text-gray-600">AI video dubbing for up to 60 minutes of content per month</span>
+                  </li>
+                  <li class="flex items-start">
+                    <i class="fa-solid fa-check text-primary-600 mt-1 mr-3"></i>
+                    <span class="text-gray-600">Support for 5 languages of your choice</span>
+                  </li>
+                  <li class="flex items-start">
+                    <i class="fa-solid fa-check text-primary-600 mt-1 mr-3"></i>
+                    <span class="text-gray-600">Standard processing time (24-48 hours)</span>
+                  </li>
+                  <li class="flex items-start">
+                    <i class="fa-solid fa-check text-primary-600 mt-1 mr-3"></i>
+                    <span class="text-gray-600">Voice characteristic preservation</span>
+                  </li>
+                  <li class="flex items-start">
+                    <i class="fa-solid fa-check text-primary-600 mt-1 mr-3"></i>
+                    <span class="text-gray-600">Self-service dashboard</span>
+                  </li>
+                  <li class="flex items-start">
+                    <i class="fa-solid fa-check text-primary-600 mt-1 mr-3"></i>
+                    <span class="text-gray-600">Email support</span>
+                  </li>
+                </ul>
+              </div>
+              <div class="p-8 border-t border-gray-200">
+                
+                  href="#"
+                  data-modal-target="contactModal"
+                  data-modal-toggle="contactModal"
+                  class="w-full inline-flex justify-center items-center py-3 px-6 text-base font-medium text-center text-white rounded-lg bg-primary-600 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 transition-all duration-300"
+                >
+                  Get Started
+                </a>
+              </div>
             </div>
             
-            <div class="bg-white rounded-xl shadow-xl p-8 border border-gray-200">
-              <h3 class="text-2xl font-bold text-gray-900 mb-6">
-                Pricing
-              </h3>
-              <div class="flex items-baseline text-gray-900 mb-8">
-                <span class="text-3xl font-semibold">$</span>
-                <span class="text-5xl font-extrabold tracking-tight">300</span>
-                <span class="ml-2 text-xl text-gray-500">per video / month</span>
+            <!-- Professional Plan -->
+            <div class="bg-white rounded-xl border-2 border-primary-600 shadow-2xl overflow-hidden flex flex-col relative transform scale-105 z-10">
+              <div class="absolute top-0 right-0 bg-primary-600 text-white px-4 py-1 text-sm font-semibold">
+                MOST POPULAR
               </div>
-              <p class="text-lg text-gray-700 mb-6">
-                With a minimum of 20 videos monthly. Maintain a steady stream of
-                compelling content without breaking the bank.
-              </p>
-
-              <p class="text-lg text-gray-700 mb-8">
-                Don't let traditional video creation hold you back. Partner with
-                <b>Zentinl</b> and unlock the power of AI-powered video
-                production.
-              </p>
-              <button
-                type="button"
-                data-modal-target="contactModal"
-                data-modal-toggle="contactModal"
-                class="w-full btn-primary text-white bg-primary-700 hover:bg-primary-800 font-medium rounded-lg text-lg px-5 py-4 text-center"
-              >
-                Get Started
-              </button>
+              <div class="p-8 bg-primary-50 border-b border-primary-100">
+                <h3 class="text-2xl font-bold text-primary-900 mb-2">Professional</h3>
+                <p class="text-gray-600 mb-6">Ideal for growing businesses and content agencies</p>
+                <div class="flex items-baseline">
+                  <span class="text-4xl font-extrabold text-primary-900">$799</span>
+                  <span class="text-gray-500 ml-2">/ month</span>
+                </div>
+                <p class="text-sm text-gray-500 mt-2">Billed monthly, no contract</p>
+              </div>
+              <div class="p-8 flex-grow">
+                <ul class="space-y-4">
+                  <li class="flex items-start">
+                    <i class="fa-solid fa-check text-primary-600 mt-1 mr-3"></i>
+                    <span class="text-gray-600">AI video dubbing for up to 200 minutes of content per month</span>
+                  </li>
+                  <li class="flex items-start">
+                    <i class="fa-solid fa-check text-primary-600 mt-1 mr-3"></i>
+                    <span class="text-gray-600">Support for 15 languages of your choice</span>
+                  </li>
+                  <li class="flex items-start">
+                    <i class="fa-solid fa-check text-primary-600 mt-1 mr-3"></i>
+                    <span class="text-gray-600">Priority processing (12-24 hours)</span>
+                  </li>
+                  <li class="flex items-start">
+                    <i class="fa-solid fa-check text-primary-600 mt-1 mr-3"></i>
+                    <span class="text-gray-600">Enhanced voice characteristic preservation</span>
+                  </li>
+                  <li class="flex items-start">
+                    <i class="fa-solid fa-check text-primary-600 mt-1 mr-3"></i>
+                    <span class="text-gray-600">Social media publishing</span>
+                  </li>
+                  <li class="flex items-start">
+                    <i class="fa-solid fa-check text-primary-600 mt-1 mr-3"></i>
+                    <span class="text-gray-600">Priority email & chat support</span>
+                  </li>
+                </ul>
+              </div>
+              <div class="p-8 border-t border-primary-100">
+                
+                  href="#"
+                  data-modal-target="contactModal"
+                  data-modal-toggle="contactModal"
+                  class="w-full inline-flex justify-center items-center py-3 px-6 text-base font-medium text-center text-white rounded-lg bg-primary-600 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 transition-all duration-300 shadow-lg hover:shadow-xl"
+                >
+                  Get Started
+                </a>
+              </div>
             </div>
+            
+            <!-- Enterprise Plan -->
+            <div class="bg-white rounded-xl border border-gray-200 shadow-xl overflow-hidden flex flex-col">
+              <div class="p-8 bg-gray-900 border-b border-gray-700 text-white">
+                <h3 class="text-2xl font-bold mb-2">Enterprise</h3>
+                <p class="text-gray-300 mb-6">Custom solutions for large organizations</p>
+                <div class="flex items-baseline">
+                  <span class="text-4xl font-extrabold">Custom</span>
+                </div>
+                <p class="text-sm text-gray-400 mt-2">Contact us for custom pricing</p>
+              </div>
+              <div class="p-8 flex-grow">
+                <ul class="space-y-4">
+                  <li class="flex items-start">
+                    <i class="fa-solid fa-check text-primary-600 mt-1 mr-3"></i>
+                    <span class="text-gray-600">Unlimited AI video dubbing</span>
+                  </li>
+                  <li class="flex items-start">
+                    <i class="fa-solid fa-check text-primary-600 mt-1 mr-3"></i>
+                    <span class="text-gray-600">Support for all 40+ languages</span>
+                  </li>
+                  <li class="flex items-start">
+                    <i class="fa-solid fa-check text-primary-600 mt-1 mr-3"></i>
+                    <span class="text-gray-600">Express processing (4-12 hours)</span>
+                  </li>
+                  <li class="flex items-start">
+                    <i class="fa-solid fa-check text-primary-600 mt-1 mr-3"></i>
+                    <span class="text-gray-600">Premium voice characteristics & lip sync</span>
+                  </li>
+                  <li class="flex items-start">
+                    <i class="fa-solid fa-check text-primary-600 mt-1 mr-3"></i>
+                    <span class="text-gray-600">API access & custom integrations</span>
+                  </li>
+                  <li class="flex items-start">
+                    <i class="fa-solid fa-check text-primary-600 mt-1 mr-3"></i>
+                    <span class="text-gray-600">Dedicated account manager</span>
+                  </li>
+                </ul>
+              </div>
+              <div class="p-8 border-t border-gray-200">
+                
+                  href="#"
+                  data-modal-target="contactModal"
+                  data-modal-toggle="contactModal"
+                  class="w-full inline-flex justify-center items-center py-3 px-6 text-base font-medium text-center text-white rounded-lg bg-gray-900 hover:bg-gray-800 focus:ring-4 focus:ring-gray-300 transition-all duration-300"
+                >
+                  Contact Sales
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Video Creation Plans -->
+      <div class="py-16 px-4 bg-gray-50">
+        <div class="max-w-screen-xl mx-auto">
+          <h2 class="mb-12 text-3xl font-extrabold tracking-tight text-center text-gray-900 sm:text-4xl">
+            AI Video Creation Plans
+          </h2>
+          
+          <div class="bg-white rounded-xl shadow-xl overflow-hidden">
+            <div class="p-8 bg-primary-900 text-white">
+              <h3 class="text-2xl font-bold mb-2">Just-in-Time Video Creation</h3>
+              <p class="opacity-90">
+                Automatically generate videos from your data, news, or trending content
+              </p>
+            </div>
+            <div class="p-8">
+              <div class="flex items-baseline mb-8">
+                <span class="text-4xl font-extrabold text-gray-900">$300</span>
+                <span class="text-gray-500 ml-2">per video</span>
+                <span class="text-sm text-gray-500 ml-2">(minimum 20 videos/month)</span>
+              </div>
+              
+              <div class="grid md:grid-cols-2 gap-8">
+                <div>
+                  <h4 class="text-lg font-semibold text-gray-900 mb-4">Plan Includes:</h4>
+                  <ul class="space-y-3">
+                    <li class="flex items-start">
+                      <i class="fa-solid fa-check text-primary-600 mt-1 mr-3"></i>
+                      <span class="text-gray-600">AI-generated videos from your data sources</span>
+                    </li>
+                    <li class="flex items-start">
+                      <i class="fa-solid fa-check text-primary-600 mt-1 mr-3"></i>
+                      <span class="text-gray-600">Automatic thumbnail generation</span>
+                    </li>
+                    <li class="flex items-start">
+                      <i class="fa-solid fa-check text-primary-600 mt-1 mr-3"></i>
+                      <span class="text-gray-600">Optimized titles and descriptions</span>
+                    </li>
+                    <li class="flex items-start">
+                      <i class="fa-solid fa-check text-primary-600 mt-1 mr-3"></i>
+                      <span class="text-gray-600">Direct publishing to all major platforms</span>
+                    </li>
+                    <li class="flex items-start">
+                      <i class="fa-solid fa-check text-primary-600 mt-1 mr-3"></i>
+                      <span class="text-gray-600">Consistent content delivery 365 days/year</span>
+                    </li>
+                  </ul>
+                </div>
+                
+                <div>
+                  <h4 class="text-lg font-semibold text-gray-900 mb-4">Perfect For:</h4>
+                  <ul class="space-y-3">
+                    <li class="flex items-start">
+                      <i class="fa-solid fa-circle-check text-primary-600 mt-1 mr-3"></i>
+                      <span class="text-gray-600">News publications looking to create video content</span>
+                    </li>
+                    <li class="flex items-start">
+                      <i class="fa-solid fa-circle-check text-primary-600 mt-1 mr-3"></i>
+                      <span class="text-gray-600">Real estate companies showcasing properties</span>
+                    </li>
+                    <li class="flex items-start">
+                      <i class="fa-solid fa-circle-check text-primary-600 mt-1 mr-3"></i>
+                      <span class="text-gray-600">E-commerce businesses highlighting products</span>
+                    </li>
+                    <li class="flex items-start">
+                      <i class="fa-solid fa-circle-check text-primary-600 mt-1 mr-3"></i>
+                      <span class="text-gray-600">Brands maintaining consistent social presence</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              
+              <div class="mt-8 text-center">
+                
+                  href="#"
+                  data-modal-target="contactModal"
+                  data-modal-toggle="contactModal"
+                  class="inline-flex justify-center items-center py-3 px-6 text-base font-medium text-center text-white rounded-lg bg-primary-600 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 transition-all duration-300 shadow-lg hover:shadow-xl"
+                >
+                  Get Started with Video Creation
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Custom AI Solutions -->
+      <div class="py-16 px-4 bg-white">
+        <div class="max-w-screen-xl mx-auto">
+          <h2 class="mb-8 text-3xl font-extrabold tracking-tight text-center text-gray-900 sm:text-4xl">
+            Custom AI Solutions
+          </h2>
+          <p class="text-lg text-center text-gray-600 mb-12 max-w-3xl mx-auto">
+            Need something unique? We offer tailored AI video solutions for enterprise requirements
+          </p>
+          
+          <div class="grid md:grid-cols-3 gap-8">
+            <div class="bg-gray-50 rounded-xl p-8 shadow-lg">
+              <div class="text-primary-600 text-4xl mb-6 flex justify-center">
+                <i class="fa-solid fa-robot"></i>
+              </div>
+              <h3 class="text-xl font-bold text-gray-900 mb-4 text-center">
+                Virtual Influencers
+              </h3>
+              <p class="text-gray-600 text-center mb-6">
+                Custom AI-driven personalities that represent your brand with consistent
+                voice, look, and messaging across all content.
+              </p>
+              <div class="text-center">
+                
+                  href="/virtual-influencers"
+                  class="inline-flex items-center font-medium text-primary-600 hover:text-primary-800"
+                >
+                  Learn more
+                  <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" fill="none">
+                    <path d="M5 12H19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M12 5L19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
+            
+            <div class="bg-gray-50 rounded-xl p-8 shadow-lg">
+              <div class="text-primary-600 text-4xl mb-6 flex justify-center">
+                <i class="fa-solid fa-code"></i>
+              </div>
+              <h3 class="text-xl font-bold text-gray-900 mb-4 text-center">
+                API Integration
+              </h3>
+              <p class="text-gray-600 text-center mb-6">
+                Integrate our AI video dubbing and creation capabilities directly into
+                your existing tools and workflows via our powerful API.
+              </p>
+              <div class="text-center">
+                
+                  href="/api"
+                  class="inline-flex items-center font-medium text-primary-600 hover:text-primary-800"
+                >
+                  Learn more
+                  <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" fill="none">
+                    <path d="M5 12H19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M12 5L19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
+            
+            <div class="bg-gray-50 rounded-xl p-8 shadow-lg">
+              <div class="text-primary-600 text-4xl mb-6 flex justify-center">
+                <i class="fa-solid fa-rocket"></i>
+              </div>
+              <h3 class="text-xl font-bold text-gray-900 mb-4 text-center">
+                Just-on-Time Video
+              </h3>
+              <p class="text-gray-600 text-center mb-6">
+                AI-generated videos exactly when and how you need them, ensuring
+                relevance and maximizing engagement for specific campaigns.
+              </p>
+              <div class="text-center">
+                
+                  href="/just-on-time"
+                  class="inline-flex items-center font-medium text-primary-600 hover:text-primary-800"
+                >
+                  Learn more
+                  <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" fill="none">
+                    <path d="M5 12H19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M12 5L19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- CTA Section -->
+      <div class="hero-gradient text-white">
+        <div class="py-16 px-4 mx-auto max-w-screen-xl text-center">
+          <h2 class="mb-6 text-3xl font-extrabold tracking-tight leading-none sm:text-4xl lg:text-5xl">
+            Not Sure Which Plan is Right for You?
+          </h2>
+          <p class="mb-8 text-lg font-normal opacity-90 lg:text-xl sm:px-16 lg:px-48 max-w-3xl mx-auto">
+            Our team of experts can help you find the perfect solution for your specific needs.
+            Get in touch for a personalized consultation.
+          </p>
+          <div class="flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-4">
+            
+              href="#"
+              data-modal-target="contactModal"
+              data-modal-toggle="contactModal"
+              class="inline-flex justify-center items-center py-3 px-6 text-base font-medium text-center text-white rounded-lg bg-white/20 backdrop-blur-sm hover:bg-white/30 focus:ring-4 focus:ring-white/30 transition-all duration-300 border border-white/30"
+            >
+              Schedule a Free Consultation
+            </a>
           </div>
         </div>
       </div>
@@ -1362,6 +2108,9 @@
               <h2 class="mb-4 text-sm font-semibold uppercase">Services</h2>
               <ul class="text-gray-400">
                 <li class="mb-2">
+                  <a href="/video-dubbing" class="hover:text-white transition-colors duration-200">AI Video Dubbing</a>
+                </li>
+                <li class="mb-2">
                   <a href="/just-on-time" class="hover:text-white transition-colors duration-200">Just on Time Video</a>
                 </li>
                 <li class="mb-2">
@@ -1515,6 +2264,9 @@
           // Convert URL path to section ID
           let sectionId;
           switch(path) {
+            case 'video-dubbing':
+              sectionId = 'video-dubbing';
+              break;
             case 'pricing':
               sectionId = 'Pricing';
               break;
@@ -1618,6 +2370,24 @@
                 }
               };
               break;
+            
+            case 'video-dubbing':
+              pageData = {
+                "@context": "https://schema.org",
+                "@type": "WebPage",
+                "name": pageTitle,
+                "description": pageDescription,
+                "url": currentUrl,
+                "offers": {
+                  "@type": "Service",
+                  "serviceType": "AI Video Dubbing",
+                  "provider": {
+                    "@type": "Organization",
+                    "name": "Zentinl"
+                  }
+                }
+              };
+              break;
               
             case 'Pricing':
               pageData = {
@@ -1628,13 +2398,13 @@
                 "url": currentUrl,
                 "offers": {
                   "@type": "Offer",
-                  "price": "300",
+                  "price": "299",
                   "priceCurrency": "USD",
                   "priceSpecification": {
                     "@type": "PriceSpecification",
-                    "price": "300",
+                    "price": "299",
                     "priceCurrency": "USD",
-                    "unitText": "per video"
+                    "unitText": "per month"
                   }
                 }
               };
@@ -1691,6 +2461,11 @@
       <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
         <url>
           <loc>https://zentinl.com/</loc>
+          <lastmod>${new Date().toISOString().split('T')[0]}</lastmod>
+          <priority>1.0</priority>
+        </url>
+        <url>
+          <loc>https://zentinl.com/video-dubbing</loc>
           <lastmod>${new Date().toISOString().split('T')[0]}</lastmod>
           <priority>1.0</priority>
         </url>
