@@ -13,11 +13,44 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Zentinl</title>
-    <meta
-      name="description"
-      content="Create Stunning Videos Effortlessly with AI. Unleash your creativity with our AI-powered video creation software! Simply describe your vision, and our intelligent tool brings it to life—no editing skills required. Whether you need professional presentations, captivating social media clips, or personalized content, our software transforms your ideas into high-quality videos in minutes. Customize styles, add effects, and let the AI handle the heavy lifting. Perfect for creators, businesses, and anyone looking to elevate their video game with ease. Try it today and watch your ideas come to life like never before!"
-    />
+    
+    <!-- Dynamic Meta Tags - Will be updated by JavaScript -->
+    <title>Zentinl - AI-Powered Video Creation</title>
+    <meta name="description" content="Create Stunning Videos Effortlessly with AI. Unleash your creativity with our AI-powered video creation software! Simply describe your vision, and our intelligent tool brings it to life—no editing skills required." />
+    <link rel="canonical" href="https://zentinl.com/" id="canonicalLink" />
+    
+    <!-- Open Graph Tags for Social Media -->
+    <meta property="og:title" content="Zentinl - AI-Powered Video Creation" id="ogTitle" />
+    <meta property="og:description" content="Create Stunning Videos Effortlessly with AI. Unleash your creativity with our AI-powered video creation software!" id="ogDescription" />
+    <meta property="og:url" content="https://zentinl.com/" id="ogUrl" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://zentinl.com/zentinel-logo.png" />
+    
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Zentinl - AI-Powered Video Creation" id="twitterTitle" />
+    <meta name="twitter:description" content="Create Stunning Videos Effortlessly with AI." id="twitterDescription" />
+    <meta name="twitter:image" content="https://zentinl.com/zentinel-logo.png" />
+    
+    <!-- JSON-LD Structured Data - Will be updated by JavaScript -->
+    <script type="application/ld+json" id="structuredData">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Zentinl",
+        "url": "https://zentinl.com",
+        "logo": "https://zentinl.com/zentinel-logo.png",
+        "sameAs": [
+          "https://www.facebook.com/zentinl",
+          "https://x.com/zentinl",
+          "https://www.linkedin.com/company/zentinl.com/",
+          "https://t.me/zentinl",
+          "https://github.com/zentinl",
+          "https://www.tiktok.com/@zentinl.com"
+        ],
+        "description": "AI-powered video creation software for social media content."
+      }
+    </script>
   </head>
   <body>
     <!-- Navigation Bar -->
@@ -27,8 +60,8 @@
       <div
         class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4"
       >
-        <a href="" class="flex items-center space-x-3 rtl:space-x-reverse">
-          <img src="./zentinel-logo.png" class="h-14" alt="Flowbite Logo" />
+        <a href="/" class="flex items-center space-x-3 rtl:space-x-reverse">
+          <img src="./zentinel-logo.png" class="h-14" alt="Zentinl Logo" />
           <span
             class="self-center text-2xl font-semibold whitespace-nowrap text-gray-900"
           >
@@ -76,11 +109,10 @@
           <ul
             class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white"
           >
-            <!-- Original Navbar Links -->
+            <!-- Updated Navigation Links with proper paths -->
             <li>
               <a
-                href="#"
-                onclick="scrollToTop()"
+                href="/"
                 class="nav-link block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0"
                 data-section="home"
               >
@@ -89,8 +121,7 @@
             </li>
             <li>
               <a
-                href="#"
-                onclick="scrollToTop()"
+                href="/pricing"
                 class="nav-link block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0"
                 data-section="Pricing"
               >
@@ -99,8 +130,7 @@
             </li>
             <li>
               <a
-                href="#"
-                onclick="scrollToTop()"
+                href="/just-on-time"
                 class="nav-link block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0"
                 data-section="just-on-time"
               >
@@ -109,8 +139,7 @@
             </li>
             <li>
               <a
-                href="#"
-                onclick="scrollToTop()"
+                href="/virtual-influencers"
                 class="nav-link block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0"
                 data-section="virtual-influencers"
               >
@@ -119,8 +148,7 @@
             </li>
             <li>
               <a
-                href="#"
-                onclick="scrollToTop()"
+                href="/api"
                 class="nav-link block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0"
                 data-section="api"
               >
@@ -227,14 +255,14 @@
     </div>
 
     <!-- Home Section -->
-    <section id="home">
+    <section id="home" class="page-section" data-page-title="Zentinl - AI-Powered Video Creation" data-page-description="Create Stunning Videos Effortlessly with AI. Unleash your creativity with our AI-powered video creation software!">
       <div class="bg-white mt-6">
         <div class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16">
           <!-- Imagen encima del título -->
           <div class="mb-4 bg-gray-900">
             <img
               src="./zentinel-logo.png"
-              alt="Descripción de la imagen"
+              alt="Zentinl Logo"
               class="mx-auto"
             />
           </div>
@@ -572,7 +600,7 @@
     </section>
 
     <!-- pricing Section -->
-    <section id="Pricing">
+    <section id="Pricing" class="page-section" data-page-title="Pricing - Zentinl AI Video Creation" data-page-description="Discover the cost-effective solution for captivating social media video content with Zentinl's AI-powered video creation service.">
       <div class="bg-white mt-6">
         <div class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16">
           <h1
@@ -784,13 +812,13 @@
     </section>
 
     <!-- Just on Time Section -->
-    <section id="just-on-time">
+    <section id="just-on-time" class="page-section" data-page-title="Just on Time Video - Zentinl" data-page-description="AI-driven video generation tailored precisely when and how you need it, ensuring relevance and maximizing engagement.">
       <div class="bg-white mt-6">
         <div class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16">
           <div class="mb-4 bg-gray-900">
             <img
               src="./zentinel-logo.png"
-              alt="Descripción de la imagen"
+              alt="Zentinl Logo"
               class="mx-auto"
             />
           </div>
@@ -911,7 +939,7 @@
     </section>
 
     <!-- Virtual Influencers Section -->
-    <section id="virtual-influencers">
+    <section id="virtual-influencers" class="page-section" data-page-title="Virtual Influencers - Zentinl" data-page-description="Create and manage AI-driven virtual influencers to amplify your brand's presence and engage with audiences in innovative ways.">
       <div class="bg-white mt-6">
         <div class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16">
           <h1
@@ -1085,7 +1113,7 @@
                 <img
                   class="w-10 h-10 rounded-full"
                   src="./zentinel-logo.png"
-                  alt=""
+                  alt="Ava Tech profile"
                 />
               </div>
             </div>
@@ -1109,7 +1137,7 @@
                 <img
                   class="w-10 h-10 rounded-full"
                   src="./zentinel-logo.png"
-                  alt=""
+                  alt="Luna Style profile"
                 />
               </div>
             </div>
@@ -1133,7 +1161,7 @@
                 <img
                   class="w-10 h-10 rounded-full"
                   src="./zentinel-logo.png"
-                  alt=""
+                  alt="Max Fitness profile"
                 />
               </div>
             </div>
@@ -1151,13 +1179,13 @@
     </section>
 
     <!-- Api & Zap Integrations Section -->
-    <section id="api">
+    <section id="api" class="page-section" data-page-title="API & Zap Integration - Zentinl" data-page-description="Seamlessly integrate Zentinl with your existing tools and workflows using our robust API and Zapier integrations.">
       <div class="bg-white mt-6">
         <div class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16">
           <div class="mb-4 bg-gray-900">
             <img
               src="./zentinel-logo.png"
-              alt="Descripción de la imagen"
+              alt="Zentinl Logo"
               class="mx-auto"
             />
           </div>
@@ -1379,11 +1407,11 @@
         <div class="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
           <div class="md:flex md:justify-between">
             <div class="mb-6 md:mb-0">
-              <a class="flex items-center">
+              <a href="/" class="flex items-center">
                 <img
                   src="./zentinel-logo.png"
                   class="h-11 me-3"
-                  alt="FlowBite Logo"
+                  alt="Zentinl Logo"
                 />
                 <span
                   class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white"
@@ -1460,40 +1488,285 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
 
-    <!-- Custom JavaScript -->
+    <!-- SEO-Optimized Custom JavaScript -->
     <script>
-      $(document).ready(function () {
-        function showSection(sectionId) {
-          $("section").hide();
-          $("#" + sectionId).show();
-          $(".nav-item").removeClass("active");
-          $('.nav-link[data-section="' + sectionId + '"]')
-            .parent()
-            .addClass("active");
+      document.addEventListener('DOMContentLoaded', function() {
+        // Initially hide all sections except home
+        const sections = document.querySelectorAll('.page-section');
+        sections.forEach(section => {
+          if (section.id !== 'home') {
+            section.style.display = 'none';
+          }
+        });
+
+        // Get the current path from the URL
+        const path = window.location.pathname.replace(/^\/+|\/+$/g, '') || 'home';
+        
+        // Show the correct section based on URL path
+        showSectionByPath(path);
+        
+        // Update navigation links to use History API
+        document.querySelectorAll('.nav-link').forEach(link => {
+          link.addEventListener('click', function(e) {
+            e.preventDefault();
+            const href = this.getAttribute('href');
+            const sectionId = this.getAttribute('data-section');
+            
+            // Use History API to change URL without page reload
+            history.pushState({sectionId: sectionId}, '', href);
+            
+            // Show the appropriate section
+            showSectionByID(sectionId);
+            
+            // Close mobile menu if open
+            if (window.innerWidth < 768) {
+              const navbarCollapse = document.getElementById('navbar-sticky');
+              if (navbarCollapse.classList.contains('show')) {
+                document.querySelector('[data-collapse-toggle="navbar-sticky"]').click();
+              }
+            }
+          });
+        });
+
+        // Handle browser back/forward buttons
+        window.addEventListener('popstate', function(e) {
+          const path = window.location.pathname.replace(/^\/+|\/+$/g, '') || 'home';
+          showSectionByPath(path);
+        });
+
+        // Function to show section by path
+        function showSectionByPath(path) {
+          // Convert URL path to section ID
+          let sectionId;
+          switch(path) {
+            case 'pricing':
+              sectionId = 'Pricing';
+              break;
+            case 'just-on-time':
+            case 'virtual-influencers':
+            case 'api':
+              sectionId = path;
+              break;
+            default:
+              sectionId = 'home';
+          }
+          
+          showSectionByID(sectionId);
         }
 
-        showSection("home");
+        // Function to show section by ID
+        function showSectionByID(sectionId) {
+          // Hide all sections
+          sections.forEach(section => {
+            section.style.display = 'none';
+          });
+          
+          // Show the target section
+          const targetSection = document.getElementById(sectionId);
+          if (targetSection) {
+            targetSection.style.display = 'block';
+            
+            // Update metadata based on the section
+            updateMetadata(targetSection);
+            
+            // Update active navigation state
+            updateActiveNavigation(sectionId);
+            
+            // Scroll to top
+            window.scrollTo(0, 0);
+          }
+        }
 
-        $(".nav-link[data-section]").click(function (e) {
-          e.preventDefault();
-          var section = $(this).data("section");
-          showSection(section);
-          $(".navbar-collapse").collapse("hide");
-        });
+        // Function to update metadata
+        function updateMetadata(section) {
+          // Get metadata from data attributes
+          const pageTitle = section.getAttribute('data-page-title');
+          const pageDescription = section.getAttribute('data-page-description');
+          const currentUrl = window.location.href;
+          
+          // Update page title and meta description
+          if (pageTitle) {
+            document.title = pageTitle;
+            document.getElementById('ogTitle').setAttribute('content', pageTitle);
+            document.getElementById('twitterTitle').setAttribute('content', pageTitle);
+          }
+          
+          if (pageDescription) {
+            document.querySelector('meta[name="description"]').setAttribute('content', pageDescription);
+            document.getElementById('ogDescription').setAttribute('content', pageDescription);
+            document.getElementById('twitterDescription').setAttribute('content', pageDescription);
+          }
+          
+          // Update canonical URL and OG URL
+          document.getElementById('canonicalLink').setAttribute('href', currentUrl);
+          document.getElementById('ogUrl').setAttribute('content', currentUrl);
+          
+          // Update JSON-LD structured data
+          updateStructuredData(section.id, pageTitle, pageDescription, currentUrl);
+        }
 
-        $(".nav-link[data-toggle='modal']").click(function (e) {
-          e.preventDefault();
-          $("#contactModal").modal("show");
-          $(".navbar-collapse").collapse("hide");
-        });
+        // Function to update structured data
+        function updateStructuredData(sectionId, pageTitle, pageDescription, currentUrl) {
+          // Base organization data
+          const orgData = {
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "Zentinl",
+            "url": "https://zentinl.com",
+            "logo": "https://zentinl.com/zentinel-logo.png",
+            "sameAs": [
+              "https://www.facebook.com/zentinl",
+              "https://x.com/zentinl",
+              "https://www.linkedin.com/company/zentinl.com/",
+              "https://t.me/zentinl",
+              "https://github.com/zentinl",
+              "https://www.tiktok.com/@zentinl.com"
+            ]
+          };
+          
+          // Create page-specific structured data
+          let pageData;
+          
+          switch(sectionId) {
+            case 'home':
+              pageData = {
+                "@context": "https://schema.org",
+                "@type": "WebPage",
+                "name": pageTitle,
+                "description": pageDescription,
+                "url": currentUrl,
+                "isPartOf": {
+                  "@type": "WebSite",
+                  "name": "Zentinl",
+                  "url": "https://zentinl.com"
+                }
+              };
+              break;
+              
+            case 'Pricing':
+              pageData = {
+                "@context": "https://schema.org",
+                "@type": "WebPage",
+                "name": pageTitle,
+                "description": pageDescription,
+                "url": currentUrl,
+                "offers": {
+                  "@type": "Offer",
+                  "price": "300",
+                  "priceCurrency": "USD",
+                  "priceSpecification": {
+                    "@type": "PriceSpecification",
+                    "price": "300",
+                    "priceCurrency": "USD",
+                    "unitText": "per video"
+                  }
+                }
+              };
+              break;
+              
+            case 'just-on-time':
+            case 'virtual-influencers':
+            case 'api':
+              pageData = {
+                "@context": "https://schema.org",
+                "@type": "WebPage",
+                "name": pageTitle,
+                "description": pageDescription,
+                "url": currentUrl,
+                "offers": {
+                  "@type": "Service",
+                  "serviceType": sectionId === 'just-on-time' ? "Just on Time Video Creation" : 
+                                 sectionId === 'virtual-influencers' ? "Virtual Influencers" : 
+                                 "API Integration",
+                  "provider": {
+                    "@type": "Organization",
+                    "name": "Zentinl"
+                  }
+                }
+              };
+              break;
+          }
+          
+          // Update the structured data in the DOM
+          document.getElementById('structuredData').textContent = JSON.stringify(sectionId === 'home' ? orgData : pageData);
+        }
+
+        // Function to update active navigation state
+        function updateActiveNavigation(sectionId) {
+          document.querySelectorAll('.nav-link').forEach(link => {
+            if (link.getAttribute('data-section') === sectionId) {
+              link.classList.add('text-blue-700');
+            } else {
+              link.classList.remove('text-blue-700');
+            }
+          });
+        }
       });
     </script>
+
+    <!-- XML Sitemap Generator -->
+    <!-- This should be used server-side to create an actual XML file -->
     <script>
-      function scrollToTop() {
-        window.scrollTo(0, 0);
-      }
+      /* 
+      This script demonstrates how to create an XML sitemap.
+      In a real implementation, you would run this server-side.
+      
+      const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
+      <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+        <url>
+          <loc>https://zentinl.com/</loc>
+          <lastmod>${new Date().toISOString().split('T')[0]}</lastmod>
+          <priority>1.0</priority>
+        </url>
+        <url>
+          <loc>https://zentinl.com/pricing</loc>
+          <lastmod>${new Date().toISOString().split('T')[0]}</lastmod>
+          <priority>0.8</priority>
+        </url>
+        <url>
+          <loc>https://zentinl.com/just-on-time</loc>
+          <lastmod>${new Date().toISOString().split('T')[0]}</lastmod>
+          <priority>0.8</priority>
+        </url>
+        <url>
+          <loc>https://zentinl.com/virtual-influencers</loc>
+          <lastmod>${new Date().toISOString().split('T')[0]}</lastmod>
+          <priority>0.8</priority>
+        </url>
+        <url>
+          <loc>https://zentinl.com/api</loc>
+          <lastmod>${new Date().toISOString().split('T')[0]}</lastmod>
+          <priority>0.8</priority>
+        </url>
+      </urlset>`;
+      
+      // Then write this to a sitemap.xml file on your server
+      */
     </script>
-    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
+
+    <!-- Server Configuration Comments -->
+    <!-- 
+    Apache .htaccess file:
+    
+    <IfModule mod_rewrite.c>
+      RewriteEngine On
+      RewriteBase /
+      
+      # If the request is not for a file or directory
+      RewriteCond %{REQUEST_FILENAME} !-f
+      RewriteCond %{REQUEST_FILENAME} !-d
+      
+      # Rewrite all requests to the index.html file
+      RewriteRule . /index.html [L]
+    </IfModule>
+    
+    For Nginx:
+    
+    location / {
+      try_files $uri $uri/ /index.html;
+    }
+    -->
   </body>
 </html>
