@@ -1,0 +1,1035 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="./zentinel-logo.png" type="image/x-icon" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.css" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/30da9ec722.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- Meta Tags -->
+    <title>API & Zap Integration - Zentinl</title>
+    <meta name="description" content="Seamlessly integrate Zentinl's AI video dubbing and creation capabilities into your existing workflows with our robust API and Zapier integrations." />
+    <link rel="canonical" href="https://zentinl.com/api.html" id="canonicalLink" />
+    
+    <!-- Open Graph Tags for Social Media -->
+    <meta property="og:title" content="API & Zap Integration - Zentinl" id="ogTitle" />
+    <meta property="og:description" content="Integrate AI video dubbing and creation into your existing workflows with our API and Zapier integrations." id="ogDescription" />
+    <meta property="og:url" content="https://zentinl.com/api.html" id="ogUrl" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://zentinl.com/zentinel-logo.png" />
+    
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="API & Zap Integration - Zentinl" id="twitterTitle" />
+    <meta name="twitter:description" content="Integrate AI video dubbing and creation into your existing workflows." id="twitterDescription" />
+    <meta name="twitter:image" content="https://zentinl.com/zentinel-logo.png" />
+    
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json" id="structuredData">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "API & Zap Integration - Zentinl",
+        "description": "Seamlessly integrate AI video dubbing and creation into your workflows.",
+        "url": "https://zentinl.com/api.html",
+        "offers": {
+          "@type": "Service",
+          "serviceType": "API Integration",
+          "provider": {
+            "@type": "Organization",
+            "name": "Zentinl"
+          }
+        }
+      }
+    </script>
+    
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: {
+                50: '#EFF6FF',
+                100: '#DBEAFE',
+                200: '#BFDBFE',
+                300: '#93C5FD',
+                400: '#60A5FA',
+                500: '#3B82F6',
+                600: '#2563EB',
+                700: '#1D4ED8',
+                800: '#1E40AF',
+                900: '#1E3A8A',
+                950: '#172554',
+              },
+              secondary: {
+                50: '#F8FAFC',
+                900: '#0F172A',
+                950: '#020617',
+              }
+            },
+            fontFamily: {
+              'sans': ['Inter', 'ui-sans-serif', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'sans-serif'],
+            },
+            animation: {
+              'fade-in': 'fadeIn 0.5s ease-in-out',
+              'slide-up': 'slideUp 0.5s ease-out',
+              'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+              'bounce-slow': 'bounce 3s infinite',
+              'float': 'float 3s ease-in-out infinite',
+            },
+            keyframes: {
+              fadeIn: {
+                '0%': { opacity: '0' },
+                '100%': { opacity: '1' },
+              },
+              slideUp: {
+                '0%': { transform: 'translateY(20px)', opacity: '0' },
+                '100%': { transform: 'translateY(0)', opacity: '1' },
+              },
+              float: {
+                '0%, 100%': { transform: 'translateY(0)' },
+                '50%': { transform: 'translateY(-10px)' },
+              }
+            }
+          }
+        }
+      }
+    </script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./css/style.css">
+  </head>
+  <body class="bg-white font-sans text-secondary-900">
+    <!-- Navigation Bar -->
+    <nav class="bg-white/95 backdrop-blur-sm fixed w-full z-20 top-0 start-0 border-b border-gray-200 shadow-sm">
+      <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+        <a href="index.html" class="flex items-center space-x-3 rtl:space-x-reverse">
+          <img src="./zentinel-logo.png" class="h-12" alt="Zentinl Logo" />
+          <span class="self-center text-2xl font-semibold whitespace-nowrap text-primary-900">
+            Zentinl
+          </span>
+        </a>
+        <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
+          <button
+            type="button"
+            class="btn-primary text-white bg-primary-700 hover:bg-primary-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
+            data-modal-target="contactModal"
+            data-modal-toggle="contactModal"
+          >
+            Get Started
+          </button>
+          <button
+            data-collapse-toggle="navbar-sticky"
+            type="button"
+            class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-primary-400"
+            aria-controls="navbar-sticky"
+            aria-expanded="false"
+          >
+            <span class="sr-only">Open main menu</span>
+            <svg
+              class="w-5 h-5"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 17 14"
+            >
+              <path
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M1 1h15M1 7h15M1 13h15"
+              />
+            </svg>
+          </button>
+        </div>
+        <div
+          class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1"
+          id="navbar-sticky"
+        >
+          <ul
+            class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white"
+          >
+            <li>
+              <a href="index.html" 
+                class="nav-link block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-primary-700 md:p-0 transition-colors duration-300">
+                Home
+              </a>
+            </li>
+            <li>
+              <a href="video-dubbing.html"
+                class="nav-link block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-primary-700 md:p-0 transition-colors duration-300">
+                AI Video Dubbing
+              </a>
+            </li>
+            <li>
+              <a href="enterprise.html"
+                class="nav-link block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-primary-700 md:p-0 transition-colors duration-300">
+                Enterprise Solutions
+              </a>
+            </li>
+            <li>
+              <a href="pricing.html"
+                class="nav-link block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-primary-700 md:p-0 transition-colors duration-300">
+                Pricing
+              </a>
+            </li>
+            <li>
+              <a href="just-on-time.html"
+                class="nav-link block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-primary-700 md:p-0 transition-colors duration-300">
+                Just On Time Video
+              </a>
+            </li>
+            <li>
+              <a href="virtual-influencers.html"
+                class="nav-link block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-primary-700 md:p-0 transition-colors duration-300">
+                Virtual Influencers
+              </a>
+            </li>
+            <li>
+              <a href="api.html"
+                class="nav-link active block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-primary-700 md:p-0 transition-colors duration-300">
+                API & Zap Integration
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Modal -->
+    <div
+      id="contactModal"
+      tabindex="-1"
+      class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-modal md:h-full"
+    >
+      <div class="relative w-full max-w-md h-full md:h-auto">
+        <div class="relative bg-white rounded-xl shadow-2xl dark:bg-gray-700 animate-fade-in">
+          <button
+            type="button"
+            class="absolute top-3 right-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center transition-colors duration-200"
+            data-modal-hide="contactModal"
+          >
+            <svg
+              aria-hidden="true"
+              class="w-5 h-5"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 011.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                clip-rule="evenodd"
+              />
+            </svg>
+            <span class="sr-only">Close modal</span>
+          </button>
+          <div class="px-6 py-6 lg:px-8">
+            <h3 class="mb-6 text-xl font-semibold text-gray-900 dark:text-white border-b pb-4">
+              Custom Enterprise Solution
+            </h3>
+            <form
+              action="https://formspree.io/f/xkgnzyqo"
+              method="POST"
+              class="space-y-6"
+            >
+              <div>
+                <label
+                  for="name"
+                  class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                  >Your Name</label
+                >
+                <input
+                  type="text"
+                  name="name"
+                  id="name"
+                  class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 transition-all duration-200"
+                  placeholder="John Doe"
+                  required
+                />
+              </div>
+              <div>
+                <label
+                  for="company"
+                  class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                  >Company Name</label
+                >
+                <input
+                  type="text"
+                  name="company"
+                  id="company"
+                  class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 transition-all duration-200"
+                  placeholder="Your Company"
+                  required
+                />
+              </div>
+              <div>
+                <label
+                  for="email"
+                  class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                  >Your Email</label
+                >
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 transition-all duration-200"
+                  placeholder="name@company.com"
+                  required
+                />
+              </div>
+              <div>
+                <label
+                  for="service"
+                  class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                  >Service Interest</label
+                >
+                <select
+                  name="service"
+                  id="service"
+                  class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 transition-all duration-200"
+                  required
+                >
+                  <option value="">Select a service</option>
+                  <option value="video-dubbing">AI Video Dubbing</option>
+                  <option value="just-on-time">Just-on-Time Video</option>
+                  <option value="virtual-influencers">Virtual Influencers</option>
+                  <option value="api-integration" selected>API Integration</option>
+                  <option value="enterprise">Custom Enterprise Solution</option>
+                </select>
+              </div>
+              <div>
+                <label
+                  for="message"
+                  class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                  >Your Requirements</label
+                >
+                <textarea
+                  name="message"
+                  id="message"
+                  rows="4"
+                  class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 transition-all duration-200"
+                  placeholder="Tell us about your specific needs and requirements..."
+                  required
+                ></textarea>
+              </div>
+              <button
+                type="submit"
+                class="w-full btn-primary text-white bg-primary-700 hover:bg-primary-800 font-medium rounded-lg text-sm px-5 py-3 text-center transition-all duration-300"
+              >
+                Request Custom Solution
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- API Section -->
+    <section id="api" class="page-section pt-20">
+      <!-- Hero Section -->
+      <div class="hero-gradient text-white">
+        <div class="py-16 px-4 mx-auto max-w-screen-xl text-center">
+          <h1 class="mb-6 text-4xl font-extrabold tracking-tight leading-none sm:text-5xl lg:text-6xl">
+            API & Integration Solutions
+          </h1>
+          <p class="mb-8 text-lg font-normal opacity-90 lg:text-xl sm:px-16 lg:px-48 max-w-3xl mx-auto">
+            Seamlessly integrate Zentinl's AI video dubbing and creation technologies 
+            into your existing workflows with our robust API and Zapier integrations.
+          </p>
+          
+          <div class="flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-4 mt-8">
+            <a
+              href="#api-documentation"
+              class="inline-flex justify-center items-center py-3 px-6 text-base font-medium text-center text-white rounded-lg bg-primary-600 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 transition-all duration-300 shadow-lg hover:shadow-xl"
+            >
+              API Documentation
+            </a>
+            <a
+              href="#zapier"
+              class="inline-flex justify-center items-center py-3 px-6 text-base font-medium text-center text-white rounded-lg bg-white/20 backdrop-blur-sm hover:bg-white/30 focus:ring-4 focus:ring-white/30 transition-all duration-300 border border-white/30"
+            >
+              Zapier Integration
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Key Benefits -->
+      <div class="py-16 px-4 bg-white" id="benefits">
+        <div class="max-w-screen-xl mx-auto">
+          <h2 class="text-3xl font-extrabold text-center text-gray-900 mb-6">Why Integrate With Zentinl?</h2>
+          <p class="text-lg text-center text-gray-600 mb-12 max-w-3xl mx-auto">
+            Our API and integration options provide flexibility and power for developers and businesses
+          </p>
+          
+          <div class="grid md:grid-cols-3 gap-8">
+            <div class="feature-card bg-gray-50 p-8 rounded-xl border border-gray-200 shadow-lg hover:shadow-xl transition-all duration-300">
+              <div class="text-primary-600 text-4xl mb-6 flex justify-center">
+                <i class="fa-solid fa-plug"></i>
+              </div>
+              <h5 class="mb-4 text-xl font-bold tracking-tight text-center text-gray-900">
+                Simple Integration
+              </h5>
+              <p class="font-normal text-gray-700 text-center">
+                Our RESTful API is designed for easy integration with minimal code. 
+                Clear documentation, SDKs, and samples make implementation quick and painless.
+              </p>
+            </div>
+            
+            <div class="feature-card bg-gray-50 p-8 rounded-xl border border-gray-200 shadow-lg hover:shadow-xl transition-all duration-300">
+              <div class="text-primary-600 text-4xl mb-6 flex justify-center">
+                <i class="fa-solid fa-bolt"></i>
+              </div>
+              <h5 class="mb-4 text-xl font-bold tracking-tight text-center text-gray-900">
+                Powerful Capabilities
+              </h5>
+              <p class="font-normal text-gray-700 text-center">
+                Access the full range of Zentinl's AI technologies programmatically.
+                Create fully automated video dubbing and creation pipelines within your existing systems.
+              </p>
+            </div>
+            
+            <div class="feature-card bg-gray-50 p-8 rounded-xl border border-gray-200 shadow-lg hover:shadow-xl transition-all duration-300">
+              <div class="text-primary-600 text-4xl mb-6 flex justify-center">
+                <i class="fa-solid fa-cogs"></i>
+              </div>
+              <h5 class="mb-4 text-xl font-bold tracking-tight text-center text-gray-900">
+                Complete Automation
+              </h5>
+              <p class="font-normal text-gray-700 text-center">
+                Build fully automated processes that handle video downloading, processing, dubbing, 
+                and publishing with no human intervention required.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- API Documentation Section -->
+      <div id="api-documentation" class="py-16 px-4 bg-gray-50">
+        <div class="max-w-screen-xl mx-auto">
+          <div class="grid md:grid-cols-2 gap-12 items-start">
+            <div>
+              <h2 class="text-3xl font-extrabold text-gray-900 mb-6">API Documentation</h2>
+              <p class="text-lg text-gray-600 mb-6">
+                Our comprehensive REST API allows you to access all of Zentinl's AI capabilities programmatically.
+                Integrate video dubbing, creation, and distribution directly into your application or service.
+              </p>
+              
+              <div class="space-y-6 mt-8">
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                  <h3 class="text-xl font-bold text-gray-900 mb-2">Authentication</h3>
+                  <p class="text-gray-600 mb-4">
+                    Secure your API requests with API keys or OAuth 2.0 authentication.
+                  </p>
+                  <div class="bg-gray-100 p-4 rounded-md">
+                    <pre class="text-sm text-gray-800 overflow-x-auto">
+# Example using API key
+curl -X POST https://api.zentinl.com/v1/dub
+  -H "Authorization: Bearer YOUR_API_KEY"
+  -H "Content-Type: application/json"
+  -d '{
+    "video_url": "https://example.com/video.mp4",
+    "target_languages": ["es", "fr", "de"]
+  }'</pre>
+                  </div>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                  <h3 class="text-xl font-bold text-gray-900 mb-2">Video Dubbing Endpoint</h3>
+                  <p class="text-gray-600 mb-4">
+                    Submit videos for dubbing in multiple languages with a single API call.
+                  </p>
+                  <div class="bg-gray-100 p-4 rounded-md">
+                    <pre class="text-sm text-gray-800 overflow-x-auto">
+# Response example (JSON)
+{
+  "job_id": "dub_12345",
+  "status": "processing",
+  "estimated_completion_time": "2023-07-15T16:30:00Z",
+  "target_languages": ["es", "fr", "de"],
+  "callback_url": "https://your-callback-url.com"
+}</pre>
+                  </div>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                  <h3 class="text-xl font-bold text-gray-900 mb-2">Webhook Integration</h3>
+                  <p class="text-gray-600 mb-4">
+                    Receive notifications when your processing jobs are complete.
+                  </p>
+                  <div class="bg-gray-100 p-4 rounded-md">
+                    <pre class="text-sm text-gray-800 overflow-x-auto">
+# Webhook payload example
+{
+  "job_id": "dub_12345",
+  "status": "completed",
+  "completion_time": "2023-07-15T16:25:12Z",
+  "results": {
+    "es": "https://cdn.zentinl.com/output/video_es.mp4",
+    "fr": "https://cdn.zentinl.com/output/video_fr.mp4",
+    "de": "https://cdn.zentinl.com/output/video_de.mp4"
+  }
+}</pre>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="mt-8">
+                <a
+                  href="#"
+                  data-modal-target="contactModal"
+                  data-modal-toggle="contactModal"
+                  class="inline-flex justify-center items-center py-3 px-6 text-base font-medium text-center text-white rounded-lg bg-primary-600 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 transition-all duration-300 shadow-lg hover:shadow-xl"
+                >
+                  Request API Access
+                </a>
+              </div>
+            </div>
+            
+            <div class="bg-white p-8 rounded-xl shadow-lg">
+              <h3 class="text-2xl font-bold text-gray-900 mb-6">Available API Endpoints</h3>
+              
+              <div class="space-y-6">
+                <div class="border-b border-gray-200 pb-4">
+                  <h4 class="text-lg font-semibold text-primary-700 mb-2">Video Dubbing</h4>
+                  <p class="text-gray-600 mb-3">Submit videos for translation and dubbing in multiple languages.</p>
+                  <div class="flex items-center text-sm font-medium">
+                    <span class="bg-green-100 text-green-800 px-2 py-1 rounded mr-2">POST</span>
+                    <span class="text-gray-500">/v1/dub</span>
+                  </div>
+                </div>
+                
+                <div class="border-b border-gray-200 pb-4">
+                  <h4 class="text-lg font-semibold text-primary-700 mb-2">Job Status</h4>
+                  <p class="text-gray-600 mb-3">Check the status of processing jobs and retrieve results.</p>
+                  <div class="flex items-center text-sm font-medium">
+                    <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded mr-2">GET</span>
+                    <span class="text-gray-500">/v1/jobs/{job_id}</span>
+                  </div>
+                </div>
+                
+                <div class="border-b border-gray-200 pb-4">
+                  <h4 class="text-lg font-semibold text-primary-700 mb-2">Video Creation</h4>
+                  <p class="text-gray-600 mb-3">Generate new videos using text prompts and templates.</p>
+                  <div class="flex items-center text-sm font-medium">
+                    <span class="bg-green-100 text-green-800 px-2 py-1 rounded mr-2">POST</span>
+                    <span class="text-gray-500">/v1/create</span>
+                  </div>
+                </div>
+                
+                <div class="border-b border-gray-200 pb-4">
+                  <h4 class="text-lg font-semibold text-primary-700 mb-2">Social Publishing</h4>
+                  <p class="text-gray-600 mb-3">Automatically publish videos to connected social platforms.</p>
+                  <div class="flex items-center text-sm font-medium">
+                    <span class="bg-green-100 text-green-800 px-2 py-1 rounded mr-2">POST</span>
+                    <span class="text-gray-500">/v1/publish</span>
+                  </div>
+                </div>
+                
+                <div class="border-b border-gray-200 pb-4">
+                  <h4 class="text-lg font-semibold text-primary-700 mb-2">Account Management</h4>
+                  <p class="text-gray-600 mb-3">Manage API keys, usage limits, and billing information.</p>
+                  <div class="flex items-center text-sm font-medium">
+                    <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded mr-2">GET</span>
+                    <span class="text-gray-500">/v1/account</span>
+                  </div>
+                </div>
+                
+                <div>
+                  <h4 class="text-lg font-semibold text-primary-700 mb-2">Webhook Configuration</h4>
+                  <p class="text-gray-600 mb-3">Set up and manage notification webhooks for job status updates.</p>
+                  <div class="flex items-center text-sm font-medium">
+                    <span class="bg-green-100 text-green-800 px-2 py-1 rounded mr-2">POST</span>
+                    <span class="text-gray-500">/v1/webhooks</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Zapier Integration Section -->
+      <div id="zapier" class="py-16 px-4 bg-white">
+        <div class="max-w-screen-xl mx-auto">
+          <div class="text-center mb-12">
+            <h2 class="text-3xl font-extrabold text-gray-900 mb-6">No-Code Integration with Zapier</h2>
+            <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+              Connect Zentinl to over 5,000+ apps without writing a single line of code using our Zapier integration
+            </p>
+          </div>
+          
+          <div class="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+              <div class="bg-primary-50 p-8 rounded-xl border border-primary-100 mb-8">
+                <h3 class="text-2xl font-bold text-gray-900 mb-4">Popular Zap Templates</h3>
+                <ul class="space-y-4">
+                  <li class="flex items-start">
+                    <div class="flex-shrink-0 mt-1">
+                      <div class="flex h-8 w-8 items-center justify-center rounded-full bg-primary-100">
+                        <i class="fab fa-youtube text-primary-600"></i>
+                      </div>
+                    </div>
+                    <div class="ml-3">
+                      <p class="font-medium text-gray-900">YouTube to Zentinl Dubbing</p>
+                      <p class="text-sm text-gray-600">Automatically send new YouTube uploads to Zentinl for dubbing</p>
+                    </div>
+                  </li>
+                  
+                  <li class="flex items-start">
+                    <div class="flex-shrink-0 mt-1">
+                      <div class="flex h-8 w-8 items-center justify-center rounded-full bg-primary-100">
+                        <i class="far fa-calendar-alt text-primary-600"></i>
+                      </div>
+                    </div>
+                    <div class="ml-3">
+                      <p class="font-medium text-gray-900">Schedule Video Creation</p>
+                      <p class="text-sm text-gray-600">Create AI videos on a regular schedule with Google Calendar triggers</p>
+                    </div>
+                  </li>
+                  
+                  <li class="flex items-start">
+                    <div class="flex-shrink-0 mt-1">
+                      <div class="flex h-8 w-8 items-center justify-center rounded-full bg-primary-100">
+                        <i class="fab fa-shopify text-primary-600"></i>
+                      </div>
+                    </div>
+                    <div class="ml-3">
+                      <p class="font-medium text-gray-900">Shopify Product Videos</p>
+                      <p class="text-sm text-gray-600">Automatically create product videos when new items are added to Shopify</p>
+                    </div>
+                  </li>
+                  
+                  <li class="flex items-start">
+                    <div class="flex-shrink-0 mt-1">
+                      <div class="flex h-8 w-8 items-center justify-center rounded-full bg-primary-100">
+                        <i class="fab fa-twitter text-primary-600"></i>
+                      </div>
+                    </div>
+                    <div class="ml-3">
+                      <p class="font-medium text-gray-900">Multi-Platform Publishing</p>
+                      <p class="text-sm text-gray-600">Automatically publish dubbed videos to multiple social platforms</p>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              
+              <div class="bg-gray-50 p-8 rounded-xl shadow-lg">
+                <h3 class="text-xl font-bold text-gray-900 mb-4">Available Triggers</h3>
+                <ul class="space-y-3">
+                  <li class="flex items-center">
+                    <i class="fa-solid fa-check-circle text-primary-600 mr-3"></i>
+                    <span class="text-gray-700">Video Dubbing Completed</span>
+                  </li>
+                  <li class="flex items-center">
+                    <i class="fa-solid fa-check-circle text-primary-600 mr-3"></i>
+                    <span class="text-gray-700">Video Creation Completed</span>
+                  </li>
+                  <li class="flex items-center">
+                    <i class="fa-solid fa-check-circle text-primary-600 mr-3"></i>
+                    <span class="text-gray-700">Publishing Status Changed</span>
+                  </li>
+                </ul>
+                
+                <h3 class="text-xl font-bold text-gray-900 mb-4 mt-6">Available Actions</h3>
+                <ul class="space-y-3">
+                  <li class="flex items-center">
+                    <i class="fa-solid fa-check-circle text-primary-600 mr-3"></i>
+                    <span class="text-gray-700">Create Dubbing Job</span>
+                  </li>
+                  <li class="flex items-center">
+                    <i class="fa-solid fa-check-circle text-primary-600 mr-3"></i>
+                    <span class="text-gray-700">Generate Video</span>
+                  </li>
+                  <li class="flex items-center">
+                    <i class="fa-solid fa-check-circle text-primary-600 mr-3"></i>
+                    <span class="text-gray-700">Publish to Social Platforms</span>
+                  </li>
+                  <li class="flex items-center">
+                    <i class="fa-solid fa-check-circle text-primary-600 mr-3"></i>
+                    <span class="text-gray-700">Create Virtual Influencer Post</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            
+            <div>
+              <h3 class="text-2xl font-bold text-gray-900 mb-6">How Zapier Integration Works</h3>
+              
+              <div class="space-y-8">
+                <div class="flex">
+                  <div class="flex-shrink-0">
+                    <div class="flex items-center justify-center h-12 w-12 rounded-md bg-primary-600 text-white text-xl font-bold">
+                      1
+                    </div>
+                  </div>
+                  <div class="ml-4">
+                    <h4 class="text-lg font-semibold text-gray-900">Connect Your Accounts</h4>
+                    <p class="text-gray-600 mt-2">
+                      Link your Zentinl account with Zapier and authorize access to the services you want to connect.
+                      No API keys or technical setup required.
+                    </p>
+                  </div>
+                </div>
+                
+                <div class="flex">
+                  <div class="flex-shrink-0">
+                    <div class="flex items-center justify-center h-12 w-12 rounded-md bg-primary-600 text-white text-xl font-bold">
+                      2
+                    </div>
+                  </div>
+                  <div class="ml-4">
+                    <h4 class="text-lg font-semibold text-gray-900">Choose Your Trigger</h4>
+                    <p class="text-gray-600 mt-2">
+                      Select an event from any connected app that will start your automation.
+                      For example, "When a new video is uploaded to YouTube" or "When a Google Calendar event starts."
+                    </p>
+                  </div>
+                </div>
+                
+                <div class="flex">
+                  <div class="flex-shrink-0">
+                    <div class="flex items-center justify-center h-12 w-12 rounded-md bg-primary-600 text-white text-xl font-bold">
+                      3
+                    </div>
+                  </div>
+                  <div class="ml-4">
+                    <h4 class="text-lg font-semibold text-gray-900">Set Up Zentinl Action</h4>
+                    <p class="text-gray-600 mt-2">
+                      Choose what you want Zentinl to do when the trigger occurs - dub a video, create new content,
+                      or publish to social media. Configure all parameters through a simple form interface.
+                    </p>
+                  </div>
+                </div>
+                
+                <div class="flex">
+                  <div class="flex-shrink-0">
+                    <div class="flex items-center justify-center h-12 w-12 rounded-md bg-primary-600 text-white text-xl font-bold">
+                      4
+                    </div>
+                  </div>
+                  <div class="ml-4">
+                    <h4 class="text-lg font-semibold text-gray-900">Add Additional Steps (Optional)</h4>
+                    <p class="text-gray-600 mt-2">
+                      Chain multiple actions together for complex workflows. For example, after Zentinl dubs a video,
+                      automatically publish it to social media and send a notification to your team on Slack.
+                    </p>
+                  </div>
+                </div>
+                
+                <div class="flex">
+                  <div class="flex-shrink-0">
+                    <div class="flex items-center justify-center h-12 w-12 rounded-md bg-primary-600 text-white text-xl font-bold">
+                      5
+                    </div>
+                  </div>
+                  <div class="ml-4">
+                    <h4 class="text-lg font-semibold text-gray-900">Activate and Let It Run</h4>
+                    <p class="text-gray-600 mt-2">
+                      Turn on your Zap and it runs automatically in the background. No monitoring or manual 
+                      intervention required - just fully automated video processing and distribution.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="mt-8 text-center">
+                <a
+                  href="#"
+                  data-modal-target="contactModal"
+                  data-modal-toggle="contactModal"
+                  class="inline-flex justify-center items-center py-3 px-6 text-base font-medium text-center text-white rounded-lg bg-primary-600 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 transition-all duration-300 shadow-lg hover:shadow-xl"
+                >
+                  Get Started with Zapier Integration
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Use Cases -->
+      <div class="py-16 px-4 bg-gray-50">
+        <div class="max-w-screen-xl mx-auto">
+          <h2 class="text-3xl font-extrabold text-center text-gray-900 mb-6">Integration Use Cases</h2>
+          <p class="text-lg text-center text-gray-600 mb-12 max-w-3xl mx-auto">
+            See how businesses are leveraging our API and integration options
+          </p>
+          
+          <div class="grid md:grid-cols-3 gap-8">
+            <div class="bg-white p-8 rounded-xl shadow-lg">
+              <div class="text-primary-600 text-4xl mb-4 flex justify-center">
+                <i class="fa-solid fa-shopping-cart"></i>
+              </div>
+              <h3 class="text-xl font-bold text-center text-gray-900 mb-4">E-commerce Product Videos</h3>
+              <p class="text-gray-600 mb-6 text-center">
+                Automatically create and dub product videos in multiple languages whenever new products 
+                are added to your e-commerce platform. Increase conversions with localized video content.
+              </p>
+              <ul class="space-y-2">
+                <li class="flex items-center">
+                  <i class="fa-solid fa-check text-primary-600 mr-3"></i>
+                  <span class="text-gray-700">Integration with Shopify, WooCommerce, Magento</span>
+                </li>
+                <li class="flex items-center">
+                  <i class="fa-solid fa-check text-primary-600 mr-3"></i>
+                  <span class="text-gray-700">Auto-generated videos from product descriptions</span>
+                </li>
+                <li class="flex items-center">
+                  <i class="fa-solid fa-check text-primary-600 mr-3"></i>
+                  <span class="text-gray-700">Multi-language product demonstrations</span>
+                </li>
+              </ul>
+            </div>
+            
+            <div class="bg-white p-8 rounded-xl shadow-lg">
+              <div class="text-primary-600 text-4xl mb-4 flex justify-center">
+                <i class="fa-solid fa-newspaper"></i>
+              </div>
+              <h3 class="text-xl font-bold text-center text-gray-900 mb-4">News and Media Production</h3>
+              <p class="text-gray-600 mb-6 text-center">
+                Transform written news articles into video content automatically. Create once and dub into
+                multiple languages to reach global audiences with timely news coverage.
+              </p>
+              <ul class="space-y-2">
+                <li class="flex items-center">
+                  <i class="fa-solid fa-check text-primary-600 mr-3"></i>
+                  <span class="text-gray-700">Integration with CMS platforms</span>
+                </li>
+                <li class="flex items-center">
+                  <i class="fa-solid fa-check text-primary-600 mr-3"></i>
+                  <span class="text-gray-700">Automatic video creation from articles</span>
+                </li>
+                <li class="flex items-center">
+                  <i class="fa-solid fa-check text-primary-600 mr-3"></i>
+                  <span class="text-gray-700">Multi-regional news distribution</span>
+                </li>
+              </ul>
+            </div>
+            
+            <div class="bg-white p-8 rounded-xl shadow-lg">
+              <div class="text-primary-600 text-4xl mb-4 flex justify-center">
+                <i class="fa-solid fa-graduation-cap"></i>
+              </div>
+              <h3 class="text-xl font-bold text-center text-gray-900 mb-4">Educational Content</h3>
+              <p class="text-gray-600 mb-6 text-center">
+                Create and localize educational videos for global learning platforms. Automatically translate
+                and dub course content for international students.
+              </p>
+              <ul class="space-y-2">
+                <li class="flex items-center">
+                  <i class="fa-solid fa-check text-primary-600 mr-3"></i>
+                  <span class="text-gray-700">LMS platform integrations</span>
+                </li>
+                <li class="flex items-center">
+                  <i class="fa-solid fa-check text-primary-600 mr-3"></i>
+                  <span class="text-gray-700">Course content localization</span>
+                </li>
+                <li class="flex items-center">
+                  <i class="fa-solid fa-check text-primary-600 mr-3"></i>
+                  <span class="text-gray-700">Multi-language learning resources</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Final CTA -->
+      <div class="hero-gradient text-white">
+        <div class="py-16 px-4 mx-auto max-w-screen-xl text-center">
+          <h2 class="mb-6 text-3xl font-extrabold tracking-tight leading-none sm:text-4xl lg:text-5xl">
+            Ready to Integrate Zentinl Into Your Workflow?
+          </h2>
+          <p class="mb-8 text-lg font-normal opacity-90 lg:text-xl sm:px-16 lg:px-48 max-w-3xl mx-auto">
+            Get started with our API or no-code integrations to automate your video dubbing and creation processes.
+          </p>
+          <div class="flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-4">
+            <a
+              href="#"
+              data-modal-target="contactModal"
+              data-modal-toggle="contactModal"
+              class="inline-flex justify-center items-center py-3 px-6 text-base font-medium text-center text-white rounded-lg bg-primary-600 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 transition-all duration-300 shadow-lg hover:shadow-xl"
+            >
+              Request API Access
+            </a>
+            <a
+              href="#"
+              data-modal-target="contactModal"
+              data-modal-toggle="contactModal"
+              class="inline-flex justify-center items-center py-3 px-6 text-base font-medium text-center text-white rounded-lg bg-white/20 backdrop-blur-sm hover:bg-white/30 focus:ring-4 focus:ring-white/30 transition-all duration-300 border border-white/30"
+            >
+              Schedule a Demo
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- footer Section -->
+    <footer class="bg-gray-900 text-white mt-16">
+      <div class="mx-auto w-full max-w-screen-xl p-4 py-8 lg:py-12">
+        <div class="md:flex md:justify-between items-start">
+          <div class="mb-6 md:mb-0">
+            <a href="index.html" class="flex items-center">
+              <img
+                src="./zentinel-logo.png"
+                class="h-14 me-3 bg-white rounded-full p-1"
+                alt="Zentinl Logo"
+              />
+              <span
+                class="self-center text-2xl font-semibold whitespace-nowrap"
+                >Zentinl</span
+              >
+            </a>
+            <p class="mt-3 text-gray-400 max-w-xs">
+              AI-powered video dubbing and creation for global audiences. 
+              Expand your reach with fully automated video solutions.
+            </p>
+            <div class="flex mt-4 space-x-4">
+              <a href="#" class="text-gray-400 hover:text-white transition-colors duration-200">
+                <i class="fas fa-globe"></i>
+              </a>
+              <a href="mailto:contact@zentinl.com" class="text-gray-400 hover:text-white transition-colors duration-200">
+                <i class="fas fa-envelope"></i>
+              </a>
+              <a href="tel:+1234567890" class="text-gray-400 hover:text-white transition-colors duration-200">
+                <i class="fas fa-phone"></i>
+              </a>
+            </div>
+          </div>
+          <div class="grid grid-cols-2 gap-8 sm:grid-cols-3 sm:gap-6">
+            <div>
+              <h2 class="mb-4 text-sm font-semibold uppercase tracking-wider">Services</h2>
+              <ul class="text-gray-400 space-y-2">
+                <li>
+                  <a href="video-dubbing.html" class="hover:text-white transition-colors duration-200">AI Video Dubbing</a>
+                </li>
+                <li>
+                  <a href="just-on-time.html" class="hover:text-white transition-colors duration-200">Just on Time Video</a>
+                </li>
+                <li>
+                  <a href="virtual-influencers.html" class="hover:text-white transition-colors duration-200">Virtual Influencers</a>
+                </li>
+                <li>
+                  <a href="api.html" class="hover:text-white transition-colors duration-200">API Integration</a>
+                </li>
+                <li>
+                  <a href="enterprise.html" class="hover:text-white transition-colors duration-200">Enterprise Solutions</a>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h2 class="mb-4 text-sm font-semibold uppercase tracking-wider">Company</h2>
+              <ul class="text-gray-400 space-y-2">
+                <li>
+                  <a href="index.html" class="hover:text-white transition-colors duration-200">About Us</a>
+                </li>
+                <li>
+                  <a href="pricing.html" class="hover:text-white transition-colors duration-200">Pricing</a>
+                </li>
+                <li>
+                  <a href="#" data-modal-target="contactModal" data-modal-toggle="contactModal" class="hover:text-white transition-colors duration-200">Contact</a>
+                </li>
+                <li>
+                  <a href="#" class="hover:text-white transition-colors duration-200">Careers</a>
+                </li>
+                <li>
+                  <a href="#" class="hover:text-white transition-colors duration-200">Blog</a>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h2 class="mb-4 text-sm font-semibold uppercase tracking-wider">Resources</h2>
+              <ul class="text-gray-400 space-y-2">
+                <li>
+                  <a href="#" class="hover:text-white transition-colors duration-200">Documentation</a>
+                </li>
+                <li>
+                  <a href="#" class="hover:text-white transition-colors duration-200">API References</a>
+                </li>
+                <li>
+                  <a href="#" class="hover:text-white transition-colors duration-200">Privacy Policy</a>
+                </li>
+                <li>
+                  <a href="#" class="hover:text-white transition-colors duration-200">Terms of Service</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <hr class="my-8 border-gray-700 sm:mx-auto" />
+        <div class="sm:flex sm:items-center sm:justify-between">
+          <span class="text-sm text-gray-400 sm:text-center">
+            © 2024 <a href="/" class="hover:underline">Zentinl</a>. All Rights Reserved.
+          </span>
+          <div class="flex mt-4 sm:justify-center sm:mt-0 space-x-5">
+            <!-- Facebook -->
+            <a
+              href="https://www.facebook.com/zentinl"
+              class="text-gray-500 hover:text-white transition-colors duration-200"
+            >
+              <i class="fab fa-facebook-f"></i>
+              <span class="sr-only">Facebook</span>
+            </a>
+            <!-- Twitter -->
+            <a
+              href="https://x.com/zentinl"
+              class="text-gray-500 hover:text-white transition-colors duration-200"
+            >
+              <i class="fab fa-twitter"></i>
+              <span class="sr-only">Twitter</span>
+            </a>
+            <!-- LinkedIn -->
+            <a
+              href="https://www.linkedin.com/company/zentinl.com/"
+              class="text-gray-500 hover:text-white transition-colors duration-200"
+            >
+              <i class="fab fa-linkedin-in"></i>
+              <span class="sr-only">LinkedIn</span>
+            </a>
+            <!-- Telegram -->
+            <a
+              href="https://t.me/zentinl"
+              class="text-gray-500 hover:text-white transition-colors duration-200"
+            >
+              <i class="fab fa-telegram-plane"></i>
+              <span class="sr-only">Telegram</span>
+            </a>
+            <!-- GitHub -->
+            <a
+              href="https://github.com/zentinl"
+              class="text-gray-500 hover:text-white transition-colors duration-200"
+            >
+              <i class="fab fa-github"></i>
+              <span class="sr-only">GitHub</span>
+            </a>
+            <!-- TikTok -->
+            <a
+              href="https://www.tiktok.com/@zentinl.com"
+              class="text-gray-500 hover:text-white transition-colors duration-200"
+            >
+              <i class="fab fa-tiktok"></i>
+              <span class="sr-only">TikTok</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- External JS Libraries -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="./js/main.js"></script>
+  </body>
+</html>

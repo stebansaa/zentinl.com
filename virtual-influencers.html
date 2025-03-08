@@ -1,0 +1,940 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="./zentinel-logo.png" type="image/x-icon" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.css" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/30da9ec722.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- Meta Tags -->
+    <title>Virtual Influencers - Zentinl</title>
+    <meta name="description" content="Create AI-driven virtual influencers that engage with your audience 24/7. Expand your brand reach with Zentinl's automated virtual personality technology." />
+    <link rel="canonical" href="https://zentinl.com/virtual-influencers.html" id="canonicalLink" />
+    
+    <!-- Open Graph Tags for Social Media -->
+    <meta property="og:title" content="Virtual Influencers - Zentinl" id="ogTitle" />
+    <meta property="og:description" content="Create AI-driven virtual influencers that engage with your audience 24/7. Expand your brand reach with automated personalities." id="ogDescription" />
+    <meta property="og:url" content="https://zentinl.com/virtual-influencers.html" id="ogUrl" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://zentinl.com/zentinel-logo.png" />
+    
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Virtual Influencers - Zentinl" id="twitterTitle" />
+    <meta name="twitter:description" content="Create AI-driven virtual influencers that engage with your audience 24/7." id="twitterDescription" />
+    <meta name="twitter:image" content="https://zentinl.com/zentinel-logo.png" />
+    
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json" id="structuredData">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "Virtual Influencers - Zentinl",
+        "description": "Create AI-driven virtual influencers that engage with your audience 24/7.",
+        "url": "https://zentinl.com/virtual-influencers.html",
+        "offers": {
+          "@type": "Service",
+          "serviceType": "Virtual Influencers",
+          "provider": {
+            "@type": "Organization",
+            "name": "Zentinl"
+          }
+        }
+      }
+    </script>
+    
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: {
+                50: '#EFF6FF',
+                100: '#DBEAFE',
+                200: '#BFDBFE',
+                300: '#93C5FD',
+                400: '#60A5FA',
+                500: '#3B82F6',
+                600: '#2563EB',
+                700: '#1D4ED8',
+                800: '#1E40AF',
+                900: '#1E3A8A',
+                950: '#172554',
+              },
+              secondary: {
+                50: '#F8FAFC',
+                900: '#0F172A',
+                950: '#020617',
+              }
+            },
+            fontFamily: {
+              'sans': ['Inter', 'ui-sans-serif', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'sans-serif'],
+            },
+            animation: {
+              'fade-in': 'fadeIn 0.5s ease-in-out',
+              'slide-up': 'slideUp 0.5s ease-out',
+              'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+              'bounce-slow': 'bounce 3s infinite',
+              'float': 'float 3s ease-in-out infinite',
+            },
+            keyframes: {
+              fadeIn: {
+                '0%': { opacity: '0' },
+                '100%': { opacity: '1' },
+              },
+              slideUp: {
+                '0%': { transform: 'translateY(20px)', opacity: '0' },
+                '100%': { transform: 'translateY(0)', opacity: '1' },
+              },
+              float: {
+                '0%, 100%': { transform: 'translateY(0)' },
+                '50%': { transform: 'translateY(-10px)' },
+              }
+            }
+          }
+        }
+      }
+    </script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./css/style.css">
+  </head>
+  <body class="bg-white font-sans text-secondary-900">
+    <!-- Navigation Bar -->
+    <nav class="bg-white/95 backdrop-blur-sm fixed w-full z-20 top-0 start-0 border-b border-gray-200 shadow-sm">
+      <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+        <a href="index.html" class="flex items-center space-x-3 rtl:space-x-reverse">
+          <img src="./zentinel-logo.png" class="h-12" alt="Zentinl Logo" />
+          <span class="self-center text-2xl font-semibold whitespace-nowrap text-primary-900">
+            Zentinl
+          </span>
+        </a>
+        <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
+          <button
+            type="button"
+            class="btn-primary text-white bg-primary-700 hover:bg-primary-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
+            data-modal-target="contactModal"
+            data-modal-toggle="contactModal"
+          >
+            Get Started
+          </button>
+          <button
+            data-collapse-toggle="navbar-sticky"
+            type="button"
+            class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-primary-400"
+            aria-controls="navbar-sticky"
+            aria-expanded="false"
+          >
+            <span class="sr-only">Open main menu</span>
+            <svg
+              class="w-5 h-5"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 17 14"
+            >
+              <path
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M1 1h15M1 7h15M1 13h15"
+              />
+            </svg>
+          </button>
+        </div>
+        <div
+          class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1"
+          id="navbar-sticky"
+        >
+          <ul
+            class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white"
+          >
+            <li>
+              <a href="index.html" 
+                class="nav-link block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-primary-700 md:p-0 transition-colors duration-300">
+                Home
+              </a>
+            </li>
+            <li>
+              <a href="video-dubbing.html"
+                class="nav-link block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-primary-700 md:p-0 transition-colors duration-300">
+                AI Video Dubbing
+              </a>
+            </li>
+            <li>
+              <a href="enterprise.html"
+                class="nav-link block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-primary-700 md:p-0 transition-colors duration-300">
+                Enterprise Solutions
+              </a>
+            </li>
+            <li>
+              <a href="pricing.html"
+                class="nav-link block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-primary-700 md:p-0 transition-colors duration-300">
+                Pricing
+              </a>
+            </li>
+            <li>
+              <a href="just-on-time.html"
+                class="nav-link block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-primary-700 md:p-0 transition-colors duration-300">
+                Just On Time Video
+              </a>
+            </li>
+            <li>
+              <a href="virtual-influencers.html"
+                class="nav-link active block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-primary-700 md:p-0 transition-colors duration-300">
+                Virtual Influencers
+              </a>
+            </li>
+            <li>
+              <a href="api.html"
+                class="nav-link block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-primary-700 md:p-0 transition-colors duration-300">
+                API & Zap Integration
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Modal -->
+    <div
+      id="contactModal"
+      tabindex="-1"
+      class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-modal md:h-full"
+    >
+      <div class="relative w-full max-w-md h-full md:h-auto">
+        <div class="relative bg-white rounded-xl shadow-2xl dark:bg-gray-700 animate-fade-in">
+          <button
+            type="button"
+            class="absolute top-3 right-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center transition-colors duration-200"
+            data-modal-hide="contactModal"
+          >
+            <svg
+              aria-hidden="true"
+              class="w-5 h-5"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 011.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                clip-rule="evenodd"
+              />
+            </svg>
+            <span class="sr-only">Close modal</span>
+          </button>
+          <div class="px-6 py-6 lg:px-8">
+            <h3 class="mb-6 text-xl font-semibold text-gray-900 dark:text-white border-b pb-4">
+              Custom Enterprise Solution
+            </h3>
+            <form
+              action="https://formspree.io/f/xkgnzyqo"
+              method="POST"
+              class="space-y-6"
+            >
+              <div>
+                <label
+                  for="name"
+                  class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                  >Your Name</label
+                >
+                <input
+                  type="text"
+                  name="name"
+                  id="name"
+                  class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 transition-all duration-200"
+                  placeholder="John Doe"
+                  required
+                />
+              </div>
+              <div>
+                <label
+                  for="company"
+                  class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                  >Company Name</label
+                >
+                <input
+                  type="text"
+                  name="company"
+                  id="company"
+                  class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 transition-all duration-200"
+                  placeholder="Your Company"
+                  required
+                />
+              </div>
+              <div>
+                <label
+                  for="email"
+                  class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                  >Your Email</label
+                >
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 transition-all duration-200"
+                  placeholder="name@company.com"
+                  required
+                />
+              </div>
+              <div>
+                <label
+                  for="service"
+                  class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                  >Service Interest</label
+                >
+                <select
+                  name="service"
+                  id="service"
+                  class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 transition-all duration-200"
+                  required
+                >
+                  <option value="">Select a service</option>
+                  <option value="video-dubbing">AI Video Dubbing</option>
+                  <option value="just-on-time">Just-on-Time Video</option>
+                  <option value="virtual-influencers" selected>Virtual Influencers</option>
+                  <option value="api-integration">API Integration</option>
+                  <option value="enterprise">Custom Enterprise Solution</option>
+                </select>
+              </div>
+              <div>
+                <label
+                  for="message"
+                  class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                  >Your Requirements</label
+                >
+                <textarea
+                  name="message"
+                  id="message"
+                  rows="4"
+                  class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 transition-all duration-200"
+                  placeholder="Tell us about your specific needs and requirements..."
+                  required
+                ></textarea>
+              </div>
+              <button
+                type="submit"
+                class="w-full btn-primary text-white bg-primary-700 hover:bg-primary-800 font-medium rounded-lg text-sm px-5 py-3 text-center transition-all duration-300"
+              >
+                Request Custom Solution
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Virtual Influencers Section -->
+    <section id="virtual-influencers" class="page-section pt-20">
+      <!-- Hero Section -->
+      <div class="hero-gradient text-white">
+        <div class="py-16 px-4 mx-auto max-w-screen-xl text-center">
+          <h1 class="mb-6 text-4xl font-extrabold tracking-tight leading-none sm:text-5xl lg:text-6xl">
+            AI-Powered Virtual Influencers
+          </h1>
+          <p class="mb-8 text-lg font-normal opacity-90 lg:text-xl sm:px-16 lg:px-48 max-w-3xl mx-auto">
+            Create fully automated, AI-driven virtual personalities that engage with your audience 24/7.
+            Build brand presence and drive engagement without human input.
+          </p>
+          
+          <!-- Social Platform Support -->
+          <div class="social-platform-logos">
+            <div class="social-platform-logo">
+              <i class="fab fa-youtube text-white"></i>
+              <span class="text-sm text-white opacity-80">YouTube</span>
+            </div>
+            <div class="social-platform-logo">
+              <i class="fab fa-tiktok text-white"></i>
+              <span class="text-sm text-white opacity-80">TikTok</span>
+            </div>
+            <div class="social-platform-logo">
+              <i class="fab fa-instagram text-white"></i>
+              <span class="text-sm text-white opacity-80">Instagram</span>
+            </div>
+            <div class="social-platform-logo">
+              <i class="fab fa-facebook text-white"></i>
+              <span class="text-sm text-white opacity-80">Facebook</span>
+            </div>
+            <div class="social-platform-logo">
+              <i class="fab fa-linkedin text-white"></i>
+              <span class="text-sm text-white opacity-80">LinkedIn</span>
+            </div>
+            <div class="social-platform-logo">
+              <i class="fab fa-twitter text-white"></i>
+              <span class="text-sm text-white opacity-80">Twitter</span>
+            </div>
+          </div>
+          
+          <div class="flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-4 mt-8">
+            <a
+              href="#how-it-works"
+              class="inline-flex justify-center items-center py-3 px-6 text-base font-medium text-center text-white rounded-lg bg-primary-600 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 transition-all duration-300 shadow-lg hover:shadow-xl"
+            >
+              How It Works
+            </a>
+            <a
+              href="#"
+              data-modal-target="contactModal"
+              data-modal-toggle="contactModal"
+              class="inline-flex justify-center items-center py-3 px-6 text-base font-medium text-center text-white rounded-lg bg-white/20 backdrop-blur-sm hover:bg-white/30 focus:ring-4 focus:ring-white/30 transition-all duration-300 border border-white/30"
+            >
+              Get Started
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- What are Virtual Influencers -->
+      <div class="py-16 px-4 bg-gray-50">
+        <div class="max-w-screen-xl mx-auto">
+          <div class="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+              <h2 class="text-3xl font-extrabold text-gray-900 mb-6">What Are Virtual Influencers?</h2>
+              <p class="text-lg text-gray-600 mb-6">
+                Virtual influencers are AI-powered digital personalities that can create content, engage with audiences, 
+                and promote brands across social media platforms - without requiring any human intervention.
+              </p>
+              <p class="text-lg text-gray-600 mb-6">
+                Unlike traditional influencers, virtual influencers never sleep, don't require physical photoshoots, 
+                and can be fully automated to create and publish content based on your brand guidelines.
+              </p>
+              <div class="space-y-4 mt-8">
+                <div class="flex items-start">
+                  <div class="flex-shrink-0 mt-1">
+                    <div class="flex h-6 w-6 items-center justify-center rounded-full bg-primary-100">
+                      <i class="fa-solid fa-check text-xs text-primary-600"></i>
+                    </div>
+                  </div>
+                  <p class="ml-3 text-gray-600">Create content 24/7 without human input</p>
+                </div>
+                <div class="flex items-start">
+                  <div class="flex-shrink-0 mt-1">
+                    <div class="flex h-6 w-6 items-center justify-center rounded-full bg-primary-100">
+                      <i class="fa-solid fa-check text-xs text-primary-600"></i>
+                    </div>
+                  </div>
+                  <p class="ml-3 text-gray-600">Fully customizable personality and appearance</p>
+                </div>
+                <div class="flex items-start">
+                  <div class="flex-shrink-0 mt-1">
+                    <div class="flex h-6 w-6 items-center justify-center rounded-full bg-primary-100">
+                      <i class="fa-solid fa-check text-xs text-primary-600"></i>
+                    </div>
+                  </div>
+                  <p class="ml-3 text-gray-600">Publish across all major social platforms</p>
+                </div>
+                <div class="flex items-start">
+                  <div class="flex-shrink-0 mt-1">
+                    <div class="flex h-6 w-6 items-center justify-center rounded-full bg-primary-100">
+                      <i class="fa-solid fa-check text-xs text-primary-600"></i>
+                    </div>
+                  </div>
+                  <p class="ml-3 text-gray-600">Engage with audiences naturally and consistently</p>
+                </div>
+              </div>
+            </div>
+            <div class="bg-white p-8 rounded-xl shadow-lg">
+              <div class="text-primary-600 text-8xl flex justify-center mb-6">
+                <i class="fa-solid fa-robot"></i>
+              </div>
+              <h3 class="text-xl font-bold text-center text-gray-900 mb-4">Key Benefits</h3>
+              <div class="grid grid-cols-2 gap-4">
+                <div class="bg-gray-50 p-4 rounded-lg">
+                  <div class="text-primary-600 text-2xl mb-2 flex justify-center">
+                    <i class="fa-solid fa-clock"></i>
+                  </div>
+                  <p class="text-center text-sm font-medium">Always Active</p>
+                </div>
+                <div class="bg-gray-50 p-4 rounded-lg">
+                  <div class="text-primary-600 text-2xl mb-2 flex justify-center">
+                    <i class="fa-solid fa-money-bill-wave"></i>
+                  </div>
+                  <p class="text-center text-sm font-medium">Cost Effective</p>
+                </div>
+                <div class="bg-gray-50 p-4 rounded-lg">
+                  <div class="text-primary-600 text-2xl mb-2 flex justify-center">
+                    <i class="fa-solid fa-sliders"></i>
+                  </div>
+                  <p class="text-center text-sm font-medium">Full Control</p>
+                </div>
+                <div class="bg-gray-50 p-4 rounded-lg">
+                  <div class="text-primary-600 text-2xl mb-2 flex justify-center">
+                    <i class="fa-solid fa-chart-line"></i>
+                  </div>
+                  <p class="text-center text-sm font-medium">Scalable Reach</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Key Benefits -->
+      <div class="py-16 px-4 bg-white" id="benefits">
+        <div class="max-w-screen-xl mx-auto">
+          <h2 class="text-3xl font-extrabold text-center text-gray-900 mb-6">Revolutionize Your Brand Presence</h2>
+          <p class="text-lg text-center text-gray-600 mb-12 max-w-3xl mx-auto">
+            Our AI virtual influencers provide continuous brand engagement with authenticity and consistency
+          </p>
+          
+          <div class="grid md:grid-cols-3 gap-8">
+            <div class="feature-card bg-gray-50 p-8 rounded-xl border border-gray-200 shadow-lg hover:shadow-xl transition-all duration-300">
+              <div class="text-primary-600 text-4xl mb-6 flex justify-center">
+                <i class="fa-solid fa-users"></i>
+              </div>
+              <h5 class="mb-4 text-xl font-bold tracking-tight text-center text-gray-900">
+                Authentic Audience Connection
+              </h5>
+              <p class="font-normal text-gray-700 text-center">
+                Our virtual influencers build genuine connections with your audience through consistent
+                personality traits, human-like interactions, and relatable content that resonates with viewers.
+              </p>
+            </div>
+            
+            <div class="feature-card bg-gray-50 p-8 rounded-xl border border-gray-200 shadow-lg hover:shadow-xl transition-all duration-300">
+              <div class="text-primary-600 text-4xl mb-6 flex justify-center">
+                <i class="fa-solid fa-cogs"></i>
+              </div>
+              <h5 class="mb-4 text-xl font-bold tracking-tight text-center text-gray-900">
+                Complete Automation
+              </h5>
+              <p class="font-normal text-gray-700 text-center">
+                From content creation to audience engagement, our AI handles everything automatically.
+                Schedule content months in advance or let the AI create on-demand based on trending topics.
+              </p>
+            </div>
+            
+            <div class="feature-card bg-gray-50 p-8 rounded-xl border border-gray-200 shadow-lg hover:shadow-xl transition-all duration-300">
+              <div class="text-primary-600 text-4xl mb-6 flex justify-center">
+                <i class="fa-solid fa-palette"></i>
+              </div>
+              <h5 class="mb-4 text-xl font-bold tracking-tight text-center text-gray-900">
+                Customized Brand Alignment
+              </h5>
+              <p class="font-normal text-gray-700 text-center">
+                Create virtual personalities that perfectly embody your brand values, voice, and aesthetic.
+                Maintain complete control over messaging and ensure perfect brand consistency.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- How It Works Section -->
+      <div id="how-it-works" class="py-16 px-4 bg-gray-50">
+        <div class="max-w-screen-xl mx-auto">
+          <h2 class="text-3xl font-extrabold text-center text-gray-900 mb-6">How It Works</h2>
+          <p class="text-lg text-center text-gray-600 mb-12 max-w-3xl mx-auto">
+            Our fully automated process makes creating and deploying virtual influencers effortless
+          </p>
+          
+          <div class="relative">
+            <!-- Timeline line -->
+            <div class="hidden md:block absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-primary-200"></div>
+            
+            <div class="space-y-12 relative">
+              <!-- Step 1 -->
+              <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 md:pr-12 md:text-right">
+                  <h3 class="text-xl font-bold text-gray-900 mb-2">1. Design Your Influencer</h3>
+                  <p class="text-gray-600 mb-4">
+                    Define your virtual influencer's appearance, personality traits, voice characteristics, and 
+                    content style. Select from pre-built templates or create a completely custom personality that 
+                    aligns perfectly with your brand values.
+                  </p>
+                </div>
+                <div class="mx-auto md:mx-0 flex items-center justify-center w-12 h-12 rounded-full bg-primary-600 text-white text-xl font-bold z-10">
+                  1
+                </div>
+                <div class="md:w-1/2 md:pl-12 mt-4 md:mt-0"></div>
+              </div>
+              
+              <!-- Step 2 -->
+              <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 md:pr-12 md:text-right order-1 md:order-1 mt-4 md:mt-0"></div>
+                <div class="mx-auto md:mx-0 flex items-center justify-center w-12 h-12 rounded-full bg-primary-600 text-white text-xl font-bold z-10 order-0 md:order-2">
+                  2
+                </div>
+                <div class="md:w-1/2 md:pl-12 order-2 md:order-3">
+                  <h3 class="text-xl font-bold text-gray-900 mb-2">2. Set Content Parameters</h3>
+                  <p class="text-gray-600 mb-4">
+                    Specify content themes, topics, posting frequency, and engagement style. Our AI will 
+                    automatically generate appropriate content based on these parameters, ensuring all posts 
+                    match your brand guidelines and messaging.
+                  </p>
+                </div>
+              </div>
+              
+              <!-- Step 3 -->
+              <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 md:pr-12 md:text-right">
+                  <h3 class="text-xl font-bold text-gray-900 mb-2">3. AI Content Generation</h3>
+                  <p class="text-gray-600 mb-4">
+                    Our AI automatically creates images, videos, captions, and comments that match your 
+                    virtual influencer's personality. The system also analyzes trending topics to ensure 
+                    content remains relevant and engaging to target audiences.
+                  </p>
+                </div>
+                <div class="mx-auto md:mx-0 flex items-center justify-center w-12 h-12 rounded-full bg-primary-600 text-white text-xl font-bold z-10">
+                  3
+                </div>
+                <div class="md:w-1/2 md:pl-12 mt-4 md:mt-0"></div>
+              </div>
+              
+              <!-- Step 4 -->
+              <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 md:pr-12 md:text-right order-1 md:order-1 mt-4 md:mt-0"></div>
+                <div class="mx-auto md:mx-0 flex items-center justify-center w-12 h-12 rounded-full bg-primary-600 text-white text-xl font-bold z-10 order-0 md:order-2">
+                  4
+                </div>
+                <div class="md:w-1/2 md:pl-12 order-2 md:order-3">
+                  <h3 class="text-xl font-bold text-gray-900 mb-2">4. Automated Publishing</h3>
+                  <p class="text-gray-600 mb-4">
+                    The system automatically publishes content across selected social platforms at 
+                    optimal times for maximum engagement. All publishing is handled seamlessly without 
+                    requiring any manual intervention.
+                  </p>
+                </div>
+              </div>
+              
+              <!-- Step 5 -->
+              <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 md:pr-12 md:text-right">
+                  <h3 class="text-xl font-bold text-gray-900 mb-2">5. Audience Engagement</h3>
+                  <p class="text-gray-600 mb-4">
+                    Your virtual influencer automatically engages with followers by responding to comments, 
+                    participating in trends, and interacting with other accounts. This ongoing engagement 
+                    builds authentic connections and grows your audience organically.
+                  </p>
+                </div>
+                <div class="mx-auto md:mx-0 flex items-center justify-center w-12 h-12 rounded-full bg-primary-600 text-white text-xl font-bold z-10">
+                  5
+                </div>
+                <div class="md:w-1/2 md:pl-12 mt-4 md:mt-0"></div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="text-center mt-16">
+            <a
+              href="#"
+              data-modal-target="contactModal"
+              data-modal-toggle="contactModal"
+              class="inline-flex justify-center items-center py-3 px-6 text-base font-medium text-center text-white rounded-lg bg-primary-600 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 transition-all duration-300 shadow-lg hover:shadow-xl"
+            >
+              Create Your Virtual Influencer
+            </a>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Use Cases -->
+      <div class="py-16 px-4 bg-white">
+        <div class="max-w-screen-xl mx-auto">
+          <h2 class="text-3xl font-extrabold text-center text-gray-900 mb-6">Use Cases</h2>
+          <p class="text-lg text-center text-gray-600 mb-12 max-w-3xl mx-auto">
+            Virtual influencers provide versatile solutions for various marketing challenges
+          </p>
+          
+          <div class="grid md:grid-cols-2 gap-8">
+            <div class="bg-gray-50 p-8 rounded-xl shadow-lg">
+              <div class="text-primary-600 text-4xl mb-4 flex justify-center">
+                <i class="fa-solid fa-store"></i>
+              </div>
+              <h3 class="text-xl font-bold text-center text-gray-900 mb-4">Product Promotions</h3>
+              <p class="text-gray-600 mb-6 text-center">
+                Create dedicated virtual spokespersons for your products that can showcase features, 
+                demonstrate usage, and answer common questions consistently across all platforms.
+              </p>
+              <ul class="space-y-2">
+                <li class="flex items-center">
+                  <i class="fa-solid fa-check text-primary-600 mr-3"></i>
+                  <span class="text-gray-700">Consistent product messaging across channels</span>
+                </li>
+                <li class="flex items-center">
+                  <i class="fa-solid fa-check text-primary-600 mr-3"></i>
+                  <span class="text-gray-700">Automated product demonstrations</span>
+                </li>
+                <li class="flex items-center">
+                  <i class="fa-solid fa-check text-primary-600 mr-3"></i>
+                  <span class="text-gray-700">24/7 product support and engagement</span>
+                </li>
+              </ul>
+            </div>
+            
+            <div class="bg-gray-50 p-8 rounded-xl shadow-lg">
+              <div class="text-primary-600 text-4xl mb-4 flex justify-center">
+                <i class="fa-solid fa-bullhorn"></i>
+              </div>
+              <h3 class="text-xl font-bold text-center text-gray-900 mb-4">Brand Ambassadors</h3>
+              <p class="text-gray-600 mb-6 text-center">
+                Deploy virtual brand ambassadors that embody your company values and communicate your 
+                messaging with perfect consistency across all platforms and campaigns.
+              </p>
+              <ul class="space-y-2">
+                <li class="flex items-center">
+                  <i class="fa-solid fa-check text-primary-600 mr-3"></i>
+                  <span class="text-gray-700">Perfect brand message consistency</span>
+                </li>
+                <li class="flex items-center">
+                  <i class="fa-solid fa-check text-primary-600 mr-3"></i>
+                  <span class="text-gray-700">Risk-free brand representation</span>
+                </li>
+                <li class="flex items-center">
+                  <i class="fa-solid fa-check text-primary-600 mr-3"></i>
+                  <span class="text-gray-700">Continuous brand presence building</span>
+                </li>
+              </ul>
+            </div>
+            
+            <div class="bg-gray-50 p-8 rounded-xl shadow-lg">
+              <div class="text-primary-600 text-4xl mb-4 flex justify-center">
+                <i class="fa-solid fa-graduation-cap"></i>
+              </div>
+              <h3 class="text-xl font-bold text-center text-gray-900 mb-4">Educational Content</h3>
+              <p class="text-gray-600 mb-6 text-center">
+                Create virtual educators that can deliver consistent learning content, answer student 
+                questions, and provide 24/7 support for online learning platforms and educational brands.
+              </p>
+              <ul class="space-y-2">
+                <li class="flex items-center">
+                  <i class="fa-solid fa-check text-primary-600 mr-3"></i>
+                  <span class="text-gray-700">Always-available learning resources</span>
+                </li>
+                <li class="flex items-center">
+                  <i class="fa-solid fa-check text-primary-600 mr-3"></i>
+                  <span class="text-gray-700">Consistent teaching methodology</span>
+                </li>
+                <li class="flex items-center">
+                  <i class="fa-solid fa-check text-primary-600 mr-3"></i>
+                  <span class="text-gray-700">Scalable educational content creation</span>
+                </li>
+              </ul>
+            </div>
+            
+            <div class="bg-gray-50 p-8 rounded-xl shadow-lg">
+              <div class="text-primary-600 text-4xl mb-4 flex justify-center">
+                <i class="fa-solid fa-globe"></i>
+              </div>
+              <h3 class="text-xl font-bold text-center text-gray-900 mb-4">Global Market Expansion</h3>
+              <p class="text-gray-600 mb-6 text-center">
+                Deploy culturally-adapted virtual influencers for different markets, offering authentic 
+                localized content without the need for managing multiple human influencer relationships.
+              </p>
+              <ul class="space-y-2">
+                <li class="flex items-center">
+                  <i class="fa-solid fa-check text-primary-600 mr-3"></i>
+                  <span class="text-gray-700">Market-specific content adaptation</span>
+                </li>
+                <li class="flex items-center">
+                  <i class="fa-solid fa-check text-primary-600 mr-3"></i>
+                  <span class="text-gray-700">Culturally appropriate engagement</span>
+                </li>
+                <li class="flex items-center">
+                  <i class="fa-solid fa-check text-primary-600 mr-3"></i>
+                  <span class="text-gray-700">Simultaneous multi-market presence</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Final CTA -->
+      <div class="hero-gradient text-white">
+        <div class="py-16 px-4 mx-auto max-w-screen-xl text-center">
+          <h2 class="mb-6 text-3xl font-extrabold tracking-tight leading-none sm:text-4xl lg:text-5xl">
+            Ready to Launch Your Virtual Influencer?
+          </h2>
+          <p class="mb-8 text-lg font-normal opacity-90 lg:text-xl sm:px-16 lg:px-48 max-w-3xl mx-auto">
+            Join forward-thinking companies using Zentinl's AI virtual influencers to maintain
+            24/7 brand presence and engage global audiences.
+          </p>
+          <div class="flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-4">
+            <a
+              href="#"
+              data-modal-target="contactModal"
+              data-modal-toggle="contactModal"
+              class="inline-flex justify-center items-center py-3 px-6 text-base font-medium text-center text-white rounded-lg bg-primary-600 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 transition-all duration-300 shadow-lg hover:shadow-xl"
+            >
+              Start Your Free Trial
+            </a>
+            <a
+              href="#"
+              data-modal-target="contactModal"
+              data-modal-toggle="contactModal"
+              class="inline-flex justify-center items-center py-3 px-6 text-base font-medium text-center text-white rounded-lg bg-white/20 backdrop-blur-sm hover:bg-white/30 focus:ring-4 focus:ring-white/30 transition-all duration-300 border border-white/30"
+            >
+              Request Enterprise Demo
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- footer Section -->
+    <footer class="bg-gray-900 text-white mt-16">
+      <div class="mx-auto w-full max-w-screen-xl p-4 py-8 lg:py-12">
+        <div class="md:flex md:justify-between items-start">
+          <div class="mb-6 md:mb-0">
+            <a href="index.html" class="flex items-center">
+              <img
+                src="./zentinel-logo.png"
+                class="h-14 me-3 bg-white rounded-full p-1"
+                alt="Zentinl Logo"
+              />
+              <span
+                class="self-center text-2xl font-semibold whitespace-nowrap"
+                >Zentinl</span
+              >
+            </a>
+            <p class="mt-3 text-gray-400 max-w-xs">
+              AI-powered video dubbing and creation for global audiences. 
+              Expand your reach with fully automated video solutions.
+            </p>
+            <div class="flex mt-4 space-x-4">
+              <a href="#" class="text-gray-400 hover:text-white transition-colors duration-200">
+                <i class="fas fa-globe"></i>
+              </a>
+              <a href="mailto:contact@zentinl.com" class="text-gray-400 hover:text-white transition-colors duration-200">
+                <i class="fas fa-envelope"></i>
+              </a>
+              <a href="tel:+1234567890" class="text-gray-400 hover:text-white transition-colors duration-200">
+                <i class="fas fa-phone"></i>
+              </a>
+            </div>
+          </div>
+          <div class="grid grid-cols-2 gap-8 sm:grid-cols-3 sm:gap-6">
+            <div>
+              <h2 class="mb-4 text-sm font-semibold uppercase tracking-wider">Services</h2>
+              <ul class="text-gray-400 space-y-2">
+                <li>
+                  <a href="video-dubbing.html" class="hover:text-white transition-colors duration-200">AI Video Dubbing</a>
+                </li>
+                <li>
+                  <a href="just-on-time.html" class="hover:text-white transition-colors duration-200">Just on Time Video</a>
+                </li>
+                <li>
+                  <a href="virtual-influencers.html" class="hover:text-white transition-colors duration-200">Virtual Influencers</a>
+                </li>
+                <li>
+                  <a href="api.html" class="hover:text-white transition-colors duration-200">API Integration</a>
+                </li>
+                <li>
+                  <a href="enterprise.html" class="hover:text-white transition-colors duration-200">Enterprise Solutions</a>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h2 class="mb-4 text-sm font-semibold uppercase tracking-wider">Company</h2>
+              <ul class="text-gray-400 space-y-2">
+                <li>
+                  <a href="index.html" class="hover:text-white transition-colors duration-200">About Us</a>
+                </li>
+                <li>
+                  <a href="pricing.html" class="hover:text-white transition-colors duration-200">Pricing</a>
+                </li>
+                <li>
+                  <a href="#" data-modal-target="contactModal" data-modal-toggle="contactModal" class="hover:text-white transition-colors duration-200">Contact</a>
+                </li>
+                <li>
+                  <a href="#" class="hover:text-white transition-colors duration-200">Careers</a>
+                </li>
+                <li>
+                  <a href="#" class="hover:text-white transition-colors duration-200">Blog</a>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h2 class="mb-4 text-sm font-semibold uppercase tracking-wider">Resources</h2>
+              <ul class="text-gray-400 space-y-2">
+                <li>
+                  <a href="#" class="hover:text-white transition-colors duration-200">Documentation</a>
+                </li>
+                <li>
+                  <a href="#" class="hover:text-white transition-colors duration-200">API References</a>
+                </li>
+                <li>
+                  <a href="#" class="hover:text-white transition-colors duration-200">Privacy Policy</a>
+                </li>
+                <li>
+                  <a href="#" class="hover:text-white transition-colors duration-200">Terms of Service</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <hr class="my-8 border-gray-700 sm:mx-auto" />
+        <div class="sm:flex sm:items-center sm:justify-between">
+          <span class="text-sm text-gray-400 sm:text-center">
+            © 2024 <a href="/" class="hover:underline">Zentinl</a>. All Rights Reserved.
+          </span>
+          <div class="flex mt-4 sm:justify-center sm:mt-0 space-x-5">
+            <!-- Facebook -->
+            <a
+              href="https://www.facebook.com/zentinl"
+              class="text-gray-500 hover:text-white transition-colors duration-200"
+            >
+              <i class="fab fa-facebook-f"></i>
+              <span class="sr-only">Facebook</span>
+            </a>
+            <!-- Twitter -->
+            <a
+              href="https://x.com/zentinl"
+              class="text-gray-500 hover:text-white transition-colors duration-200"
+            >
+              <i class="fab fa-twitter"></i>
+              <span class="sr-only">Twitter</span>
+            </a>
+            <!-- LinkedIn -->
+            <a
+              href="https://www.linkedin.com/company/zentinl.com/"
+              class="text-gray-500 hover:text-white transition-colors duration-200"
+            >
+              <i class="fab fa-linkedin-in"></i>
+              <span class="sr-only">LinkedIn</span>
+            </a>
+            <!-- Telegram -->
+            <a
+              href="https://t.me/zentinl"
+              class="text-gray-500 hover:text-white transition-colors duration-200"
+            >
+              <i class="fab fa-telegram-plane"></i>
+              <span class="sr-only">Telegram</span>
+            </a>
+            <!-- GitHub -->
+            <a
+              href="https://github.com/zentinl"
+              class="text-gray-500 hover:text-white transition-colors duration-200"
+            >
+              <i class="fab fa-github"></i>
+              <span class="sr-only">GitHub</span>
+            </a>
+            <!-- TikTok -->
+            <a
+              href="https://www.tiktok.com/@zentinl.com"
+              class="text-gray-500 hover:text-white transition-colors duration-200"
+            >
+              <i class="fab fa-tiktok"></i>
+              <span class="sr-only">TikTok</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- External JS Libraries -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="./js/main.js"></script>
+  </body>
+</html>

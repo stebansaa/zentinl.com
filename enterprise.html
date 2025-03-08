@@ -1,0 +1,968 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="./zentinel-logo.png" type="image/x-icon" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.css" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/30da9ec722.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- Meta Tags -->
+    <title>Enterprise Solutions - Zentinl</title>
+    <meta name="description" content="Custom AI video dubbing and creation solutions tailored for enterprise needs. Automate your global content strategy with Zentinl's enterprise-grade platform." />
+    <link rel="canonical" href="https://zentinl.com/enterprise.html" id="canonicalLink" />
+    
+    <!-- Open Graph Tags for Social Media -->
+    <meta property="og:title" content="Enterprise Solutions - Zentinl" id="ogTitle" />
+    <meta property="og:description" content="Custom AI video dubbing and creation solutions tailored for enterprise needs." id="ogDescription" />
+    <meta property="og:url" content="https://zentinl.com/enterprise.html" id="ogUrl" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://zentinl.com/zentinel-logo.png" />
+    
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Enterprise Solutions - Zentinl" id="twitterTitle" />
+    <meta name="twitter:description" content="Custom AI video solutions for enterprise needs." id="twitterDescription" />
+    <meta name="twitter:image" content="https://zentinl.com/zentinel-logo.png" />
+    
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json" id="structuredData">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "Enterprise Solutions - Zentinl",
+        "description": "Custom AI video dubbing and creation solutions tailored for enterprise needs.",
+        "url": "https://zentinl.com/enterprise.html",
+        "offers": {
+          "@type": "Service",
+          "serviceType": "Enterprise AI Solutions",
+          "provider": {
+            "@type": "Organization",
+            "name": "Zentinl"
+          }
+        }
+      }
+    </script>
+    
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: {
+                50: '#EFF6FF',
+                100: '#DBEAFE',
+                200: '#BFDBFE',
+                300: '#93C5FD',
+                400: '#60A5FA',
+                500: '#3B82F6',
+                600: '#2563EB',
+                700: '#1D4ED8',
+                800: '#1E40AF',
+                900: '#1E3A8A',
+                950: '#172554',
+              },
+              secondary: {
+                50: '#F8FAFC',
+                900: '#0F172A',
+                950: '#020617',
+              }
+            },
+            fontFamily: {
+              'sans': ['Inter', 'ui-sans-serif', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'sans-serif'],
+            },
+            animation: {
+              'fade-in': 'fadeIn 0.5s ease-in-out',
+              'slide-up': 'slideUp 0.5s ease-out',
+              'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+              'bounce-slow': 'bounce 3s infinite',
+              'float': 'float 3s ease-in-out infinite',
+            },
+            keyframes: {
+              fadeIn: {
+                '0%': { opacity: '0' },
+                '100%': { opacity: '1' },
+              },
+              slideUp: {
+                '0%': { transform: 'translateY(20px)', opacity: '0' },
+                '100%': { transform: 'translateY(0)', opacity: '1' },
+              },
+              float: {
+                '0%, 100%': { transform: 'translateY(0)' },
+                '50%': { transform: 'translateY(-10px)' },
+              }
+            }
+          }
+        }
+      }
+    </script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./css/style.css">
+  </head>
+  <body class="bg-white font-sans text-secondary-900">
+    <!-- Navigation Bar -->
+    <nav class="bg-white/95 backdrop-blur-sm fixed w-full z-20 top-0 start-0 border-b border-gray-200 shadow-sm">
+      <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+        <a href="index.html" class="flex items-center space-x-3 rtl:space-x-reverse">
+          <img src="./zentinel-logo.png" class="h-12" alt="Zentinl Logo" />
+          <span class="self-center text-2xl font-semibold whitespace-nowrap text-primary-900">
+            Zentinl
+          </span>
+        </a>
+        <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
+          <button
+            type="button"
+            class="btn-primary text-white bg-primary-700 hover:bg-primary-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
+            data-modal-target="contactModal"
+            data-modal-toggle="contactModal"
+          >
+            Get Started
+          </button>
+          <button
+            data-collapse-toggle="navbar-sticky"
+            type="button"
+            class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-primary-400"
+            aria-controls="navbar-sticky"
+            aria-expanded="false"
+          >
+            <span class="sr-only">Open main menu</span>
+            <svg
+              class="w-5 h-5"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 17 14"
+            >
+              <path
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M1 1h15M1 7h15M1 13h15"
+              />
+            </svg>
+          </button>
+        </div>
+        <div
+          class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1"
+          id="navbar-sticky"
+        >
+          <ul
+            class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white"
+          >
+            <li>
+              <a href="index.html" 
+                class="nav-link block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-primary-700 md:p-0 transition-colors duration-300">
+                Home
+              </a>
+            </li>
+            <li>
+              <a href="video-dubbing.html"
+                class="nav-link block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-primary-700 md:p-0 transition-colors duration-300">
+                AI Video Dubbing
+              </a>
+            </li>
+            <li>
+              <a href="enterprise.html"
+                class="nav-link active block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-primary-700 md:p-0 transition-colors duration-300">
+                Enterprise Solutions
+              </a>
+            </li>
+            <li>
+              <a href="pricing.html"
+                class="nav-link block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-primary-700 md:p-0 transition-colors duration-300">
+                Pricing
+              </a>
+            </li>
+            <li>
+              <a href="just-on-time.html"
+                class="nav-link block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-primary-700 md:p-0 transition-colors duration-300">
+                Just On Time Video
+              </a>
+            </li>
+            <li>
+              <a href="virtual-influencers.html"
+                class="nav-link block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-primary-700 md:p-0 transition-colors duration-300">
+                Virtual Influencers
+              </a>
+            </li>
+            <li>
+              <a href="api.html"
+                class="nav-link block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-primary-700 md:p-0 transition-colors duration-300">
+                API & Zap Integration
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Modal -->
+    <div
+      id="contactModal"
+      tabindex="-1"
+      class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-modal md:h-full"
+    >
+      <div class="relative w-full max-w-md h-full md:h-auto">
+        <div class="relative bg-white rounded-xl shadow-2xl dark:bg-gray-700 animate-fade-in">
+          <button
+            type="button"
+            class="absolute top-3 right-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center transition-colors duration-200"
+            data-modal-hide="contactModal"
+          >
+            <svg
+              aria-hidden="true"
+              class="w-5 h-5"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 011.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                clip-rule="evenodd"
+              />
+            </svg>
+            <span class="sr-only">Close modal</span>
+          </button>
+          <div class="px-6 py-6 lg:px-8">
+            <h3 class="mb-6 text-xl font-semibold text-gray-900 dark:text-white border-b pb-4">
+              Custom Enterprise Solution
+            </h3>
+            <form
+              action="https://formspree.io/f/xkgnzyqo"
+              method="POST"
+              class="space-y-6"
+            >
+              <div>
+                <label
+                  for="name"
+                  class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                  >Your Name</label
+                >
+                <input
+                  type="text"
+                  name="name"
+                  id="name"
+                  class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 transition-all duration-200"
+                  placeholder="John Doe"
+                  required
+                />
+              </div>
+              <div>
+                <label
+                  for="company"
+                  class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                  >Company Name</label
+                >
+                <input
+                  type="text"
+                  name="company"
+                  id="company"
+                  class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 transition-all duration-200"
+                  placeholder="Your Company"
+                  required
+                />
+              </div>
+              <div>
+                <label
+                  for="email"
+                  class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                  >Your Email</label
+                >
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 transition-all duration-200"
+                  placeholder="name@company.com"
+                  required
+                />
+              </div>
+              <div>
+                <label
+                  for="service"
+                  class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                  >Service Interest</label
+                >
+                <select
+                  name="service"
+                  id="service"
+                  class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 transition-all duration-200"
+                  required
+                >
+                  <option value="">Select a service</option>
+                  <option value="video-dubbing">AI Video Dubbing</option>
+                  <option value="just-on-time">Just-on-Time Video</option>
+                  <option value="virtual-influencers">Virtual Influencers</option>
+                  <option value="api-integration">API Integration</option>
+                  <option value="enterprise" selected>Custom Enterprise Solution</option>
+                </select>
+              </div>
+              <div>
+                <label
+                  for="message"
+                  class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                  >Your Requirements</label
+                >
+                <textarea
+                  name="message"
+                  id="message"
+                  rows="4"
+                  class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 transition-all duration-200"
+                  placeholder="Tell us about your specific needs and requirements..."
+                  required
+                ></textarea>
+              </div>
+              <button
+                type="submit"
+                class="w-full btn-primary text-white bg-primary-700 hover:bg-primary-800 font-medium rounded-lg text-sm px-5 py-3 text-center transition-all duration-300"
+              >
+                Request Custom Solution
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Enterprise Solutions Section -->
+    <section id="enterprise" class="page-section pt-20">
+      <!-- Hero Section -->
+      <div class="hero-gradient text-white">
+        <div class="py-16 px-4 mx-auto max-w-screen-xl text-center">
+          <h1 class="mb-6 text-4xl font-extrabold tracking-tight leading-none sm:text-5xl lg:text-6xl">
+            Enterprise Solutions
+          </h1>
+          <p class="mb-8 text-lg font-normal opacity-90 lg:text-xl sm:px-16 lg:px-48 max-w-3xl mx-auto">
+            Custom AI video solutions designed specifically for your organization's unique needs.
+            No one-size-fits-all approaches. Just tailored solutions that work for you.
+          </p>
+          <div class="flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-4">
+            <a
+              href="#enterprise-solutions"
+              class="inline-flex justify-center items-center py-3 px-6 text-base font-medium text-center text-white rounded-lg bg-primary-600 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 transition-all duration-300 shadow-lg hover:shadow-xl"
+            >
+              Explore Solutions
+            </a>
+            <a
+              href="#"
+              data-modal-target="contactModal"
+              data-modal-toggle="contactModal"
+              class="inline-flex justify-center items-center py-3 px-6 text-base font-medium text-center text-white rounded-lg bg-white/20 backdrop-blur-sm hover:bg-white/30 focus:ring-4 focus:ring-white/30 transition-all duration-300 border border-white/30"
+            >
+              Schedule a Consultation
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Enterprise Approach -->
+      <div class="py-16 px-4 bg-white" id="enterprise-solutions">
+        <div class="max-w-screen-xl mx-auto">
+          <div class="text-center mb-12">
+            <h2 class="text-3xl font-extrabold text-gray-900 mb-6">Our Enterprise Approach</h2>
+            <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+              We understand that every enterprise has unique needs, challenges, and goals. 
+              Our team works closely with you to develop tailored solutions that integrate 
+              seamlessly with your existing systems and workflows.
+            </p>
+          </div>
+          
+          <div class="grid md:grid-cols-2 gap-12 items-center mb-16">
+            <div>
+              <h3 class="text-2xl font-bold text-gray-900 mb-6">Not One-Size-Fits-All</h3>
+              <p class="text-lg text-gray-600 mb-6">
+                Unlike many providers, we don't force your business into predefined packages or templates. 
+                We begin with understanding your specific requirements and build custom solutions that address 
+                your particular needs.
+              </p>
+              <p class="text-lg text-gray-600 mb-6">
+                Whether you're a global media company managing thousands of videos across multiple platforms, 
+                an e-learning provider creating educational content in multiple languages, or a marketing agency 
+                serving international clients, we adapt our technology to fit your business model.
+              </p>
+              <div class="space-y-4">
+                <div class="flex items-start">
+                  <div class="flex-shrink-0 mt-1">
+                    <div class="flex h-6 w-6 items-center justify-center rounded-full bg-primary-100">
+                      <i class="fa-solid fa-check text-xs text-primary-600"></i>
+                    </div>
+                  </div>
+                  <p class="ml-3 text-gray-600">Custom workflows designed around your processes</p>
+                </div>
+                <div class="flex items-start">
+                  <div class="flex-shrink-0 mt-1">
+                    <div class="flex h-6 w-6 items-center justify-center rounded-full bg-primary-100">
+                      <i class="fa-solid fa-check text-xs text-primary-600"></i>
+                    </div>
+                  </div>
+                  <p class="ml-3 text-gray-600">Integration with your existing content systems</p>
+                </div>
+                <div class="flex items-start">
+                  <div class="flex-shrink-0 mt-1">
+                    <div class="flex h-6 w-6 items-center justify-center rounded-full bg-primary-100">
+                      <i class="fa-solid fa-check text-xs text-primary-600"></i>
+                    </div>
+                  </div>
+                  <p class="ml-3 text-gray-600">Tailored solutions for your industry-specific challenges</p>
+                </div>
+              </div>
+            </div>
+            <div class="bg-gray-50 p-8 rounded-xl shadow-lg text-center">
+              <div class="text-primary-600 text-6xl mb-6">
+                <i class="fa-solid fa-puzzle-piece"></i>
+              </div>
+              <h3 class="text-2xl font-bold text-gray-900 mb-4">Our Customization Process</h3>
+              <ol class="space-y-3 text-left max-w-sm mx-auto">
+                <li class="flex items-start">
+                  <div class="flex-shrink-0 flex h-6 w-6 items-center justify-center rounded-full bg-primary-600 text-white text-xs mr-3 mt-1">
+                    1
+                  </div>
+                  <span class="text-gray-700"><b>Discovery:</b> Thorough analysis of your needs, systems, and workflows</span>
+                </li>
+                <li class="flex items-start">
+                  <div class="flex-shrink-0 flex h-6 w-6 items-center justify-center rounded-full bg-primary-600 text-white text-xs mr-3 mt-1">
+                    2
+                  </div>
+                  <span class="text-gray-700"><b>Design:</b> Custom solution architecture tailored to your requirements</span>
+                </li>
+                <li class="flex items-start">
+                  <div class="flex-shrink-0 flex h-6 w-6 items-center justify-center rounded-full bg-primary-600 text-white text-xs mr-3 mt-1">
+                    3
+                  </div>
+                  <span class="text-gray-700"><b>Development:</b> Building and configuring your custom implementation</span>
+                </li>
+                <li class="flex items-start">
+                  <div class="flex-shrink-0 flex h-6 w-6 items-center justify-center rounded-full bg-primary-600 text-white text-xs mr-3 mt-1">
+                    4
+                  </div>
+                  <span class="text-gray-700"><b>Deployment:</b> Seamless integration with minimal disruption</span>
+                </li>
+                <li class="flex items-start">
+                  <div class="flex-shrink-0 flex h-6 w-6 items-center justify-center rounded-full bg-primary-600 text-white text-xs mr-3 mt-1">
+                    5
+                  </div>
+                  <span class="text-gray-700"><b>Support:</b> Ongoing dedicated enterprise-level support and optimization</span>
+                </li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Full Automation Section -->
+      <div class="py-16 px-4 bg-gray-50">
+        <div class="max-w-screen-xl mx-auto">
+          <div class="text-center mb-12">
+            <h2 class="text-3xl font-extrabold text-gray-900 mb-6">Complete Process Automation</h2>
+            <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+              Our enterprise solutions automate your entire video localization workflow, 
+              eliminating the need for additional human resources while expanding your global reach.
+            </p>
+          </div>
+          
+          <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+            <div class="feature-card bg-white p-8 rounded-xl border border-gray-200 shadow-lg hover:shadow-xl transition-all duration-300">
+              <div class="text-primary-600 text-4xl mb-6 flex justify-center">
+                <i class="fa-solid fa-robot"></i>
+              </div>
+              <h5 class="mb-4 text-xl font-bold tracking-tight text-center text-gray-900">
+                No Human Involvement Required
+              </h5>
+              <p class="font-normal text-gray-700 text-center">
+                Our AI handles everything from content analysis to voice generation, synchronization, 
+                and publishing. No need to hire specialists or train staff on new tools.
+              </p>
+            </div>
+            
+            <div class="feature-card bg-white p-8 rounded-xl border border-gray-200 shadow-lg hover:shadow-xl transition-all duration-300">
+              <div class="text-primary-600 text-4xl mb-6 flex justify-center">
+                <i class="fa-solid fa-clock"></i>
+              </div>
+              <h5 class="mb-4 text-xl font-bold tracking-tight text-center text-gray-900">
+                Scale Without Adding Resources
+              </h5>
+              <p class="font-normal text-gray-700 text-center">
+                Whether you're dubbing 10 videos or 10,000, our system scales automatically without 
+                requiring additional human resources or management overhead.
+              </p>
+            </div>
+            
+            <div class="feature-card bg-white p-8 rounded-xl border border-gray-200 shadow-lg hover:shadow-xl transition-all duration-300">
+              <div class="text-primary-600 text-4xl mb-6 flex justify-center">
+                <i class="fa-solid fa-chart-bar"></i>
+              </div>
+              <h5 class="mb-4 text-xl font-bold tracking-tight text-center text-gray-900">
+                Data-Driven Insights
+              </h5>
+              <p class="font-normal text-gray-700 text-center">
+                Comprehensive analytics dashboard shows performance across languages and platforms, 
+                helping you understand ROI and optimize your global content strategy.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Enterprise Solutions -->
+      <div class="py-16 px-4 bg-white">
+        <div class="max-w-screen-xl mx-auto">
+          <div class="text-center mb-12">
+            <h2 class="text-3xl font-extrabold text-gray-900 mb-6">Enterprise-Grade Features</h2>
+            <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+              Our enterprise solutions include advanced features designed specifically 
+              for the needs of large organizations with complex requirements.
+            </p>
+          </div>
+          
+          <div class="grid md:grid-cols-2 gap-8 mb-16">
+            <div class="bg-gray-50 p-8 rounded-xl shadow-lg">
+              <div class="flex items-start mb-6">
+                <div class="flex-shrink-0 mt-1">
+                  <div class="flex h-10 w-10 items-center justify-center rounded-full bg-primary-100">
+                    <i class="fa-solid fa-shield-alt text-primary-600"></i>
+                  </div>
+                </div>
+                <div class="ml-4">
+                  <h3 class="text-xl font-bold text-gray-900 mb-2">Enterprise Security</h3>
+                  <p class="text-gray-600">
+                    Robust security features including SOC 2 compliance, data encryption, 
+                    role-based access control, and secure content handling protocols designed 
+                    for enterprise requirements.
+                  </p>
+                </div>
+              </div>
+              
+              <div class="flex items-start mb-6">
+                <div class="flex-shrink-0 mt-1">
+                  <div class="flex h-10 w-10 items-center justify-center rounded-full bg-primary-100">
+                    <i class="fa-solid fa-code-branch text-primary-600"></i>
+                  </div>
+                </div>
+                <div class="ml-4">
+                  <h3 class="text-xl font-bold text-gray-900 mb-2">Custom API Integration</h3>
+                  <p class="text-gray-600">
+                    Dedicated API endpoints and custom integrations with your existing CMS, 
+                    DAM, CRM, and other systems for seamless data flow and process automation 
+                    that fits your infrastructure.
+                  </p>
+                </div>
+              </div>
+              
+              <div class="flex items-start mb-6">
+                <div class="flex-shrink-0 mt-1">
+                  <div class="flex h-10 w-10 items-center justify-center rounded-full bg-primary-100">
+                    <i class="fa-solid fa-users-cog text-primary-600"></i>
+                  </div>
+                </div>
+                <div class="ml-4">
+                  <h3 class="text-xl font-bold text-gray-900 mb-2">Advanced Team Management</h3>
+                  <p class="text-gray-600">
+                    Multi-user management with customizable permission levels, team workflows, 
+                    approval processes, and audit logs designed for enterprise collaboration.
+                  </p>
+                </div>
+              </div>
+            </div>
+            
+            <div class="bg-gray-50 p-8 rounded-xl shadow-lg">
+              <div class="flex items-start mb-6">
+                <div class="flex-shrink-0 mt-1">
+                  <div class="flex h-10 w-10 items-center justify-center rounded-full bg-primary-100">
+                    <i class="fa-solid fa-server text-primary-600"></i>
+                  </div>
+                </div>
+                <div class="ml-4">
+                  <h3 class="text-xl font-bold text-gray-900 mb-2">Dedicated Infrastructure</h3>
+                  <p class="text-gray-600">
+                    Option for dedicated processing infrastructure, private cloud deployment, 
+                    or on-premises solutions for organizations with specific security or 
+                    performance requirements.
+                  </p>
+                </div>
+              </div>
+              
+              <div class="flex items-start mb-6">
+                <div class="flex-shrink-0 mt-1">
+                  <div class="flex h-10 w-10 items-center justify-center rounded-full bg-primary-100">
+                    <i class="fa-solid fa-headset text-primary-600"></i>
+                  </div>
+                </div>
+                <div class="ml-4">
+                  <h3 class="text-xl font-bold text-gray-900 mb-2">White-Glove Support</h3>
+                  <p class="text-gray-600">
+                    Dedicated account management, priority support with guaranteed response times, 
+                    regular business reviews, and a direct line to our technical team for 
+                    enterprise clients.
+                  </p>
+                </div>
+              </div>
+              
+              <div class="flex items-start mb-6">
+                <div class="flex-shrink-0 mt-1">
+                  <div class="flex h-10 w-10 items-center justify-center rounded-full bg-primary-100">
+                    <i class="fa-solid fa-file-contract text-primary-600"></i>
+                  </div>
+                </div>
+                <div class="ml-4">
+                  <h3 class="text-xl font-bold text-gray-900 mb-2">Custom SLAs & Agreements</h3>
+                  <p class="text-gray-600">
+                    Tailored service level agreements, custom legal terms, specialized compliance 
+                    documentation, and flexible billing options to meet enterprise requirements.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Industry Solutions -->
+      <div class="py-16 px-4 bg-gray-50">
+        <div class="max-w-screen-xl mx-auto">
+          <div class="text-center mb-12">
+            <h2 class="text-3xl font-extrabold text-gray-900 mb-6">Industry-Specific Solutions</h2>
+            <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+              We've developed specialized solutions for various industries, each with unique requirements and challenges
+            </p>
+          </div>
+          
+          <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+            <div class="feature-card bg-white p-8 rounded-xl border border-gray-200 shadow-lg hover:shadow-xl transition-all duration-300">
+              <div class="text-primary-600 text-4xl mb-6 flex justify-center">
+                <i class="fa-solid fa-tv"></i>
+              </div>
+              <h5 class="mb-4 text-xl font-bold tracking-tight text-center text-gray-900">
+                Media & Entertainment
+              </h5>
+              <p class="font-normal text-gray-700 text-center">
+                Solutions for broadcasters, studios, and content networks to localize massive content libraries 
+                while preserving brand voice and creative intent across global markets.
+              </p>
+            </div>
+            
+            <div class="feature-card bg-white p-8 rounded-xl border border-gray-200 shadow-lg hover:shadow-xl transition-all duration-300">
+              <div class="text-primary-600 text-4xl mb-6 flex justify-center">
+                <i class="fa-solid fa-graduation-cap"></i>
+              </div>
+              <h5 class="mb-4 text-xl font-bold tracking-tight text-center text-gray-900">
+                Education & E-Learning
+              </h5>
+              <p class="font-normal text-gray-700 text-center">
+                Specialized tools for educational institutions and online learning platforms to make 
+                knowledge accessible globally through perfectly localized instructional content.
+              </p>
+            </div>
+            
+            <div class="feature-card bg-white p-8 rounded-xl border border-gray-200 shadow-lg hover:shadow-xl transition-all duration-300">
+              <div class="text-primary-600 text-4xl mb-6 flex justify-center">
+                <i class="fa-solid fa-shopping-bag"></i>
+              </div>
+              <h5 class="mb-4 text-xl font-bold tracking-tight text-center text-gray-900">
+                Retail & E-Commerce
+              </h5>
+              <p class="font-normal text-gray-700 text-center">
+                Solutions for retailers to localize product demonstrations, marketing videos, and customer 
+                testimonials to drive sales in international markets.
+              </p>
+            </div>
+            
+            <div class="feature-card bg-white p-8 rounded-xl border border-gray-200 shadow-lg hover:shadow-xl transition-all duration-300">
+              <div class="text-primary-600 text-4xl mb-6 flex justify-center">
+                <i class="fa-solid fa-building"></i>
+              </div>
+              <h5 class="mb-4 text-xl font-bold tracking-tight text-center text-gray-900">
+                Corporate Communications
+              </h5>
+              <p class="font-normal text-gray-700 text-center">
+                Enterprise solutions for internal communications, training, and compliance videos that maintain 
+                consistent messaging across global offices and teams.
+              </p>
+            </div>
+            
+            <div class="feature-card bg-white p-8 rounded-xl border border-gray-200 shadow-lg hover:shadow-xl transition-all duration-300">
+              <div class="text-primary-600 text-4xl mb-6 flex justify-center">
+                <i class="fa-solid fa-bullhorn"></i>
+              </div>
+              <h5 class="mb-4 text-xl font-bold tracking-tight text-center text-gray-900">
+                Marketing Agencies
+              </h5>
+              <p class="font-normal text-gray-700 text-center">
+                Custom tools for agencies managing multiple client accounts and campaigns, with seamless 
+                workflow integration and multi-client management features.
+              </p>
+            </div>
+            
+            <div class="feature-card bg-white p-8 rounded-xl border border-gray-200 shadow-lg hover:shadow-xl transition-all duration-300">
+              <div class="text-primary-600 text-4xl mb-6 flex justify-center">
+                <i class="fa-solid fa-heartbeat"></i>
+              </div>
+              <h5 class="mb-4 text-xl font-bold tracking-tight text-center text-gray-900">
+                Healthcare
+              </h5>
+              <p class="font-normal text-gray-700 text-center">
+                Specialized solutions for healthcare organizations with HIPAA compliance, medical terminology 
+                precision, and patient education video localization.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Enterprise Case Study -->
+      <div class="py-16 px-4 bg-white">
+        <div class="max-w-screen-xl mx-auto">
+          <div class="bg-primary-900 text-white rounded-xl overflow-hidden shadow-xl">
+            <div class="grid md:grid-cols-2">
+              <div class="p-8 md:p-12">
+                <div class="text-sm font-semibold uppercase tracking-wider mb-2 text-primary-200">Enterprise Success Story</div>
+                <h3 class="text-2xl font-bold mb-4">How MultiLearn Globalized Their Course Library</h3>
+                <p class="text-white/80 mb-6">
+                  MultiLearn, a leading online education platform with over 10,000 instructional videos, 
+                  needed to expand into 8 international markets without delay.
+                </p>
+                <ul class="space-y-2 mb-6 text-white/80">
+                  <li class="flex items-center">
+                    <i class="fa-solid fa-check text-primary-300 mr-2"></i>
+                    <span>Custom integration with their existing content management system</span>
+                  </li>
+                  <li class="flex items-center">
+                    <i class="fa-solid fa-check text-primary-300 mr-2"></i>
+                    <span>Automated dubbing of 10,000+ educational videos in 8 languages</span>
+                  </li>
+                  <li class="flex items-center">
+                    <i class="fa-solid fa-check text-primary-300 mr-2"></i>
+                    <span>Perfectly preserved instructor voice characteristics in all languages</span>
+                  </li>
+                  <li class="flex items-center">
+                    <i class="fa-solid fa-check text-primary-300 mr-2"></i>
+                    <span>85% time savings compared to traditional voice-over processes</span>
+                  </li>
+                  <li class="flex items-center">
+                    <i class="fa-solid fa-check text-primary-300 mr-2"></i>
+                    <span>No additional staff needed - fully automated workflow</span>
+                  </li>
+                </ul>
+                <div class="mb-6 text-2xl font-bold">
+                  Results: <span class="text-primary-300">245% increase</span> in international enrollment
+                </div>
+                <a href="#" class="inline-flex items-center font-medium text-primary-300 hover:text-primary-200">
+                  Read the full case study
+                  <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" fill="none">
+                    <path d="M5 12H19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M12 5L19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </a>
+              </div>
+              <div class="bg-primary-800 flex items-center justify-center p-8">
+                <div class="text-center">
+                  <div class="text-white text-7xl mb-4">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                  </div>
+                  <div class="text-5xl font-bold text-primary-300 mb-2">8 Languages</div>
+                  <div class="text-3xl font-semibold text-white">10,000+ Videos</div>
+                  <div class="text-lg text-white/70 mt-2">Zero Additional Staff</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- CTA Section -->
+      <div class="hero-gradient text-white">
+        <div class="py-16 px-4 mx-auto max-w-screen-xl text-center">
+          <h2 class="mb-6 text-3xl font-extrabold tracking-tight leading-none sm:text-4xl lg:text-5xl">
+            Ready for a Custom Enterprise Solution?
+          </h2>
+          <p class="mb-8 text-lg font-normal opacity-90 lg:text-xl sm:px-16 lg:px-48 max-w-3xl mx-auto">
+            Our team will work with you to understand your specific requirements and create 
+            a tailored solution that meets your organization's unique needs.
+          </p>
+          <div class="flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-4">
+            <a
+              href="#"
+              data-modal-target="contactModal"
+              data-modal-toggle="contactModal"
+              class="inline-flex justify-center items-center py-3 px-6 text-base font-medium text-center text-white rounded-lg bg-primary-600 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 transition-all duration-300 shadow-lg hover:shadow-xl"
+            >
+              Request Enterprise Demo
+            </a>
+            <a
+              href="#"
+              data-modal-target="contactModal"
+              data-modal-toggle="contactModal"
+              class="inline-flex justify-center items-center py-3 px-6 text-base font-medium text-center text-white rounded-lg bg-white/20 backdrop-blur-sm hover:bg-white/30 focus:ring-4 focus:ring-white/30 transition-all duration-300 border border-white/30"
+            >
+              Speak with a Solution Architect
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- footer Section -->
+    <footer class="bg-gray-900 text-white mt-16">
+      <div class="mx-auto w-full max-w-screen-xl p-4 py-8 lg:py-12">
+        <div class="md:flex md:justify-between items-start">
+          <div class="mb-6 md:mb-0">
+            <a href="index.html" class="flex items-center">
+              <img
+                src="./zentinel-logo.png"
+                class="h-14 me-3 bg-white rounded-full p-1"
+                alt="Zentinl Logo"
+              />
+              <span
+                class="self-center text-2xl font-semibold whitespace-nowrap"
+                >Zentinl</span
+              >
+            </a>
+            <p class="mt-3 text-gray-400 max-w-xs">
+              AI-powered video dubbing and creation for global audiences. 
+              Expand your reach with fully automated video solutions.
+            </p>
+            <div class="flex mt-4 space-x-4">
+              <a href="#" class="text-gray-400 hover:text-white transition-colors duration-200">
+                <i class="fas fa-globe"></i>
+              </a>
+              <a href="mailto:contact@zentinl.com" class="text-gray-400 hover:text-white transition-colors duration-200">
+                <i class="fas fa-envelope"></i>
+              </a>
+              <a href="tel:+1234567890" class="text-gray-400 hover:text-white transition-colors duration-200">
+                <i class="fas fa-phone"></i>
+              </a>
+            </div>
+          </div>
+          <div class="grid grid-cols-2 gap-8 sm:grid-cols-3 sm:gap-6">
+            <div>
+              <h2 class="mb-4 text-sm font-semibold uppercase tracking-wider">Services</h2>
+              <ul class="text-gray-400 space-y-2">
+                <li>
+                  <a href="video-dubbing.html" class="hover:text-white transition-colors duration-200">AI Video Dubbing</a>
+                </li>
+                <li>
+                  <a href="just-on-time.html" class="hover:text-white transition-colors duration-200">Just on Time Video</a>
+                </li>
+                <li>
+                  <a href="virtual-influencers.html" class="hover:text-white transition-colors duration-200">Virtual Influencers</a>
+                </li>
+                <li>
+                  <a href="api.html" class="hover:text-white transition-colors duration-200">API Integration</a>
+                </li>
+                <li>
+                  <a href="enterprise.html" class="hover:text-white transition-colors duration-200">Enterprise Solutions</a>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h2 class="mb-4 text-sm font-semibold uppercase tracking-wider">Company</h2>
+              <ul class="text-gray-400 space-y-2">
+                <li>
+                  <a href="index.html" class="hover:text-white transition-colors duration-200">About Us</a>
+                </li>
+                <li>
+                  <a href="pricing.html" class="hover:text-white transition-colors duration-200">Pricing</a>
+                </li>
+                <li>
+                  <a href="#" data-modal-target="contactModal" data-modal-toggle="contactModal" class="hover:text-white transition-colors duration-200">Contact</a>
+                </li>
+                <li>
+                  <a href="#" class="hover:text-white transition-colors duration-200">Careers</a>
+                </li>
+                <li>
+                  <a href="#" class="hover:text-white transition-colors duration-200">Blog</a>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h2 class="mb-4 text-sm font-semibold uppercase tracking-wider">Resources</h2>
+              <ul class="text-gray-400 space-y-2">
+                <li>
+                  <a href="#" class="hover:text-white transition-colors duration-200">Documentation</a>
+                </li>
+                <li>
+                  <a href="#" class="hover:text-white transition-colors duration-200">API References</a>
+                </li>
+                <li>
+                  <a href="#" class="hover:text-white transition-colors duration-200">Privacy Policy</a>
+                </li>
+                <li>
+                  <a href="#" class="hover:text-white transition-colors duration-200">Terms of Service</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <hr class="my-8 border-gray-700 sm:mx-auto" />
+        <div class="sm:flex sm:items-center sm:justify-between">
+          <span class="text-sm text-gray-400 sm:text-center">
+            © 2024 <a href="/" class="hover:underline">Zentinl</a>. All Rights Reserved.
+          </span>
+          <div class="flex mt-4 sm:justify-center sm:mt-0 space-x-5">
+            <!-- Facebook -->
+            <a
+              href="https://www.facebook.com/zentinl"
+              class="text-gray-500 hover:text-white transition-colors duration-200"
+            >
+              <i class="fab fa-facebook-f"></i>
+              <span class="sr-only">Facebook</span>
+            </a>
+            <!-- Twitter -->
+            <a
+              href="https://x.com/zentinl"
+              class="text-gray-500 hover:text-white transition-colors duration-200"
+            >
+              <i class="fab fa-twitter"></i>
+              <span class="sr-only">Twitter</span>
+            </a>
+            <!-- LinkedIn -->
+            <a
+              href="https://www.linkedin.com/company/zentinl.com/"
+              class="text-gray-500 hover:text-white transition-colors duration-200"
+            >
+              <i class="fab fa-linkedin-in"></i>
+              <span class="sr-only">LinkedIn</span>
+            </a>
+            <!-- Telegram -->
+            <a
+              href="https://t.me/zentinl"
+              class="text-gray-500 hover:text-white transition-colors duration-200"
+            >
+              <i class="fab fa-telegram-plane"></i>
+              <span class="sr-only">Telegram</span>
+            </a>
+            <!-- GitHub -->
+            <a
+              href="https://github.com/zentinl"
+              class="text-gray-500 hover:text-white transition-colors duration-200"
+            >
+              <i class="fab fa-github"></i>
+              <span class="sr-only">GitHub</span>
+            </a>
+            <!-- TikTok -->
+            <a
+              href="https://www.tiktok.com/@zentinl.com"
+              class="text-gray-500 hover:text-white transition-colors duration-200"
+            >
+              <i class="fab fa-tiktok"></i>
+              <span class="sr-only">TikTok</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- External JS Libraries -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="./js/main.js"></script>
+  </body>
+</html>
